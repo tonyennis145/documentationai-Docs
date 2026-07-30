@@ -1,0 +1,136 @@
+---
+title: Changelog
+description: Version history of Giga, highlighting the 2-3 most recent updates and changes.
+---
+
+## Recent Updates
+
+Stay up to date with the latest improvements and features in Giga. You receive notifications in Slack when new versions deploy.
+
+<Update label="2024-11-15" description="v1.5.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added Shopify integration: Boost your sales by analyzing trends and automating listings via `@Giga boost my Shopify sales`.
+- Google Calendar support: Organize meetings with natural language commands like `@Giga organize my meetings today`.
+- Notion integration: Build operations manuals automatically from your Slack conversations.
+
+## Improvements
+
+- Enhanced Slack response times by `>30%` for complex queries.
+- Better error handling for failed integrations with retry logic.
+
+## Bug Fixes
+
+- Fixed duplicate task creation in HubSpot pipelines.
+- Resolved authentication issues with Stripe webhooks.
+
+</Update>
+
+<Update label="2024-11-01" description="v1.4.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- QuickBooks integration: Manage cash flow with commands like `@Giga manage my cash flow`.
+- Gmail response automation: Draft and send customer replies directly in Slack.
+
+## Bug Fixes
+
+- Corrected SEO analysis parsing for Semrush data.
+- Fixed LinkedIn outreach message formatting.
+
+## Improvements
+
+- Added task history view: `@Giga show my recent tasks`.
+
+</Update>
+
+<Update label="2024-10-20" description="v1.3.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Updated Slack command prefix from `/giga` to `@Giga` for better discoverability. Update your shortcuts.
+
+## New Features
+
+- HubSpot and Salesforce CRM updates: Nurture pipelines with `@Giga nurture my sales pipeline`.
+- Stripe revenue suggestions: `@Giga suggest ways to grow revenue`.
+
+## Migration Instructions
+
+See the steps below for a smooth transition.
+
+</Update>
+
+<Callout kind="alert">
+  Breaking changes in v1.3.0 require updating Slack shortcuts. Test in a sandbox workspace first.
+</Callout>
+
+## Migration Guide
+
+Follow these steps to migrate from older versions.
+
+<Steps>
+  <Step title="Update Slack App" icon="settings">
+
+    Reinstall the Giga Slack app from the [app directory](https://app.getgiga.com/signup).
+
+````bash
+# No code needed - use the web installer
+# Visit https://app.getgiga.com/slack/install
+````
+
+  </Step>
+  <Step title="Test Commands" icon="play-circle">
+
+    Verify new prefix works.
+
+<CodeGroup tabs="Slack Commands">
+````bash
+@Giga organize my meetings today
+````
+
+````bash
+@Giga boost my Shopify sales
+````
+</CodeGroup>
+
+  </Step>
+  <Step title="Reconnect Integrations" icon="link">
+
+    Run `@Giga connect Shopify` to relink accounts.
+
+  </Step>
+</Steps>
+
+## Future Roadmap
+
+Track upcoming features on our project board.
+
+<Board title="Q4 2024 Roadmap">
+  <BoardColumn title="Planned" color="0" icon="calendar">
+    <BoardCard title="X (Twitter) growth tools" description="Automate follower engagement" icon="twitter" dueDate="2024-12-15" />
+    <BoardCard title="Advanced analytics dashboard" icon="bar-chart" dueDate="2024-12-31" />
+  </BoardColumn>
+  <BoardColumn title="In Progress" color="1" icon="loader-2">
+    <BoardCard title="Meta Ads optimization" description="Lower ad costs automatically" icon="dollar-sign" author="Engineering" />
+  </BoardColumn>
+  <BoardColumn title="Completed" color="2" icon="check-circle">
+    <BoardCard title="Semrush SEO integration" createdAt="2024-11-10" />
+  </BoardColumn>
+</Board>
+
+## Further Reading
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="book-open" href="/quickstart">
+    Get started with Giga in Slack.
+  </Card>
+  <Card title="Integrations" icon="link" href="/integrations">
+    Connect your tools.
+  </Card>
+</Columns>
+
+<Expandable title="Full Version History" default-open="false">
+  View all releases on GitHub or contact support@giga.com for archives.
+</Expandable>

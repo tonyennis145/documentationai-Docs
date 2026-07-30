@@ -1,0 +1,122 @@
+---
+title: Features
+description: Discover Giga's core capabilities, from task automation to team workflows across sales, finance, and operations.
+---
+
+## Overview
+
+Giga automates repetitive tasks across your tools and team directly in Slack. You mention `@Giga` followed by a natural language request, and it executes complex workflows like sending invoices, organizing meetings, or updating CRM records. This saves hours weekly by connecting apps such as Google Calendar, Notion, Shopify, QuickBooks, and more.
+
+Key benefits include AI-powered execution, department-specific automations, seamless Slack integration, collaborative team tools, and scalability as your team grows.
+
+<Columns cols={2}>
+  <Card title="AI Task Execution" icon="zap" href="/quickstart">
+    Describe tasks in plain English; Giga handles the rest across 50+ integrations.
+  </Card>
+  <Card title="Slack Native" icon="message-circle" href="/authentication">
+    No apps to switch—everything happens in your team's daily chat.
+  </Card>
+  <Card title="Team Workflows" icon="users" href="/guides">
+    Share automations team-wide for consistent processes.
+  </Card>
+  <Card title="Scalable" icon="trending-up" href="/configuration">
+    Handles growing volumes without setup changes.
+  </Card>
+</Columns>
+
+## AI-Powered Task Execution
+
+Giga uses advanced AI to interpret your requests and execute multi-step actions. For example, tell it to "organize my meetings today" and it checks your Google Calendar, resolves conflicts, and books rooms.
+
+<Callout kind="info">
+  Start with `@Giga` in any Slack channel. Use natural language—no rigid syntax required.
+</Callout>
+
+Here are common examples:
+
+<CodeGroup tabs="Meeting,Finance,Sales">
+  ```slack
+  @Giga organize my meetings today
+  ```
+  ```slack
+  @Giga send this week’s invoices from QuickBooks
+  ```
+  ```slack
+  @Giga draft customer outreach messages for leads in HubSpot
+  ```
+</CodeGroup>
+
+## Use Cases by Department
+
+Tailor Giga to your team's needs with department-specific automations.
+
+<Tabs>
+  <Tab title="Sales & Leads" icon="trending-up">
+    Boost pipeline efficiency.
+    
+    <Steps>
+      <Step title="Update CRM" icon="database">
+        `@Giga update Salesforce records for new leads from the form`
+      </Step>
+      <Step title="Nurture Pipeline" icon="git-branch">
+        `@Giga nurture my sales pipeline in HubSpot`
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Finance & Ops" icon="dollar-sign">
+    Streamline operations.
+    
+    ```slack
+    @Giga manage my cash flow from Stripe and QuickBooks
+    ```
+    
+    ```slack
+    @Giga build my operations manual in Notion
+    ```
+  </Tab>
+  <Tab title="Recruiting" icon="users">
+    Handle hiring workflows.
+    
+    <Expandable title="Advanced Recruiting Flows" default-open="true">
+      `@Giga schedule interviews from Greenhouse and update Lever records`
+      
+      This pulls candidate data, finds slots in Google Calendar, and notifies stakeholders.
+    </Expandable>
+  </Tab>
+</Tabs>
+
+## Team Collaboration Tools
+
+Collaborate effortlessly with shared workflows visible in Slack threads.
+
+<Board title="Sample Team Workflow">
+  <BoardColumn title="Requested" icon="message-circle">
+    <BoardCard title="@Giga send invoices" description="Finance requests weekly export" author="Ops Team" />
+  </BoardColumn>
+  <BoardColumn title="In Progress" color="1" icon="loader">
+    <BoardCard title="Update CRM leads" description="Sync HubSpot and Salesforce" dueDate="2024-12-15" />
+  </BoardColumn>
+  <BoardColumn title="Completed" color="2" icon="check-circle">
+    <BoardCard title="Organize meetings" description="Calendar updated for team" createdAt="2024-12-10" />
+  </BoardColumn>
+</Board>
+
+## Scalability for Growing Teams
+
+Giga scales with your business. Start small in one channel, then expand to enterprise-wide usage.
+
+<Steps>
+  <Step title="Start Small" icon="zap">
+    Test in a private channel.
+  </Step>
+  <Step title="Team Rollout" icon="users">
+    Share workflows via Slack templates.
+  </Step>
+  <Step title="Monitor & Optimize" icon="bar-chart">
+    Review execution logs in dashboard.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  As your team grows, Giga's rate limits adapt automatically. Contact support for custom plans.
+</Callout>

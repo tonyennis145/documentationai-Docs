@@ -1,0 +1,140 @@
+---
+title: Quickstart
+description: Set up your Giga account, add it to Slack, and send your first automation command in under 5 minutes.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+
+Before starting, ensure you have:
+- A Slack workspace where you have admin or owner permissions
+- Access to a web browser for account setup
+
+Giga works in any Slack workspace and integrates with tools like Google Calendar, Notion, Shopify, and more.
+
+</Callout>
+
+## Step-by-Step Setup
+
+Follow these steps to get Giga running in your Slack workspace.
+
+<Steps>
+  <Step title="Create a free account" icon="user-plus">
+
+  Visit [https://app.getgiga.com/signup](https://app.getgiga.com/signup) and sign up with your email or Google account. No credit card required.
+
+  After signup, you'll land on the Giga dashboard where you can manage automations and integrations.
+
+  </Step>
+
+  <Step title="Invite Giga to your Slack workspace" icon="messages-square">
+
+  From the Giga dashboard, click **Add to Slack** and select your workspace.
+
+  Authorize the app in Slack. Giga requires permissions to read messages, post responses, and access linked tools.
+
+  Once added, `@Giga` will appear in your workspace channel list.
+
+  </Step>
+
+  <Step title="Configure initial settings" icon="settings">
+
+  In Slack, type `/giga setup` to start configuration.
+
+````text
+/giga setup
+````
+
+  Follow the prompts to connect your first tool, such as Google Calendar or Notion. Enter your API keys if needed (e.g., `YOUR_GOOGLE_API_KEY`).
+
+  Test the connection with `/giga test`.
+
+  </Step>
+
+  <Step title="Send your first command" icon="zap">
+
+  In any Slack channel, mention `@Giga` with a task:
+
+````text
+@Giga organize my meetings today
+````
+
+  Giga will scan your Google Calendar, summarize events, and post a threaded response with actions.
+
+  </Step>
+</Steps>
+
+## Example Commands
+
+Try these ready-to-use automations. Replace placeholders with your details.
+
+<CodeGroup tabs="Meetings,Finance,Sales">
+  ```text
+@Giga organize my meetings today
+  ```
+  ```text
+@Giga send this week’s invoices from QuickBooks
+  ```
+  ```text
+@Giga draft customer outreach messages for LinkedIn leads
+  ```
+</CodeGroup>
+
+<Callout kind="tip">
+  Giga executes tasks across 20+ tools. Start simple—commands get smarter with use.
+</Callout>
+
+## Troubleshooting Common Issues
+
+<Tabs>
+  <Tab title="Giga not responding" icon="alert-triangle">
+
+  - Ensure `@Giga` is added to the channel (use `/invite @Giga`)
+  - Check workspace app approvals in Slack settings
+  - Restart with `/giga restart`
+
+  </Tab>
+
+  <Tab title="Permission errors" icon="lock">
+
+  - Reauthorize Giga in Slack app management
+  - Verify tool API keys in Giga dashboard
+  - Use `/giga permissions` to review scopes
+
+  </Tab>
+
+  <Tab title="Command failures" icon="x-circle">
+
+  - Test integrations individually: `/giga test calendar`
+  - Clear cache: `/giga clear`
+  - Contact support via dashboard if issues persist
+
+  </Tab>
+</Tabs>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Integrations" icon="plug" href="/integrations">
+    Connect Giga to Google Calendar, Shopify, Notion, and more for powerful automations.
+  </Card>
+
+  <Card title="Advanced Commands" icon="sparkles" href="/commands">
+    Explore 50+ pre-built automations for sales, finance, and operations.
+  </Card>
+
+  <Card title="Dashboard" icon="layout-dashboard" href="https://app.getgiga.com/dashboard" target="_blank">
+    Manage settings, view execution history, and customize workflows.
+  </Card>
+
+  <Card title="Support" icon="help-circle" href="https://getgiga.com/support">
+    Get help or join the community for tips and updates.
+  </Card>
+</Columns>
+
+<Expandable title="Need more help?" default-open="false">
+
+If setup fails, email support@getgiga.com with your workspace name and error message. Most issues resolve in under 24 hours.
+
+</Expandable>
