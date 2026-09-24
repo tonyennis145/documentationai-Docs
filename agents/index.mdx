@@ -1,0 +1,192 @@
+---
+title: Agents
+description: Learn how named AI Agents in Giga combine role, instructions, context, Skills, and Connections.
+---
+
+An **Agent** is a named, reusable AI role in Giga.
+
+Agents are useful when you want Giga to operate with a consistent role, instructions, context, and access across repeated work.
+
+> **Video placeholder**
+>
+> Agents overview video.
+
+## What an Agent can bring together
+
+<Columns cols={2}>
+  <Card title="Role and instructions" href="/agents/instructions" icon="file-text">
+    Define how the Agent should approach its work and what it is responsible for.
+  </Card>
+  <Card title="Context" href="/agents/context-and-knowledge" icon="brain">
+    Give the Agent durable background relevant to the work it handles.
+  </Card>
+  <Card title="Connections" href="/agents/connections" icon="plug">
+    Give the Agent access to external tools and systems when permissions allow it.
+  </Card>
+  <Card title="Skills" href="/skills/index" icon="sparkles">
+    Reuse task-specific instructions and methods with the Agent.
+  </Card>
+</Columns>
+
+The exact capabilities available to an Agent depend on the current workspace, Group, Connections, Skills, and live tool surface.
+
+## When to use an Agent
+
+Create or use an Agent when you want a reusable AI role that people can return to repeatedly.
+
+Examples include:
+
+- a sales research Agent
+- a recruiting Agent
+- a customer support Agent
+- an operations Agent
+- a finance reporting Agent
+
+A normal [Chat](/chats/index) works well for ad hoc work that does not need a persistent named role.
+
+## Agent vs Chat vs Skill vs Workflow
+
+| Primitive | Best fit |
+| --- | --- |
+| **Chat** | Direct, ad hoc work with Giga |
+| **Agent** | A named reusable AI role |
+| **Skill** | Reusable instructions for a specific kind of task |
+| **Workflow** | A reusable ordered multi-step process |
+| **Pulse** | Recurring scheduled work |
+
+These primitives can work together.
+
+For example, a recruiting Agent might use a candidate-screening [Skill](/skills/index), work through a [Workflow](/workflows/index), and run recurring work through a [Pulse](/pulses/index) when the live configuration supports it.
+
+## Where Agents live
+
+Agents operate within Giga’s [Group](/groups/index) permission model.
+
+The Group helps determine who can access the Agent and which shared resources are in scope.
+
+That means an Agent’s availability can depend on:
+
+- the Group it belongs to
+- the user’s Group membership
+- the Connections available in that scope
+- the Skills available to the Agent
+- the current live permissions
+
+[Learn about Sharing Agents →](/agents/sharing)
+
+## Agent instructions
+
+An Agent can have durable instructions that shape how it behaves across repeated work.
+
+Those instructions can define things such as:
+
+- its role
+- its responsibilities
+- preferred ways of working
+- constraints
+- terminology
+- expected output style
+
+Keep durable Agent behavior in the Agent’s instructions rather than re-explaining it in every Chat.
+
+[Learn about Agent instructions →](/agents/instructions)
+
+## Agents and context
+
+Agents can also have durable context relevant to their role.
+
+The live Giga environment determines what context and resources the Agent can actually retrieve.
+
+Giga should never assume an Agent has access to every Track, Connection, file, or piece of company context simply because those resources exist in the workspace.
+
+[Learn about Agents and context →](/agents/context-and-knowledge)
+
+## Agents and Connections
+
+Connections let an Agent work with live external systems.
+
+For example, an Agent might be allowed to use:
+
+- a CRM
+- an analytics platform
+- a support tool
+- an internal database
+- an MCP server
+
+The Agent can only use Connections that are available within its current configuration and permission scope.
+
+[Learn about giving Agents access to Connections →](/agents/connections)
+
+## Agents and Skills
+
+A [Skill](/skills/index) gives Giga reusable instructions for a specific kind of task.
+
+An Agent can use Skills when the live Agent and Skill configuration makes those Skills available.
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Sales Agent" href="/agents/index" icon="user">
+    Maintains the broader role, context, and access needed for sales research.
+  </Card>
+  <Card title="Account research Skill" href="/skills/index" icon="sparkles">
+    Defines a reusable method for researching an account.
+  </Card>
+</Columns>
+
+This keeps the Agent’s identity separate from the reusable task method.
+
+## Agents and Pulses
+
+The current Pulse model can target an Agent.
+
+That means recurring scheduled work can run through a named Agent when the live Pulse configuration supports it.
+
+For example, a reporting Agent could run a recurring weekly check through a [Pulse](/pulses/index).
+
+[Learn about Pulses with Agents →](/pulses/with-agents)
+
+## A simple example
+
+Imagine your Sales team creates a **Sales Research Agent**.
+
+<Columns cols={2}>
+  <Card title="Role" href="/agents/instructions" icon="file-text">
+    Research target accounts and prepare useful sales context.
+  </Card>
+  <Card title="Context" href="/agents/context-and-knowledge" icon="brain">
+    Uses the durable background relevant to the sales team.
+  </Card>
+  <Card title="Connections" href="/agents/connections" icon="plug">
+    Can use approved sales tools when permissions allow it.
+  </Card>
+  <Card title="Skills" href="/skills/index" icon="sparkles">
+    Uses repeatable research methods without rebuilding them each time.
+  </Card>
+</Columns>
+
+The team gets a consistent AI role they can return to, while access remains controlled by the workspace and Group permission model.
+
+> **Image placeholder**
+>
+> Diagram showing an Agent at the center with Role + Instructions, Context, Skills, Connections, Group permissions, and Pulses around it.
+
+## Explore Agents
+
+<Columns cols={2}>
+  <Card title="Creating an Agent" href="/agents/creating-an-agent" icon="plus-circle">
+    Set up a reusable Agent for a role your team returns to.
+  </Card>
+  <Card title="Agent instructions" href="/agents/instructions" icon="file-text">
+    Define how the Agent should behave and work.
+  </Card>
+  <Card title="Connections" href="/agents/connections" icon="plug">
+    Give an Agent access to approved external systems.
+  </Card>
+  <Card title="Agents and context" href="/agents/context-and-knowledge" icon="brain">
+    Understand what durable context an Agent can use.
+  </Card>
+  <Card title="Sharing Agents" href="/agents/sharing" icon="users">
+    Control who can access an Agent through Giga’s permission model.
+  </Card>
+</Columns>

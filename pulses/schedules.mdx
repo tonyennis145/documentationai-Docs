@@ -1,0 +1,128 @@
+---
+title: Schedules
+description: Learn how shared schedule slots and custom cadences control when a Pulse runs.
+---
+
+A Pulse schedule controls **when recurring work runs**.
+
+The current Pulse model supports 2 scheduling approaches: shared named schedule slots and custom recurring schedules.
+
+## Shared schedule slots
+
+A shared schedule slot is a named time already available in the workspace.
+
+A Pulse can attach to one or more of those slots.
+
+<Columns cols={2}>
+  <Card title="Shared timing" href="/pulses/schedules" icon="calendar">
+    Use an existing workspace schedule slot instead of defining a separate cadence for the Pulse.
+  </Card>
+  <Card title="Current workspace" href="/pulses/managing" icon="clock">
+    The available slot names and timing come from the live workspace.
+  </Card>
+</Columns>
+
+Giga should read the current Pulse configuration to see which named slots are available rather than assuming a fixed list.
+
+## Custom schedules
+
+A custom schedule gives the Pulse its own recurring cadence.
+
+The current Pulse model supports:
+
+- daily
+- weekly
+- monthly
+- intra-day
+
+Choose the cadence that matches how often the recurring job should run.
+
+> **Use the live schedule options**
+>
+> Exact schedule details and available shared slots can change. Giga should use the current Pulse configuration as the source of truth.
+
+## Slot vs custom
+
+| Schedule type | Good fit |
+| --- | --- |
+| **Shared slot** | The Pulse should run at an existing workspace schedule time |
+| **Custom schedule** | The Pulse needs its own daily, weekly, monthly, or intra-day cadence |
+
+The work itself still comes from the Pulse instruction and optional [Agent](/agents/index) or [Track](/tracks/index) target.
+
+## Schedule and target are separate
+
+The schedule answers **when the Pulse runs**.
+
+The target answers **what context or role the Pulse runs against**.
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Schedule" href="/pulses/schedules" icon="clock">
+    Weekly.
+  </Card>
+  <Card title="Target" href="/pulses/with-agents" icon="bot">
+    Sales Reporting Agent.
+  </Card>
+</Columns>
+
+A Pulse can also target a Track or run without a target.
+
+## Editing a schedule
+
+Changing a Pulse schedule changes future recurring behavior.
+
+Giga should read the current Pulse before editing it because the current update operation replaces the full Pulse definition.
+
+That means an update should preserve every setting that should remain, including:
+
+- name
+- instruction
+- schedule type
+- cadence or selected slots
+- target
+
+> **Read before updating**
+>
+> Omitting an existing Pulse setting from the replacement definition can reset it.
+
+[Learn about Managing Pulses →](/pulses/managing)
+
+## Choosing the cadence
+
+Match the schedule to how quickly the underlying work changes.
+
+For example:
+
+- **daily** can fit information that changes every day
+- **weekly** can fit recurring team reviews
+- **monthly** can fit slower reporting cycles
+- **intra-day** can fit work that needs several checks within a day
+
+The right cadence depends on the job. Avoid scheduling work more frequently than it needs to run.
+
+## A simple example
+
+Imagine a **Weekly Pipeline Review** Pulse.
+
+| Setting | Example |
+| --- | --- |
+| **Instruction** | Review meaningful pipeline changes and summarize what needs attention |
+| **Schedule type** | Custom |
+| **Cadence** | Weekly |
+| **Target** | Sales Reporting Agent |
+
+Another Pulse could use a shared workspace slot instead while keeping the same instruction.
+
+> **Image placeholder**
+>
+> Schedule selector showing Shared schedule slots on one side and Custom cadence with Daily, Weekly, Monthly, and Intra-day options on the other.
+
+## Related pages
+
+- [Introduction to Pulses](/pulses/index)
+- [Creating a Pulse](/pulses/creating-a-pulse)
+- [Pulses with Agents](/pulses/with-agents)
+- [Managing Pulses](/pulses/managing)
+- [Pulse examples](/pulses/examples)

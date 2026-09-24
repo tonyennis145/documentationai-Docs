@@ -1,0 +1,153 @@
+---
+title: Sharing Skills
+description: Learn how Skill ownership and Group sharing determine who can use and manage a Skill in Giga.
+---
+
+A **Skill** can stay private to its owner or be shared into one or more [Groups](/groups/index).
+
+Sharing makes the same task method available to the right team without copying the Skill into separate versions.
+
+## Owner-only vs shared Skills
+
+<Columns cols={2}>
+  <Card title="Owner-only Skill" href="/skills/sharing" icon="lock">
+    Available to the Skill owner without sharing it into a Group.
+  </Card>
+  <Card title="Shared Skill" href="/skills/sharing" icon="users">
+    Available to members of the Groups the owner shares it into.
+  </Card>
+</Columns>
+
+Users can see Skills they own plus Skills shared into Groups they belong to.
+
+## Ownership and access are different
+
+The current Skill model separates **owning** a Skill from **having access** to it.
+
+| Role | What it means |
+| --- | --- |
+| **Skill owner** | Can manage the Skill and its sharing |
+| **Group member** | Can access a Skill shared into that Group |
+
+A teammate can use a shared Skill without becoming its owner.
+
+> **Sharing does not transfer ownership**
+>
+> The owner keeps control of the Skill while Group members gain access to the reusable method.
+
+## Share a Skill into a Group
+
+The current Giga tools let the owner share a Skill into one or more Groups they can access.
+
+<Steps>
+  <Step title="Choose the Skill" icon="sparkles">
+    Confirm the Skill you want to make available to a team.
+  </Step>
+  <Step title="Choose the Group" icon="users">
+    Pick the Group that represents the real audience for that method.
+  </Step>
+  <Step title="Share the Skill" icon="share-2">
+    Make the Skill available in that Group.
+  </Step>
+  <Step title="Use it from the shared scope" icon="check-circle">
+    Members of that Group can access the Skill according to the current live permissions.
+  </Step>
+</Steps>
+
+A Skill can be shared into several Groups when the same method is useful to more than one team.
+
+## Use the narrowest useful audience
+
+Share the Skill only where it is actually needed.
+
+For example:
+
+- a **Candidate Screening Skill** may belong in Recruiting
+- an **Account Research Skill** may belong in Sales
+- a **Brand Review Skill** may belong in Marketing
+- a broadly useful **Meeting Summary Skill** could be shared more widely
+
+Keeping the audience deliberate makes it easier to understand which methods are available in each part of the workspace.
+
+## Shared Skills and Agents
+
+A shared [Agent](/agents/index) can use a Skill when the Skill is available in the relevant live scope.
+
+Sharing an Agent does not automatically share every Skill in the workspace with it.
+
+If a team Agent depends on a Skill, make sure the Skill is available to the appropriate Group.
+
+[Learn how Skills are used →](/skills/how-skills-are-used)
+
+## Shared Skills and Workflows
+
+A [Workflow](/workflows/index) can rely on a reusable Skill method when that Skill is available during execution.
+
+The Workflow and Skill keep separate jobs:
+
+- the Workflow stores the ordered process
+- the Skill stores the reusable task method
+
+This lets one Skill support more than one process without duplicating its instructions.
+
+## Updating a shared Skill
+
+Only the Skill owner can update it in the current model.
+
+Because the same shared Skill can be used across a Group, changes to its instructions or supporting files affect future use of that Skill.
+
+Giga should read the current Skill before editing it because updating the file set replaces the full set of Skill files.
+
+> **Shared methods should be edited deliberately**
+>
+> One update can change the method reused by everyone who has access to that Skill.
+
+## Stop sharing a Skill
+
+The owner can remove a Skill from a Group.
+
+That stops the Skill from being shared into that Group while leaving the Skill itself available to its owner and any other Groups it is still shared with.
+
+Removing the Skill from a Group changes team access, so confirm the intended Group before doing it.
+
+## Deleting a Skill
+
+Deleting a Skill is broader than unsharing it.
+
+In the current model, deleting a Skill removes it and unshares it from every Group.
+
+Giga should confirm before deleting a Skill.
+
+If you only want one team to stop using it, remove it from that Group instead.
+
+## A simple example
+
+Imagine the Sales team has an **Account Research Skill**.
+
+<Columns cols={2}>
+  <Card title="Skill owner" href="/skills/creating-a-skill" icon="user">
+    Maintains the research method and supporting files.
+  </Card>
+  <Card title="Sales Group" href="/groups/index" icon="users">
+    Receives access to the shared Skill.
+  </Card>
+  <Card title="Sales Agent" href="/agents/index" icon="bot">
+    Can use the research method when the Skill is available in its current scope.
+  </Card>
+  <Card title="Future updates" href="/skills/how-skills-are-used" icon="refresh-cw">
+    Changes to the shared Skill update the reusable method for future use.
+  </Card>
+</Columns>
+
+> **Image placeholder**
+>
+> Diagram showing one Skill owner sharing the same Skill into one or more Groups, where teammates and Agents can use it.
+
+## Related pages
+
+- [Introduction to Skills](/skills/index)
+- [Creating a Skill](/skills/creating-a-skill)
+- [How Skills are used](/skills/how-skills-are-used)
+- [Skill examples](/skills/examples)
+- [Introduction to Groups](/groups/index)
+- [Sharing Agents](/agents/sharing)

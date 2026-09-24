@@ -1,0 +1,267 @@
+---
+title: Giga Dictionary
+description: Definitions for the core terms used across Giga.
+---
+
+Use this page as a quick reference for Giga’s product language.
+
+The definitions below follow the current Giga product model. Exact workspace state, permissions, provider capabilities, and model availability still come from the live environment.
+
+## Agent
+
+An **Agent** is a named reusable AI role in Giga.
+
+An Agent can have a role, instructions, context, access to permitted [Connections](/connections/index), and [Skills](/skills/index).
+
+Use an Agent when a reusable operating identity should be available across multiple tasks, people, or repeated interactions.
+
+[Learn about Agents →](/agents/index)
+
+## Chat
+
+A **Chat** is the direct working surface between a user and Giga.
+
+Use a Chat to ask questions, reason through work, create or edit supported work product, use Connections, and ask Giga to take supported actions.
+
+A Chat can be linked to at most **1 explicitly selected Track**.
+
+[Learn about Chats →](/chats/index)
+
+## Chat history
+
+**Chat history** is the transcript of the interaction inside a Chat.
+
+It is separate from durable Track context such as Context Notes, Observations, Current Track State, and files.
+
+[Learn about Chat history →](/chats/history)
+
+## Company Brain
+
+**Company Brain** is Giga’s permission-aware company context layer.
+
+Depending on relevance and access, it can draw from workspace and Group guidance, Tracks, Context Notes, Observations, Current Track State, files, Connections, Agents, Skills, Workflows, and user-level context.
+
+Company Brain is structured around permissions and the work it belongs to.
+
+[See the Feature Overview →](/resources/feature-overview)
+
+## Connection
+
+A **Connection** gives Giga permissioned access to an external system.
+
+Connections can represent apps, APIs, databases, MCP servers, browser sessions, messaging systems, and other supported services.
+
+A Connection can provide live information and support actions when the current Giga and provider permissions allow it.
+
+[Learn about Connections →](/connections/index)
+
+## Context Note
+
+A **Context Note** is the durable standing context for a Track.
+
+Use it for stable background such as:
+
+- what the Track is about
+- standing instructions
+- terminology
+- durable constraints
+- long-lived handoff context
+
+Fast-changing progress belongs in Track memory or Current Track State.
+
+[Learn about Context Notes →](/tracks/context-notes)
+
+## Credential
+
+A **credential** is secure authentication material behind some Connections.
+
+Examples can include authentication tokens, API credentials, connection strings, or login material depending on the Connection method.
+
+Credentials should stay in the secure connection flow rather than ordinary Chats, Context Notes, or files.
+
+[Learn about Managing Connections →](/connections/managing-connections)
+
+## Current Track State
+
+**Current Track State** is the curated current state and decision record for a Track.
+
+It can capture:
+
+- where the work stands now
+- how it got there
+- what was ruled out and why
+- what remains open
+
+It is mutable and should stay current as the work develops.
+
+[Learn about Track memory →](/tracks/memory)
+
+## Database
+
+A **database** is a structured store for records that are repetitive, tabular, updated field by field, filtered, sorted, aggregated, or expected to grow.
+
+Current Giga doctrine supports SQLite and hosted Giga databases where the relevant capability is available.
+
+Use files for authored narrative work such as reports and drafts.
+
+[Learn about Files in Tracks →](/tracks/files)
+
+## File
+
+A **file** is authored work product.
+
+Files can hold reports, drafts, notes, code, webpages, exports, and other supported artifacts.
+
+Files are separate from Track memory. A Track can have rich context and history even when its file area is empty.
+
+[Learn about Files in Tracks →](/tracks/files)
+
+## Group
+
+A **Group** is a placement and permission scope in Giga.
+
+Groups can contain or scope resources such as Tracks, Agents, files, credentials, Connections, and shared context.
+
+Use a Group when there is a real team boundary, shared area, or top-level access scope.
+
+[Learn about Groups →](/groups/index)
+
+## Memory
+
+**Memory** is the durable Track context that preserves meaningful developments and helps future work understand what happened.
+
+The Track memory model includes:
+
+- **Observations**, which preserve append-only developments
+- **Current Track State**, which keeps the curated current state and decision record
+
+Context Notes and files serve different jobs and remain separate.
+
+[Learn about Memory →](/tracks/memory)
+
+## Model flexibility
+
+**Model flexibility** is Giga’s product area for working across AI models and providers while keeping Giga’s workspace context and permissions conceptually separate from any single provider.
+
+Exact providers, model availability, plan access, custom endpoints, and bring-your-own-model options must be verified from the current product configuration.
+
+[See the Feature Overview →](/resources/feature-overview)
+
+## Observation
+
+An **Observation** is an append-only development in Giga’s memory layer.
+
+Observations can capture meaningful facts, changes, decisions, progress, preferences, or learned context.
+
+They should only be attached to a Track or Group when that attachment has been explicitly selected or confirmed.
+
+[Learn about Memory →](/tracks/memory)
+
+## Private Group
+
+A **private Group** is a Group scoped to its owner.
+
+Each member has an existing private Group for private work.
+
+A separate Group is generally unnecessary simply to make a Track private.
+
+[Learn about Personal vs shared work →](/groups/personal-vs-shared)
+
+## Pulse
+
+A **Pulse** is recurring scheduled work.
+
+Use a Pulse when Giga should run a check or task on a schedule instead of waiting for someone to ask in a Chat.
+
+A Pulse can target an Agent, target a Track, or run without a target.
+
+[Learn about Pulses →](/pulses/index)
+
+## Shared Group
+
+A **shared Group** is a Group used for team work.
+
+Membership in the shared Group helps determine which people can access the resources inside its permission scope.
+
+[Learn about Groups →](/groups/index)
+
+## Skill
+
+A **Skill** is reusable instructions and supporting context for a specific kind of task.
+
+Use a Skill when the reusable asset is primarily the method, rules, standard, template, or reference context for doing the task.
+
+[Learn about Skills →](/skills/index)
+
+## Surface
+
+A **surface** is a user-facing interface where someone can work with Giga.
+
+Current official Giga surfaces are:
+
+- Giga Web
+- Slack
+- ChatGPT
+- Claude
+- Microsoft Teams
+
+The underlying Giga context and permissions stay consistent, while exact UI, file behavior, and available capabilities can differ by surface.
+
+[Learn about using Giga anywhere →](/use-giga-anywhere/index)
+
+## Track
+
+A **Track** is Giga’s core long-running work primitive.
+
+Use a Track when context, decisions, files, and progress should accumulate around an effort over time.
+
+A Track can contain durable context across Context Notes, Observations, Current Track State, linked Chats, and files.
+
+Track visibility currently follows the Group it lives in.
+
+[Learn about Tracks →](/tracks/index)
+
+## Workflow
+
+A **Workflow** is a reusable multi-step process.
+
+Use a Workflow when several meaningful ordered stages should be saved, standardized, or run again later.
+
+Current Workflows can have a name, description, ordered steps, plain-language instructions, and optional runtime inputs.
+
+[Learn about Workflows →](/workflows/index)
+
+## Workspace
+
+A **workspace** is the top-level Giga environment for a company or team.
+
+Workspace membership, Groups, context, Connections, and other resources all sit within that environment.
+
+The current workspace state is the source of truth for what a user can access.
+
+[Learn about Teams & Admin →](/teams-and-admin/index)
+
+## Quick reference
+
+| Term | Short definition |
+| --- | --- |
+| **Chat** | Direct work with Giga |
+| **Group** | Placement and permission scope |
+| **Track** | Ongoing work with continuity |
+| **Context Note** | Durable standing Track background |
+| **Observation** | Append-only development |
+| **Current Track State** | Curated current state and decision record |
+| **Agent** | Named reusable AI role |
+| **Skill** | Reusable task method |
+| **Workflow** | Reusable ordered process |
+| **Pulse** | Recurring scheduled work |
+| **Connection** | Permissioned external-system access |
+| **File** | Authored work product |
+| **Database** | Structured growing records |
+| **Company Brain** | Permission-aware company context layer |
+
+## Related resources
+
+- [Feature Overview](/resources/feature-overview)
+- [Choosing the right Giga feature](/resources/choosing-the-right-feature)
+- [FAQ](/resources/faq)

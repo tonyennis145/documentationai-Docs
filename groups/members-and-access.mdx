@@ -1,0 +1,136 @@
+---
+title: Members and access
+description: Learn how workspace membership and Group access work together in Giga.
+---
+
+Access in Giga happens at more than one level.
+
+A person first needs to be a **member of the workspace**. From there, shared [Groups](/groups/index) determine which team resources they can access.
+
+## Workspace membership vs Group access
+
+| Layer | What it controls |
+| --- | --- |
+| **Workspace membership** | Whether someone belongs to the Giga workspace at all |
+| **Workspace role** | Their workspace-level role, such as owner, admin, or member |
+| **Group membership** | Which shared Groups and the resources inside them they can access |
+
+Being in the workspace does not automatically mean someone belongs to every shared Group.
+
+> **Workspace membership comes first**
+>
+> A teammate must exist in the workspace before an admin can give them access to a shared Group.
+
+## Inviting a teammate
+
+Workspace admins can add a person to the workspace by email.
+
+When someone is added, Giga can provision their default workspace setup, including their personal/private area.
+
+<Steps>
+  <Step title="Add them to the workspace" icon="user-plus">
+    Invite the teammate by email and assign the appropriate workspace role.
+  </Step>
+  <Step title="Find the shared Group they need" icon="search">
+    Choose the Group that already contains the Tracks and resources relevant to their work.
+  </Step>
+  <Step title="Grant Group access" icon="users">
+    An admin can add the existing workspace member to that shared Group.
+  </Step>
+  <Step title="Work from the same shared context" icon="layers">
+    The teammate can then access the resources available within that Group according to their permissions.
+  </Step>
+</Steps>
+
+## Workspace roles
+
+The current workspace membership model includes:
+
+- **Owner**
+- **Admin**
+- **Member**
+
+Some actions are restricted by role. For example, inviting a new workspace member or adding an existing member to a shared Group is an **admin-level operation**.
+
+We cover the broader admin model separately in [Teams & Admin](/teams-and-admin/index).
+
+> **Permissions are checked live**
+>
+> Giga should verify a person’s current role and access before making permission-sensitive changes.
+
+## What Group access can expose
+
+A shared Group can contain or scope several kinds of resources:
+
+<Columns cols={2}>
+  <Card title="Tracks" href="/tracks/index" icon="folder">
+    Ongoing work, context, files, and memory that live inside the Group.
+  </Card>
+  <Card title="Agents" href="/agents/index" icon="bot">
+    Reusable Agents available within the Group’s access scope.
+  </Card>
+  <Card title="Files" href="/tracks/files" icon="file-text">
+    Shared work product stored with Tracks or within the Group.
+  </Card>
+  <Card title="Credentials and Connections" href="/connections/index" icon="plug">
+    Connected access that may be available to members of the relevant Group.
+  </Card>
+</Columns>
+
+Because Group membership affects access to these resources, it should be managed deliberately.
+
+## Private Groups are different
+
+Each member has a private Group for their own work.
+
+That private Group is intended for personal [Tracks](/tracks/index) and other resources that should not automatically be shared with teammates.
+
+You do not add other teammates to someone else’s private Group as a normal sharing pattern. Shared collaboration belongs in a **shared Group**.
+
+[Learn about personal vs shared work →](/groups/personal-vs-shared)
+
+## A simple example
+
+Imagine a new teammate joins the **Customer Success** team.
+
+<Columns cols={2}>
+  <Card title="Workspace membership" href="/teams-and-admin/members-and-roles" icon="user-check">
+    They are invited into the Giga workspace first.
+  </Card>
+  <Card title="Customer Success Group" href="/groups/index" icon="users">
+    An admin gives them access to the shared Group used by that team.
+  </Card>
+  <Card title="Customer Tracks" href="/tracks/index" icon="folder">
+    They can work from the same customer-specific Tracks available in that Group.
+  </Card>
+  <Card title="Shared resources" href="/agents/index" icon="layers">
+    They can also use other resources available within that Group’s permission scope.
+  </Card>
+</Columns>
+
+The result is a shared working environment without giving every workspace member access to every team’s work.
+
+## Removing someone from the workspace
+
+Removing a member from the workspace is a separate administrative action.
+
+In the current Giga model, removing a member **soft-archives their membership** rather than deleting their data. Owners cannot be removed through this operation.
+
+Because this changes someone’s access, Giga should confirm before carrying it out.
+
+> **Access changes deserve confirmation**
+>
+> Adding or removing access can affect what company information someone can reach. Giga should verify the current workspace state and confirm consequential changes before acting.
+
+> **Image placeholder**
+>
+> Diagram showing Workspace → Shared Groups → Tracks and shared resources, with different members accessing different Groups.
+
+## Related pages
+
+- [Introduction to Groups](/groups/index)
+- [Personal vs shared work](/groups/personal-vs-shared)
+- [Groups and Tracks](/groups/groups-and-tracks)
+- [Sharing and permissions for Tracks](/tracks/sharing-and-permissions)
+- [Teams & Admin](/teams-and-admin/index)
+- [Members and roles](/teams-and-admin/members-and-roles)

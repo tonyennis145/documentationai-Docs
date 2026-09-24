@@ -1,0 +1,136 @@
+---
+title: MCP
+description: Learn how Giga connects to compatible MCP servers and uses the tools they expose.
+---
+
+**MCP** is one of Giga’s preferred ways to connect to an external tool or system.
+
+When a service exposes a compatible MCP server, Giga can connect to that server and use the tools it makes available, subject to the current authentication and permission rules.
+
+## When MCP is a good fit
+
+Use MCP when:
+
+- the service already exposes an MCP server
+- your company operates its own MCP server
+- the server exposes useful actions or data through a structured tool interface
+- you want Giga to use the server’s tools directly instead of manually moving data through Chat
+
+> **MCP is the preferred custom path when it is available**
+>
+> For a new integration, Giga prefers MCP before OAuth, API credentials, or browser-based access when the service actually supports a compatible MCP server.
+
+## How an MCP Connection works
+
+<Steps>
+  <Step title="Identify the MCP server" icon="server">
+    Start with the official or company-provided MCP endpoint for the service you want to connect.
+  </Step>
+  <Step title="Giga checks how the server authenticates" icon="search">
+    The server may use its own authentication method, such as OAuth or an API-key-style bearer credential.
+  </Step>
+  <Step title="Complete the secure connection flow" icon="lock">
+    Finish authentication through Giga’s secure connection experience rather than pasting secrets into Chat.
+  </Step>
+  <Step title="Use the exposed tools" icon="zap">
+    Once connected, Giga can use the tools advertised by the MCP server when your current permissions allow it.
+  </Step>
+</Steps>
+
+## Authentication
+
+MCP servers can authenticate in different ways.
+
+The current Giga connection model can support MCP servers that use:
+
+- **OAuth**, when the server supports a compatible self-serve flow
+- **API-key-style authentication**, when the server expects a user-provided bearer credential
+
+The server’s actual authentication behavior is the source of truth.
+
+> **Giga checks the server itself**
+>
+> When a new MCP integration is installed, Giga can verify what the server actually advertises instead of relying only on a manually entered assumption about its authentication method.
+
+## Keep MCP secrets out of Chat
+
+If the MCP server requires a token, key, client credential, or other secret, use Giga’s secure connection flow.
+
+Do not paste those values into a normal [Chat](/chats/index) or store them in a [Context Note](/tracks/context-notes).
+
+[Learn about API-key-based Connections →](/connections/custom/api-keys)
+
+## Built-in MCP vs Custom MCP
+
+Some services in Giga’s integration catalog already include an MCP connection method.
+
+If the service is already listed, use that existing integration.
+
+Use a **Custom MCP** path when:
+
+- the service is not already in the catalog
+- your company operates its own MCP server
+- you need to connect a specific MCP endpoint for your workspace
+
+This avoids creating duplicate integrations for the same product.
+
+## What Giga gets from MCP
+
+An MCP Connection gives Giga access to the **tools exposed by the server**.
+
+Those tools may let Giga:
+
+- search or retrieve data
+- create or update records
+- trigger service-specific actions
+- work with external systems as part of a [Chat](/chats/index), [Agent](/agents/index), or [Workflow](/workflows/index)
+
+The exact capabilities depend on the connected MCP server. Giga should discover the live tool surface rather than assume what the server can do.
+
+## MCP and permissions
+
+Connecting an MCP server does not make every exposed tool available to every user.
+
+Access can depend on:
+
+| Layer | What it controls |
+| --- | --- |
+| **Giga access** | Whether the user or Agent can use the Connection |
+| **Group sharing** | Who can access a shared Connection |
+| **MCP authentication** | Which account or credential Giga connects with |
+| **Server permissions** | What the MCP server itself allows |
+| **Tool surface** | Which tools the server currently exposes |
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## Example: an internal MCP server
+
+Imagine your company has an internal MCP server for operations data.
+
+<Columns cols={2}>
+  <Card title="Internal MCP server" href="/connections/custom/mcp" icon="server">
+    Exposes company-specific tools through MCP.
+  </Card>
+  <Card title="Secure authentication" href="/connections/connect-a-tool" icon="lock">
+    Giga connects using the authentication method the server supports.
+  </Card>
+  <Card title="Agent access" href="/agents/connections" icon="bot">
+    An approved Agent can use the MCP tools when its Group and Connection permissions allow it.
+  </Card>
+  <Card title="Live capabilities" href="/connections/index" icon="zap">
+    Giga discovers the tools exposed by the server rather than relying on a hard-coded list.
+  </Card>
+</Columns>
+
+> **Image placeholder**
+>
+> Diagram showing Giga → MCP Connection → MCP server → exposed tools, with authentication and permissions between each layer.
+
+## Related pages
+
+- [Custom Connections](/connections/custom-connections)
+- [OAuth](/connections/custom/oauth)
+- [API keys](/connections/custom/api-keys)
+- [Browser connections](/connections/custom/browser-connections)
+- [Sharing Connections](/connections/sharing-connections)
+- [Agents and Connections](/agents/connections)

@@ -1,0 +1,174 @@
+---
+title: How Skills are used
+description: Learn how Giga reuses Skills across tasks, Agents, and repeatable work.
+---
+
+A **Skill** gives Giga a reusable method for handling a specific kind of task.
+
+Once a Skill is available in the current permission scope, its instructions and supporting files can be used to guide that task instead of rebuilding the method from scratch.
+
+## Skills separate the method from the work
+
+A Skill stores **how a task should be done**.
+
+The actual work can happen in different places depending on the current Giga surface and permissions.
+
+For example, the same task method may be relevant to:
+
+- a [Chat](/chats/index)
+- an [Agent](/agents/index)
+- a step inside a [Workflow](/workflows/index)
+- other repeated work where the live environment makes that Skill available
+
+The current live tool and permission surface determines exactly where a Skill can be applied.
+
+## Example: account research
+
+Imagine your company has an **Account Research Skill**.
+
+The Skill might define:
+
+- which evidence to prioritize
+- which company facts to collect
+- how to separate facts from inference
+- the qualification criteria to apply
+- the required output structure
+
+A Sales Research Agent can then use that method when it performs account research, provided the Skill is available to the Agent’s current scope.
+
+<Columns cols={2}>
+  <Card title="Skill" href="/skills/index" icon="sparkles">
+    Stores the reusable account research method.
+  </Card>
+  <Card title="Agent" href="/agents/index" icon="user">
+    Carries the broader Sales Research role and context.
+  </Card>
+</Columns>
+
+## Skills and Chats
+
+A Chat is useful for direct, ad hoc work.
+
+When a relevant Skill is available in the current environment, Giga can use that reusable method as part of the task instead of relying only on the instructions typed into the current Chat.
+
+Temporary directions still belong in the Chat.
+
+For example:
+
+- Skill: “Use our standard account research method.”
+- Chat: “Focus on Acme and keep this one under 300 words.”
+
+This lets the reusable method stay stable while the immediate request stays flexible.
+
+## Skills and Agents
+
+An Agent can use Skills when the current Agent and Skill configuration makes them available together.
+
+Use the Agent for:
+
+- role
+- durable instructions
+- Agent-specific context
+- Connections
+- broader responsibility
+
+Use Skills for:
+
+- repeatable task methods
+- standards
+- templates
+- task-specific reference material
+
+[Learn about Agents →](/agents/index)
+
+## Skills and Workflows
+
+A Workflow organizes a repeatable process into ordered steps.
+
+A Skill can supply the reusable method inside one of those steps when it is available during execution.
+
+For example:
+
+| Workflow step | Reusable Skill |
+| --- | --- |
+| Research the account | Account Research Skill |
+| Draft the outreach | Sales Outreach Skill |
+| Review the final message | Brand Review Skill |
+
+The Workflow controls the process order. The Skills carry the methods.
+
+[Learn about Workflows →](/workflows/index)
+
+## Availability follows permissions
+
+A user can see Skills they own plus Skills shared into Groups they belong to.
+
+That means a Skill must be available in the relevant scope before Giga should rely on it.
+
+Giga should not assume every Skill in the workspace is available to every user or Agent.
+
+[Learn about Sharing Skills →](/skills/sharing)
+
+## Supporting files travel with the Skill
+
+A Skill can contain more than its main instructions.
+
+Supporting files can provide:
+
+- templates
+- examples
+- references
+- helper material
+- task-specific scripts or files when appropriate
+
+Those files belong to the Skill’s reusable method.
+
+They should stay focused on helping Giga perform that task consistently.
+
+## Updating a Skill changes future reuse
+
+When the owner updates a Skill, the reusable method changes for future use of that Skill.
+
+This is useful when a team changes its process, standards, terminology, or expected output.
+
+Giga should read the current Skill before editing because the file set is replaced as a whole when files are updated.
+
+> **One method, maintained in one place**
+>
+> Updating the shared Skill lets the reusable method evolve without copying the same instruction changes into every Agent or Chat.
+
+## Skill visibility
+
+<Columns cols={2}>
+  <Card title="Owner-only Skill" href="/skills/sharing" icon="lock">
+    Available to the owner without sharing it to a Group.
+  </Card>
+  <Card title="Shared Skill" href="/skills/sharing" icon="users">
+    Available through one or more Groups the owner has shared it into.
+  </Card>
+</Columns>
+
+The live Skill and Group state are the source of truth for who can use it.
+
+## A practical rule
+
+Use a Skill when you find yourself repeating the same task instructions.
+
+If you are repeating the same **role**, create or refine an [Agent](/agents/index).
+
+If you are repeating the same **multi-step process**, create a [Workflow](/workflows/index).
+
+If you are repeating the same **task method**, a Skill is usually the right home.
+
+> **Image placeholder**
+>
+> Diagram showing one shared Skill feeding a Chat, an Agent, and Workflow steps, all inside the appropriate Group permission scope.
+
+## Related pages
+
+- [Introduction to Skills](/skills/index)
+- [Creating a Skill](/skills/creating-a-skill)
+- [Sharing Skills](/skills/sharing)
+- [Skill examples](/skills/examples)
+- [Introduction to Agents](/agents/index)
+- [Introduction to Workflows](/workflows/index)

@@ -1,0 +1,185 @@
+---
+title: Troubleshooting Connections
+description: Diagnose common Connection issues and choose the right way to reconnect or fix access.
+---
+
+Connection problems usually come from one of a few layers: **the Connection itself, authentication, Giga permissions, or the external provider**.
+
+Start by identifying which layer is failing before reconnecting or creating anything new.
+
+## Start here
+
+<Steps>
+  <Step title="Confirm the Connection exists" icon="search">
+    Check the Connections currently available to you before creating another one.
+  </Step>
+  <Step title="Confirm you can access it" icon="users">
+    Check whether the Connection is yours or shared into a Group you belong to.
+  </Step>
+  <Step title="Check authentication" icon="key">
+    If the credential expired, was revoked, or the account changed, reconnect through Giga’s secure setup flow.
+  </Step>
+  <Step title="Check provider permissions" icon="shield-check">
+    Confirm the connected account is actually allowed to perform the action you are asking for.
+  </Step>
+</Steps>
+
+> **Avoid duplicate Connections**
+>
+> A failed request does not automatically mean you need a new Connection. Check the existing Connection, account, permissions, and authentication first.
+
+## “I can’t see the Connection”
+
+A Connection may be missing from your current view because:
+
+- it belongs to another user
+- it was shared into a [Group](/groups/index) you do not belong to
+- the underlying credential was removed
+- you are working in a different workspace
+- the integration has not been connected yet
+
+Giga should inspect the current workspace and Connection state instead of assuming the Connection is unavailable.
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## “The Connection used to work”
+
+Authentication can stop working after setup.
+
+Common causes include:
+
+- an OAuth grant was revoked
+- an API key or PAT expired
+- a password changed
+- a browser session expired
+- the provider invalidated the credential
+- the connected account lost access inside the external system
+
+When authentication needs to change, use the secure connection flow again.
+
+[Connect a tool →](/connections/connect-a-tool)
+
+> **Reconnect securely**
+>
+> Do not paste a replacement password, token, API key, OAuth secret, or connection string into Chat.
+
+## “Giga can connect, but it can’t perform the action”
+
+A working Connection can still have limited permissions.
+
+There are several permission layers:
+
+| Layer | What to check |
+| --- | --- |
+| **Giga user access** | Can you use this Connection in the current workspace? |
+| **Group access** | Is the Connection shared into a Group you belong to? |
+| **Credential ownership** | Can you manage it, or only use it? |
+| **Provider account permissions** | Can the external account perform the requested action? |
+| **Provider scopes** | Did OAuth or the API credential grant the required access? |
+| **Current tool surface** | Does the connected service expose the action Giga needs? |
+
+A read-only provider account will remain read-only when used through Giga.
+
+## “The wrong account is connected”
+
+If your company has several accounts for the same service, check the Connection label and account context before using it.
+
+Clear names such as **Production CRM**, **Test CRM**, or **North America Support** make this much easier.
+
+If the wrong credential is behind the Connection, reconnect the intended account through the secure setup flow.
+
+[Learn about Managing Connections →](/connections/managing-connections)
+
+## “My API key is valid, but the request still fails”
+
+Authentication is only one part of an API request.
+
+For raw API Connections, Giga also needs the provider’s current API contract, including details such as:
+
+- endpoint
+- HTTP method
+- body shape
+- headers
+- pagination
+- signing
+- idempotency
+
+Giga should verify that contract before making the request rather than guessing the request format.
+
+[Learn about API-key Connections →](/connections/custom/api-keys)
+
+## “The browser login is blocked”
+
+Websites may interrupt automated login with:
+
+- CAPTCHA
+- two-factor authentication
+- bot detection
+- a login approval screen
+
+When that happens, Giga should stop retrying and hand the login step to you.
+
+<Steps>
+  <Step title="Open the login handoff" icon="log-in">
+    Giga gives you the browser-profile login flow.
+  </Step>
+  <Step title="Sign in yourself" icon="user-check">
+    Complete the CAPTCHA, 2FA, or other blocked login step.
+  </Step>
+  <Step title="Save and close" icon="save">
+    Save the authenticated browser profile.
+  </Step>
+  <Step title="Continue the task" icon="play">
+    Giga can reuse the signed-in profile while that session remains valid.
+  </Step>
+</Steps>
+
+[Learn about Browser Connections →](/connections/custom/browser-connections)
+
+## “The integration I need isn’t listed”
+
+First, confirm that the service is genuinely missing from Giga’s integration catalog.
+
+If it is missing, Giga can investigate the service and choose the strongest connection path it supports:
+
+1. **MCP**
+2. **OAuth** with a supported self-serve flow
+3. **API key or PAT**
+4. **Browser login**
+
+[Explore Custom Connections →](/connections/custom-connections)
+
+## “I can use the Connection, but I can’t edit or remove it”
+
+This often means the credential is shared with you rather than owned by you.
+
+In the current model, a teammate can use a credential shared into a Group without automatically gaining permission to edit or delete it.
+
+The credential owner retains those management controls.
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## Quick diagnosis
+
+| Problem | First thing to check |
+| --- | --- |
+| Connection missing | Workspace and Group access |
+| Login stopped working | Authentication or expired credential |
+| Read works, write fails | Provider permissions or OAuth scopes |
+| API request fails | Provider API contract |
+| Browser stuck at login | CAPTCHA, 2FA, or bot-detection handoff |
+| Wrong account used | Connection label and credential |
+| Can use but cannot edit | Credential ownership |
+| Service is missing | Integration catalog, then Custom Connections |
+
+> **Image placeholder**
+>
+> Troubleshooting flowchart: Connection exists? → Access allowed? → Authentication valid? → Provider permission available? → Correct connection method?
+
+## Related pages
+
+- [Introduction to Connections](/connections/index)
+- [Connect a tool](/connections/connect-a-tool)
+- [Managing Connections](/connections/managing-connections)
+- [Sharing Connections](/connections/sharing-connections)
+- [Custom Connections](/connections/custom-connections)

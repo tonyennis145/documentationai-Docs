@@ -1,0 +1,169 @@
+---
+title: Teams & Admin
+description: >-
+  Learn how workspace membership, roles, permissions, company Connections, and
+  workspace-level context are administered in Giga.
+---
+The **Teams & Admin** area covers how Giga is managed across a workspace.
+
+The current admin model centers on workspace membership, Group-based access, permission-aware resources, company Connections, and workspace-level settings.
+
+## Start with the workspace
+
+A workspace is the top-level environment that brings your company’s Giga resources together.
+
+Within it, access is shaped by:
+
+- workspace membership
+- workspace role
+- [Group](/groups/index) membership
+- resource ownership
+- current tool permissions
+- permissions inside connected external systems
+
+Giga should use the live workspace state as the source of truth for who can do what.
+
+## Admin areas
+
+<Columns cols="2">
+  <Card title="Members and roles" href="/teams-and-admin/members-and-roles" icon="users" horizontal="false">
+    Understand workspace membership and the current Owner, Admin, and Member roles.
+  </Card>
+
+  <Card title="Permissions" href="/teams-and-admin/permissions" icon="shield-check" horizontal="false">
+    See how workspace roles, Groups, Tracks, Agents, Skills, files, and Connections fit together.
+  </Card>
+
+  <Card title="Company Connections" href="/teams-and-admin/managing-company-connections" icon="plug" horizontal="false">
+    Manage connected access used across the company while keeping credential ownership and Group sharing separate.
+  </Card>
+
+  <Card title="Workspace settings" href="/teams-and-admin/workspace-settings" icon="settings" horizontal="false">
+    Understand the workspace-level settings and context that are currently available.
+  </Card>
+</Columns>
+
+## Workspace roles
+
+The current workspace roles are:
+
+| Role       | Current documented behavior                                                                                       |
+| ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Owner**  | A workspace role with protected membership status in the current removal flow                                     |
+| **Admin**  | Can perform current admin membership operations such as adding workspace members and granting shared Group access |
+| **Member** | A standard workspace member whose access depends on their Groups and other resource permissions                   |
+
+This is not a complete permission matrix.
+
+Exact capabilities should be checked against the live workspace and current tools rather than inferred from the role name alone.
+
+[Learn about Members and roles →](/teams-and-admin/members-and-roles)
+
+## Workspace membership and Group access are separate
+
+Being in the workspace does not automatically mean a person can access every shared resource.
+
+A person first belongs to the workspace. Shared [Groups](/groups/index) then define which team resources are available to them.
+
+Groups can scope access around resources such as:
+
+- [Tracks](/tracks/index)
+- [Agents](/agents/index)
+- files
+- shared credentials and [Connections](/connections/index)
+- Group-level context
+
+> **Workspace membership opens the door. Group membership defines much of the room-by-room access.**
+>
+> Giga still checks the live resource and permission state before acting.
+
+## Permissions follow the resource
+
+Different Giga primitives have their own access rules.
+
+For example:
+
+- Track visibility currently follows the Group the Track lives in
+- Skills can be owner-only or explicitly shared into Groups
+- credentials can be owned by one user and shared into Groups
+- files follow the Group or Track scope that contains them
+- Context Notes and Current Track State inherit the Track’s Group boundary
+- Agents are Group-scoped where supported by the current product model
+
+[Learn about Permissions →](/teams-and-admin/permissions)
+
+## Company Connections
+
+A company Connection can give the right people or Agents access to external systems without handing around raw credentials.
+
+Credential ownership and usage are separate.
+
+A user may be able to **use** a credential shared into their Group without being able to edit or delete it.
+
+The external provider’s own permissions still apply.
+
+[Learn about Managing company Connections →](/teams-and-admin/managing-company-connections)
+
+## Workspace-level context
+
+Giga supports workspace-level context for standing guidance that applies across the workspace.
+
+Changes to that workspace context are admin-controlled in the current model.
+
+Group and Track context use their own management permissions.
+
+This keeps company-wide guidance separate from context that belongs to one team or one body of work.
+
+## Consequential admin changes
+
+Access changes can affect other people’s work.
+
+Giga should confirm consequential changes such as:
+
+- granting access
+- removing members
+- deleting credentials
+- sharing sensitive files
+- changing other meaningful permission boundaries
+
+Live permissions should be checked immediately before the change.
+
+## Current documentation boundary
+
+This section documents only admin behavior backed by the current product doctrine and live tool surface.
+
+Enterprise controls such as SSO, authentication policies, audit logs, data residency, retention, DPA terms, and security-control exports require separate canonical product sources before they should be documented as Giga capabilities.
+
+## A simple example
+
+Imagine a new salesperson joins the company.
+
+<Steps>
+  <Step title="Add them to the workspace" icon="user-plus" title-type="p">
+    A workspace admin adds the new member.
+  </Step>
+
+  <Step title="Give them Sales access" icon="users" title-type="p">
+    The admin adds the existing workspace member to the shared Sales Group.
+  </Step>
+
+  <Step title="Use shared resources" icon="layers" title-type="p">
+    The member can use the Sales resources available through that Group and the current live permissions.
+  </Step>
+
+  <Step title="Keep external access scoped" icon="plug" title-type="p">
+    Shared Connections still follow credential ownership and provider-side permissions.
+  </Step>
+</Steps>
+
+> **Image placeholder**
+>
+> Diagram showing Workspace → Owner/Admin/Member → Groups → Tracks, Agents, Files, Skills, and shared Connections.
+
+## Related pages
+
+- [Members and roles](/teams-and-admin/members-and-roles)
+- [Permissions](/teams-and-admin/permissions)
+- [Managing company Connections](/teams-and-admin/managing-company-connections)
+- [Workspace settings](/teams-and-admin/workspace-settings)
+- [Introduction to Groups](/groups/index)

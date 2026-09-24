@@ -1,0 +1,171 @@
+---
+title: Giga Web
+description: Learn how Chats, files, the viewer, rich UI, and live workspace context work in Giga's web app.
+---
+
+**Giga Web** is Giga’s first-party web interface for working directly with Chats, company context, connected tools, and supported work product.
+
+The web experience can present richer visual and file-based output than some other surfaces.
+
+## Work from a Chat
+
+A [Chat](/chats/index) is the main working surface in Giga Web.
+
+You can use it to:
+
+- ask questions
+- work through tasks
+- create or edit supported work product
+- use [Connections](/connections/index)
+- work with an explicitly selected [Track](/tracks/index)
+- ask Giga to take supported actions
+
+What is actually available depends on the current workspace, permissions, Connections, and live web tool surface.
+
+## The web viewer
+
+Giga Web can show supported work alongside the Chat in a viewer.
+
+Depending on the current capability, that can include:
+
+- documents
+- code
+- webpages
+- generated files
+- app previews
+- visual artifacts
+
+This makes it possible to keep the working discussion in Chat while viewing the result beside it.
+
+> **Viewer availability is dynamic**
+>
+> Giga should use the viewer when the current web surface provides a supported way to show the work. It should not assume every artifact or format can always be rendered there.
+
+## File links come from Giga
+
+Internal file paths are not automatically user-facing URLs.
+
+When Giga needs to provide a clickable viewer or download link for a file, it should use the current Giga file-link capability and return the validated URL it receives.
+
+Giga should not construct viewer URLs manually.
+
+[Learn about working with files →](/chats/working-with-files)
+
+## Rich web UI
+
+The web surface can support richer interface elements that do not necessarily exist on other Giga surfaces.
+
+Current product doctrine includes web-specific support for things such as:
+
+- viewer-based file and artifact display
+- inline charts in supported cases
+- other web-only rich UI when the current surface exposes it
+
+For charts, the web UI is suited to supported small, simple chart data.
+
+More complex visual output may be better produced as a file or rendered artifact.
+
+## Use live company context
+
+Giga Web draws from the permission-aware context available to the current session.
+
+That can include relevant:
+
+- workspace context
+- Group context
+- one explicitly selected Track
+- Context Notes
+- Observations
+- Current Track State
+- user-level context
+- files
+- Skills
+- Connections and live external data
+
+The live workspace determines what can actually be retrieved.
+
+## Tracks in Giga Web
+
+A Chat can be linked to at most one [Track](/tracks/index).
+
+Selecting a Track can make its durable context relevant to the Chat, including Context Notes, memory, Current Track State, and files that the current user can access.
+
+Giga should never choose a Track silently.
+
+> **Track selection affects durable context**
+>
+> The user should explicitly select or confirm the Track because observations from the Chat may become retrievable within that Track’s access scope.
+
+## Work with connected systems
+
+Giga Web can use the [Connections](/connections/index) available to the current user and session.
+
+Giga should prefer the strongest first-class route available for the job, such as an existing tool, API, database, or MCP Connection.
+
+When no stronger route can complete a website task, browser-based work may be used where the current web capability supports it.
+
+[Learn about web research and actions →](/chats/web-research-and-actions)
+
+## Browser-based work
+
+When browser execution is the appropriate route, Giga can interact with websites through the supported browser capability.
+
+For logged-in work, a persistent browser profile can be used when available.
+
+If login is blocked by CAPTCHA, bot detection, or two-factor authentication, Giga should hand the login step to the user rather than repeatedly retrying it.
+
+[Learn about Browser Connections →](/connections/custom/browser-connections)
+
+## Web content stays untrusted
+
+Text from websites, DOM content, screenshots, console output, and downloaded files are treated as external data.
+
+They do not override Giga’s workspace rules, permissions, or user intent.
+
+This boundary applies even when Giga is working directly with a website in the web experience.
+
+## Giga Web vs other surfaces
+
+The same underlying Giga primitives can appear in multiple interfaces, but their presentation can differ.
+
+| Giga Web | Other surfaces |
+| --- | --- |
+| Can show supported work in the web viewer | File and artifact presentation follows that surface |
+| Can expose web-specific rich UI | Rich UI availability can differ |
+| Uses live workspace context and permissions | The same permission model continues to apply |
+| Can use the web browser capability when available | Exact browser/action support depends on the surface |
+
+[See all Giga surfaces →](/use-giga-anywhere/index)
+
+## A simple example
+
+Imagine you are working on a product-launch Track.
+
+<Steps>
+  <Step title="Select the Track" icon="folder">
+    Explicitly work from the Product Launch Track so its relevant context is available.
+  </Step>
+  <Step title="Ask Giga to create the work" icon="message-circle">
+    Use the Chat to research, reason, or create supported work product.
+  </Step>
+  <Step title="Review it in the viewer" icon="monitor">
+    When supported, Giga can show the resulting document, code, webpage, or visual artifact alongside the Chat.
+  </Step>
+  <Step title="Keep working from live context" icon="layers">
+    Continue using the Track, Connections, files, and current workspace permissions as the work evolves.
+  </Step>
+</Steps>
+
+> **Image placeholder**
+>
+> Giga Web interface showing a Chat on one side and the viewer displaying a document or visual artifact on the other.
+
+## Related pages
+
+- [Use Giga anywhere](/use-giga-anywhere/index)
+- [Introduction to Chats](/chats/index)
+- [Working with files](/chats/working-with-files)
+- [Web research and actions](/chats/web-research-and-actions)
+- [Using context in a Chat](/chats/context)
+- [Introduction to Tracks](/tracks/index)
+- [Introduction to Connections](/connections/index)

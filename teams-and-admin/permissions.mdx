@@ -1,0 +1,194 @@
+---
+title: Permissions
+description: >-
+  Learn how workspace roles, Groups, resource ownership, and provider
+  permissions combine to control access in Giga.
+---
+Giga permissions are layered.
+
+Workspace membership establishes who belongs to the workspace. [Groups](/groups/index) provide the main placement and access scopes for shared work, while individual resources can add their own ownership or management rules.
+
+## The permission layers
+
+| Layer                             | What it affects                                                |
+| --------------------------------- | -------------------------------------------------------------- |
+| **Workspace membership**          | Whether a person belongs to the Giga workspace                 |
+| **Workspace role**                | Access to current admin-level operations                       |
+| **Group membership**              | Access to shared work and resources inside that Group          |
+| **Resource ownership**            | Who can manage certain resources such as Skills or credentials |
+| **External provider permissions** | What a connected account can do inside the external service    |
+| **Live tool permissions**         | Which operations Giga can perform in the current session       |
+
+Giga should check the live state before any access-sensitive action.
+
+> **Permissions are resolved at the time of the request**
+>
+> Roles, Group membership, resource sharing, and provider access can change. The current workspace and connected service are the source of truth.
+
+## Workspace roles
+
+The current workspace roles are **Owner**, **Admin**, and **Member**.
+
+Current documented admin behavior includes:
+
+- workspace admins can add members
+- workspace admins can add existing members to shared Groups
+- owners have protected membership status in the current member-removal flow
+- removing a member soft-archives their workspace membership and preserves their data
+
+Role names do not provide a complete resource-level permission matrix.
+
+[Learn about Members and roles →](/teams-and-admin/members-and-roles)
+
+## Groups are the main shared access boundary
+
+A [Group](/groups/index) provides the broader access scope around shared resources.
+
+Groups can scope resources such as:
+
+- [Tracks](/tracks/index)
+- [Agents](/agents/index)
+- files
+- credentials and [Connections](/connections/index)
+- Group-level context
+
+A person must first belong to the workspace before an admin can grant them access to a shared Group.
+
+## Track permissions
+
+A Track currently inherits visibility from the Group it lives in.
+
+<Columns cols="2">
+  <Card title="Private Track" href="/groups/personal-vs-shared" icon="lock" horizontal="false">
+    Lives in the user’s existing private Group.
+  </Card>
+
+  <Card title="Shared Track" href="/tracks/sharing-and-permissions" icon="users" horizontal="false">
+    Lives in a shared Group and is available to the members who can access that Group.
+  </Card>
+</Columns>
+
+Track context, Observations, Current Track State, and files stay inside that access boundary.
+
+A Chat should only be attached to a Track after the user explicitly selects or confirms it because attachment affects where Observations can become retrievable.
+
+## Agent permissions
+
+Agents operate within the Group permission model where supported by the current product surface.
+
+An Agent’s available context and capabilities can depend on:
+
+- its Group
+- the current user’s access
+- shared Connections
+- available Skills
+- live tool permissions
+
+Giga should resolve the actual Agent and Group state before assuming access.
+
+[Learn about Sharing Agents →](/agents/sharing)
+
+## Skill permissions
+
+[Skills](/skills/index) use explicit sharing.
+
+A Skill can be:
+
+- owner-only
+- shared into one or more Groups
+
+Users can see Skills they own plus Skills shared into Groups they belong to.
+
+The Skill owner retains management control in the current model.
+
+[Learn about Sharing Skills →](/skills/sharing)
+
+## Connection permissions
+
+Connections can add several permission layers at once.
+
+A credential can have an owner and can be shared into Groups.
+
+A teammate may be able to use a shared credential while the owner keeps management controls such as renaming or deleting it.
+
+The external service still controls what the connected account is allowed to do.
+
+| Check                    | Why it matters                                            |
+| ------------------------ | --------------------------------------------------------- |
+| **Current user access**  | Determines whether the user can use the Connection        |
+| **Group sharing**        | Determines which shared scopes can use it                 |
+| **Credential ownership** | Determines who can manage the stored credential           |
+| **Provider permissions** | Limits actions inside the external system                 |
+| **Exposed tools**        | Determines which connected capabilities are available now |
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## File permissions
+
+Files follow the access scope of the Group or Track that contains them.
+
+When a file needs a user-facing viewer or download link, Giga should use the validated file-link capability rather than constructing a URL from an internal path.
+
+[Learn about Files in Tracks →](/tracks/files)
+
+## Context permissions
+
+Context exists at several levels.
+
+- **Workspace context** is admin-controlled in the current model.
+- **Group context** requires appropriate management permission for that Group.
+- **Track context** requires appropriate management permission for the Track’s Group.
+- **User context** belongs to the current user.
+
+Context Notes and Current Track State follow the access boundary of their Track.
+
+## Consequential permission changes
+
+Changes that affect another person’s access deserve confirmation.
+
+Examples include:
+
+- granting access
+- removing a workspace member
+- sharing sensitive resources
+- deleting a credential
+- changing a meaningful access boundary
+
+Giga should verify the exact resource, audience, and current permissions immediately before making the change.
+
+## A simple example
+
+Imagine a Sales team using a shared CRM Connection.
+
+<Steps>
+  <Step title="Workspace membership" icon="user-check" title-type="p">
+    A salesperson belongs to the Giga workspace.
+  </Step>
+
+  <Step title="Sales Group access" icon="users" title-type="p">
+    The salesperson belongs to the shared Sales Group.
+  </Step>
+
+  <Step title="Shared Connection" icon="plug" title-type="p">
+    The CRM Connection is available within that Group’s current scope.
+  </Step>
+
+  <Step title="Provider permissions" icon="shield-check" title-type="p">
+    The CRM account itself determines which records and actions are allowed.
+  </Step>
+</Steps>
+
+All 4 layers can matter to the final action.
+
+> **Image placeholder**
+>
+> Layered permission diagram: Workspace → Role → Group → Resource ownership/sharing → External provider permissions.
+
+## Related pages
+
+- [Teams & Admin overview](/teams-and-admin/index)
+- [Members and roles](/teams-and-admin/members-and-roles)
+- [Managing company Connections](/teams-and-admin/managing-company-connections)
+- [Workspace settings](/teams-and-admin/workspace-settings)
+- [Introduction to Groups](/groups/index)
+- [Sharing and permissions for Tracks](/tracks/sharing-and-permissions)

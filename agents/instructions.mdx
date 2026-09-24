@@ -1,0 +1,166 @@
+---
+title: Agent instructions
+description: Learn how durable instructions define an Agent's role, working rules, and expected behavior.
+---
+
+**Agent instructions** define how an Agent should approach its role across repeated work.
+
+They are durable guidance for the Agent, so the user does not need to restate the same rules in every Chat.
+
+## What belongs in Agent instructions
+
+Use Agent instructions for behavior that should stay true across future work.
+
+Good candidates include:
+
+<Columns cols={2}>
+  <Card title="Role" href="/agents/index" icon="user">
+    What the Agent is responsible for.
+  </Card>
+  <Card title="Working rules" href="/agents/instructions" icon="list-checks">
+    The recurring rules and constraints it should follow.
+  </Card>
+  <Card title="Terminology" href="/agents/instructions" icon="book-open">
+    Company-specific language the Agent should use consistently.
+  </Card>
+  <Card title="Output expectations" href="/agents/instructions" icon="file-text">
+    How the Agent should structure or present recurring work.
+  </Card>
+</Columns>
+
+## Instructions vs one-off Chat requests
+
+Keep durable behavior in Agent instructions.
+
+Keep temporary directions in the current [Chat](/chats/index).
+
+| Put it in Agent instructions | Keep it in Chat |
+| --- | --- |
+| “Always cite the source of customer facts.” | “Summarize these 3 tickets.” |
+| “Use our internal lifecycle terminology.” | “Make this answer shorter.” |
+| “Confirm before taking an outward-facing action.” | “Focus on Acme for this request.” |
+| “Prioritize open opportunities over closed ones.” | “Research these 5 accounts today.” |
+
+If a direction should still matter next week, it is a strong candidate for the Agent’s durable instructions.
+
+## Instructions vs context
+
+Instructions tell the Agent **how to behave**.
+
+Context tells the Agent **what it should know**.
+
+For example:
+
+- “Always separate confirmed facts from assumptions” is an instruction.
+- “Our enterprise tier is called Scale” is context.
+
+The two can work together, but keeping them conceptually separate makes the Agent easier to maintain.
+
+[Learn about Agents and context →](/agents/context-and-knowledge)
+
+## Instructions vs Skills
+
+A [Skill](/skills/index) stores a reusable method for a particular kind of task.
+
+Agent instructions define the broader operating behavior of the Agent.
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Recruiting Agent instructions" href="/agents/instructions" icon="user">
+    Defines the Agent’s role, tone, decision boundaries, and recurring working rules.
+  </Card>
+  <Card title="Candidate screening Skill" href="/skills/index" icon="sparkles">
+    Defines a reusable process for evaluating a candidate against a role.
+  </Card>
+</Columns>
+
+If the method could be useful to another Agent, it probably belongs in a Skill.
+
+## Write instructions that leave room for judgment
+
+Useful Agent instructions describe outcomes and boundaries without turning every task into a rigid script.
+
+Prefer guidance such as:
+
+- “Return the strongest evidence first.”
+- “Ask before taking an outward-facing action.”
+- “Use live CRM data when the Connection is available.”
+- “Flag missing evidence instead of guessing.”
+
+Avoid bloated instructions that prescribe every click, search, or tool call unless that detail is genuinely required.
+
+## Connections can have their own operating guidance
+
+Some Connections can include provider-specific guidance about how they should be used.
+
+That guidance can complement the Agent’s own instructions.
+
+For example, a browser-based Connection may carry service-specific operating notes while the Agent instructions define the Agent’s broader role.
+
+The live Connection configuration remains the source of truth for provider-specific behavior.
+
+[Learn about Agent Connections →](/agents/connections)
+
+## Editing Agent instructions
+
+Agent instructions are durable context.
+
+When editing existing instructions, Giga should read the current version first and amend it rather than accidentally wiping useful guidance.
+
+Internally, the context tools may treat this durable Agent guidance as the Agent’s **brief**.
+
+> **Read before replacing**
+>
+> The underlying context update can replace the stored content. Existing instructions should be reviewed before a meaningful update so useful guidance is preserved.
+
+Meaningful changes should be confirmed with the user before they are saved.
+
+## Keep instructions maintainable
+
+A useful Agent instruction set is usually easier to maintain when it has a small number of clear sections.
+
+For example:
+
+### Role
+
+Research target accounts for the Sales team.
+
+### Priorities
+
+Prioritize current company facts and evidence from approved Connections.
+
+### Working rules
+
+- Separate confirmed facts from inference.
+- Link to sources when available.
+- Ask before making outward-facing changes.
+
+### Output
+
+Return a concise account summary, useful signals, and open questions.
+
+This gives the Agent a stable operating model without freezing every task into a fixed procedure.
+
+## A simple test
+
+Before adding something to Agent instructions, ask:
+
+> “Should this still guide the Agent across future work?”
+
+If yes, it belongs in durable instructions.
+
+If it only matters for the current task, keep it in Chat.
+
+If it is a reusable task method, consider a [Skill](/skills/index).
+
+If it is a multi-step process, consider a [Workflow](/workflows/index).
+
+## Related pages
+
+- [Introduction to Agents](/agents/index)
+- [Creating an Agent](/agents/creating-an-agent)
+- [Giving Agents access to Connections](/agents/connections)
+- [Agents and context](/agents/context-and-knowledge)
+- [Sharing Agents](/agents/sharing)
+- [Introduction to Skills](/skills/index)

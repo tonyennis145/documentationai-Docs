@@ -1,0 +1,164 @@
+---
+title: Skills
+description: Learn how reusable Skills give Giga task-specific instructions, methods, and supporting context.
+---
+
+A **Skill** is reusable instructions and supporting context for a specific kind of task.
+
+Skills let you teach Giga how your company wants a task handled once, then reuse that method without explaining it again every time.
+
+> **Video placeholder**
+>
+> Skills & Workflows overview video.
+
+## What a Skill is good for
+
+Use a Skill when you have a repeatable way of doing a specific task.
+
+Examples include:
+
+- researching an account
+- screening a candidate
+- writing a customer update
+- reviewing a document against company standards
+- preparing a weekly report
+- following a specific internal process or template
+
+A Skill can hold the instructions, standards, reference context, and supporting files needed for that task.
+
+## Skill vs Agent vs Workflow
+
+| Primitive | Best fit |
+| --- | --- |
+| **Skill** | Reusable instructions for a specific kind of task |
+| **Agent** | A named reusable AI role with broader identity, context, and access |
+| **Workflow** | A reusable ordered multi-step process |
+| **Chat** | Ad hoc work that does not need a reusable primitive |
+
+A Skill answers **how should Giga do this kind of task?**
+
+An [Agent](/agents/index) carries the broader role doing the work. A [Workflow](/workflows/index) organizes multiple ordered stages.
+
+## Skills can be reused
+
+A well-designed Skill should be useful wherever that task method is needed and permitted.
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Account Research Skill" href="/skills/index" icon="sparkles">
+    Defines how Giga should research and summarize an account.
+  </Card>
+  <Card title="Sales Research Agent" href="/agents/index" icon="user">
+    Can use that method as part of its broader sales research role when the Skill is available.
+  </Card>
+</Columns>
+
+The same Skill could also be useful in a normal Chat or another Agent if the live environment makes it available.
+
+## What can live inside a Skill
+
+A Skill is stored as a set of files with a required **SKILL.md** entry point.
+
+That structure can contain:
+
+- the main task instructions
+- supporting reference material
+- templates
+- examples
+- helper files or scripts when appropriate
+
+The exact files should support the task the Skill teaches.
+
+> **Keep the Skill focused on the method**
+>
+> Put reusable task guidance in the Skill. Keep broad Agent identity in Agent instructions, and keep project-specific standing background in Track Context Notes.
+
+## Creating and editing Skills
+
+The current Giga tools support:
+
+- creating a Skill
+- reading its full file set
+- updating it
+- deleting it
+- sharing it into Groups
+- removing it from Groups
+
+When editing a Skill, Giga should read the current files first.
+
+Updating the Skill’s file set replaces that complete set, so edits should preserve any files that are still needed.
+
+[Learn how to create a Skill →](/skills/creating-a-skill)
+
+## Skills can be private or shared
+
+A Skill can remain owner-only or be shared into one or more [Groups](/groups/index).
+
+Users can see Skills they own plus Skills shared into Groups they belong to.
+
+This gives teams a way to reuse the same method without copying the instructions into every Agent or Chat.
+
+[Learn about Sharing Skills →](/skills/sharing)
+
+## Ownership matters
+
+The current Skill model distinguishes between owning a Skill and having access to a shared Skill.
+
+The owner can manage the Skill.
+
+A teammate may be able to use a Skill shared into their Group without owning the underlying Skill itself.
+
+The live Skill and Group state determine the exact access available in a session.
+
+## A simple example
+
+Imagine your Sales team has a standard way to research target accounts.
+
+Instead of placing that entire method inside every Agent, you create an **Account Research Skill**.
+
+It might contain:
+
+- which sources to check
+- what evidence to prioritize
+- the required output structure
+- company-specific qualification criteria
+- examples of strong research summaries
+
+That Skill can then be reused wherever the method is relevant and available.
+
+<Columns cols={2}>
+  <Card title="Skill" href="/skills/index" icon="sparkles">
+    Stores the repeatable account research method.
+  </Card>
+  <Card title="Agent" href="/agents/index" icon="user">
+    Provides the broader Sales Research role.
+  </Card>
+  <Card title="Workflow" href="/workflows/index" icon="list-checks">
+    Can organize research into a larger ordered process.
+  </Card>
+  <Card title="Group" href="/groups/index" icon="users">
+    Controls which team can access the shared Skill.
+  </Card>
+</Columns>
+
+> **Image placeholder**
+>
+> Diagram showing one Skill reused by a Chat, an Agent, and a Workflow within the appropriate Group permissions.
+
+## Explore Skills
+
+<Columns cols={2}>
+  <Card title="Creating a Skill" href="/skills/creating-a-skill" icon="plus-circle">
+    Turn a repeatable task method into a reusable Skill.
+  </Card>
+  <Card title="How Skills are used" href="/skills/how-skills-are-used" icon="play">
+    Understand how Skills fit into Chats, Agents, and repeated work.
+  </Card>
+  <Card title="Sharing Skills" href="/skills/sharing" icon="users">
+    Make a Skill available to the right Groups.
+  </Card>
+  <Card title="Examples" href="/skills/examples" icon="book-open">
+    See practical examples of useful Skills.
+  </Card>
+</Columns>

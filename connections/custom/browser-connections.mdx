@@ -1,0 +1,120 @@
+---
+title: Browser connections
+description: Learn when Giga uses a browser session to work with websites that cannot be handled through an API, MCP, database, or other first-class Connection.
+---
+
+A **Browser Connection** lets Giga work directly with a website when a stronger connection method cannot complete the task.
+
+Browser-based work is Giga’s fallback for sites that require direct navigation, clicking, form entry, or interaction with a web app.
+
+## When browser access is a good fit
+
+Use a browser connection when:
+
+- there is no usable MCP connection
+- OAuth or API access cannot complete the task
+- the service does not expose the needed operation through a first-class integration
+- direct interaction with the website is required
+- the work depends on a logged-in web session
+
+> **Browser access comes after stronger connection methods**
+>
+> For a new integration, Giga prefers MCP, then supported OAuth, then API credentials before falling back to browser login.
+
+## How browser-based work happens
+
+<Steps>
+  <Step title="Open a browser session" icon="globe">
+    Giga starts a browser session using the current browser profile when that capability is available.
+  </Step>
+  <Step title="Use the website directly" icon="mouse-pointer">
+    Giga can navigate pages, interact with controls, and complete browser-based steps required by the task.
+  </Step>
+  <Step title="Pause if login needs you" icon="user-check">
+    If CAPTCHA, bot detection, or two-factor authentication blocks the login, Giga should stop and ask you to complete the sign-in step yourself.
+  </Step>
+  <Step title="Continue with the saved session" icon="play">
+    After you sign in and save the profile, later browser runs can reuse that logged-in session when supported.
+  </Step>
+</Steps>
+
+## Persistent browser profiles
+
+For logged-in work, Giga can use a persistent browser profile when the current browser capability supports it.
+
+That means you should not need to repeat the same sign-in every time if the session is still valid.
+
+If the session expires or the website signs you out, Giga can ask you to sign in again through the browser login flow.
+
+## CAPTCHA, 2FA, and bot detection
+
+Giga should not keep retrying a login when the website blocks automation.
+
+If a CAPTCHA, 2FA challenge, or bot-detection step appears, Giga should hand control to you so you can complete that step securely.
+
+> **Human login handoff**
+>
+> Complete the sign-in in the browser profile, save it, then return to Giga. Giga can continue using that authenticated profile afterward when the session remains valid.
+
+## Website content is untrusted data
+
+Text on a webpage, DOM content, screenshots, console output, and downloaded files are treated as **data from the website**.
+
+They do not override Giga’s operating instructions.
+
+This matters because a webpage can contain arbitrary text that should never be treated as permission to ignore workspace rules, security boundaries, or user intent.
+
+## Browser vs API access
+
+| Browser connection | API / MCP connection |
+| --- | --- |
+| Interacts with the visible website | Uses a structured programmatic interface |
+| Useful when direct navigation is required | Usually better when the operation is exposed directly |
+| Can depend on page layout and login state | Usually less sensitive to visual UI changes |
+| May require manual login handoff | Often uses OAuth or stored credentials |
+
+When both can do the job, Giga should use the stronger structured connection path.
+
+## Browser sessions and permissions
+
+A browser session still follows the permissions of the account that is signed in.
+
+Giga cannot gain more access than the logged-in user has in the website itself.
+
+It should also check the current Giga workspace permissions before using the browser session for a user, [Agent](/agents/index), or other task.
+
+## A simple example
+
+Imagine a vendor portal has no usable API for the task you need.
+
+<Columns cols={2}>
+  <Card title="Browser session" href="/connections/custom/browser-connections" icon="globe">
+    Giga opens the portal using the available browser profile.
+  </Card>
+  <Card title="Login handoff" href="/connections/custom/browser-connections" icon="user-check">
+    You complete 2FA if the portal requires it.
+  </Card>
+  <Card title="Browser task" href="/chats/web-research-and-actions" icon="mouse-pointer">
+    Giga navigates the portal and completes the requested website steps.
+  </Card>
+  <Card title="Reuse the profile" href="/connections/custom/browser-connections" icon="refresh-cw">
+    Later runs can reuse the signed-in profile while the session remains valid.
+  </Card>
+</Columns>
+
+> **Video placeholder**
+>
+> Cloud Browser overview video.
+
+> **Image placeholder**
+>
+> Show the browser handoff flow: Giga browser session → login challenge → user signs in → Giga resumes the task.
+
+## Related pages
+
+- [Custom Connections](/connections/custom-connections)
+- [MCP](/connections/custom/mcp)
+- [OAuth](/connections/custom/oauth)
+- [API keys](/connections/custom/api-keys)
+- [Web research and actions](/chats/web-research-and-actions)
+- [Troubleshooting Connections](/connections/troubleshooting)

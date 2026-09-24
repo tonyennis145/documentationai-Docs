@@ -1,0 +1,175 @@
+---
+title: Running a Workflow
+description: Learn how a Workflow uses runtime inputs, moves through its ordered steps, and reports progress.
+---
+
+Running a **Workflow** means taking its saved process and executing the ordered steps for a specific task.
+
+The process stays reusable while the inputs and live workspace context can change from one run to the next.
+
+## Before the run starts
+
+A Workflow may ask for runtime inputs.
+
+Depending on how the Workflow was created, those inputs can include:
+
+- text
+- URL
+- number
+- choice
+- boolean
+
+For example, an account-research Workflow might ask for a **company name** and **company website**.
+
+The Workflow keeps the process stable while those values change each time.
+
+## What happens during a run
+
+Giga works through the Workflow in order.
+
+<Steps>
+  <Step title="Start the first step" icon="play">
+    Giga begins the first meaningful stage using the Workflow instructions and current inputs.
+  </Step>
+  <Step title="Use the live workspace" icon="layers">
+    Giga can use relevant Skills, Connections, tools, files, and context that are actually available in the current session.
+  </Step>
+  <Step title="Report the step result" icon="check-circle">
+    The step is marked completed, blocked, or failed based on what happened.
+  </Step>
+  <Step title="Continue when appropriate" icon="arrow-right">
+    A completed step moves the run to the next stage. A blocked or failed step stops the run.
+  </Step>
+</Steps>
+
+## Step status
+
+The current Workflow execution model supports these statuses:
+
+| Status | Meaning |
+| --- | --- |
+| **Running** | Giga is currently working on the step |
+| **Completed** | The step finished successfully |
+| **Blocked** | The step cannot continue because something required is missing or needs intervention |
+| **Failed** | The step encountered an error and did not complete |
+
+Giga can include a short summary of what happened, or an error when a step is blocked or failed.
+
+> **Blocked and failed runs stop**
+>
+> Giga should stop after a blocked or failed step instead of pretending the process completed successfully.
+
+## What can block a Workflow?
+
+A step can become blocked when the process needs something Giga cannot safely or correctly proceed without.
+
+Examples include:
+
+- a required input is missing
+- a Connection is unavailable
+- the user does not have the necessary permission
+- a browser login needs human 2FA or CAPTCHA completion
+- the step requires confirmation before an outward-facing action
+- the evidence is insufficient under the Workflow’s own instructions
+
+A blocked status should explain what is needed before the work can continue.
+
+## Live permissions still apply
+
+A Workflow does not bypass Giga’s access model.
+
+During a run, Giga should check the live environment for:
+
+- available [Connections](/connections/index)
+- current user permissions
+- accessible Groups and resources
+- provider-side permissions
+- relevant [Skills](/skills/index)
+- the tools exposed in that session
+
+A Workflow asking for a CRM update does not make the CRM writable if the connected account only has read access.
+
+## Skills during a run
+
+A Workflow step can apply a relevant Skill when that Skill is available in the current scope.
+
+The Workflow provides the process order. The Skill provides a reusable method for a task within that process.
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Workflow step" href="/workflows/steps" icon="list-checks">
+    Research the account.
+  </Card>
+  <Card title="Skill" href="/skills/index" icon="sparkles">
+    Apply the company’s reusable account-research method.
+  </Card>
+</Columns>
+
+## Connections during a run
+
+A step can use live external systems through approved Connections.
+
+For example, Giga may:
+
+- retrieve current CRM data
+- query an approved database
+- use tools exposed by an MCP server
+- interact with a website through a browser Connection when needed
+
+The exact route depends on the Connections and tools available when the Workflow runs.
+
+## Consequential actions still need confirmation
+
+A saved Workflow does not remove Giga’s normal confirmation rules.
+
+Giga should still confirm before consequential actions such as:
+
+- sending messages
+- sharing files
+- granting access
+- deleting important records
+- executing payments
+- making other outward-facing changes
+
+A Workflow can include those actions as part of its process, but the live run still follows the relevant confirmation requirements.
+
+## Example: candidate interview brief
+
+Imagine running a **Candidate Interview Brief** Workflow.
+
+The inputs might be:
+
+- candidate name
+- role
+- source material
+
+The run could then move through:
+
+1. **Gather candidate evidence** → completed
+2. **Evaluate against the role** → completed
+3. **Prepare the interview brief** → completed
+
+If the candidate material is unavailable during step 1, that step could be marked **blocked** with a note explaining what source is missing.
+
+## Run again with new inputs
+
+The value of a Workflow is reuse.
+
+The same saved process can be run again with a different account, candidate, document, customer, or other input without recreating the steps.
+
+If the process itself changes, edit the Workflow rather than rewriting it for every run.
+
+[Learn about editing and reusing Workflows →](/workflows/editing-and-reusing)
+
+> **Image placeholder**
+>
+> Workflow run view showing runtime inputs at the top and ordered steps progressing through Running → Completed, with a Blocked state example.
+
+## Related pages
+
+- [Introduction to Workflows](/workflows/index)
+- [Creating a Workflow](/workflows/creating-a-workflow)
+- [Workflow steps](/workflows/steps)
+- [Editing and reusing Workflows](/workflows/editing-and-reusing)
+- [Workflow examples](/workflows/examples)

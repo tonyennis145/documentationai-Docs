@@ -1,0 +1,150 @@
+---
+title: Workflow steps
+description: Learn how to write clear, outcome-oriented Workflow steps without scripting every tool action.
+---
+
+Workflow steps are the meaningful stages of a reusable process.
+
+Each step has a **name** and **plain-language instructions** that tell Giga what should be accomplished at that stage.
+
+## Keep steps at the right level
+
+A useful Workflow usually has a small number of steps that people can understand at a glance.
+
+Good steps:
+
+1. Research the account
+2. Evaluate the opportunity
+3. Prepare the brief
+
+Overly granular steps:
+
+1. Search the company name
+2. Open the website
+3. Read the homepage
+4. Search the CRM
+5. Open the CRM record
+6. Write the summary
+
+> **Describe the work, not every click**
+>
+> Giga can choose the appropriate tools inside a step. Split something into its own step when it represents a meaningful stage, checkpoint, or place where the run may need to pause.
+
+## What belongs in step instructions
+
+A step can explain:
+
+- the outcome to produce
+- the evidence or information to collect
+- relevant constraints
+- quality standards
+- a [Skill](/skills/index) to apply when available
+- [Connections](/connections/index) or tools that may be useful
+- conditions that should change or stop the work
+- what the step should return before the Workflow continues
+
+For example:
+
+> Research the account using current approved sources. Return confirmed company facts, useful sales signals, and open questions. Apply the Account Research Skill when it is available. If the company cannot be identified reliably, stop instead of guessing.
+
+That gives Giga a clear target while leaving the implementation flexible.
+
+## Steps can use live tools and Connections
+
+Workflow steps do not need to hard-code every underlying tool.
+
+A step can ask Giga to use the systems relevant to the outcome, such as:
+
+- a CRM
+- a database
+- an MCP Connection
+- a research tool
+- a browser session
+- files or other available work product
+
+The actual capabilities come from the live session and current permissions.
+
+> **The Workflow does not create access**
+>
+> Asking a step to use a system does not make that Connection available. Giga still checks the current workspace, Connection, and provider permissions at run time.
+
+## Skills inside steps
+
+A [Skill](/skills/index) can provide a reusable task method inside a Workflow step when that Skill is available.
+
+For example:
+
+| Workflow step | Skill that may help |
+| --- | --- |
+| Research the account | Account Research Skill |
+| Draft the update | Customer Update Skill |
+| Review the result | Brand Review Skill |
+
+The step defines **what happens at this stage**. The Skill can define **how a particular task should be done**.
+
+## Conditions belong in the instructions
+
+The current Workflow model does not expose separate structured condition or branch objects.
+
+Write decision rules in plain language inside the relevant step.
+
+Examples:
+
+- “If there is no active opportunity, stop and explain why.”
+- “If fewer than 3 reliable sources are available, flag the research as incomplete.”
+- “If the action would send a message externally, ask for confirmation first.”
+
+This keeps the Workflow aligned with the product that exists today.
+
+## Know when to split a step
+
+Create a separate step when:
+
+- the outcome is meaningful on its own
+- a person may want to review progress there
+- later work depends on that stage completing
+- the process may need to pause or stop there
+- the step has a distinct failure condition
+
+Keep actions together when they are simply implementation details needed to reach one outcome.
+
+## Example: customer issue review
+
+A useful Workflow might look like this:
+
+<Steps>
+  <Step title="Investigate the issue" icon="search">
+    Gather the relevant customer facts, recent activity, and available evidence from approved systems.
+  </Step>
+  <Step title="Determine the next action" icon="git-branch">
+    Identify the likely resolution or what information is still missing. Stop if the evidence is insufficient.
+  </Step>
+  <Step title="Prepare the response" icon="file-text">
+    Draft a concise response using the approved support guidance. Ask for confirmation before any outward-facing action.
+  </Step>
+</Steps>
+
+Each step represents a clear stage someone could understand without seeing the underlying tool calls.
+
+## Editing steps
+
+When Workflow steps need to change, Giga should read the existing Workflow first.
+
+The current update operation replaces the **complete ordered step list** when steps are supplied.
+
+That means an edit should send the full revised sequence, including every step that should remain.
+
+> **Read before replacing**
+>
+> A partial step update can accidentally remove steps that were not included in the replacement list.
+
+[Learn about editing and reusing Workflows →](/workflows/editing-and-reusing)
+
+## Related pages
+
+- [Introduction to Workflows](/workflows/index)
+- [Creating a Workflow](/workflows/creating-a-workflow)
+- [Running a Workflow](/workflows/running)
+- [Editing and reusing Workflows](/workflows/editing-and-reusing)
+- [Workflow examples](/workflows/examples)
+- [Introduction to Skills](/skills/index)

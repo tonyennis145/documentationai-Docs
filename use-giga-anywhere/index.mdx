@@ -1,0 +1,143 @@
+---
+title: Use Giga anywhere
+description: Learn how Giga carries the same permission-aware company context across Web, Slack, ChatGPT, Claude, and Microsoft Teams.
+---
+
+Giga can be used through the interfaces your team already works in.
+
+The surface can change, while the underlying **workspace context, permissions, Tracks, Groups, Connections, and available tools** continue to come from the live Giga environment.
+
+## Choose the interface that fits the work
+
+<Columns cols={2}>
+  <Card title="Giga Web" href="/use-giga-anywhere/web" icon="monitor">
+    Work directly in Giga with Chats, rich viewer experiences, files, and other web-specific capabilities.
+  </Card>
+  <Card title="Slack" href="/use-giga-anywhere/slack" icon="message-square">
+    Work with Giga from Slack while keeping the same permission-aware company context underneath.
+  </Card>
+  <Card title="ChatGPT" href="/use-giga-anywhere/chatgpt" icon="message-circle">
+    Use Giga from ChatGPT with the capabilities exposed by the current connected environment.
+  </Card>
+  <Card title="Claude" href="/use-giga-anywhere/claude" icon="sparkles">
+    Use Giga from Claude while resolving current access and tools from the live workspace.
+  </Card>
+  <Card title="Microsoft Teams" href="/use-giga-anywhere/microsoft-teams" icon="users">
+    Work with Giga from Microsoft Teams where the current integration and permissions support it.
+  </Card>
+</Columns>
+
+## The same Giga primitives still apply
+
+Across surfaces, the core product model stays consistent.
+
+That includes:
+
+- [Chats](/chats/index)
+- [Groups](/groups/index)
+- [Tracks](/tracks/index)
+- [Context Notes](/tracks/context-notes)
+- Current Track State
+- [Agents](/agents/index)
+- [Skills](/skills/index)
+- [Workflows](/workflows/index)
+- [Pulses](/pulses/index)
+- [Connections](/connections/index)
+
+The interface may present them differently, but Giga should keep their meaning and permission boundaries consistent.
+
+## Company Brain stays permission-aware
+
+Giga’s Company Brain is the permission-aware company context layer available to the work.
+
+Depending on the current session, that can include relevant:
+
+- workspace and Group instructions
+- Track context and memory
+- files
+- Connections and live external data
+- Agent context
+- Skills and reusable operating assets
+- user-level context
+
+Changing surfaces does not turn Company Brain into a different pool of company knowledge.
+
+The current user, workspace, and permissions still determine what Giga can retrieve and use.
+
+> **Access follows the workspace**
+>
+> Giga should never assume a user gains access to a Track, Group, Connection, file, or Agent simply because they opened Giga from a different interface.
+
+## Capabilities can differ by surface
+
+The interfaces are not required to expose every capability in exactly the same way.
+
+Differences can include:
+
+- how files are displayed or returned
+- which rich UI elements are available
+- how actions are presented
+- which tools the current surface exposes
+- how long-running or interactive work is handled
+
+For example, Giga Web can show supported work in its viewer, while Slack has its own file-upload and message behavior.
+
+The current surface is the source of truth for those details.
+
+## Context stays live
+
+Giga should resolve current workspace facts at the time of the request.
+
+That includes things such as:
+
+- which Groups you belong to
+- which Track is selected
+- which Connections you can use
+- which Skills are available
+- which tools a connected provider currently exposes
+- what permissions apply to the requested action
+
+This keeps the experience grounded in the current workspace rather than a hard-coded snapshot.
+
+## One Track per Chat
+
+A [Chat](/chats/index) can be linked to at most one Track.
+
+Giga should never silently attach a Track because that choice affects where observations from the Chat can become retrievable.
+
+This rule stays consistent across surfaces even when the interface for selecting or displaying the Track differs.
+
+## Files can behave differently
+
+File behavior is one of the places where the surfaces can differ most.
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Giga Web" href="/use-giga-anywhere/web" icon="monitor">
+    Supported documents, code, webpages, and visual work can be shown in the web viewer when the current surface supports it.
+  </Card>
+  <Card title="Slack" href="/use-giga-anywhere/slack" icon="file">
+    Generated files, charts, screenshots, and exports can be uploaded into Slack when the current Slack surface supports them.
+  </Card>
+</Columns>
+
+For ChatGPT, Claude, and Microsoft Teams, Giga should follow the file behavior exposed by the current live integration rather than assuming parity with Web or Slack.
+
+## Pick the surface, keep the context
+
+You can move between Giga’s supported interfaces based on where the work is happening.
+
+The important part is that Giga continues to resolve the same underlying company context and access rules from the live workspace.
+
+> **Image placeholder**
+>
+> Diagram with Company Brain and permissions at the center, connected to Giga Web, Slack, ChatGPT, Claude, and Microsoft Teams around it.
+
+## Explore each surface
+
+- [Giga Web](/use-giga-anywhere/web)
+- [Slack](/use-giga-anywhere/slack)
+- [ChatGPT](/use-giga-anywhere/chatgpt)
+- [Claude](/use-giga-anywhere/claude)
+- [Microsoft Teams](/use-giga-anywhere/microsoft-teams)

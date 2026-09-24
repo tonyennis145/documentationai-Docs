@@ -1,0 +1,137 @@
+---
+title: Custom Connections
+description: Learn how Giga can connect to services that need MCP, OAuth, API credentials, or browser-based access.
+---
+
+Giga can connect to tools beyond the standard integration catalog through **Custom Connections**.
+
+Use a Custom Connection when the service you need is not already available through a built-in Connection, or when your company needs to use its own MCP server, OAuth setup, API credentials, or browser-based access.
+
+## Start by checking for an existing integration
+
+Before creating something custom, Giga should check whether the product is already available in the integration catalog.
+
+If it already exists, use the existing integration and its supported connection methods instead of creating a duplicate.
+
+> **Use the existing integration when one already exists**
+>
+> Custom Connections are for genuinely new or specialized connection needs, not a second copy of an integration Giga already knows about.
+
+## Custom Connection options
+
+<Columns cols={2}>
+  <Card title="MCP" href="/connections/custom/mcp" icon="server">
+    Connect a compatible MCP server and expose its tools to Giga.
+  </Card>
+  <Card title="OAuth" href="/connections/custom/oauth" icon="key">
+    Use an OAuth-based connection when the service supports the required authorization flow.
+  </Card>
+  <Card title="API keys" href="/connections/custom/api-keys" icon="code">
+    Connect services that authenticate with an API key or personal access token.
+  </Card>
+  <Card title="Browser connections" href="/connections/custom/browser-connections" icon="globe">
+    Use a browser session when the task requires direct interaction with a website.
+  </Card>
+</Columns>
+
+## How Giga chooses a connection path
+
+For a new integration, Giga should prefer the strongest self-serve option the service actually supports.
+
+1. **MCP**
+2. **OAuth** with a supported self-serve flow
+3. **API key or PAT**
+4. **Browser login**
+
+The connection method should come from the service’s real capabilities, not from guesswork.
+
+| Method | Good fit when… |
+| --- | --- |
+| **MCP** | The service exposes an MCP server that Giga can connect to |
+| **OAuth** | The service supports delegated account access through an OAuth flow Giga can use |
+| **API key / PAT** | The service exposes an API and authenticates with a user-provided credential |
+| **Browser session** | Direct website interaction is required and another connection method cannot complete the task |
+
+## Custom Connections still use secure setup
+
+A Custom Connection should not require you to paste secrets into a normal [Chat](/chats/index).
+
+If the connection needs an API key, token, password, client credential, or other secret, Giga should route you through the secure connection setup.
+
+> **Keep secrets out of Chat**
+>
+> Custom does not mean manual secret handling. Passwords, tokens, API keys, OAuth secrets, and connection strings should stay inside Giga’s secure connection flow.
+
+## What Giga checks before creating a custom integration
+
+When the product is not already in the catalog, Giga should first understand how that service actually connects.
+
+That includes checking:
+
+- the official product or service
+- which connection methods it supports
+- whether an MCP server exists
+- whether OAuth supports a self-serve setup
+- whether an API key or PAT is available
+- whether browser login is the only practical route
+
+Giga should avoid promising that a service can be connected until it has verified a workable path.
+
+## Workspace-specific integrations
+
+When supported, Giga can create a new integration that is private to the current workspace.
+
+This is useful for:
+
+- niche SaaS tools
+- internal company systems
+- private MCP servers
+- tools that have not been added to the main integration catalog yet
+
+Once created, the integration can have its own secure connection flow based on the mechanisms the service actually supports.
+
+> **Image placeholder**
+>
+> Flow diagram showing: check catalog → choose MCP / OAuth / API key / Browser → secure setup → Connection available in Giga.
+
+## Custom does not change permissions
+
+A Custom Connection still follows Giga’s permission model.
+
+Giga should check:
+
+- who owns the underlying credential
+- whether the Connection is shared into a [Group](/groups/index)
+- which users or [Agents](/agents/index) can access it
+- what the external service itself allows
+- which actions are available in the current session
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## Which option should you use?
+
+<Columns cols={2}>
+  <Card title="Use MCP" href="/connections/custom/mcp" icon="server">
+    Best when the service already exposes a compatible MCP server.
+  </Card>
+  <Card title="Use OAuth" href="/connections/custom/oauth" icon="key">
+    Best when delegated user access is supported through a compatible OAuth flow.
+  </Card>
+  <Card title="Use an API key" href="/connections/custom/api-keys" icon="code">
+    Best when the service provides a direct API and user-managed credential.
+  </Card>
+  <Card title="Use the browser" href="/connections/custom/browser-connections" icon="globe">
+    Best when direct website interaction is required and no stronger connection path can do the job.
+  </Card>
+</Columns>
+
+## Related pages
+
+- [Introduction to Connections](/connections/index)
+- [Connect a tool](/connections/connect-a-tool)
+- [Managing Connections](/connections/managing-connections)
+- [Sharing Connections](/connections/sharing-connections)
+- [MCP](/connections/custom/mcp)
+- [OAuth](/connections/custom/oauth)
+- [API keys](/connections/custom/api-keys)
+- [Browser connections](/connections/custom/browser-connections)

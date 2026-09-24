@@ -1,0 +1,192 @@
+---
+title: Skill examples
+description: See practical examples of task-specific methods that can be captured as reusable Skills in Giga.
+---
+
+Skills work best when they capture a **specific repeatable method**.
+
+The examples below show the kinds of task instructions, standards, templates, and reference context that can make a useful Skill.
+
+## Account research
+
+An **Account Research Skill** could teach Giga how your team researches a prospective customer.
+
+It might define:
+
+- which company facts to collect
+- which sources or evidence to prioritize
+- qualification criteria
+- how to separate facts from inference
+- the required output structure
+- examples of a strong research summary
+
+<Columns cols={2}>
+  <Card title="Useful with a Sales Agent" href="/agents/index" icon="user">
+    The Agent carries the broader sales research role.
+  </Card>
+  <Card title="Useful inside a Workflow" href="/workflows/index" icon="list-checks">
+    The Skill can provide the method for a research step when available.
+  </Card>
+</Columns>
+
+## Candidate screening
+
+A **Candidate Screening Skill** could capture how your recruiting team evaluates a candidate against a role.
+
+It might include:
+
+- the criteria to assess
+- how to distinguish evidence from assumptions
+- the expected evaluation format
+- interview or application evidence to reference
+- examples of acceptable and weak evidence
+
+The Skill stores the reusable screening method, while the specific candidate and role belong to the current task.
+
+## Customer update writing
+
+A **Customer Update Skill** could define how your team prepares recurring customer-facing updates.
+
+It might include:
+
+- the preferred structure
+- which facts should be confirmed before drafting
+- terminology to use
+- tone and formatting guidance
+- what should be escalated for human review
+
+A [Chat](/chats/index) can then supply the customer-specific facts for that one update.
+
+## Brand review
+
+A **Brand Review Skill** could teach Giga how to review content against your company’s writing standards.
+
+It might contain:
+
+- brand voice rules
+- words or phrases to avoid
+- formatting preferences
+- review criteria
+- examples of acceptable and unacceptable copy
+
+This works well as a reusable method because the same review standard can apply to many different pieces of content.
+
+## Document review
+
+A **Document Review Skill** could define a repeatable review checklist.
+
+For example:
+
+1. identify missing information
+2. flag contradictions
+3. check the document against the required standard
+4. separate required fixes from optional suggestions
+5. return findings in a consistent format
+
+If the review becomes part of a larger ordered process, the Skill can sit alongside a [Workflow](/workflows/index).
+
+## Meeting summary
+
+A **Meeting Summary Skill** could define what your company wants preserved from meeting notes.
+
+It might ask Giga to identify:
+
+- decisions
+- owners
+- open questions
+- follow-up actions
+- dates or deadlines explicitly stated
+- useful durable context
+
+The Skill defines the extraction method. The actual meeting notes remain task input.
+
+## Weekly reporting
+
+A **Weekly Reporting Skill** could define how a recurring report should be prepared.
+
+It might include:
+
+- required sections
+- how to summarize changes
+- how to distinguish current state from historical detail
+- metrics or evidence to include when available
+- the expected final format
+
+If the report should run automatically on a schedule, a [Pulse](/pulses/index) handles the recurring timing while the Skill can carry the reporting method where the live configuration makes it available.
+
+## Support troubleshooting
+
+A **Support Troubleshooting Skill** could capture a repeatable diagnostic method.
+
+It might define:
+
+- what evidence to collect first
+- the order of diagnostic checks
+- when to use a [Connection](/connections/index)
+- what should be confirmed before taking an outward-facing action
+- how to summarize the issue and next step
+
+A Support Agent can carry the broader support role while the Skill stores this specific troubleshooting method.
+
+## Handoff preparation
+
+A **Handoff Skill** could define how Giga turns active work into a concise handoff for another teammate.
+
+It might require:
+
+- current objective
+- relevant background
+- confirmed decisions
+- unresolved questions
+- immediate next steps
+- links or references to the relevant work
+
+This can be useful when moving work between people without copying the entire history.
+
+## What makes a strong Skill example?
+
+Across these examples, the strongest Skills have the same basic properties:
+
+| Strong Skill | Weak Skill |
+| --- | --- |
+| One recognizable task | Several unrelated jobs |
+| Reusable method | One-off request |
+| Clear standards | Vague goals |
+| Useful supporting context | Large dump of unrelated information |
+| Portable across relevant work | Tied unnecessarily to one specific Chat |
+
+> **A Skill earns its place through reuse**
+>
+> If the instructions will only be used once, they can stay in the Chat. If the same method should guide future work, a Skill gives it a durable home.
+
+## From example to Skill
+
+<Steps>
+  <Step title="Spot a repeated method" icon="repeat">
+    Look for task instructions your team keeps explaining again.
+  </Step>
+  <Step title="Separate the method from the current task" icon="layers">
+    Keep reusable rules in the Skill and task-specific facts in the Chat, Agent, Track, or Workflow.
+  </Step>
+  <Step title="Capture the method clearly" icon="file-text">
+    Write the instructions, standards, output expectations, and supporting references.
+  </Step>
+  <Step title="Share it where useful" icon="users">
+    Keep it private or share it into the Groups that should reuse it.
+  </Step>
+</Steps>
+
+[Create a Skill →](/skills/creating-a-skill)
+
+> **Image placeholder**
+>
+> Gallery-style visual showing several Skill cards: Account Research, Candidate Screening, Brand Review, Weekly Reporting, and Support Troubleshooting.
+
+## Related pages
+
+- [Introduction to Skills](/skills/index)
+- [Creating a Skill](/skills/creating-a-skill)
+- [How Skills are used](/skills/how-skills-are-used)
+- [Sharing Skills](/skills/sharing)
+- [Introduction to Agents](/agents/index)
+- [Introduction to Workflows](/workflows/index)

@@ -1,0 +1,176 @@
+---
+title: Connect a tool
+description: >-
+  Learn how to connect an app, service, database, or other system to Giga
+  securely.
+---
+A **Connection** lets Giga work with a tool or system your company already uses.
+
+You can connect common apps, APIs, databases, MCP servers, and browser-based services. The exact setup depends on what the service supports.
+
+## Start from Chat or Connections
+
+When the connection flow supports it, you can start directly from a [Chat](/chats/index).
+
+For example, you can ask:
+
+> “Connect my CRM.”
+
+Giga can check whether that service already exists in the integration catalog and start the appropriate secure connection flow.
+
+You can also manage and add Connections from the **Connections** area in Giga.
+
+> **You do not have to leave the Chat**
+>
+> If Giga can start the connection flow from Chat, it should do that instead of sending you through unnecessary setup steps elsewhere.
+
+## Connect a tool
+
+<Steps>
+  <Step title="Tell Giga what you want to connect" icon="message-circle" title-type="p">
+    Name the service, tool, database, or system you want Giga to access.
+  </Step>
+
+  <Step title="Giga checks the available connection methods" icon="search" title-type="p">
+    Giga looks for an existing integration and checks which supported methods are available.
+  </Step>
+
+  <Step title="Complete the secure connection flow" icon="lock" title-type="p">
+    Sign in, approve OAuth access, or provide the required credential through the secure setup flow.
+  </Step>
+
+  <Step title="Return to your work" icon="check-circle" title-type="p">
+    Once connected, Giga can use the Connection when your permissions and the service allow it.
+  </Step>
+</Steps>
+
+## How Giga chooses a connection method
+
+Different services support different methods.
+
+Giga prefers the strongest self-serve option available:
+
+1. **MCP**
+2. **OAuth** with a supported self-serve flow
+3. **API key or PAT**
+4. **Browser login**
+
+The service itself determines which options are actually available.
+
+| Method                  | What to expect                                                                    |
+| ----------------------- | --------------------------------------------------------------------------------- |
+| **MCP**                 | Giga connects to an MCP server that exposes supported tools                       |
+| **OAuth**               | You approve access through the provider’s sign-in and authorization flow          |
+| **API key / PAT**       | You enter the credential through Giga’s secure connection flow                    |
+| **Database connection** | Giga securely stores and uses the database connection without exposing it in Chat |
+| **Browser login**       | A browser session is used when direct website interaction is needed               |
+
+## Keep secrets out of Chat
+
+Never paste passwords, API keys, access tokens, OAuth secrets, or database connection strings into a normal Chat.
+
+If a service requires a secret, Giga should send you through the secure connection flow.
+
+> **Credentials stay protected**
+>
+> Giga uses stored credentials through its connection layer. The underlying secret does not need to be exposed in the Chat.
+
+## If the tool is already supported
+
+Giga should use the existing integration rather than create a duplicate.
+
+This keeps setup cleaner and lets Giga use the connection method already defined for that service.
+
+If the service has several connection methods, Giga should follow the live integration configuration rather than guess which one to use.
+
+## If the tool is not already supported
+
+Giga can investigate how the service connects and, where supported, create a workspace-specific integration.
+
+The preferred path remains:
+
+**MCP → OAuth → API key/PAT → browser login**
+
+If the service requires a more specialized setup, Giga can route you to the relevant [Custom Connection](/connections/custom-connections) path.
+
+<Columns cols="2">
+  <Card title="Custom MCP" href="/connections/custom/mcp" icon="server" horizontal="false">
+    Connect a compatible MCP server.
+  </Card>
+
+  <Card title="Custom OAuth" href="/connections/custom/oauth" icon="key" horizontal="false">
+    Use a custom OAuth setup when supported.
+  </Card>
+
+  <Card title="API keys" href="/connections/custom/api-keys" icon="code" horizontal="false">
+    Connect a service using an API key or personal access token.
+  </Card>
+
+  <Card title="Browser connections" href="/connections/custom/browser-connections" icon="globe" horizontal="false">
+    Use a browser session for services that require direct website interaction.
+  </Card>
+</Columns>
+
+## What happens after connecting?
+
+Once the Connection is available, Giga can use it from places such as a [Chat](/chats/index) or [Agent](/agents/index), depending on the current permissions and configuration.
+
+A Connection can allow Giga to:
+
+- retrieve live information
+- search or query the connected system
+- use provider-specific tools
+- take supported actions
+- work with connected data as part of a larger task or [Workflow](/workflows/index)
+
+The exact actions depend on both **Giga permissions** and the permissions granted by the external service.
+
+## Connections are permission-aware
+
+A service being connected somewhere in the workspace does not automatically mean every user or Agent can use it.
+
+Giga checks the current workspace state to determine:
+
+- whether you can access the Connection
+- whether it has been shared into a [Group](/groups/index) you belong to
+- whether you own the underlying credential
+- which provider actions are allowed
+- which tools are exposed in the current session
+
+[Learn about sharing Connections →](/connections/sharing-connections)
+
+## Example: connect a CRM
+
+<Columns cols="2">
+  <Card title="Ask in Chat" href="/chats/index" icon="message-circle" horizontal="false">
+    “Connect our CRM.”
+  </Card>
+
+  <Card title="Secure setup" href="/connections/connect-a-tool" icon="lock" horizontal="false">
+    Giga identifies the supported connection method and opens the secure flow.
+  </Card>
+
+  <Card title="Use live data" href="/connections/index" icon="database" horizontal="false">
+    Ask for current pipeline, account, or customer information.
+  </Card>
+
+  <Card title="Take action" href="/connections/index" icon="zap" horizontal="false">
+    Where allowed, Giga can use the Connection to perform supported CRM actions.
+  </Card>
+</Columns>
+
+> **Image placeholder**
+>
+> Show a Chat starting a Connection, followed by the secure authorization flow and a successful connected state.
+
+## Having trouble connecting?
+
+If authentication fails, the service is missing, or a Connection stops working, see [Troubleshooting Connections](/connections/troubleshooting).
+
+## Related pages
+
+- [Introduction to Connections](/connections/index)
+- [Managing Connections](/connections/managing-connections)
+- [Sharing Connections](/connections/sharing-connections)
+- [Custom Connections](/connections/custom-connections)
+- [Troubleshooting Connections](/connections/troubleshooting)

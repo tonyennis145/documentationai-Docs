@@ -1,0 +1,175 @@
+---
+title: Managing company Connections
+description: Learn how teams manage shared external-system access while keeping credential ownership, Group sharing, and provider permissions separate.
+---
+
+Company-managed Connections let teams use approved external systems through Giga without distributing raw credentials between teammates.
+
+A Connection can be backed by OAuth, an API credential, database access, MCP, a browser session, or another mechanism supported by the live integration.
+
+## Company access is usually Group-scoped
+
+A credential can be owned by one user and made available through shared [Groups](/groups/index).
+
+This creates a useful separation:
+
+<Columns cols={2}>
+  <Card title="Credential owner" href="/connections/managing-connections" icon="key">
+    Manages the stored credential and its metadata where the current tools allow it.
+  </Card>
+  <Card title="Shared users" href="/connections/sharing-connections" icon="users">
+    Can use the Connection through an approved Group when the live permissions allow it.
+  </Card>
+</Columns>
+
+Shared usage can happen without exposing the underlying secret.
+
+## Review existing Connections first
+
+Before creating another company Connection, check what is already connected.
+
+The current credential list can include:
+
+- credentials owned by the current user
+- credentials shared into Groups the current user belongs to
+
+This helps avoid duplicate Connections for the same system.
+
+[Learn about Managing Connections →](/connections/managing-connections)
+
+## Ownership controls management
+
+The current credential tools distinguish between **use** and **management**.
+
+A user with shared access may be able to use the Connection while the credential owner retains controls such as:
+
+- renaming the credential
+- changing its display label or note
+- deleting the credential
+
+The live credential state determines the exact ownership and access.
+
+> **Shared access keeps the secret protected**
+>
+> Credential metadata can be inspected without returning the secret value itself.
+
+## Share into the right Group
+
+Company Connections should be available to the teams that need them.
+
+For example:
+
+- a CRM Connection may belong with the Sales Group
+- a recruiting system may belong with Recruiting
+- a support platform may belong with Customer Support
+- a finance system may belong with a tightly scoped finance Group
+
+Choose the narrowest useful Group boundary for the work.
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## Provider permissions still control the external system
+
+Giga sharing does not expand the connected account’s permissions inside the provider.
+
+If the underlying account can only read certain records, the shared Connection remains limited by that provider access.
+
+Check both Giga access and the external system’s permissions when diagnosing an action.
+
+## Agents can use shared Connections
+
+An [Agent](/agents/index) can use a Connection when that Connection is available within the Agent’s current scope and the live permissions allow it.
+
+For a shared Agent, review:
+
+- the Agent’s Group
+- which Connections are available there
+- the credential owner
+- provider permissions
+- the exact tools exposed by the Connection
+
+[Learn about Agents and Connections →](/agents/connections)
+
+## Keep secrets in the secure connection flow
+
+Company credentials should stay in Giga’s secure connection layer.
+
+Avoid placing API keys, passwords, tokens, OAuth secrets, or connection strings in:
+
+- Chats
+- Agent instructions
+- Context Notes
+- files
+- Group or workspace context
+
+Use the supported secure connection flow when authentication needs to be added or replaced.
+
+## Rename and label Connections clearly
+
+Useful labels make company-managed access easier to understand when several credentials exist for the same provider.
+
+Examples:
+
+- Production CRM
+- Sales CRM
+- Support Analytics
+- EU Customer Database
+- Test Account
+
+The current credential tools can update non-secret metadata such as a handle, display name, or note for credentials the user owns.
+
+Changing that metadata does not rotate the underlying secret.
+
+## Rotate authentication through the secure flow
+
+When a key, password, or other credential needs replacement, use the secure connection flow.
+
+Metadata editing and secret rotation are separate operations.
+
+[Learn about API-key Connections →](/connections/custom/api-keys)
+
+## Removing a company Connection
+
+Deleting a stored credential is owner-controlled in the current model.
+
+Because removal can interrupt other people or Agents using that shared Connection, Giga should confirm before deleting it.
+
+Before removal, check:
+
+- who owns the credential
+- where it is shared
+- which team or Agent may rely on it
+- whether the intent is to remove access entirely or simply change the authentication
+
+## A simple example
+
+Imagine the company has a CRM credential owned by the Sales Operations lead.
+
+<Steps>
+  <Step title="Connect securely" icon="lock">
+    The owner establishes the CRM Connection through the supported secure flow.
+  </Step>
+  <Step title="Share with Sales" icon="users">
+    The Connection is made available through the appropriate Sales Group.
+  </Step>
+  <Step title="Use without exposing the secret" icon="plug">
+    Sales teammates and approved Agents can use the Connection according to live permissions.
+  </Step>
+  <Step title="Keep management with the owner" icon="key">
+    Credential management remains with the owner under the current credential model.
+  </Step>
+</Steps>
+
+> **Image placeholder**
+>
+> Diagram showing Credential owner → secure Connection → Sales Group → teammates and Agents, with provider permissions applied at the external system.
+
+## Related pages
+
+- [Teams & Admin overview](/teams-and-admin/index)
+- [Permissions](/teams-and-admin/permissions)
+- [Members and roles](/teams-and-admin/members-and-roles)
+- [Introduction to Connections](/connections/index)
+- [Managing Connections](/connections/managing-connections)
+- [Sharing Connections](/connections/sharing-connections)
+- [Giving Agents access to Connections](/agents/connections)

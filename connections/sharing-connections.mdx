@@ -1,0 +1,147 @@
+---
+title: Sharing Connections
+description: Learn how shared Connections work across Groups, ownership, and permissions in Giga.
+---
+
+A **Connection** can be personal or made available through a shared [Group](/groups/index), depending on how the underlying credential and integration are configured.
+
+The key distinction is **use vs ownership**: a teammate may be able to use a shared Connection without owning or managing the credential behind it.
+
+## How shared access works
+
+<Columns cols={2}>
+  <Card title="Connection owner" href="/connections/managing-connections" icon="key">
+    Owns the underlying credential and may be able to rename, update, or remove it.
+  </Card>
+  <Card title="Shared user" href="/groups/members-and-access" icon="users">
+    Can use a Connection shared into a Group they belong to, subject to the current permissions.
+  </Card>
+</Columns>
+
+> **Shared access does not transfer ownership**
+>
+> Someone can have permission to use a Connection without being allowed to edit or delete the credential behind it.
+
+## Group-based sharing
+
+Groups are Giga’s main permission and placement boundary.
+
+When a Connection or credential is shared through a Group, members of that Group may be able to use it with [Chats](/chats/index), [Agents](/agents/index), or other supported Giga features.
+
+Access still depends on the live workspace state.
+
+| Layer | What it affects |
+| --- | --- |
+| **Workspace membership** | Whether the person belongs to the workspace |
+| **Group membership** | Whether they can access resources shared into that Group |
+| **Credential ownership** | Whether they can manage or remove the underlying credential |
+| **Provider permissions** | What the external system itself allows |
+| **Current Giga surface** | Which tools and actions are available in the current session |
+
+[Learn about Groups and access →](/groups/members-and-access)
+
+## When to share a Connection
+
+Shared Connections are useful when several people need access to the same company system.
+
+Examples include:
+
+- a shared CRM
+- a company analytics account
+- an internal database
+- a support platform
+- a shared operational tool
+
+A personal Connection is better when the account is specific to one person or should not be exposed to a broader Group.
+
+> **Choose the audience deliberately**
+>
+> A shared Connection can make company systems available to more people. Use the narrowest Group that matches the real access need.
+
+## What shared users can do
+
+A shared user may be able to use the Connection in Giga without seeing the underlying secret.
+
+For example, they may be able to:
+
+- search or retrieve data
+- use provider-specific tools
+- query a connected system
+- ask an [Agent](/agents/index) to use the Connection
+- take supported actions when the external service and Giga permissions allow it
+
+They should not automatically be able to:
+
+- view the password, token, API key, or connection string
+- edit the credential
+- delete the credential
+- grant the Connection to another audience
+
+The exact behavior depends on the live Connection and permission state.
+
+## Sharing does not bypass provider permissions
+
+Giga’s access model sits on top of the external service’s own permissions.
+
+If the connected CRM account only has read access, sharing that Connection through Giga does not turn it into a write-enabled account.
+
+Likewise, if the external account can only access part of a database or workspace, Giga remains limited to that scope.
+
+> **Giga permissions and provider permissions both matter**
+>
+> A Connection can only do what both layers allow.
+
+## Connections and Agents
+
+An [Agent](/agents/index) can use Connections when its current configuration and Group permissions allow it.
+
+Do not assume that every Agent can use every Connection in the workspace.
+
+A shared Agent and a shared Connection still need compatible access scopes before Giga should treat the Connection as available to that Agent.
+
+[Learn about giving Agents access to Connections →](/agents/connections)
+
+## A simple example
+
+Imagine your company has a shared **Sales** Group and a CRM Connection.
+
+<Columns cols={2}>
+  <Card title="Sales Group" href="/groups/index" icon="users">
+    Contains the teammates who should work with shared sales systems.
+  </Card>
+  <Card title="CRM Connection" href="/connections/index" icon="plug">
+    Uses a company-owned credential to access the CRM.
+  </Card>
+  <Card title="Sales teammate" href="/groups/members-and-access" icon="user-check">
+    Can use the shared Connection because they belong to the Sales Group.
+  </Card>
+  <Card title="Credential owner" href="/connections/managing-connections" icon="key">
+    Keeps control over renaming, rotating, or removing the underlying credential.
+  </Card>
+</Columns>
+
+The teammate can work with the CRM through Giga without needing the raw credential.
+
+## Before changing shared access
+
+Sharing or removing access can affect other people’s work.
+
+Giga should confirm consequential access changes and check the live workspace state before changing who can use a shared resource.
+
+> **Access changes deserve confirmation**
+>
+> Before removing a shared Connection or changing who can use it, confirm the exact audience and Connection involved.
+
+> **Image placeholder**
+>
+> Diagram showing one credential owner sharing a Connection into a Group, with several teammates and an Agent using it without seeing the underlying secret.
+
+## Related pages
+
+- [Introduction to Connections](/connections/index)
+- [Connect a tool](/connections/connect-a-tool)
+- [Managing Connections](/connections/managing-connections)
+- [Custom Connections](/connections/custom-connections)
+- [Groups](/groups/index)
+- [Members and access](/groups/members-and-access)
+- [Agents and Connections](/agents/connections)

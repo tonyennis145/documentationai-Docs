@@ -1,0 +1,172 @@
+---
+title: Agents and context
+description: Learn how durable Agent context, Group context, live Connections, and company knowledge shape an Agent's work.
+---
+
+An Agent can use durable context to understand its role and the work around it.
+
+That context can include the Agent’s own standing guidance, broader Group or workspace context, relevant live systems, and other information the current Giga permissions allow it to retrieve.
+
+## Agent context is layered
+
+Giga keeps different kinds of context separate so each one can do a clear job.
+
+| Context layer | What it is for |
+| --- | --- |
+| **Agent instructions** | How the Agent should behave and approach its role |
+| **Agent context** | Durable background specific to the Agent |
+| **Group context** | Shared guidance relevant across a broader team or area |
+| **Workspace context** | Company-wide standing context |
+| **Connections** | Live information from external systems |
+| **Skills** | Reusable task-specific instructions and methods |
+| **Current Chat** | Temporary instructions and Chat context for the immediate work |
+
+The live workspace determines which layers are actually available in a given session.
+
+## What belongs in Agent context
+
+Use durable Agent context for background that should continue to matter across repeated work.
+
+Good examples include:
+
+- the domain the Agent works in
+- stable company terminology relevant to its role
+- durable handoff information
+- recurring background the Agent needs to interpret requests correctly
+- context that is specific to the Agent rather than the entire company or Group
+
+Keep temporary directions in the current [Chat](/chats/index).
+
+## Context vs instructions
+
+[Agent instructions](/agents/instructions) tell the Agent **how to work**.
+
+Agent context tells the Agent **what it should know**.
+
+For example:
+
+| Instructions | Context |
+| --- | --- |
+| “Separate confirmed facts from inference.” | “Our enterprise plan is called Scale.” |
+| “Ask before taking an outward-facing action.” | “The Sales team uses MEDDICC terminology.” |
+| “Return concise account summaries.” | “North America is the current expansion focus.” |
+
+Keeping these separate makes the Agent easier to maintain.
+
+## Context vs Track Context Notes
+
+[Context Notes](/tracks/context-notes) are the user-facing durable standing context for a **Track**.
+
+Agent context belongs with the **Agent**.
+
+Use Track Context Notes when the information belongs to one ongoing body of work. Use Agent context when the information should travel with the Agent across the work it handles.
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Sales Research Agent context" href="/agents/context-and-knowledge" icon="brain">
+    Durable background the Sales Research Agent should understand across its role.
+  </Card>
+  <Card title="Acme renewal Context Note" href="/tracks/context-notes" icon="folder">
+    Durable background specific to the Acme renewal Track.
+  </Card>
+</Columns>
+
+## Group and workspace context
+
+An Agent can also operate inside broader company context.
+
+A [Group](/groups/index) can provide shared instructions or context relevant to the team or area the Agent belongs to.
+
+Workspace-level context can carry company-wide standing guidance.
+
+This lets company-wide rules stay broad, team-specific context stay with the Group, and Agent-specific background stay with the Agent.
+
+## Connections provide live context
+
+Durable context is only part of what an Agent can work with.
+
+[Connections](/connections/index) let an Agent retrieve current information from external systems when its permissions allow it.
+
+That means an Agent can combine:
+
+- durable background
+- current Chat instructions
+- approved Skills
+- live external data
+
+The exact mix is resolved from the current Giga environment.
+
+[Learn about giving Agents access to Connections →](/agents/connections)
+
+## Skills provide reusable methods
+
+A [Skill](/skills/index) carries reusable instructions for a specific kind of task.
+
+Agent context should hold background the Agent needs to know. A Skill should hold a method the Agent may need to apply.
+
+For example:
+
+- Agent context: “Our ICP is US-based B2B SaaS with 50–500 employees.”
+- Skill: “How to research an account and return a qualification summary.”
+
+This keeps reusable task methods separate from persistent Agent knowledge.
+
+## Permissions still shape retrieval
+
+An Agent should only retrieve company context it is allowed to access.
+
+Its permission boundary can be affected by:
+
+- the Group it belongs to
+- available shared resources
+- Connections in scope
+- current user permissions
+- the live Giga surface
+
+> **Company Brain remains permission-aware**
+>
+> Information existing somewhere in the workspace does not automatically make it available to every Agent.
+
+## Updating Agent context
+
+The current context tools treat an Agent’s durable standing context as stored context that can be read and replaced.
+
+Giga should read the current Agent context before making a meaningful update, then amend it rather than wiping useful background accidentally.
+
+Meaningful changes should be confirmed before saving.
+
+## A simple example
+
+Imagine a **Recruiting Agent**.
+
+<Columns cols={2}>
+  <Card title="Agent context" href="/agents/context-and-knowledge" icon="brain">
+    Knows the company’s role families, hiring terminology, and durable recruiting background.
+  </Card>
+  <Card title="Group context" href="/groups/index" icon="users">
+    Inherits shared recruiting guidance from the Recruiting Group when available.
+  </Card>
+  <Card title="Skill" href="/skills/index" icon="sparkles">
+    Uses a reusable candidate-screening method for a specific task.
+  </Card>
+  <Card title="Connection" href="/agents/connections" icon="plug">
+    Uses approved recruiting systems for current candidate information.
+  </Card>
+</Columns>
+
+Each layer has a different job, which keeps the Agent’s knowledge easier to understand and maintain.
+
+> **Image placeholder**
+>
+> Layered diagram showing Workspace context → Group context → Agent context/instructions, with Skills, Chat, and Connections feeding the Agent at runtime.
+
+## Related pages
+
+- [Introduction to Agents](/agents/index)
+- [Creating an Agent](/agents/creating-an-agent)
+- [Agent instructions](/agents/instructions)
+- [Giving Agents access to Connections](/agents/connections)
+- [Sharing Agents](/agents/sharing)
+- [Introduction to Skills](/skills/index)
+- [Context Notes](/tracks/context-notes)

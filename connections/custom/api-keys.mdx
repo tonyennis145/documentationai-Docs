@@ -1,0 +1,141 @@
+---
+title: API keys
+description: Learn how Giga connects to services that use API keys or personal access tokens.
+---
+
+Some tools and systems connect to Giga through an **API key** or **personal access token (PAT)**.
+
+This is a good fit when the service exposes an API and lets you create a credential that Giga can use on your behalf.
+
+## When API keys are a good fit
+
+Use an API key or PAT when:
+
+- the service exposes an API
+- MCP is not available
+- OAuth is not the better supported path
+- the provider gives you a user-managed key or token
+- the work can be completed through the API rather than a browser
+
+For a new custom integration, Giga prefers API credentials after MCP and supported OAuth.
+
+## How an API-key Connection works
+
+<Steps>
+  <Step title="Choose the service" icon="plug">
+    Start from [Chat](/chats/index) or the Connections area and tell Giga what you want to connect.
+  </Step>
+  <Step title="Confirm the service supports API credentials" icon="search">
+    Giga checks the integration and the provider’s supported authentication methods.
+  </Step>
+  <Step title="Enter the key through the secure setup flow" icon="lock">
+    Add the API key or PAT through Giga’s secure connection experience rather than pasting it into Chat.
+  </Step>
+  <Step title="Use the connected API" icon="zap">
+    Giga can call the external service through the stored credential when your current permissions allow it.
+  </Step>
+</Steps>
+
+> **Keep API keys out of Chat**
+>
+> API keys, PATs, tokens, passwords, and connection strings belong in Giga’s secure connection layer, not in Chats, files, or Context Notes.
+
+## Giga does not need to reveal the secret
+
+Once stored, Giga can use the credential without returning the secret value to the user or passing it through the Chat.
+
+For authenticated API requests, Giga can inject the credential server-side according to the connection’s configured authentication policy.
+
+That lets Giga work with the API while keeping the underlying secret protected.
+
+## API contracts still matter
+
+Having a valid credential does not tell Giga how every API endpoint works.
+
+Before using a raw HTTP API, Giga should verify the provider’s current API contract for the operation it needs.
+
+That includes details such as:
+
+- endpoint and HTTP method
+- request body shape
+- authentication placement
+- pagination
+- signing rules
+- MIME behavior
+- idempotency requirements
+
+> **Credentials answer “can Giga authenticate?”**
+>
+> The provider’s API documentation answers “how should Giga make this request?”
+
+Giga should avoid inventing request formats from memory.
+
+## API key vs PAT
+
+Both can act as credentials for API-based Connections.
+
+The exact difference comes from the external provider:
+
+| Credential | Typical pattern |
+| --- | --- |
+| **API key** | A key issued for API access |
+| **PAT** | A personal access token tied to a user or account |
+
+Giga should follow the provider’s actual authentication model rather than treating them as interchangeable when the service distinguishes between them.
+
+## Managing API credentials
+
+The underlying credential can have metadata such as a display name, handle, note, integration, or expiry information when available.
+
+For credentials you own, Giga may be able to rename or relabel that metadata.
+
+Updating the label does not rotate the secret itself.
+
+If the credential needs to be replaced, use the secure connection flow again.
+
+[Learn about Managing Connections →](/connections/managing-connections)
+
+## Sharing API-backed Connections
+
+A credential-backed Connection can be shared through a [Group](/groups/index) when the current sharing model supports it.
+
+A teammate may be able to **use** that Connection without being able to:
+
+- see the raw API key
+- edit the credential
+- delete the credential
+- rotate the secret
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## A simple example
+
+Imagine your analytics provider gives you an API key.
+
+<Columns cols={2}>
+  <Card title="Secure setup" href="/connections/connect-a-tool" icon="lock">
+    Add the API key through Giga’s secure connection flow.
+  </Card>
+  <Card title="Authenticated API" href="/connections/custom/api-keys" icon="code">
+    Giga injects the credential when calling the provider.
+  </Card>
+  <Card title="Chat" href="/chats/index" icon="message-circle">
+    Ask Giga for current analytics data without pasting the key again.
+  </Card>
+  <Card title="Shared access" href="/connections/sharing-connections" icon="users">
+    Make the Connection available to the appropriate Group when team access is needed.
+  </Card>
+</Columns>
+
+> **Image placeholder**
+>
+> Diagram showing secure key entry → stored credential → authenticated API request → returned provider data.
+
+## Related pages
+
+- [Custom Connections](/connections/custom-connections)
+- [MCP](/connections/custom/mcp)
+- [OAuth](/connections/custom/oauth)
+- [Browser connections](/connections/custom/browser-connections)
+- [Managing Connections](/connections/managing-connections)
+- [Sharing Connections](/connections/sharing-connections)

@@ -1,0 +1,156 @@
+---
+title: Creating a Skill
+description: Learn how to turn a repeatable task method into a reusable Skill in Giga.
+---
+
+Create a **Skill** when you have a repeatable way of doing a specific task and want Giga to reuse that method later.
+
+A good Skill is focused, clear, and portable. It captures the instructions and supporting context for one kind of task without turning into a full [Agent](/agents/index) or [Workflow](/workflows/index).
+
+## Start with one repeatable task
+
+Before creating a Skill, define the task in plain language.
+
+Good examples include:
+
+- research a target account
+- screen a candidate against a role
+- write a weekly customer update
+- review a document against company standards
+- prepare a recurring report format
+- follow a specific internal checklist
+
+> **Keep the Skill focused**
+>
+> A Skill should teach Giga how to handle one recognizable kind of task. If the scope starts covering several unrelated jobs, split it into separate Skills.
+
+## Create the Skill
+
+<Steps>
+  <Step title="Name the Skill" icon="sparkles">
+    Use a clear name that describes the task or method people will recognize later.
+  </Step>
+  <Step title="Describe what it does" icon="file-text">
+    Add a short description that explains when the Skill is useful.
+  </Step>
+  <Step title="Write the core instructions" icon="list-checks">
+    Capture the repeatable method, rules, standards, and expected output.
+  </Step>
+  <Step title="Add supporting files when useful" icon="folder">
+    Include templates, examples, references, or helper files that genuinely support the task.
+  </Step>
+  <Step title="Choose whether to share it" icon="users">
+    Keep the Skill owner-only or share it into one or more Groups when the method should be reusable by a team.
+  </Step>
+</Steps>
+
+## The Skill file structure
+
+A Skill is stored as a set of files.
+
+Every Skill must include a **SKILL.md** entry point. That file contains the Skill’s main definition and instructions.
+
+Supporting files can sit alongside it when the task benefits from extra material.
+
+For example:
+
+| File | Purpose |
+| --- | --- |
+| **SKILL.md** | Main Skill definition and instructions |
+| **template.md** | Reusable output template |
+| **examples.md** | Examples of strong results |
+| **reference.md** | Supporting task-specific reference material |
+
+The exact supporting files depend on the Skill.
+
+## What belongs in SKILL.md
+
+The main Skill file should make the task easy for Giga to understand and reuse.
+
+Useful content can include:
+
+- when to use the Skill
+- the goal of the task
+- the method or sequence to follow
+- important constraints
+- quality standards
+- expected output structure
+- references to supporting files
+
+Keep it readable. Dense instructions that try to account for every possible edge case become harder to maintain.
+
+## Skill vs Agent instructions
+
+Use [Agent instructions](/agents/instructions) for the durable behavior of a named Agent.
+
+Use a Skill for a reusable task method.
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Sales Research Agent" href="/agents/index" icon="user">
+    Defines the broader role, responsibilities, context, and access.
+  </Card>
+  <Card title="Account Research Skill" href="/skills/index" icon="sparkles">
+    Defines the repeatable method for researching one account.
+  </Card>
+</Columns>
+
+This keeps the Agent’s identity separate from the method it may use.
+
+## Skill vs Workflow
+
+Use a Skill when the main value is the reusable instructions or method.
+
+Use a [Workflow](/workflows/index) when the work needs several ordered stages that should be saved and run as one repeatable process.
+
+A Workflow can refer to or apply a Skill within its steps when the current live execution surface makes that Skill available.
+
+## Share at creation or later
+
+The current Skill model supports owner-only Skills and Skills shared into [Groups](/groups/index).
+
+If the method is personal, leave it unshared.
+
+If a team should use the same method, share it into the relevant Group.
+
+You can also change the sharing later.
+
+[Learn about Sharing Skills →](/skills/sharing)
+
+## Editing an existing Skill
+
+Giga should read the current Skill before editing it.
+
+The live update behavior replaces the full Skill file set when files are supplied, so an edit should preserve every file that still belongs in the Skill.
+
+> **Read before replacing**
+>
+> Editing a Skill without first reading its current files can accidentally drop supporting material.
+
+Only the Skill owner can update the Skill in the current model.
+
+## A simple example
+
+Imagine your team repeatedly researches prospective customers.
+
+You create an **Account Research Skill** with:
+
+- **SKILL.md** describing the research method
+- **template.md** defining the output structure
+- **examples.md** showing what a strong result looks like
+
+The Skill can then be reused wherever it is available instead of rebuilding that method from scratch.
+
+> **Image placeholder**
+>
+> Show the Skill creation flow: Task → SKILL.md → optional supporting files → private or shared Group access.
+
+## Related pages
+
+- [Introduction to Skills](/skills/index)
+- [How Skills are used](/skills/how-skills-are-used)
+- [Sharing Skills](/skills/sharing)
+- [Skill examples](/skills/examples)
+- [Introduction to Agents](/agents/index)
+- [Introduction to Workflows](/workflows/index)

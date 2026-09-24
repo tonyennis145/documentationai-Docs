@@ -1,0 +1,182 @@
+---
+title: Creating a Pulse
+description: Learn how to create recurring scheduled work with the right instruction, schedule, and optional target.
+---
+
+Create a **Pulse** when you want Giga to perform work automatically on a recurring schedule.
+
+Before creating one, decide 3 things: **what should run, when should it run, and what should it run against?**
+
+## Start with the recurring job
+
+Write the Pulse instruction around the result you want each time it runs.
+
+Good examples:
+
+- review the latest pipeline changes and summarize anything important
+- check this Track for new developments and prepare an update
+- run a weekly customer health review
+- review current recruiting activity and surface open issues
+
+Keep the instruction durable enough to make sense on future runs.
+
+## Choose a target
+
+A Pulse can currently target:
+
+- an [Agent](/agents/index)
+- a [Track](/tracks/index)
+- no target
+
+Choose the target based on where the recurring work belongs.
+
+| Target | Use it when |
+| --- | --- |
+| **Agent** | The recurring work should run through a named AI role |
+| **Track** | The work belongs to one ongoing body of context |
+| **No target** | The scheduled instruction can stand on its own |
+
+> **Choose the target deliberately**
+>
+> The target shapes the context available to the scheduled run. Use the live workspace to select the actual Agent or Track.
+
+## Choose a schedule
+
+The current Pulse model supports 2 scheduling approaches.
+
+<Columns cols={2}>
+  <Card title="Shared schedule slot" href="/pulses/schedules" icon="calendar">
+    Attach the Pulse to one or more named time slots already available in the workspace.
+  </Card>
+  <Card title="Custom schedule" href="/pulses/schedules" icon="clock">
+    Give the Pulse its own daily, weekly, monthly, or intra-day cadence.
+  </Card>
+</Columns>
+
+The exact named slots come from the current workspace rather than a fixed global list.
+
+## Create the Pulse
+
+<Steps>
+  <Step title="Name the Pulse" icon="file-text">
+    Use a clear name that describes the recurring job.
+  </Step>
+  <Step title="Write the instruction" icon="edit-3">
+    Explain what Giga should do each time the Pulse runs.
+  </Step>
+  <Step title="Choose the schedule" icon="clock">
+    Use a shared named slot or a custom cadence.
+  </Step>
+  <Step title="Choose the target" icon="target">
+    Select an Agent, Track, or leave the Pulse without a target.
+  </Step>
+  <Step title="Confirm the recurring behavior" icon="check-circle">
+    Review the instruction, schedule, and target before creating future scheduled work.
+  </Step>
+</Steps>
+
+## Writing a useful Pulse instruction
+
+A good Pulse instruction should tell Giga what outcome matters each time it runs.
+
+For example:
+
+> Review the latest activity for this Track. Summarize material changes, unresolved issues, and anything that needs attention. If nothing meaningful changed, keep the update brief.
+
+Useful instructions can include:
+
+- what to check
+- what counts as meaningful
+- what output to produce
+- which conditions should be surfaced
+- what to avoid
+- when human confirmation is still required
+
+Avoid instructions that depend on a one-time detail that will stop making sense next week.
+
+## Agent-targeted Pulse
+
+Choose an Agent when recurring work benefits from a reusable role.
+
+For example, a **Weekly Sales Review** Pulse could target a Sales Reporting Agent.
+
+The Agent contributes its role, durable instructions, context, and permitted resources at run time.
+
+[Learn about Pulses with Agents →](/pulses/with-agents)
+
+## Track-targeted Pulse
+
+Choose a Track when recurring work belongs to one ongoing effort.
+
+For example, a **Customer Renewal Check** Pulse could target the customer’s renewal Track and ask Giga to surface meaningful changes on a recurring cadence.
+
+The Pulse uses the Track context available when it runs.
+
+Track visibility and access continue to follow the Track’s [Group](/groups/index).
+
+## Targetless Pulse
+
+A Pulse does not have to target an Agent or Track.
+
+This can be useful when the recurring instruction is self-contained and does not need a dedicated role or ongoing Track context.
+
+The live run still uses whatever workspace permissions and capabilities are available to it.
+
+## Permissions still apply
+
+Creating a schedule does not grant new access.
+
+When the Pulse runs, Giga still needs the required:
+
+- Connections
+- provider permissions
+- Group access
+- Agent or Track access
+- live tools
+
+If the required capability is unavailable, the scheduled work should not pretend it succeeded.
+
+## Consequential actions still require confirmation
+
+A recurring instruction does not erase Giga’s normal safety boundaries.
+
+If a Pulse reaches a step that would require confirmation, such as sending an external message, granting access, deleting an important record, or making a payment, the live run should follow the applicable confirmation rule.
+
+## Confirm before creation
+
+Creating a Pulse changes future scheduled behavior.
+
+Giga should confirm the user’s intent before creating it.
+
+The confirmation should make the recurring behavior clear enough that the user understands:
+
+- what will run
+- the schedule
+- the target, if any
+
+## A simple example
+
+Imagine creating a **Weekly Customer Health Review** Pulse.
+
+| Setting | Example |
+| --- | --- |
+| **Name** | Weekly Customer Health Review |
+| **Instruction** | Review current customer signals and summarize meaningful changes, risks, and open issues |
+| **Schedule** | Weekly |
+| **Target** | Customer Success Agent |
+
+At each run, Giga uses the current Agent configuration, live Connections, and permissions rather than relying on a frozen snapshot from the day the Pulse was created.
+
+> **Image placeholder**
+>
+> Pulse creation form showing Name + Instruction + Schedule type + Cadence or named slots + Target.
+
+## Related pages
+
+- [Introduction to Pulses](/pulses/index)
+- [Schedules](/pulses/schedules)
+- [Pulses with Agents](/pulses/with-agents)
+- [Managing Pulses](/pulses/managing)
+- [Pulse examples](/pulses/examples)
+- [Introduction to Agents](/agents/index)
+- [Introduction to Tracks](/tracks/index)

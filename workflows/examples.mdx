@@ -1,0 +1,201 @@
+---
+title: Workflow examples
+description: See practical examples of reusable multi-step processes that fit the current Workflow model in Giga.
+---
+
+Workflows are useful when a task has **several meaningful stages that should run in a consistent order**.
+
+The examples below focus on process structure. The live Giga environment determines which Skills, Connections, files, and tools are available during a run.
+
+## Account research brief
+
+An **Account Research Brief Workflow** could turn company research into a consistent sales brief.
+
+<Steps>
+  <Step title="Gather account evidence" icon="search">
+    Collect current company facts and relevant evidence from approved sources.
+  </Step>
+  <Step title="Evaluate useful signals" icon="filter">
+    Identify the signals, risks, and open questions that matter for the sales team.
+  </Step>
+  <Step title="Prepare the brief" icon="file-text">
+    Return the findings in the team’s expected structure.
+  </Step>
+</Steps>
+
+Possible runtime inputs:
+
+- company name
+- company website
+- research depth
+
+An [Account Research Skill](/skills/examples) could provide the detailed research method inside the first step.
+
+## Candidate interview brief
+
+A **Candidate Interview Brief Workflow** could standardize how recruiting prepares for an interview.
+
+<Steps>
+  <Step title="Gather candidate evidence" icon="search">
+    Review the available candidate and role material.
+  </Step>
+  <Step title="Evaluate against the role" icon="check-square">
+    Identify relevant strengths, gaps, and evidence-backed open questions.
+  </Step>
+  <Step title="Prepare interview focus areas" icon="file-text">
+    Return a concise brief with the areas the interviewer should probe.
+  </Step>
+</Steps>
+
+Possible runtime inputs:
+
+- candidate name
+- role
+- source URL
+
+A Candidate Screening Skill can carry the reusable evaluation method while the Workflow keeps the ordered process.
+
+## Customer issue review
+
+A **Customer Issue Review Workflow** could give support teams a consistent diagnostic path.
+
+<Steps>
+  <Step title="Investigate the issue" icon="search">
+    Gather the relevant customer context, recent activity, and available evidence.
+  </Step>
+  <Step title="Determine the next action" icon="git-branch">
+    Identify the likely resolution or the information still required.
+  </Step>
+  <Step title="Prepare the response" icon="file-text">
+    Draft the response or internal recommendation. Ask for confirmation before any outward-facing action.
+  </Step>
+</Steps>
+
+A step can use approved [Connections](/connections/index) when the live environment makes the relevant support or customer systems available.
+
+## Document review
+
+A **Document Review Workflow** could separate analysis from final recommendations.
+
+<Steps>
+  <Step title="Understand the document" icon="file-text">
+    Identify the purpose, audience, and important claims in the material.
+  </Step>
+  <Step title="Review against the standard" icon="check-circle">
+    Apply the relevant review criteria and flag missing information, contradictions, or required fixes.
+  </Step>
+  <Step title="Prepare findings" icon="list-checks">
+    Return the issues in a consistent structure, separating required changes from optional suggestions.
+  </Step>
+</Steps>
+
+A reusable review [Skill](/skills/index) can hold the detailed standards used in step 2.
+
+## Customer renewal review
+
+A **Customer Renewal Review Workflow** could organize account context before a renewal discussion.
+
+<Steps>
+  <Step title="Gather current account context" icon="database">
+    Collect the current information relevant to the renewal.
+  </Step>
+  <Step title="Evaluate risks and opportunities" icon="activity">
+    Identify evidence-backed risks, opportunities, unresolved issues, and missing information.
+  </Step>
+  <Step title="Prepare the renewal brief" icon="file-text">
+    Summarize the account state and the questions the team should address.
+  </Step>
+</Steps>
+
+The Workflow can use live Connections when permitted, but provider access still controls which data and actions are available.
+
+## Research report
+
+A **Research Report Workflow** could turn a broad question into a structured piece of work.
+
+<Steps>
+  <Step title="Define the evidence needed" icon="target">
+    Clarify what needs to be established and what would count as reliable support.
+  </Step>
+  <Step title="Gather and evaluate sources" icon="search">
+    Collect relevant evidence and separate strong support from uncertainty.
+  </Step>
+  <Step title="Create the report" icon="file-text">
+    Synthesize the findings into the required structure and clearly mark unresolved questions.
+  </Step>
+</Steps>
+
+Possible runtime inputs:
+
+- research question
+- source URL
+- desired depth
+
+## Content review
+
+A **Content Review Workflow** could standardize how marketing content moves from draft to approved recommendation.
+
+<Steps>
+  <Step title="Understand the draft" icon="file-text">
+    Identify the intended audience, message, and purpose.
+  </Step>
+  <Step title="Review against company standards" icon="check-square">
+    Apply the relevant brand, quality, or factual review method.
+  </Step>
+  <Step title="Prepare the revision brief" icon="edit-3">
+    Return the required changes with a concise rationale.
+  </Step>
+</Steps>
+
+A Brand Review Skill can carry the reusable review standard.
+
+## Internal handoff
+
+An **Internal Handoff Workflow** could turn active work into a concise handoff for another teammate.
+
+<Steps>
+  <Step title="Gather the current state" icon="layers">
+    Collect the relevant objective, background, decisions, and current status.
+  </Step>
+  <Step title="Identify what matters next" icon="filter">
+    Pull out unresolved questions, dependencies, risks, and immediate next steps.
+  </Step>
+  <Step title="Prepare the handoff" icon="users">
+    Return a concise handoff with the context the next person needs to continue.
+  </Step>
+</Steps>
+
+If the work belongs to a [Track](/tracks/index), the Workflow can draw from the Track context available in the current run.
+
+## A useful Workflow pattern
+
+Across these examples, strong Workflows tend to follow a similar shape:
+
+| Stage | Purpose |
+| --- | --- |
+| **Gather** | Collect the information needed for the work |
+| **Evaluate** | Apply judgment, rules, or a reusable Skill |
+| **Produce** | Return the useful work product or recommendation |
+
+Real processes can have more than 3 steps, but this pattern is a good test for whether the Workflow reflects meaningful stages instead of low-level tool actions.
+
+## Workflow, Skill, or Pulse?
+
+Use a Workflow when the **ordered process** should be reusable.
+
+Use a [Skill](/skills/index) when the **task method** should be reusable.
+
+Use a [Pulse](/pulses/index) when the defining need is **recurring scheduled work**. The exact way a scheduled run uses other Giga primitives should follow the current live Pulse capabilities.
+
+> **Image placeholder**
+>
+> Gallery of Workflow cards showing Account Research, Candidate Interview Brief, Customer Issue Review, Document Review, and Internal Handoff.
+
+## Related pages
+
+- [Introduction to Workflows](/workflows/index)
+- [Creating a Workflow](/workflows/creating-a-workflow)
+- [Workflow steps](/workflows/steps)
+- [Running a Workflow](/workflows/running)
+- [Editing and reusing Workflows](/workflows/editing-and-reusing)
+- [Skill examples](/skills/examples)

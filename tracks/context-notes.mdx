@@ -1,0 +1,145 @@
+---
+title: Context Notes
+description: >-
+  Learn how Context Notes give a Track durable background, instructions, and
+  handoff context that Giga can reuse over time.
+---
+A **Context Note** gives a [Track](/tracks/index) durable background that should remain useful across multiple [Chats](/chats/index).
+
+Use it for the things Giga and your teammates should **know before they start working**: what the Track is about, important constraints, standing instructions, terminology, or a handoff from someone who already understands the work.
+
+## What belongs in a Context Note?
+
+A good Context Note captures information that is **stable enough to reuse**.
+
+<Columns cols="2">
+  <Card title="Background" href="/tracks/context-notes" icon="info" horizontal="false">
+    What this Track covers, why it exists, and what someone should understand before jumping in.
+  </Card>
+
+  <Card title="Standing instructions" href="/tracks/context-notes" icon="list" horizontal="false">
+    Rules, preferences, or constraints that should continue to apply to work in the Track.
+  </Card>
+
+  <Card title="Terminology" href="/tracks/context-notes" icon="book-open" horizontal="false">
+    Names, internal language, definitions, and other context that helps Giga interpret the work correctly.
+  </Card>
+
+  <Card title="Handoffs" href="/tracks/context-notes" icon="users" horizontal="false">
+    Useful context left by someone who already knows the work so the next person can start with less explanation.
+  </Card>
+</Columns>
+
+> **Think “what should still be true next time?”**
+>
+> Context Notes work best for durable background. Fast-changing progress belongs in [Memory](/tracks/memory), while authored work product belongs in [Files](/tracks/files).
+
+## Context Notes vs other Track information
+
+Giga separates standing context from the things that change as work happens.
+
+| If you want to keep…                                           | Best place               |
+| -------------------------------------------------------------- | ------------------------ |
+| Background, definitions, constraints, or standing instructions | **Context Note**         |
+| Progress, decisions, changes, or things learned over time      | [Memory](/tracks/memory) |
+| Reports, drafts, code, and other outputs                       | [Files](/tracks/files)   |
+| The active back-and-forth where work gets done                 | [Chats](/chats/index)    |
+
+This keeps the Track useful without turning one giant note into a dumping ground for every detail.
+
+## Why Context Notes matter
+
+Without durable context, every new Chat starts closer to a blank slate.
+
+A Context Note gives Giga a stable point of reference, which can help it:
+
+- understand the purpose of the Track
+- avoid asking for information that has already been provided
+- follow standing instructions and constraints
+- use the same terminology your team uses
+- pick up work with less repeated explanation
+- make handoffs between people smoother
+
+A Context Note is especially useful when several people work inside the same Track or when someone is joining work that already has history.
+
+## Example: a client Track
+
+Imagine a Track called **Acme rollout**.
+
+Its Context Note might contain:
+
+> **Acme rollout**
+>
+> Acme is rolling Giga out to its operations and support teams. The first phase covers 25 users. Keep recommendations practical and prioritize workflows that can be adopted without engineering support.
+>
+> Primary contacts: Maya Chen, Head of Operations; Jordan Lee, IT.
+>
+> When preparing client-facing material, keep explanations concise and avoid internal Giga implementation terminology.
+
+That information is useful across many Chats, so it belongs in the Track’s standing context rather than being rewritten every time.
+
+## Example: an onboarding handoff
+
+A Context Note can also act as a handoff.
+
+Someone inviting a teammate into Giga could leave a short note explaining:
+
+- what they are responsible for
+- which part of the business they are joining
+- the most useful source or system to connect first
+- anything important Giga should already know
+
+That lets a new Chat begin with relevant context instead of asking the person to repeat information that is already available.
+
+> **Keep handoffs useful and selective**
+>
+> Context should make the next interaction better. Avoid dumping an entire history into the note when a few durable facts will do.
+
+## What should stay out of a Context Note?
+
+Some information has a better home elsewhere.
+
+- **Passwords, API keys, tokens, and other secrets** belong in Giga’s secure credential system, never in a Context Note.
+- **Meaningful progress and changes** belong in [Memory](/tracks/memory).
+- **Large reports or working documents** belong in [Files](/tracks/files).
+- **Structured records that will grow over time** are usually better kept in a database.
+- **One-off instructions for a single Chat** can stay in that Chat unless they should become a standing rule.
+
+## Updating a Context Note
+
+Context changes sometimes. When it does, update the note so it reflects the standing truth of the Track.
+
+A good edit usually does one of three things:
+
+1. adds durable context that will matter again
+2. changes a standing instruction or constraint
+3. removes context that is no longer true
+
+Giga should read the existing Track context before changing it, so useful background is amended rather than accidentally overwritten.
+
+> **Context Notes are deliberate**
+>
+> They are the curated background you choose to keep with the Track. Automatic or event-like memory is handled separately.
+
+## Permissions
+
+A Context Note belongs to its Track, so the Track’s access boundary matters.
+
+Because a Track lives inside a [Group](/groups/index), the Group helps determine who can access the Track and its context. Put sensitive or personal work in the appropriate private Group rather than creating context in a broadly shared place.
+
+[Learn about Track sharing and permissions →](/tracks/sharing-and-permissions)
+
+## Image placeholder
+
+> **Image placeholder**
+>
+> Show a Track with a Context Note open beside a Chat, illustrating how durable background carries into the work.
+
+## Related pages
+
+- [Introduction to Tracks](/tracks/index)
+- [Creating and organizing Tracks](/tracks/creating-and-organizing)
+- [Memory](/tracks/memory)
+- [Files in Tracks](/tracks/files)
+- [Using context in a Chat](/chats/context)
+- [Groups](/groups/index)

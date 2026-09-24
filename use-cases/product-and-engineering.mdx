@@ -1,0 +1,202 @@
+---
+title: Product & Engineering
+description: >-
+  Practical ways product and engineering teams can use Giga for technical
+  context, research, implementation work, and reusable operating methods.
+---
+Product and engineering work builds up context fast: requirements, technical decisions, research, implementation details, files, and unresolved questions.
+
+Giga can keep that context connected across longer-running work while giving teams reusable ways to research, review, and execute supported tasks.
+
+## Keep ongoing work in Tracks
+
+Use a [Track](/tracks/index) when a product or engineering effort will continue across multiple Chats.
+
+Examples include:
+
+- a product initiative
+- a technical implementation
+- a system migration
+- an architecture exploration
+- a bug or regression investigation
+- an integration project
+- a long-running research effort
+
+The Track keeps the durable background, memory, Current Track State, authored files, and linked Chats around the work.
+
+## Preserve technical decisions
+
+Technical work often depends on understanding why an earlier decision was made.
+
+Current Track State is useful for keeping:
+
+- where the work stands now
+- how it got there
+- options that were ruled out
+- why those options were rejected
+- questions that remain open
+
+That helps future work avoid repeating decisions that have already been made.
+
+A [Context Note](/tracks/context-notes) is better for stable architecture background, constraints, terminology, or standing instructions.
+
+## Create and review work product
+
+Files in Giga are authored work product.
+
+For product and engineering work, confirmed file capabilities include:
+
+- Markdown
+- text and binary Track files
+- code
+- webpages
+- visual artifacts where the current Giga Web surface supports them
+- SQLite for local structured growing records
+- hosted Giga databases when requested and available
+
+Giga should use the current surface to determine exactly how a file can be created, displayed, edited, or returned.
+
+[Learn about Files in Tracks →](/tracks/files)
+
+## Use Connections for live technical systems
+
+[Connections](/connections/index) can give Giga access to approved APIs, databases, MCP servers, browser sessions, and other technical systems.
+
+When a first-class tool, API, database, or MCP Connection can complete the task, Giga should prefer that route.
+
+Browser-based work is a fallback when a stronger supported route is unavailable.
+
+The exact systems and actions available depend on the current workspace and provider permissions.
+
+## Reuse engineering methods with Skills
+
+A [Skill](/skills/index) can capture repeatable engineering or product methods.
+
+Examples include:
+
+- code or implementation review criteria
+- incident-summary structure
+- architecture-review method
+- product-requirement review
+- technical research method
+- release or handoff checklist
+- document-review standards
+
+The Skill stores the reusable method while the current Track supplies the project-specific context.
+
+## Standardize recurring processes with Workflows
+
+A [Workflow](/workflows/index) fits work with several meaningful stages.
+
+For example, a **Technical Investigation** Workflow might include:
+
+<Steps>
+  <Step title="Understand the problem" icon="search" title-type="p">
+    Review the Track context, current state, relevant files, and available evidence.
+  </Step>
+
+  <Step title="Inspect the relevant systems" icon="tool" title-type="p">
+    Use approved Connections, files, databases, or other live capabilities available in the current environment.
+  </Step>
+
+  <Step title="Evaluate the options" icon="git-branch" title-type="p">
+    Compare the evidence against the stated constraints and preserve rejected options when they matter.
+  </Step>
+
+  <Step title="Produce the handoff" icon="file-text" title-type="p">
+    Return the implementation plan, technical summary, or other supported work product.
+  </Step>
+</Steps>
+
+The Workflow defines the repeatable process. A Skill can define the review or analysis method used inside a step.
+
+## Use Agents for reusable technical roles
+
+An [Agent](/agents/index) can provide a stable role for repeated product or engineering work.
+
+Examples include:
+
+- a technical research Agent
+- a code-review Agent
+- a product-requirements Agent
+- an integration Agent
+
+The Agent can have durable instructions, context, approved Skills, and permitted Connections.
+
+Its exact capabilities still come from the live Agent configuration and Group permissions.
+
+## Use structured data when the work needs it
+
+Some engineering and product tasks produce growing structured records.
+
+SQLite or a hosted Giga database can fit work that needs:
+
+- repeated records
+- filtering and sorting
+- field-by-field updates
+- aggregation
+- structured state that grows over time
+
+Use files for authored plans, documentation, code, and reports.
+
+Use Track memory for developments and decisions.
+
+## Schedule recurring technical checks with Pulses
+
+A [Pulse](/pulses/index) can run product or engineering work that genuinely benefits from a schedule.
+
+Examples include:
+
+- a recurring project review
+- a scheduled research check
+- a periodic review of an implementation Track
+- recurring work through a technical Agent
+
+The Pulse can target an Agent, a Track, or run without a target.
+
+## Keep consequential actions explicit
+
+Connected technical systems can expose powerful actions.
+
+When a task would make a consequential external change, Giga should follow the applicable confirmation rule before executing it.
+
+The exact action boundary depends on the live tool and system involved.
+
+## Example: integration project
+
+Imagine a team building a new integration.
+
+<Columns cols="2">
+  <Card title="Integration Track" href="/tracks/index" icon="folder" horizontal="false">
+    Keeps requirements, technical decisions, Current Track State, and implementation files together.
+  </Card>
+
+  <Card title="Technical Agent" href="/agents/index" icon="bot" horizontal="false">
+    Provides a reusable technical role with approved context and access.
+  </Card>
+
+  <Card title="Review Skill" href="/skills/index" icon="sparkles" horizontal="false">
+    Applies the team’s standard implementation or review method.
+  </Card>
+
+  <Card title="Connections" href="/connections/index" icon="plug" horizontal="false">
+    Provide live access to approved technical systems where the current workspace supports it.
+  </Card>
+</Columns>
+
+A Workflow can standardize the investigation or implementation process, and a Pulse can add scheduled review when the work benefits from recurring checks.
+
+> **Image placeholder**
+>
+> Product & Engineering diagram showing Integration Track + Technical Agent + Review Skill + approved Connections, with Workflow and Pulse as reusable process and schedule layers.
+
+## Related pages
+
+- [Use Cases overview](/use-cases/index)
+- [Introduction to Tracks](/tracks/index)
+- [Files in Tracks](/tracks/files)
+- [Introduction to Connections](/connections/index)
+- [Introduction to Agents](/agents/index)
+- [Introduction to Skills](/skills/index)
+- [Introduction to Workflows](/workflows/index)
+- [Introduction to Pulses](/pulses/index)

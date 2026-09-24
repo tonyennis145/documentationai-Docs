@@ -1,0 +1,166 @@
+---
+title: Managing Pulses
+description: Learn how to review, update, and remove existing recurring work in Giga.
+---
+
+A Pulse keeps running on its saved schedule until its definition changes or the Pulse is removed.
+
+Managing a Pulse usually means reviewing its current setup, changing part of the recurring job, or deleting it when the scheduled work is no longer needed.
+
+## Review the current Pulse first
+
+Before changing a Pulse, Giga should read the current Pulse definition.
+
+That lets you review:
+
+- name
+- recurring instruction
+- schedule type
+- cadence or selected schedule slots
+- Agent, Track, or targetless setup
+
+The live Pulse list is also the source of truth for the shared schedule slots currently available in the workspace.
+
+> **Read before updating**
+>
+> The current Pulse update operation replaces the full desired definition. Giga should preserve every existing setting that should remain.
+
+## What you can change
+
+A Pulse can be updated as the recurring job evolves.
+
+Typical changes include:
+
+<Columns cols={2}>
+  <Card title="Instruction" href="/pulses/creating-a-pulse" icon="file-text">
+    Change what Giga should do each time the Pulse runs.
+  </Card>
+  <Card title="Schedule" href="/pulses/schedules" icon="clock">
+    Change the schedule type, cadence, or shared schedule slots.
+  </Card>
+  <Card title="Target" href="/pulses/with-agents" icon="target">
+    Change the Agent or Track the recurring work runs against, or remove the target.
+  </Card>
+  <Card title="Name" href="/pulses/managing" icon="edit-3">
+    Rename the Pulse when a clearer label helps people understand the recurring job.
+  </Card>
+</Columns>
+
+## Updating a Pulse safely
+
+<Steps>
+  <Step title="Read the current definition" icon="search">
+    Review every saved setting before making a change.
+  </Step>
+  <Step title="Change the intended field" icon="edit-3">
+    Update the instruction, schedule, target, or name that needs to change.
+  </Step>
+  <Step title="Preserve everything else" icon="list-checks">
+    Keep the existing settings that should remain part of the Pulse.
+  </Step>
+  <Step title="Save the full definition" icon="save">
+    Submit the complete desired Pulse configuration.
+  </Step>
+</Steps>
+
+For example, changing a Pulse from weekly to daily should not accidentally remove its target or recurring instruction.
+
+## Changing the schedule
+
+A Pulse can use a shared named schedule slot or a custom cadence.
+
+If you change between those scheduling models, review the full schedule setup so the new definition is complete.
+
+The current custom cadences are:
+
+- daily
+- weekly
+- monthly
+- intra-day
+
+[Learn about Pulse schedules →](/pulses/schedules)
+
+## Changing the target
+
+A Pulse can currently target:
+
+- an [Agent](/agents/index)
+- a [Track](/tracks/index)
+- no target
+
+Changing the target can materially change the context available to future scheduled runs.
+
+Before switching targets, check that the new Agent or Track is the intended home for the recurring work and that the required permissions and Connections are available.
+
+## Changes to Agents and Tracks can affect future runs
+
+You do not always need to edit the Pulse when the surrounding context changes.
+
+An Agent-targeted Pulse uses the current Agent configuration at run time.
+
+A Track-targeted Pulse uses the current Track context available at run time.
+
+That means future runs can reflect changes to:
+
+- Agent instructions
+- Agent context
+- Skills
+- Connections
+- Track context
+- provider permissions
+- external data
+
+Edit the Pulse itself when the recurring instruction, schedule, or target needs to change.
+
+## When a Pulse stops producing useful results
+
+If a recurring result becomes less useful, check the right layer before rewriting everything.
+
+| Problem | Check first |
+| --- | --- |
+| The job itself is wrong | Pulse instruction |
+| It runs too often or too rarely | Pulse schedule |
+| It uses the wrong role | Agent target |
+| It belongs to different ongoing work | Track target |
+| Required data is missing | Connections and provider permissions |
+| The task method needs improvement | Relevant Skill or Agent instructions |
+
+This helps keep scheduling, context, access, and task methods in their proper places.
+
+## Removing a Pulse
+
+Deleting a Pulse removes the recurring scheduled behavior.
+
+Giga should confirm before deletion because future runs will stop.
+
+> **Delete only when the recurring job should end**
+>
+> If the job still matters but needs different timing, instructions, or context, update the Pulse instead.
+
+The current Pulse tool surface exposes deletion rather than a separate documented pause or disable state, so Giga should not promise a pause control unless the live product surface confirms one.
+
+## A simple example
+
+Imagine a **Weekly Customer Health Review** Pulse currently targeting a Customer Success Agent.
+
+The team decides it should run monthly and focus only on material risks.
+
+A safe update would:
+
+1. read the current Pulse
+2. preserve its name and Agent target
+3. change the instruction to focus on material risks
+4. change the custom cadence from weekly to monthly
+5. save the complete revised definition
+
+> **Image placeholder**
+>
+> Pulse management view showing Current settings → Edit instruction/schedule/target → Review full definition → Save.
+
+## Related pages
+
+- [Introduction to Pulses](/pulses/index)
+- [Creating a Pulse](/pulses/creating-a-pulse)
+- [Schedules](/pulses/schedules)
+- [Pulses with Agents](/pulses/with-agents)
+- [Pulse examples](/pulses/examples)

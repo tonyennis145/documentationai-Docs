@@ -1,0 +1,362 @@
+---
+title: Troubleshooting
+description: Diagnose common Giga issues across context, permissions, Connections, files, Workflows, Pulses, and supported surfaces.
+---
+
+Most Giga issues become easier to diagnose once you identify 4 things:
+
+1. **which user is making the request**
+2. **which workspace and Group the work belongs to**
+3. **which resource or Connection is involved**
+4. **which Giga surface is being used**
+
+The live workspace is the source of truth for current access and capability.
+
+## Giga is using the wrong context
+
+First check the scope of the work.
+
+Review:
+
+- workspace context
+- Group context
+- the explicitly selected Track
+- Track Context Notes
+- Current Track State
+- relevant Observations
+- user-level context
+- current Connections
+
+A Chat can link to at most 1 Track, and that Track should be explicitly selected or confirmed.
+
+If the wrong Track is selected, switch to the intended Track rather than adding a second one.
+
+[Learn about Using context in a Chat →](/chats/context)
+
+## Giga cannot find the Track I expect
+
+Check:
+
+1. whether the Track exists in the current workspace
+2. which Group contains it
+3. whether the current user can access that Group
+4. whether the Track has been archived or moved out of the current working scope
+5. whether the name being used matches the intended Track
+
+Track visibility currently follows its Group.
+
+For private work, check the user’s existing private Group.
+
+## A Track looks empty
+
+An empty file area does not mean the Track has no context or history.
+
+Check the Track’s:
+
+- Context Note
+- Observations
+- Current Track State
+- linked Chats
+- files
+
+Track memory lives separately from authored files.
+
+[Learn about Memory →](/tracks/memory)
+
+## Giga keeps missing an old decision
+
+Read **Current Track State** before continuing work that depends on previous decisions, rejected options, or open questions.
+
+Current Track State is the curated decision record for the Track.
+
+Observations can also contain meaningful developments that happened over time.
+
+## I cannot see an Agent
+
+Check the live Group and Agent state.
+
+Agents operate within the Group permission model where supported.
+
+Review whether:
+
+- the Agent exists in the current workspace
+- the current user belongs to the relevant Group
+- the Agent is available in the current surface
+- the requested Connection or Skill is actually available to that Agent
+
+[Learn about Sharing Agents →](/agents/sharing)
+
+## I cannot see a Skill
+
+Skill visibility is based on ownership and explicit Group sharing.
+
+A user can see:
+
+- Skills they own
+- Skills shared into Groups they belong to
+
+Check the Skill’s current sharing state and the user’s Group membership.
+
+[Learn about Sharing Skills →](/skills/sharing)
+
+## A Connection is missing
+
+Before creating another Connection, check the current connected credentials and integrations.
+
+A credential can be:
+
+- owned by the current user
+- shared into a Group the user belongs to
+- unavailable because the user lacks access to the relevant Group
+
+Also check whether the requested provider already exists in Giga’s integration catalog.
+
+[Learn about Managing Connections →](/connections/managing-connections)
+
+## A Connection exists but the action still fails
+
+Work through the permission layers.
+
+Check:
+
+1. current user access
+2. Group sharing
+3. credential ownership
+4. external provider permissions
+5. the exact tools exposed by the Connection
+6. action-level permissions inside the external system
+
+A valid Connection can still be limited by the connected provider account.
+
+[Learn about Permissions →](/teams-and-admin/permissions)
+
+## The Connection is using the wrong account
+
+Inspect the credential metadata and current connected account before taking the action.
+
+If several credentials exist for the same provider, clear labels help distinguish them.
+
+For example:
+
+- Production CRM
+- Sales CRM
+- Test Account
+
+Credential metadata can be renamed by the owner where the current tools allow it.
+
+[Learn about Managing company Connections →](/teams-and-admin/managing-company-connections)
+
+## Authentication expired or stopped working
+
+Reconnect or rotate the authentication through the secure connection flow.
+
+Credential metadata editing and secret rotation are separate operations.
+
+Avoid pasting replacement secrets into normal Chat when a secure connection flow is available.
+
+## An API request fails
+
+When using raw API access, verify the provider’s current API contract before retrying.
+
+Check:
+
+- endpoint
+- HTTP method
+- request body
+- headers
+- authentication method
+- pagination behavior
+- content type
+- idempotency or signing requirements where relevant
+
+Giga should avoid inventing an API shape from memory.
+
+## Browser login is blocked
+
+CAPTCHA, bot detection, and two-factor authentication can require user input.
+
+When that happens, complete the login step through the supported user-facing browser login flow, then continue once the authenticated session is available.
+
+Repeated automated login attempts are unlikely to fix a human verification step.
+
+[Learn about Browser Connections →](/connections/custom/browser-connections)
+
+## Giga is trying to use the browser for something with an API
+
+The preferred order is:
+
+1. first-class Giga tool
+2. connected API, database, or MCP capability
+3. browser-based work
+
+Use the browser when stronger supported routes cannot complete the task.
+
+[Learn about Web research and actions →](/chats/web-research-and-actions)
+
+## A file link does not work
+
+Giga file links should come from the current file-link capability.
+
+Internal file paths should not be turned into user-facing URLs manually.
+
+Generate or retrieve a validated viewer or download link from Giga, then use that returned URL.
+
+## A file behaves differently in Slack and Giga Web
+
+File and rich UI behavior can differ by surface.
+
+In Giga Web, supported documents, code, webpages, and visual work can appear in the viewer when the current surface supports them.
+
+In Slack, generated files, charts, screenshots, and exports should use the current Slack upload mechanism.
+
+For ChatGPT, Claude, and Microsoft Teams, follow the file behavior exposed by the live integration.
+
+[Learn about using Giga anywhere →](/use-giga-anywhere/index)
+
+## A Workflow changed unexpectedly after editing
+
+Workflow step updates replace the full ordered step list.
+
+Before editing a Workflow:
+
+1. read the current Workflow
+2. preserve every step that should remain
+3. make the intended changes
+4. save the full revised sequence
+
+If a step is supplied incompletely, the saved Workflow can lose content that was omitted from the replacement.
+
+[Learn about Editing and reusing Workflows →](/workflows/editing-and-reusing)
+
+## A Workflow run is blocked
+
+Current Workflow runs can report these step states:
+
+- running
+- completed
+- blocked
+- failed
+
+When a step is blocked or failed, stop the run and return the reason.
+
+Resolve the missing input, permission, Connection, or other blocker before continuing.
+
+[Learn about Running a Workflow →](/workflows/running)
+
+## A Pulse changed unexpectedly after editing
+
+Pulse updates replace the full desired definition.
+
+Before updating a Pulse, read the current Pulse and preserve every setting that should remain, including:
+
+- name
+- recurring instruction
+- schedule type
+- cadence or selected slots
+- target
+
+[Learn about Managing Pulses →](/pulses/managing)
+
+## A Pulse is running against the wrong context
+
+Check its target.
+
+A Pulse can target:
+
+- an Agent
+- a Track
+- no target
+
+Then check the current Agent or Track configuration, Connections, and permissions available at run time.
+
+The schedule controls when the work runs. The target controls the role or ongoing context the Pulse runs against.
+
+## I cannot find the schedule option I expected
+
+Pulse schedule options come from the live workspace.
+
+Current supported scheduling models include shared named slots and custom daily, weekly, monthly, or intra-day cadence.
+
+Check the current Pulse surface for the exact available named slots.
+
+[Learn about Pulse schedules →](/pulses/schedules)
+
+## A teammate cannot access something I can
+
+Compare the access layers for both users.
+
+Check:
+
+- workspace membership
+- workspace role
+- Group membership
+- resource ownership or sharing
+- Connection sharing
+- provider-side permissions
+- current surface capabilities
+
+Workspace membership alone does not establish access to every resource.
+
+[Learn about Permissions →](/teams-and-admin/permissions)
+
+## A workspace context edit removed something
+
+Workspace, Group, Track, and user context updates replace the stored context at that level.
+
+Read the current context first, merge the intended change, and preserve existing guidance that should remain.
+
+Meaningful context changes should be confirmed before saving.
+
+[Learn about Workspace settings →](/teams-and-admin/workspace-settings)
+
+## A feature works in one surface but not another
+
+Giga Web, Slack, ChatGPT, Claude, and Microsoft Teams can expose different UI, file behavior, and tool capabilities.
+
+Check the current surface rather than assuming feature parity.
+
+The underlying Company Brain and permission boundaries stay consistent across surfaces.
+
+## A model or provider I expected is missing
+
+Model availability is dynamic.
+
+Verify the current workspace configuration for:
+
+- supported providers
+- models available to the workspace
+- plan-specific availability
+- custom endpoint support
+- any bring-your-own-model option
+
+Avoid relying on old documentation or assumptions about current provider availability.
+
+## Still stuck?
+
+Use the smallest diagnostic path that matches the issue:
+
+<Columns cols={2}>
+  <Card title="Context problem" href="/chats/context" icon="layers">
+    Check workspace, Group, Track, user context, and current memory.
+  </Card>
+  <Card title="Access problem" href="/teams-and-admin/permissions" icon="shield-check">
+    Check workspace membership, Group access, ownership, and provider permissions.
+  </Card>
+  <Card title="Connection problem" href="/connections/troubleshooting" icon="plug">
+    Check authentication, provider permissions, connected account, and available tools.
+  </Card>
+  <Card title="Feature choice problem" href="/resources/choosing-the-right-feature" icon="git-branch">
+    Check whether the work belongs in a Chat, Track, Agent, Skill, Workflow, Pulse, or Connection.
+  </Card>
+</Columns>
+
+> **Image placeholder**
+>
+> Troubleshooting flow: Identify user and surface → Check Group/Track context → Check permissions → Check Connection/provider → Check feature-specific state.
+
+## Related resources
+
+- [FAQ](/resources/faq)
+- [Giga Dictionary](/resources/dictionary)
+- [Choosing the right Giga feature](/resources/choosing-the-right-feature)
+- [Troubleshooting Connections](/connections/troubleshooting)

@@ -1,40 +1,85 @@
 ---
 title: Introduction to Giga
-description: Landing page with product overview, key features, quick navigation, and getting started links for Giga, the AI assistant that automates tasks in Slack.
+description: A high-level guide to Giga's core building blocks and where to find them.
 ---
+Giga brings company work, connected tools, and durable context into one AI workspace. The building blocks below help you decide **where work belongs**, **what Giga can access**, and **how repeatable work gets reused**.
 
-<Image src="https://blob-cdn.documentation.ai/org-2ebb2ef5-dd91-493f-9938-283fbdb14c81/doc-d2a73d2e-4391-4446-a5c8-2d0b41b7c4c1/1774416373576-61fes65kpt8-Image-6.png?q=85&fm=auto&auto=compress%2Cformat" alt="Giga documentation" width="800" height="400" />
+## Product overview
 
-## Overview
+> **Video placeholder**
+>
+> Product overview video. We’ll replace this block with the final video when it’s ready.
 
-Welcome to Giga's documentation. Giga connects your tools and team in Slack, automating tasks like organizing meetings and managing invoices so you focus on what matters.
+## Explore Giga
 
-<Columns cols={2}>
-  <Card title="Automate Routine Tasks" icon="zap" href="/quickstart">
-    Use simple Slack commands to handle invoices, meetings, and CRM updates automatically.
+<Columns cols="2">
+  <Card title="Chats" href="/chats/index" icon="message-circle" horizontal="false">
+    Ask questions, work through tasks, and hand off work to Giga.
   </Card>
-  <Card title="Seamless Integrations" icon="link" href="/authentication">
-    Connect Giga to Google Calendar, Notion, Shopify, Salesforce, and more for effortless workflows.
+
+  <Card title="Tracks" href="/tracks/index" icon="folder" horizontal="false">
+    Keep long-running work, context, files, and history together.
   </Card>
-  <Card title="Sales and Leads Boost" icon="trending-up" href="/quickstart">
-    Draft outreach messages, nurture pipelines, and grow your X following with AI assistance.
+
+  <Card title="Connections" href="/connections/index" icon="plug" horizontal="false">
+    Give Giga secure access to the tools and systems your company already uses.
   </Card>
-  <Card title="Finance and Operations" icon="dollar-sign" href="/configuration">
-    Manage cash flow, build operations manuals, and optimize ad costs across your tools.
+
+  <Card title="Groups" href="/groups/index" icon="users" horizontal="false">
+    Organize shared work and control who can access it.
+  </Card>
+
+  <Card title="Agents" href="/agents/index" icon="bot" horizontal="false">
+    Create named AI agents with their own instructions, context, and access.
+  </Card>
+
+  <Card title="Skills" href="/skills/index" icon="sparkles" horizontal="false">
+    Reuse instructions for specific kinds of work.
+  </Card>
+
+  <Card title="Workflows" href="/workflows/index" icon="git-branch" horizontal="false">
+    Save repeatable multi-step processes that can be run again.
+  </Card>
+
+  <Card title="Pulses" href="/pulses/index" icon="clock" horizontal="false">
+    Run recurring work on a schedule.
   </Card>
 </Columns>
 
-## Get Started Quickly
+## Use Giga where your team works
 
-<Columns cols={2}>
-  <Card title="Quickstart Guide" icon="book-open" href="/quickstart" horizontal>
-    Set up Giga in Slack and run your first automation in minutes.
+Giga can be used through different interfaces while the underlying workspace context and permissions continue to apply.
+
+<Columns cols="3">
+  <Card title="Giga Web" href="/use-giga-anywhere/web" icon="monitor" horizontal="false">
+    Work directly in the Giga web app.
   </Card>
-  <Card title="Slack Integration" icon="message-circle" href="/authentication" horizontal>
-    Learn how Giga works directly in your Slack workspace.
+
+  <Card title="Slack" href="/use-giga-anywhere/slack" icon="message-square" horizontal="false">
+    Work with Giga inside Slack.
+  </Card>
+
+  <Card title="ChatGPT" href="/use-giga-anywhere/chatgpt" icon="message-circle" horizontal="false">
+    Use Giga from ChatGPT.
+  </Card>
+
+  <Card title="Claude" href="/use-giga-anywhere/claude" icon="sparkles" horizontal="false">
+    Use Giga from Claude.
+  </Card>
+
+  <Card title="Microsoft Teams" href="/use-giga-anywhere/microsoft-teams" icon="users" horizontal="false">
+    Use Giga from Microsoft Teams.
   </Card>
 </Columns>
 
-<Callout kind="tip">
-  This documentation was generated as a starter kit. Customize the content to match your product.
-</Callout>
+## How Giga stays grounded
+
+Giga’s product doctrine stays stable, while live workspace details stay dynamic. Current **permissions**, **Tracks**, **Groups**, **Connections**, and available tools are checked from the live workspace instead of being assumed.
+
+> **Live workspace is the source of truth**
+>
+> If something depends on access, connected tools, or workspace state, Giga checks the live workspace rather than relying on a hard-coded list.
+
+> **Image placeholder**
+>
+> Product overview diagram showing how Chats, Tracks, Groups, Connections, Agents, Skills, Workflows, and Pulses fit together.

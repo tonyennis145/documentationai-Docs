@@ -1,0 +1,144 @@
+---
+title: Claude
+description: Learn how Giga can be used from Claude while keeping Giga's live workspace context and permissions in place.
+---
+
+**Claude** is an official Giga surface.
+
+When Giga is available in your Claude environment, you can work with company context and connected systems while Giga continues to resolve the current workspace, permissions, and available capabilities underneath.
+
+## Giga stays the workspace layer
+
+Using Claude changes the interface you are working from.
+
+The underlying Giga model stays consistent.
+
+Depending on the current session and permissions, Giga can resolve relevant:
+
+- [Groups](/groups/index)
+- [Tracks](/tracks/index)
+- Context Notes
+- Observations
+- Current Track State
+- [Connections](/connections/index)
+- [Skills](/skills/index)
+- files
+- user and workspace context
+
+The live Giga environment remains the source of truth for what is actually available.
+
+> **Claude does not widen access**
+>
+> Using Giga from Claude does not make every company resource available. Giga continues to respect the current user, Group, Track, Connection, and workspace permission boundaries.
+
+## Work with Giga from Claude
+
+The exact experience depends on the capabilities exposed in the current Claude environment.
+
+Where supported, you can use Giga to:
+
+- ask questions about permitted company context
+- work with an explicitly selected Track
+- use available Connections
+- apply available Skills
+- create or update supported Giga work
+- take supported actions through the tools exposed in the session
+
+Giga should check the live tool environment before claiming a specific action is available.
+
+## Tracks still require explicit selection
+
+A [Chat](/chats/index) can be linked to at most one Track.
+
+Giga should never silently infer the Track from the topic of the Claude Chat.
+
+The Track should be explicitly selected or confirmed because Track attachment affects where observations from the Chat can become retrievable.
+
+Once selected, Giga can use the Track context available to the current user.
+
+## Company Brain remains permission-aware
+
+Giga’s Company Brain is the structured company context layer behind the work.
+
+From Claude, that can include permitted:
+
+- workspace and Group guidance
+- Track context and memory
+- files
+- Agent and Skill context
+- Connections and live external information
+- user-level context
+
+Giga should retrieve what is relevant to the task while staying inside the current permission scope.
+
+## Connections stay live
+
+[Connections](/connections/index) continue to come from the current Giga workspace.
+
+If a connected capability is exposed in the Claude session and the user has access, Giga can use it.
+
+If a capability is unavailable in the current Claude environment, Giga should not assume that because it exists elsewhere in Giga it is automatically usable from Claude.
+
+> **Surface capability is dynamic**
+>
+> The current Claude integration determines which tools, actions, and file behaviors are available in that session.
+
+## File behavior can differ
+
+Giga does not assume Claude handles files exactly like [Giga Web](/use-giga-anywhere/web) or [Slack](/use-giga-anywhere/slack).
+
+The current Claude environment determines:
+
+- what file operations are available
+- how files are displayed or returned
+- which artifact or preview capabilities are exposed
+- which actions can be completed directly from the session
+
+For exact file behavior, use the capabilities available in the current surface.
+
+[Learn about working with files →](/chats/working-with-files)
+
+## Claude vs Giga Web
+
+<Columns cols={2}>
+  <Card title="Claude" href="/use-giga-anywhere/claude" icon="sparkles">
+    Work with Giga from Claude using the capabilities exposed in that environment.
+  </Card>
+  <Card title="Giga Web" href="/use-giga-anywhere/web" icon="monitor">
+    Work in Giga’s first-party web interface with its web-specific viewer and rich UI where supported.
+  </Card>
+</Columns>
+
+The same Giga workspace permissions and company context remain underneath both surfaces.
+
+## A simple example
+
+Imagine you are working through a product research question in Claude.
+
+<Steps>
+  <Step title="Ask Giga from Claude" icon="message-circle">
+    Start with the question or task you want to work through.
+  </Step>
+  <Step title="Resolve live Giga access" icon="shield-check">
+    Giga checks the current user, Groups, Connections, and explicitly selected Track.
+  </Step>
+  <Step title="Use relevant company context" icon="layers">
+    Giga retrieves the permitted context and live capabilities available in the session.
+  </Step>
+  <Step title="Return the result in Claude" icon="check-circle">
+    The response follows the capabilities and presentation available in the current Claude surface.
+  </Step>
+</Steps>
+
+> **Image placeholder**
+>
+> Diagram showing Claude → Giga permission layer → Company Brain / Track / Connections → response back in Claude.
+
+## Related pages
+
+- [Use Giga anywhere](/use-giga-anywhere/index)
+- [Giga Web](/use-giga-anywhere/web)
+- [Introduction to Chats](/chats/index)
+- [Using context in a Chat](/chats/context)
+- [Introduction to Tracks](/tracks/index)
+- [Introduction to Connections](/connections/index)

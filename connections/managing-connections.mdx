@@ -1,0 +1,163 @@
+---
+title: Managing Connections
+description: Learn how to review, update, reconnect, and remove Connections in Giga.
+---
+
+Once a [Connection](/connections/index) is set up, you can manage it as your company’s tools, accounts, and access needs change.
+
+The exact controls depend on the connection method and your permissions, but Giga can help you review what is connected, identify who owns the underlying credential, update labels, reconnect securely, and remove access when it is no longer needed.
+
+## What you can manage
+
+<Columns cols={2}>
+  <Card title="Review Connections" href="/connections/managing-connections" icon="search">
+    See the Connections currently available to you before creating another one.
+  </Card>
+  <Card title="Rename or relabel" href="/connections/managing-connections" icon="edit-3">
+    Keep account names and connection labels clear when you manage the underlying credential.
+  </Card>
+  <Card title="Reconnect securely" href="/connections/connect-a-tool" icon="refresh-cw">
+    Use the secure connection flow when authentication needs to be refreshed or replaced.
+  </Card>
+  <Card title="Remove access" href="/connections/managing-connections" icon="trash-2">
+    Remove a credential-backed Connection you own when it should no longer be available.
+  </Card>
+</Columns>
+
+## Review before adding another Connection
+
+Before creating a new Connection, Giga should check what is already available.
+
+This helps avoid duplicate CRM, database, API, or other service connections that point to the same system.
+
+> **Check what is already connected**
+>
+> Giga should inspect the current Connection and credential state before asking you to set up another copy of the same service.
+
+If you need a new account for the same service, give it a clear label so people can tell the Connections apart.
+
+## Ownership matters
+
+A Connection can be available to you even when you do not own the underlying credential.
+
+For credential-backed Connections, the current model distinguishes between **using** a shared credential and **managing** it.
+
+| Situation | What you can expect |
+| --- | --- |
+| You own the credential | You may be able to rename, relabel, or remove it |
+| It is shared into a Group you belong to | You may be able to use it without being able to edit or delete it |
+| You do not have access | Giga should not expose or use it for you |
+
+The live workspace state is always the source of truth for what you can do.
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## Rename or relabel a Connection
+
+Clear names make it easier to tell similar Connections apart.
+
+For credential-backed Connections you own, Giga can update things such as:
+
+- the credential handle
+- the human-readable display name
+- a non-secret note
+
+Changing the handle should preserve references that point to the existing credential when the live tool supports that update.
+
+> **Labels can change. Secrets do not appear in the editor**
+>
+> Giga can manage credential metadata without exposing the underlying password, token, key, or connection string.
+
+## Refresh or rotate credentials
+
+Updating a Connection’s name or note does **not** replace the secret behind it.
+
+If an API key, password, token, or other credential needs to be rotated, use the secure connection flow again rather than pasting the replacement secret into Chat.
+
+<Steps>
+  <Step title="Identify the Connection that needs new authentication" icon="search">
+    Confirm the service and account before changing anything.
+  </Step>
+  <Step title="Open the secure connection flow" icon="lock">
+    Use Giga’s connection setup to enter or approve the new credential safely.
+  </Step>
+  <Step title="Confirm the Connection works" icon="check-circle">
+    Return to your work and verify that Giga can access the service through the updated connection.
+  </Step>
+</Steps>
+
+[Connect a tool →](/connections/connect-a-tool)
+
+## Remove a Connection you own
+
+Removing a stored credential is consequential because Giga can no longer use that credential afterward.
+
+Giga should confirm before deleting it.
+
+For shared credentials, only the owner can edit or delete the stored credential in the current model. A teammate who can use a shared Connection should not automatically be able to remove it for everyone else.
+
+> **Removal affects future access**
+>
+> Confirm the exact Connection before deleting a credential, especially when other people or Agents may rely on it.
+
+## Connection metadata stays separate from the secret
+
+Giga can inspect connection metadata without returning the secret value itself.
+
+Depending on the connection type, metadata can include things such as:
+
+- the service or integration
+- the credential type
+- its display label or handle
+- expiry information when available
+- non-secret notes
+
+The actual secret stays behind Giga’s secure credential layer and is injected only when the connected operation needs it.
+
+## When a Connection stops working
+
+Authentication can fail for several reasons:
+
+- an OAuth grant was revoked
+- an API key or token expired
+- the account password changed
+- the external service changed its permissions
+- a browser login session expired
+- the provider changed its connection requirements
+
+Start by confirming the Connection still exists and that you still have access to it.
+
+If the authentication itself needs to change, reconnect through the secure setup flow.
+
+[See Troubleshooting Connections →](/connections/troubleshooting)
+
+## A simple example
+
+Imagine your company has 2 CRM Connections: one for production and one for a test account.
+
+<Columns cols={2}>
+  <Card title="Production CRM" href="/connections/managing-connections" icon="database">
+    Clearly labeled so Giga and teammates know which account contains live customer data.
+  </Card>
+  <Card title="Test CRM" href="/connections/managing-connections" icon="flask-conical">
+    Kept separate for experiments and non-production work.
+  </Card>
+  <Card title="Credential rotation" href="/connections/connect-a-tool" icon="refresh-cw">
+    When the production token expires, reconnect through the secure flow.
+  </Card>
+  <Card title="Shared access" href="/connections/sharing-connections" icon="users">
+    Teammates can use the shared Connection without necessarily owning or managing its credential.
+  </Card>
+</Columns>
+
+> **Image placeholder**
+>
+> Show the Connections management view with account labels, ownership or sharing context, and actions for reconnecting or removing access.
+
+## Related pages
+
+- [Introduction to Connections](/connections/index)
+- [Connect a tool](/connections/connect-a-tool)
+- [Sharing Connections](/connections/sharing-connections)
+- [Custom Connections](/connections/custom-connections)
+- [Troubleshooting Connections](/connections/troubleshooting)

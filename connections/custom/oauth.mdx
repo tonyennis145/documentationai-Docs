@@ -1,0 +1,132 @@
+---
+title: OAuth
+description: Learn how Giga uses OAuth to connect accounts without asking you to place provider secrets in Chat.
+---
+
+**OAuth** lets Giga connect to a service through an authorization flow where you approve access to an account.
+
+It is a good fit when the provider supports delegated access and Giga can use a compatible OAuth flow for that service.
+
+## When OAuth is a good fit
+
+Use OAuth when:
+
+- the service supports OAuth
+- you want to authorize Giga without manually sharing your account password
+- the provider supports the scopes Giga needs for the requested work
+- the integration already has an OAuth method available in Giga
+
+For a new custom integration, Giga prefers OAuth after MCP when a supported self-serve OAuth flow is available.
+
+## How OAuth works
+
+<Steps>
+  <Step title="Choose the service" icon="plug">
+    Start from [Chat](/chats/index) or the Connections area and tell Giga what you want to connect.
+  </Step>
+  <Step title="Open the authorization flow" icon="log-in">
+    Giga sends you through the provider’s secure sign-in and authorization experience.
+  </Step>
+  <Step title="Approve the requested access" icon="shield-check">
+    Review the permissions requested by the provider and approve the access you want to grant.
+  </Step>
+  <Step title="Return to Giga" icon="check-circle">
+    Once authorized, Giga can use the Connection within the permissions granted by both Giga and the provider.
+  </Step>
+</Steps>
+
+## Self-serve OAuth and DCR
+
+For custom integrations, Giga can use OAuth directly when the provider supports a compatible self-serve setup.
+
+One supported pattern is **Dynamic Client Registration (DCR)**, where the OAuth client can be established through the provider’s supported flow rather than requiring someone to manually provision and pass around a shared client secret.
+
+> **The live provider configuration decides the path**
+>
+> Giga should inspect the service’s actual OAuth capabilities before claiming that a custom OAuth connection can be completed automatically.
+
+## Your own OAuth app
+
+Some organizations may need to connect using their own OAuth application.
+
+When Giga supports that path, use the dedicated Custom OAuth setup page.
+
+Do not paste a client secret, OAuth secret, or other sensitive credential into Chat.
+
+> **Keep OAuth credentials in the secure setup flow**
+>
+> Client secrets and OAuth tokens belong in Giga’s secure connection layer, never in Chats, files, or Context Notes.
+
+## OAuth scopes matter
+
+OAuth access is limited by the scopes and permissions granted during authorization.
+
+That means a Connection may be able to read some data while being unable to perform certain write actions.
+
+Giga should respect both:
+
+- the scopes granted through OAuth
+- the permissions of the connected account inside the provider
+
+Sharing the Connection through Giga does not expand the provider-side permissions.
+
+## Built-in OAuth vs Custom OAuth
+
+<Columns cols={2}>
+  <Card title="Built-in OAuth" href="/connections/connect-a-tool" icon="check-circle">
+    Use the provider’s existing Giga integration when OAuth is already configured.
+  </Card>
+  <Card title="Custom OAuth" href="/connections/custom/oauth" icon="key">
+    Use a custom path when your workspace needs its own OAuth setup and Giga supports it.
+  </Card>
+</Columns>
+
+If the provider is already in Giga’s integration catalog, use the existing integration rather than creating another copy.
+
+## When OAuth is not self-serve
+
+Some providers require a manually created OAuth client or other setup that Giga cannot establish automatically.
+
+In that case, Giga should route you to the supported Custom OAuth setup rather than asking you to paste client credentials into Chat.
+
+If a stronger supported option exists, such as MCP or an API key, Giga can use that instead according to the connection hierarchy.
+
+## OAuth and shared access
+
+An OAuth-backed Connection can still participate in Giga’s sharing and permission model.
+
+A user may be able to use a Connection shared through a [Group](/groups/index) without owning the underlying credential or being able to remove it.
+
+The connected account’s provider permissions still apply.
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## Example: connect a company SaaS account
+
+<Columns cols={2}>
+  <Card title="Start the Connection" href="/connections/connect-a-tool" icon="plug">
+    Choose the service from Chat or Connections.
+  </Card>
+  <Card title="Authorize" href="/connections/custom/oauth" icon="key">
+    Sign in with the provider and approve the requested access.
+  </Card>
+  <Card title="Use live data" href="/connections/index" icon="database">
+    Giga can use the authorized account within the granted OAuth scopes.
+  </Card>
+  <Card title="Share carefully" href="/connections/sharing-connections" icon="users">
+    Make the Connection available to the right Group when shared access is appropriate.
+  </Card>
+</Columns>
+
+> **Image placeholder**
+>
+> Flow showing Giga → provider OAuth authorization → approved scopes → Connection available in Giga.
+
+## Related pages
+
+- [Custom Connections](/connections/custom-connections)
+- [MCP](/connections/custom/mcp)
+- [API keys](/connections/custom/api-keys)
+- [Browser connections](/connections/custom/browser-connections)
+- [Connect a tool](/connections/connect-a-tool)
+- [Sharing Connections](/connections/sharing-connections)

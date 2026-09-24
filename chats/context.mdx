@@ -1,0 +1,39 @@
+---
+title: Using context in a chat
+description: How live workspace, Group, Track, user, and connected context shape a Chat.
+---
+
+Giga uses **dynamic context**. Stable product rules can be documented, but current workspace facts such as permissions, available Tracks, connected systems, and live tool access are checked during the session.
+
+## Sources of context
+
+Context can come from several levels of the workspace:
+
+| Context source | What it helps with |
+| --- | --- |
+| **Workspace** | Standing instructions that apply across the workspace |
+| **Group** | Shared instructions and access boundaries for a Group |
+| **Track** | Standing context for a specific ongoing body of work |
+| **User** | Your own workspace-level preferences and context |
+| **Connections** | Live information and actions from connected systems |
+
+A selected [Track](/tracks/index) can give a Chat durable subject-specific background. [Groups](/groups/index) help scope shared access. [Connections](/connections/index) provide live capabilities and external data.
+
+## Context stays permission-aware
+
+Giga should only use information and tools that are available to the current user and session. It should also avoid silently attaching a Chat to a Track, because that changes where observations can be retrieved.
+
+> **Current workspace facts stay live**
+>
+> If Giga needs current facts about the workspace, it should check the live workspace rather than relying on a hard-coded list.
+
+> **Image placeholder**
+>
+> Diagram showing workspace → Group → Track → Chat context, with Connections providing live external data.
+
+## Related pages
+
+- [Tracks](/tracks/index)
+- [Groups](/groups/index)
+- [Connections](/connections/index)
+- [Memory](/tracks/memory)

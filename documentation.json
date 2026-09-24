@@ -2,10 +2,10 @@
   "name": "Giga",
   "colors": {
     "light": {
-      "brand": "#fc7414"
+      "brand": "#EA580C"
     },
     "dark": {
-      "brand": "#F9A164"
+      "brand": "#F97316"
     }
   },
   "navigation": {
@@ -19,101 +19,448 @@
             "icon": "rocket",
             "pages": [
               {
-                "title": "Introduction",
+                "title": "Introduction to Giga",
                 "path": "introduction",
                 "icon": "home"
+              }
+            ]
+          },
+          {
+            "group": "Chats",
+            "path": "chats/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Introduction to Chats",
+                "path": "chats/index"
               },
               {
-                "title": "Quick Start",
-                "path": "quickstart",
-                "icon": "zap"
-              }
-            ]
-          },
-          {
-            "group": "Core Concepts",
-            "icon": "layers",
-            "pages": [
-              {
-                "title": "Features",
-                "path": "features",
-                "icon": "star"
+                "title": "Working with files",
+                "path": "chats/working-with-files"
               },
               {
-                "title": "Integrations",
-                "path": "integrations",
-                "icon": "plug"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Endpoints",
-            "openapi": "api-reference/openapi.yaml",
-            "pages": []
-          }
-        ]
-      },
-      {
-        "tab": "Help Center",
-        "icon": "help-circle",
-        "pages": [
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
-          {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
-            "pages": [
+                "title": "Web research and actions",
+                "path": "chats/web-research-and-actions"
+              },
               {
-                "title": "Getting Started with Giga",
-                "path": "help-center/faq/getting-started-giga"
+                "title": "Chat history",
+                "path": "chats/history"
+              },
+              {
+                "title": "Using context in a chat",
+                "path": "chats/context"
               }
             ]
           },
           {
-            "group": "Troubleshooting",
-            "icon": "alert-circle",
-            "expandable": false,
+            "group": "Tracks",
+            "path": "tracks/index",
+            "expandable": true,
             "pages": [
               {
-                "title": "Login Issues",
-                "path": "help-center/troubleshooting/login-issues"
+                "title": "Introduction to Tracks",
+                "path": "tracks/index"
+              },
+              {
+                "title": "Creating and organizing Tracks",
+                "path": "tracks/creating-and-organizing"
+              },
+              {
+                "title": "Context Notes",
+                "path": "tracks/context-notes"
+              },
+              {
+                "title": "Memory",
+                "path": "tracks/memory"
+              },
+              {
+                "title": "Files in Tracks",
+                "path": "tracks/files"
+              },
+              {
+                "title": "Sharing and permissions",
+                "path": "tracks/sharing-and-permissions"
               }
             ]
           },
           {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
+            "group": "Groups",
+            "path": "groups/index",
+            "expandable": true,
             "pages": [
               {
-                "title": "Create Project",
-                "path": "help-center/guides/create-project"
+                "title": "Introduction to Groups",
+                "path": "groups/index"
+              },
+              {
+                "title": "Personal vs shared work",
+                "path": "groups/personal-vs-shared"
+              },
+              {
+                "title": "Members and access",
+                "path": "groups/members-and-access"
+              },
+              {
+                "title": "Groups and Tracks",
+                "path": "groups/groups-and-tracks"
               }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "icon": "clock",
-        "pages": [
+          },
           {
-            "title": "Release History",
-            "path": "changelog",
-            "icon": "history"
+            "group": "Connections",
+            "path": "connections/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Introduction to Connections",
+                "path": "connections/index"
+              },
+              {
+                "title": "Connect a tool",
+                "path": "connections/connect-a-tool"
+              },
+              {
+                "title": "Managing Connections",
+                "path": "connections/managing-connections"
+              },
+              {
+                "title": "Sharing Connections",
+                "path": "connections/sharing-connections"
+              },
+              {
+                "group": "Custom Connections",
+                "path": "connections/custom-connections",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Overview",
+                    "path": "connections/custom-connections"
+                  },
+                  {
+                    "title": "MCP",
+                    "path": "connections/custom/mcp"
+                  },
+                  {
+                    "title": "OAuth",
+                    "path": "connections/custom/oauth"
+                  },
+                  {
+                    "title": "API keys",
+                    "path": "connections/custom/api-keys"
+                  },
+                  {
+                    "title": "Browser connections",
+                    "path": "connections/custom/browser-connections"
+                  }
+                ]
+              },
+              {
+                "title": "Troubleshooting Connections",
+                "path": "connections/troubleshooting"
+              }
+            ]
+          },
+          {
+            "group": "Agents",
+            "path": "agents/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Introduction to Agents",
+                "path": "agents/index"
+              },
+              {
+                "title": "Creating an Agent",
+                "path": "agents/creating-an-agent"
+              },
+              {
+                "title": "Agent instructions",
+                "path": "agents/instructions"
+              },
+              {
+                "title": "Giving Agents access to Connections",
+                "path": "agents/connections"
+              },
+              {
+                "title": "Agents and context",
+                "path": "agents/context-and-knowledge"
+              },
+              {
+                "title": "Sharing Agents",
+                "path": "agents/sharing"
+              }
+            ]
+          },
+          {
+            "group": "Skills",
+            "path": "skills/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Introduction to Skills",
+                "path": "skills/index"
+              },
+              {
+                "title": "Creating a Skill",
+                "path": "skills/creating-a-skill"
+              },
+              {
+                "title": "How Skills are used",
+                "path": "skills/how-skills-are-used"
+              },
+              {
+                "title": "Sharing Skills",
+                "path": "skills/sharing"
+              },
+              {
+                "title": "Examples",
+                "path": "skills/examples"
+              }
+            ]
+          },
+          {
+            "group": "Workflows",
+            "path": "workflows/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Introduction to Workflows",
+                "path": "workflows/index"
+              },
+              {
+                "title": "Creating a Workflow",
+                "path": "workflows/creating-a-workflow"
+              },
+              {
+                "title": "Workflow steps",
+                "path": "workflows/steps"
+              },
+              {
+                "title": "Running a Workflow",
+                "path": "workflows/running"
+              },
+              {
+                "title": "Editing and reusing Workflows",
+                "path": "workflows/editing-and-reusing"
+              },
+              {
+                "title": "Examples",
+                "path": "workflows/examples"
+              }
+            ]
+          },
+          {
+            "group": "Pulses",
+            "path": "pulses/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Introduction to Pulses",
+                "path": "pulses/index"
+              },
+              {
+                "title": "Creating a Pulse",
+                "path": "pulses/creating-a-pulse"
+              },
+              {
+                "title": "Schedules",
+                "path": "pulses/schedules"
+              },
+              {
+                "title": "Pulses with Agents",
+                "path": "pulses/with-agents"
+              },
+              {
+                "title": "Managing Pulses",
+                "path": "pulses/managing"
+              },
+              {
+                "title": "Examples",
+                "path": "pulses/examples"
+              }
+            ]
+          },
+          {
+            "group": "Use Giga Anywhere",
+            "path": "use-giga-anywhere/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Overview",
+                "path": "use-giga-anywhere/index"
+              },
+              {
+                "title": "Giga Web",
+                "path": "use-giga-anywhere/web"
+              },
+              {
+                "title": "Slack",
+                "path": "use-giga-anywhere/slack"
+              },
+              {
+                "title": "ChatGPT",
+                "path": "use-giga-anywhere/chatgpt"
+              },
+              {
+                "title": "Claude",
+                "path": "use-giga-anywhere/claude"
+              },
+              {
+                "title": "Microsoft Teams",
+                "path": "use-giga-anywhere/microsoft-teams"
+              }
+            ]
+          },
+          {
+            "group": "Teams & Admin",
+            "path": "teams-and-admin/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Overview",
+                "path": "teams-and-admin/index"
+              },
+              {
+                "title": "Members and roles",
+                "path": "teams-and-admin/members-and-roles"
+              },
+              {
+                "title": "Permissions",
+                "path": "teams-and-admin/permissions"
+              },
+              {
+                "title": "Managing company Connections",
+                "path": "teams-and-admin/managing-company-connections"
+              },
+              {
+                "title": "Workspace settings",
+                "path": "teams-and-admin/workspace-settings"
+              }
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "path": "use-cases/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Overview",
+                "path": "use-cases/index"
+              },
+              {
+                "title": "Leadership",
+                "path": "use-cases/leadership"
+              },
+              {
+                "title": "Operations",
+                "path": "use-cases/operations"
+              },
+              {
+                "title": "Sales",
+                "path": "use-cases/sales"
+              },
+              {
+                "title": "Customer Support",
+                "path": "use-cases/customer-support"
+              },
+              {
+                "title": "Marketing",
+                "path": "use-cases/marketing"
+              },
+              {
+                "title": "Recruiting",
+                "path": "use-cases/recruiting"
+              },
+              {
+                "title": "Finance",
+                "path": "use-cases/finance"
+              },
+              {
+                "title": "Product & Engineering",
+                "path": "use-cases/product-and-engineering"
+              }
+            ]
+          },
+          {
+            "group": "Resources",
+            "path": "resources/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Overview",
+                "path": "resources/index"
+              },
+              {
+                "title": "Feature Overview",
+                "path": "resources/feature-overview"
+              },
+              {
+                "title": "Giga Dictionary",
+                "path": "resources/dictionary"
+              },
+              {
+                "title": "Choosing the right Giga feature",
+                "path": "resources/choosing-the-right-feature"
+              },
+              {
+                "title": "FAQ",
+                "path": "resources/faq"
+              },
+              {
+                "title": "Troubleshooting",
+                "path": "resources/troubleshooting"
+              }
+            ]
           }
         ]
       }
     ]
-  }
+  },
+  "customCss": [
+    {
+      "src": "styles/giga-docs.css"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/quickstart",
+      "destination": "/introduction",
+      "statusCode": 301
+    },
+    {
+      "source": "/features",
+      "destination": "/resources/feature-overview",
+      "statusCode": 301
+    },
+    {
+      "source": "/integrations",
+      "destination": "/connections/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/changelog",
+      "destination": "/resources/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/help-center",
+      "destination": "/resources/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/help-center/faq/getting-started-giga",
+      "destination": "/introduction",
+      "statusCode": 301
+    },
+    {
+      "source": "/help-center/guides/create-project",
+      "destination": "/tracks/creating-and-organizing",
+      "statusCode": 301
+    },
+    {
+      "source": "/help-center/troubleshooting/login-issues",
+      "destination": "/resources/troubleshooting",
+      "statusCode": 301
+    }
+  ]
 }

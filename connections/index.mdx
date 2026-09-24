@@ -1,0 +1,185 @@
+---
+title: Connections
+description: >-
+  Learn how Connections give Giga secure access to the tools, apps, databases,
+  and systems your company already uses.
+---
+A **Connection** gives Giga access to an external tool or system so it can work with live company information and, where permitted, take action there.
+
+Connections can represent apps, APIs, databases, browser sessions, MCP servers, and other connected services.
+
+## What Connections make possible
+
+<Columns cols="2">
+  <Card title="Read live information" href="/connections/index" icon="search" horizontal="false">
+    Let Giga retrieve current data from connected tools instead of relying only on what is already in the Chat.
+  </Card>
+
+  <Card title="Take action" href="/connections/index" icon="zap" horizontal="false">
+    Let Giga perform supported actions through the connected service when your permissions allow it.
+  </Card>
+
+  <Card title="Use company systems" href="/connections/index" icon="database" horizontal="false">
+    Work with APIs, databases, internal tools, and other systems already used by your company.
+  </Card>
+
+  <Card title="Extend Giga" href="/connections/custom-connections" icon="plug" horizontal="false">
+    Add custom connections when the service is not already covered by a built-in option.
+  </Card>
+</Columns>
+
+> **Video placeholder**
+>
+> Connected Apps & Integrations overview video.
+
+## Connect from Chat or manage Connections directly
+
+You do not always need to leave a [Chat](/chats/index) to start connecting something.
+
+When the connection flow supports it, you can tell Giga what you want to connect and Giga can start the secure setup flow from the Chat.
+
+You can also manage your Connections from the Connections area in Giga.
+
+[Learn how to connect a tool →](/connections/connect-a-tool)
+
+## How Giga connects
+
+Different services support different connection methods.
+
+| Connection method       | Typical use                                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------------------------ |
+| **MCP**                 | A service exposes an MCP server that Giga can connect to                                               |
+| **OAuth**               | A service supports delegated account access through OAuth                                              |
+| **API key or PAT**      | The service uses a user-provided key or personal access token                                          |
+| **Database connection** | Giga connects to an external database using stored credentials                                         |
+| **Browser session**     | Giga needs to interact with a website directly when another connection method cannot complete the task |
+
+For new or custom integrations, Giga’s operating guidance prefers the strongest self-serve path available in this order:
+
+1. **MCP**
+2. **OAuth** when a supported self-serve OAuth flow is available
+3. **API key or PAT**
+4. **Browser login**
+
+The exact method depends on the service and the connection mechanisms it actually supports.
+
+## Connections stay permission-aware
+
+A Connection does not automatically give every person or every piece of work access to the same systems.
+
+Giga checks the live workspace state to determine:
+
+- which Connections you can access
+- which credentials are yours
+- which credentials have been shared into a [Group](/groups/index) you belong to
+- which actions the connected service allows
+- which tools are currently exposed in your session
+
+> **Live access is the source of truth**
+>
+> Giga should inspect the current workspace and connection state rather than assuming a service is connected or that a user has permission to use it.
+
+## Secrets stay out of Chats
+
+Credentials are stored securely and used through Giga’s connection layer.
+
+Giga should never ask you to paste passwords, API keys, tokens, OAuth secrets, or database connection strings into a normal Chat when a secure connection flow is available.
+
+For services that require a user-provided secret, Giga can direct you to the appropriate secure setup flow.
+
+> **Keep credentials in the secure connection flow**
+>
+> Secrets should not be written into Chats, [Context Notes](/tracks/context-notes), or files.
+
+## Built-in and custom Connections
+
+Some services are already available through Giga’s integration catalog.
+
+If the service already exists there, Giga should use that existing integration rather than creating a duplicate.
+
+For services that need something more specific, Giga can support custom connection paths such as:
+
+<Columns cols="2">
+  <Card title="Custom MCP" href="/connections/custom/mcp" icon="server" horizontal="false">
+    Connect an MCP server when that is the service’s supported integration path.
+  </Card>
+
+  <Card title="Custom OAuth" href="/connections/custom/oauth" icon="key" horizontal="false">
+    Connect your own OAuth setup where Giga supports that path.
+  </Card>
+
+  <Card title="API keys" href="/connections/custom/api-keys" icon="code" horizontal="false">
+    Use secure API-key or PAT based access for compatible services.
+  </Card>
+
+  <Card title="Browser connections" href="/connections/custom/browser-connections" icon="globe" horizontal="false">
+    Use a browser session for website-based work that cannot be handled through a first-class integration.
+  </Card>
+</Columns>
+
+[Learn about Custom Connections →](/connections/custom-connections)
+
+## How Giga uses a Connection
+
+Once a Connection is available, Giga should use the connection mechanism designed for that service instead of asking you to manually move data between systems.
+
+For example:
+
+- a connected API can be queried directly
+- a connected database can be queried without exposing its connection string
+- an MCP service can expose its own tools to Giga
+- a browser session can be used when direct website interaction is required
+
+This lets a [Chat](/chats/index), [Agent](/agents/index), or [Workflow](/workflows/index) work with live systems while keeping the underlying credentials protected.
+
+## A simple example
+
+Imagine you connect your CRM.
+
+<Columns cols="2">
+  <Card title="Connection" href="/connections/connect-a-tool" icon="plug" horizontal="false">
+    You securely connect the CRM account to Giga.
+  </Card>
+
+  <Card title="Chat" href="/chats/index" icon="message-circle" horizontal="false">
+    You ask Giga for the latest state of a customer or pipeline.
+  </Card>
+
+  <Card title="Live data" href="/connections/index" icon="database" horizontal="false">
+    Giga retrieves the current information through the connection available to you.
+  </Card>
+
+  <Card title="Action" href="/connections/index" icon="zap" horizontal="false">
+    If the connection and your permissions allow it, Giga can carry out a supported CRM action.
+  </Card>
+</Columns>
+
+You can keep working from the Chat while Giga uses the connected system underneath.
+
+> **Image placeholder**
+>
+> Diagram showing Chat or Agent → Connection → external app/database, with permissions and secure credentials sitting between Giga and the external system.
+
+## Explore Connections
+
+<Columns cols="2">
+  <Card title="Connect a tool" href="/connections/connect-a-tool" icon="plus-circle" horizontal="false">
+    Connect a supported tool securely.
+  </Card>
+
+  <Card title="Managing Connections" href="/connections/managing-connections" icon="settings" horizontal="false">
+    Review and manage the Connections already available to you.
+  </Card>
+
+  <Card title="Sharing Connections" href="/connections/sharing-connections" icon="users" horizontal="false">
+    Understand how connected access can be made available through Groups.
+  </Card>
+
+  <Card title="Custom Connections" href="/connections/custom-connections" icon="wrench" horizontal="false">
+    Connect services through MCP, OAuth, API credentials, or browser access.
+  </Card>
+
+  <Card title="Troubleshooting" href="/connections/troubleshooting" icon="help-circle" horizontal="false">
+    Resolve common connection and authentication issues.
+  </Card>
+</Columns>

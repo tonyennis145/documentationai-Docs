@@ -1,0 +1,154 @@
+---
+title: Slack
+description: Learn how to work with Giga from Slack while keeping Giga's live company context, permissions, files, and actions underneath.
+---
+
+Use **Giga in Slack** when the work is already happening with your team there.
+
+You can ask Giga questions, work through tasks, use available company context, and take supported actions without moving the work into a separate interface.
+
+## The same Giga context still applies
+
+Working from Slack does not create a separate version of Giga.
+
+Giga still resolves the live workspace for the current user, including relevant:
+
+- [Groups](/groups/index)
+- [Tracks](/tracks/index)
+- Context Notes and Current Track State
+- [Connections](/connections/index)
+- [Skills](/skills/index)
+- files
+- user and workspace context
+- current permissions
+
+The exact context available depends on the Slack session and the live Giga workspace.
+
+> **Permissions carry through**
+>
+> Slack does not give someone access to a Giga resource they could not otherwise use. Giga continues to respect the current workspace, Group, Track, and Connection permissions.
+
+## Work where the team is already talking
+
+Slack is useful for work that starts naturally inside a channel, thread, or direct message.
+
+For example, you might ask Giga to:
+
+- summarize relevant work
+- research a question
+- inspect available company context
+- use an approved Connection
+- create work product
+- search Slack when the current permissions allow it
+- take a supported Slack action after confirmation where required
+
+The exact tools available come from the current Slack and Giga environment.
+
+## Slack channels and Groups
+
+A Slack channel can be linked to a Giga [Group](/groups/index) when that relationship has been configured.
+
+That gives Giga a way to resolve the broader Giga access scope associated with the Slack channel.
+
+Giga should use the live channel-to-Group relationship rather than guessing which Group a Slack discussion belongs to.
+
+> **Channel context is resolved live**
+>
+> A channel name alone is not enough to infer a Giga Group. Giga should use the current workspace mapping when one exists.
+
+## Tracks still require explicit selection
+
+A [Chat](/chats/index) can be linked to at most one Track.
+
+That rule still applies when the interaction happens through Slack.
+
+Giga should not silently choose a Track based on the channel, message content, or a likely project name. The Track should be explicitly selected or confirmed because Track attachment affects where observations from the Chat can become retrievable.
+
+## Files in Slack
+
+When Giga creates a supported file, chart, screenshot, or export for Slack, it should send the actual file through the Slack upload capability available in the current session.
+
+Giga should not point people at an internal runner or filesystem path.
+
+For charts, Slack receives a rendered image rather than web-only chart UI.
+
+[Learn about working with files →](/chats/working-with-files)
+
+## Slack formatting
+
+Giga adapts its output to Slack.
+
+Useful Slack patterns include:
+
+- concise messages
+- readable tables when tabular information helps
+- labelled links instead of long raw URLs
+- files uploaded directly into Slack when appropriate
+
+Web-only viewer or rich-UI elements should stay in [Giga Web](/use-giga-anywhere/web) rather than being emitted into Slack.
+
+## Taking Slack actions
+
+When the current tools and permissions allow it, Giga can perform supported Slack actions such as:
+
+- search messages
+- post a message
+- reply in a thread
+- send a direct message
+- create a Slack channel
+- create a Slack canvas
+
+Giga should use the supported Slack tools rather than constructing direct Slack API requests by hand.
+
+Consequential outward-facing actions still follow Giga’s normal confirmation rules.
+
+> **Ask before visible changes**
+>
+> Creating a channel, sending a message to another person, or making another outward-facing change should be confirmed when the action is consequential.
+
+## Slack search respects access
+
+Workspace-wide Slack search runs within the requesting user’s Slack access.
+
+That means search results are limited by what the user is allowed to see in Slack.
+
+Some channel-specific actions can also depend on whether Giga has access to that channel in the current workspace.
+
+## Long tasks
+
+Slack interactions may be handled as a single turn depending on the live Slack environment.
+
+When background execution is unavailable, Giga should complete the work in the current turn rather than promising a later follow-up it cannot perform.
+
+## A simple example
+
+Imagine your team is discussing a customer renewal in Slack.
+
+<Steps>
+  <Step title="Ask Giga in Slack" icon="message-square">
+    Ask for the latest relevant context or analysis from the thread.
+  </Step>
+  <Step title="Use live Giga context" icon="layers">
+    Giga resolves the current Group, explicitly selected Track if any, Connections, and permissions.
+  </Step>
+  <Step title="Create the work" icon="file-text">
+    Giga prepares the requested summary, analysis, or supported file.
+  </Step>
+  <Step title="Return it in Slack" icon="upload">
+    Giga responds in a Slack-friendly format and uploads supported files when needed.
+  </Step>
+</Steps>
+
+> **Image placeholder**
+>
+> Slack thread showing a user asking Giga for an account summary, with Giga using the linked Group, an explicitly selected Track, and approved Connections before replying in-thread.
+
+## Related pages
+
+- [Use Giga anywhere](/use-giga-anywhere/index)
+- [Introduction to Chats](/chats/index)
+- [Using context in a Chat](/chats/context)
+- [Introduction to Groups](/groups/index)
+- [Introduction to Tracks](/tracks/index)
+- [Working with files](/chats/working-with-files)
+- [Introduction to Connections](/connections/index)

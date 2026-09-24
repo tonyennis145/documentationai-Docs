@@ -1,0 +1,167 @@
+---
+title: Pulse examples
+description: See practical examples of recurring work that can run through an Agent, a Track, or a targetless Pulse.
+---
+
+Pulses work best for jobs that should happen **repeatedly on a schedule**.
+
+The examples below show recurring patterns that fit the current Pulse model. The exact Connections, permissions, targets, and live data available during each run come from the workspace at that time.
+
+## Weekly pipeline review
+
+A **Weekly Pipeline Review** Pulse could ask Giga to review current pipeline activity and surface meaningful changes.
+
+| Setting | Example |
+| --- | --- |
+| **Instruction** | Review meaningful pipeline movement, risks, and items needing attention |
+| **Schedule** | Weekly |
+| **Target** | Sales Reporting Agent |
+
+The Agent can provide the stable reporting role while approved sales Connections provide current information when available.
+
+## Customer health review
+
+A **Customer Health Review** Pulse could regularly check one customer or a broader customer-success scope.
+
+A Track-targeted version might use:
+
+- **Target:** the customer’s Track
+- **Schedule:** weekly
+- **Instruction:** review meaningful changes, open issues, risks, and unresolved questions
+
+This works well when the recurring job belongs to one ongoing customer relationship.
+
+## Recruiting activity review
+
+A **Recruiting Activity Review** Pulse could ask a Recruiting Agent to review current hiring activity.
+
+The recurring instruction might ask Giga to surface:
+
+- roles needing attention
+- meaningful candidate movement
+- unresolved hiring questions
+- missing information that blocks progress
+
+The Agent supplies the recurring role. The live recruiting Connections determine what current data is available.
+
+## Ongoing research check
+
+A **Research Watch** Pulse could target a Track for an ongoing research topic.
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Track" href="/tracks/index" icon="folder">
+    Keeps the ongoing research context and history together.
+  </Card>
+  <Card title="Pulse" href="/pulses/index" icon="clock">
+    Runs a recurring instruction to check for meaningful new developments.
+  </Card>
+</Columns>
+
+The instruction should define what counts as useful enough to surface rather than producing noise every time it runs.
+
+## Weekly operating summary
+
+An **Operations Summary** Pulse could run through an Operations Agent.
+
+Its instruction might ask Giga to:
+
+- review current signals from approved systems
+- summarize meaningful changes
+- flag unresolved issues
+- identify anything needing human attention
+
+A weekly or daily cadence can fit depending on how quickly the underlying work changes.
+
+## Monthly account review
+
+A **Monthly Account Review** Pulse could target an account Track.
+
+The recurring job might review:
+
+- current account state
+- material changes since the previous review
+- open questions
+- risks or dependencies
+- decisions that need attention
+
+Because the Pulse targets a Track, the scheduled work stays anchored to that ongoing body of context.
+
+## Targetless recurring check
+
+A Pulse can also run without an Agent or Track target.
+
+A targetless example might be a recurring instruction such as:
+
+> Review the approved current sources for the requested operating signals and produce a concise summary of material changes.
+
+This pattern fits work where the instruction and live workspace access are enough, without a dedicated Agent role or Track context.
+
+## Recurring report preparation
+
+A **Recurring Report** Pulse can handle the timing for a report that should be prepared on a regular cadence.
+
+The report method might live in a [Skill](/skills/index) or Agent instructions when the current run has access to those resources.
+
+The Pulse remains responsible for the recurring schedule and instruction.
+
+## Product launch check-in
+
+A **Launch Check-in** Pulse could target a product-launch Track.
+
+The instruction might ask Giga to review the current Track context and surface:
+
+- meaningful progress
+- unresolved blockers
+- recently changed assumptions
+- open decisions
+- items that need attention before the next checkpoint
+
+A Track target fits because the work has its own evolving context and history.
+
+## Pulse or Workflow?
+
+A Pulse is a good fit when the defining need is **recurring scheduled execution**.
+
+A [Workflow](/workflows/index) is a good fit when the defining need is a **reusable ordered process**.
+
+These concepts can complement each other at the product level, but the exact way they interact should follow the current live Pulse and Workflow capabilities rather than an assumed attachment model.
+
+## Choosing a target
+
+A useful shorthand:
+
+| Recurring job | Target pattern |
+| --- | --- |
+| Needs a stable AI role | **Agent** |
+| Belongs to one ongoing body of work | **Track** |
+| Instruction is self-contained | **No target** |
+
+The live workspace remains the source of truth for the actual Agents, Tracks, Connections, and schedule slots available.
+
+## What makes a useful Pulse?
+
+Strong Pulse instructions usually have 4 qualities:
+
+1. the work genuinely benefits from recurring execution
+2. the expected result is clear
+3. the target matches where the context belongs
+4. the schedule matches how quickly the underlying information changes
+
+> **Schedule for signal, not volume**
+>
+> A useful Pulse should surface meaningful work at the right cadence rather than generate recurring output simply because a schedule exists.
+
+> **Image placeholder**
+>
+> Gallery of Pulse cards showing Weekly Pipeline Review, Customer Health Review, Research Watch, Operations Summary, and Launch Check-in.
+
+## Related pages
+
+- [Introduction to Pulses](/pulses/index)
+- [Creating a Pulse](/pulses/creating-a-pulse)
+- [Schedules](/pulses/schedules)
+- [Pulses with Agents](/pulses/with-agents)
+- [Managing Pulses](/pulses/managing)
+- [Introduction to Tracks](/tracks/index)

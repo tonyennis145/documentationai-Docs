@@ -1,0 +1,145 @@
+---
+title: ChatGPT
+description: Learn how Giga can be used from ChatGPT while keeping Giga's live workspace context and permissions in place.
+---
+
+**ChatGPT** is an official Giga surface.
+
+When Giga is available in your ChatGPT environment, you can work with Giga from ChatGPT while Giga continues to resolve the current workspace, context, permissions, and connected capabilities underneath.
+
+## Giga stays the workspace layer
+
+Using ChatGPT changes the interface you are working from.
+
+The underlying Giga model remains the same.
+
+Depending on the current session and permissions, Giga can resolve relevant:
+
+- [Groups](/groups/index)
+- [Tracks](/tracks/index)
+- Context Notes
+- Observations
+- Current Track State
+- [Connections](/connections/index)
+- [Skills](/skills/index)
+- files and other permitted company context
+
+The live Giga environment remains the source of truth for what is available.
+
+> **ChatGPT does not widen access**
+>
+> Opening Giga from ChatGPT does not make every company resource available. Giga continues to enforce the current user and workspace permission boundaries.
+
+## Work with Giga from ChatGPT
+
+The exact experience depends on the Giga capabilities exposed in the current ChatGPT environment.
+
+Where supported, you can use Giga to work with company context and connected systems instead of treating the ChatGPT session as an isolated blank slate.
+
+That can include tasks such as:
+
+- asking questions about permitted company context
+- working with an explicitly selected Track
+- using available Connections
+- applying available Skills
+- creating or updating supported Giga work
+- taking supported actions through the tools exposed in the session
+
+Giga should check the live tool environment before claiming a specific action is available.
+
+## Tracks still work the same way
+
+A [Chat](/chats/index) can be linked to at most one Track.
+
+Giga should never silently infer the Track from the subject of a ChatGPT discussion.
+
+The Track should be explicitly selected or confirmed because Track attachment affects where observations from the Chat can become retrievable.
+
+Once selected, Giga can use the Track context available to the current user.
+
+## Company Brain remains permission-aware
+
+Giga’s Company Brain is the structured company context layer behind the work.
+
+From ChatGPT, that can include the same permitted company knowledge Giga can resolve elsewhere, such as:
+
+- workspace and Group guidance
+- Track context and memory
+- files
+- Agent and Skill context
+- Connections and live external information
+- user-level context
+
+What is actually retrieved should stay relevant to the task and within the current permission scope.
+
+## Connections stay live
+
+[Connections](/connections/index) are resolved from the current Giga workspace.
+
+If a connected tool is available and the current user has access, Giga can use the capability exposed in the ChatGPT session.
+
+If the capability is unavailable, Giga should not assume that an integration available elsewhere in the workspace can automatically be used from ChatGPT.
+
+> **Surface capability is dynamic**
+>
+> A Connection existing in Giga does not prove that every action or file behavior is exposed in every interface.
+
+## File behavior can differ
+
+Giga does not assume that ChatGPT handles files exactly like Giga Web or Slack.
+
+The current ChatGPT integration determines:
+
+- what file operations are supported
+- how files are displayed or returned
+- which artifact or preview capabilities are available
+- which actions can be completed directly from the session
+
+For exact file behavior, follow the capabilities exposed in the current environment.
+
+[Learn about file behavior across Giga →](/chats/working-with-files)
+
+## ChatGPT vs Giga Web
+
+<Columns cols={2}>
+  <Card title="ChatGPT" href="/use-giga-anywhere/chatgpt" icon="message-circle">
+    Use Giga from the ChatGPT interface with the tools and capabilities exposed there.
+  </Card>
+  <Card title="Giga Web" href="/use-giga-anywhere/web" icon="monitor">
+    Use Giga’s first-party web interface, including its web-specific viewer and rich UI where supported.
+  </Card>
+</Columns>
+
+The underlying Giga permissions and company context remain governed by the live workspace in both cases.
+
+## A simple example
+
+Imagine you are discussing a customer account in ChatGPT.
+
+<Steps>
+  <Step title="Work through ChatGPT" icon="message-circle">
+    Ask Giga for the account context or task you need.
+  </Step>
+  <Step title="Resolve live Giga access" icon="shield-check">
+    Giga checks the current user, Groups, Connections, and explicitly selected Track.
+  </Step>
+  <Step title="Use available company context" icon="layers">
+    Giga retrieves the relevant permitted context and live capabilities available in the session.
+  </Step>
+  <Step title="Return the result in ChatGPT" icon="check-circle">
+    The response follows the capabilities and presentation supported by the current ChatGPT surface.
+  </Step>
+</Steps>
+
+> **Image placeholder**
+>
+> Diagram showing ChatGPT → Giga permission layer → Company Brain / Track / Connections → response back in ChatGPT.
+
+## Related pages
+
+- [Use Giga anywhere](/use-giga-anywhere/index)
+- [Giga Web](/use-giga-anywhere/web)
+- [Introduction to Chats](/chats/index)
+- [Using context in a Chat](/chats/context)
+- [Introduction to Tracks](/tracks/index)
+- [Introduction to Connections](/connections/index)

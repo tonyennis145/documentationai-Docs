@@ -1,0 +1,300 @@
+---
+title: Choosing the right Giga feature
+description: Start from the job you are trying to do and choose the Giga primitive that fits.
+---
+
+Giga’s features each solve a different part of the work.
+
+Start with the job you need to accomplish, then choose the smallest set of primitives that gives the work the right context, access, reuse, and continuity.
+
+## Quick chooser
+
+| You need... | Use... |
+| --- | --- |
+| Direct, ad hoc work | [Chat](/chats/index) |
+| A team or access boundary | [Group](/groups/index) |
+| Ongoing work with history | [Track](/tracks/index) |
+| Stable background for a Track | [Context Note](/tracks/context-notes) |
+| A named reusable AI role | [Agent](/agents/index) |
+| A reusable task method | [Skill](/skills/index) |
+| A reusable ordered process | [Workflow](/workflows/index) |
+| Recurring scheduled work | [Pulse](/pulses/index) |
+| Live access to an external system | [Connection](/connections/index) |
+| Auth or secrets | Secure Connection flow |
+| Authored work product | [File](/tracks/files) |
+| Growing structured records | Database |
+
+## Use a Chat for direct work
+
+Choose a **Chat** when the work starts with a person asking Giga to do something now.
+
+Examples:
+
+- answer a question
+- research a topic
+- draft or revise work
+- use an approved Connection
+- reason through a decision
+- take a supported action
+
+One-off work can stay entirely in the Chat.
+
+If the work develops continuity, pair the Chat with a Track that the user explicitly selects.
+
+## Use a Group for an access boundary
+
+Choose a **Group** when the main need is deciding **who should share this area of work**.
+
+Groups are the placement and permission scope for shared resources such as Tracks, Agents, files, and Connections.
+
+Good reasons to create or use a Group include:
+
+- one team needs a shared area
+- a client or business unit needs its own access boundary
+- several resources should be available to the same audience
+
+Private work can use the member’s existing private Group.
+
+[Learn about Groups and Tracks →](/groups/groups-and-tracks)
+
+## Use a Track for ongoing work
+
+Choose a **Track** when the work has continuity.
+
+Good signals include:
+
+- the work will span multiple Chats
+- decisions need to be remembered
+- progress will change over time
+- files belong to the same effort
+- several people may need to pick up the work later
+
+Examples include a customer account, product launch, research effort, implementation, hiring process, or ongoing analysis.
+
+## Use a Context Note for stable Track background
+
+Choose a **Context Note** when information should remain useful across future work in one Track.
+
+Good examples include:
+
+- goals
+- standing constraints
+- terminology
+- stable preferences
+- durable handoff context
+- instructions that should continue to apply
+
+Use Track memory for changing progress and decisions.
+
+Use files for authored work product.
+
+## Use an Agent for a reusable role
+
+Choose an **Agent** when people should be able to work with the same named AI role repeatedly.
+
+Examples include:
+
+- Sales Research Agent
+- Recruiting Agent
+- Support Agent
+- Operations Agent
+
+An Agent can carry its own role, instructions, context, permitted Connections, and Skills.
+
+Choose a Chat for a one-off interaction that does not need a reusable identity.
+
+## Use a Skill for a reusable method
+
+Choose a **Skill** when the reusable part is **how a task should be done**.
+
+Examples include:
+
+- an account-research method
+- a brand-review standard
+- a candidate-screening method
+- a handoff format
+- a document-review procedure
+
+A Skill can be reused across tasks without requiring a dedicated Agent.
+
+## Use a Workflow for a reusable process
+
+Choose a **Workflow** when the process has several meaningful stages that should stay in order.
+
+For example:
+
+<Steps>
+  <Step title="Gather" icon="search">
+    Collect the information needed for the task.
+  </Step>
+  <Step title="Evaluate" icon="check-square">
+    Apply the relevant criteria or method.
+  </Step>
+  <Step title="Produce" icon="file-text">
+    Return the requested result or handoff.
+  </Step>
+</Steps>
+
+Keep the steps focused on meaningful outcomes rather than individual tool calls.
+
+A Skill can supply a reusable method inside a Workflow step when the live environment supports it.
+
+## Use a Pulse for recurring scheduled work
+
+Choose a **Pulse** when the key requirement is **when the work should run**.
+
+Examples include:
+
+- weekly pipeline review
+- daily operational check
+- monthly finance summary
+- recurring research watch
+- scheduled review of an ongoing Track
+
+A Pulse can target an Agent, a Track, or run without a target.
+
+Creating recurring work should be confirmed before it is scheduled.
+
+## Use a Connection for live external systems
+
+Choose a **Connection** when Giga needs current information or supported actions from an external system.
+
+Connections can cover apps, APIs, databases, MCP servers, browser sessions, messaging systems, and other supported services.
+
+Use the live integration surface to determine the exact capability.
+
+For secrets or authentication, use the secure Connection flow rather than placing credentials into normal Chat messages or files.
+
+## Use a file for authored work product
+
+Choose a **file** when the result is something people should read, edit, keep, or hand off as an artifact.
+
+Examples include:
+
+- reports
+- drafts
+- notes
+- code
+- webpages
+- other supported work product
+
+Files stay separate from structured Track memory.
+
+## Use a database for growing structured records
+
+Choose a **database** when the work is primarily records rather than narrative.
+
+Good signals include data that is:
+
+- tabular
+- repetitive
+- updated field by field
+- filtered or sorted
+- aggregated
+- expected to grow
+
+Current Giga doctrine supports SQLite and hosted Giga databases where available.
+
+## Common choices
+
+### Chat or Track?
+
+Use a **Chat** for the immediate interaction.
+
+Use a **Track** when the work needs continuity beyond that interaction.
+
+They often work together. A Chat can link to at most 1 explicitly selected Track.
+
+### Group or Track?
+
+Use a **Group** for the broader placement and permission boundary.
+
+Use a **Track** for one ongoing body of work inside that boundary.
+
+A private Track belongs in the user’s existing private Group.
+
+### Agent or Skill?
+
+Use an **Agent** when the reusable asset is a named role with broader identity, context, and access.
+
+Use a **Skill** when the reusable asset is the task method itself.
+
+An Agent can use Skills when the current configuration allows it.
+
+### Skill or Workflow?
+
+Use a **Skill** for reusable instructions around a task.
+
+Use a **Workflow** when several ordered stages should be saved as one process.
+
+### Workflow or Pulse?
+
+Use a **Workflow** to define a repeatable process.
+
+Use a **Pulse** to define recurring scheduled work.
+
+The current product should determine any exact relationship between the 2 rather than assuming every Workflow can be attached directly to a Pulse.
+
+### Track memory or file?
+
+Use **Context Notes, Observations, and Current Track State** for durable context, developments, and decisions.
+
+Use a **file** for authored work product.
+
+An empty Track file area does not mean the Track has no history.
+
+## Combine features around the work
+
+Useful Giga setups often combine a few primitives.
+
+For example, an account-review setup might use:
+
+<Columns cols={2}>
+  <Card title="Track" href="/tracks/index" icon="folder">
+    Keeps the ongoing account context and decisions together.
+  </Card>
+  <Card title="Connection" href="/connections/index" icon="plug">
+    Provides current information from approved external systems.
+  </Card>
+  <Card title="Skill" href="/skills/index" icon="sparkles">
+    Applies the team’s repeatable account-review method.
+  </Card>
+  <Card title="Agent" href="/agents/index" icon="bot">
+    Provides a reusable sales role and operating context.
+  </Card>
+  <Card title="Pulse" href="/pulses/index" icon="clock">
+    Adds recurring review when the work should run on a schedule.
+  </Card>
+</Columns>
+
+Each feature has one clear job. The combination should follow the work rather than forcing everything into one primitive.
+
+## A simple decision path
+
+<Steps>
+  <Step title="Does the work need to happen right now?" icon="message-circle">
+    Start in a Chat.
+  </Step>
+  <Step title="Will the work continue over time?" icon="folder">
+    Put the ongoing effort in a Track.
+  </Step>
+  <Step title="Does a team need shared access?" icon="users">
+    Use the appropriate shared Group.
+  </Step>
+  <Step title="Should the same role or method be reused?" icon="repeat">
+    Choose an Agent for the role, a Skill for the method, or a Workflow for the ordered process.
+  </Step>
+  <Step title="Does it need current external data or actions?" icon="plug">
+    Use an approved Connection.
+  </Step>
+  <Step title="Should it run on a schedule?" icon="clock">
+    Add a Pulse.
+  </Step>
+</Steps>
+
+## Related resources
+
+- [Giga Dictionary](/resources/dictionary)
+- [Feature Overview](/resources/feature-overview)
+- [Use Cases](/use-cases/index)
+- [FAQ](/resources/faq)

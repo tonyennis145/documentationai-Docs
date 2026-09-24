@@ -1,0 +1,249 @@
+---
+title: FAQ
+description: Answers to common questions about how Giga works.
+---
+
+This FAQ covers the current Giga product model.
+
+For live workspace state such as current permissions, connected tools, available models, schedule slots, or surface-specific capabilities, use the current product as the source of truth.
+
+## What is Giga?
+
+Giga is a permission-aware AI workspace built around company context, ongoing work, reusable AI roles and methods, connected systems, and recurring processes.
+
+Its core primitives include Chats, Groups, Tracks, Context Notes, Agents, Skills, Workflows, Pulses, Connections, files, and databases.
+
+[See the Feature Overview →](/resources/feature-overview)
+
+## What is Company Brain?
+
+**Company Brain** is Giga’s permission-aware company context layer.
+
+Depending on relevance and access, it can draw from workspace and Group guidance, Tracks, Context Notes, Observations, Current Track State, files, Connections, Agents, Skills, Workflows, and user-level context.
+
+The current user and workspace permissions determine what Giga can retrieve and use.
+
+## What is the difference between a Chat and a Track?
+
+A [Chat](/chats/index) is the direct working surface for a task or discussion.
+
+A [Track](/tracks/index) is the durable home for work that continues over time.
+
+Use a Track when decisions, files, memory, or progress need to accumulate across multiple Chats.
+
+A Chat can link to at most **1 explicitly selected Track**.
+
+## Can Giga choose a Track automatically?
+
+Track attachment should be explicitly selected or confirmed by the user.
+
+That matters because Track attachment affects where Observations from the Chat can become retrievable.
+
+Giga can help identify relevant Tracks, while the actual attachment stays explicit.
+
+## What is a Context Note?
+
+A [Context Note](/tracks/context-notes) is the durable standing context for a Track.
+
+Use it for stable background, terminology, constraints, standing instructions, and durable handoff context.
+
+Changing progress and decisions belong in Track memory or Current Track State.
+
+## What is Current Track State?
+
+**Current Track State** is the curated current position and decision record for a Track.
+
+It captures where the work stands, how it got there, what was ruled out and why, and what remains open.
+
+[Learn about Track memory →](/tracks/memory)
+
+## What is the difference between an Agent and a Skill?
+
+An [Agent](/agents/index) is a named reusable AI role with instructions, context, Skills, and permitted Connections.
+
+A [Skill](/skills/index) is a reusable task method or instruction set.
+
+Use an Agent when the reusable asset is the role. Use a Skill when the reusable asset is how a task should be done.
+
+## What is the difference between a Skill and a Workflow?
+
+A Skill stores a reusable method for a task.
+
+A [Workflow](/workflows/index) stores a reusable ordered process with several meaningful stages.
+
+For example, a review standard fits a Skill. A process that gathers information, evaluates it, and produces a handoff fits a Workflow.
+
+## What is the difference between a Workflow and a Pulse?
+
+A Workflow defines a reusable process.
+
+A [Pulse](/pulses/index) defines recurring scheduled work.
+
+A Pulse can target an Agent, target a Track, or run without a target.
+
+Any exact relationship between Pulses and Workflows should follow the current live product capabilities.
+
+## What is a Group?
+
+A [Group](/groups/index) is a placement and permission scope.
+
+Groups can scope Tracks, Agents, files, credentials, Connections, and shared context.
+
+Use a Group when a real team, shared area, or access boundary needs its own place.
+
+## Can I keep work private?
+
+Each workspace member has an existing private Group for private work.
+
+A private Track should live in that existing private Group.
+
+Creating another Group purely to make a single Track private is generally unnecessary.
+
+[Learn about Personal vs shared work →](/groups/personal-vs-shared)
+
+## Does being in the workspace give me access to everything?
+
+Access is layered.
+
+Workspace membership, workspace role, Group membership, resource ownership, Connection sharing, provider permissions, and the current live tool surface can all affect what someone can use.
+
+[Learn about Permissions →](/teams-and-admin/permissions)
+
+## Can Connections be shared?
+
+A credential can be owned by one user and shared into Groups.
+
+A teammate may be able to use a shared Connection while management actions such as renaming or deleting the credential remain with the owner.
+
+The external provider’s own permissions still apply.
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## Can Giga connect to custom tools?
+
+Current custom Connection paths can include:
+
+1. MCP
+2. OAuth with supported self-serve registration
+3. API key or PAT
+4. browser login
+
+The external service and current Giga integration surface determine which method is available.
+
+[Learn about Custom Connections →](/connections/custom-connections)
+
+## Should I paste API keys or passwords into Chat?
+
+Use the secure connection flow for authentication material whenever it is available.
+
+Secrets such as API keys, passwords, tokens, OAuth secrets, and connection strings belong in the secure credential layer rather than ordinary Chats, files, or Context Notes.
+
+## Can Giga use websites when there is no API?
+
+Browser-based work can be used when a stronger first-class route such as an API, MCP tool, database, or built-in integration cannot complete the task.
+
+For logged-in work, Giga can use the current browser capability where available.
+
+CAPTCHA, bot detection, or two-factor authentication can require the user to complete the login step.
+
+[Learn about Browser Connections →](/connections/custom/browser-connections)
+
+## Can Giga create files?
+
+Giga supports authored work product through files.
+
+Confirmed capabilities include Markdown, text and binary Track files, code, webpages, and visual artifacts where the current surface supports them.
+
+SQLite and hosted Giga databases can be used for structured growing records.
+
+Exact rich file formats should be verified from the current product capability.
+
+[Learn about Working with files →](/chats/working-with-files)
+
+## Can I use Giga in Slack, ChatGPT, Claude, or Microsoft Teams?
+
+Yes. Giga’s official user-facing surfaces are:
+
+- Giga Web
+- Slack
+- ChatGPT
+- Claude
+- Microsoft Teams
+
+The underlying Giga workspace context and permission model stays consistent, while file behavior, UI, and exact available capabilities can differ by surface.
+
+[Learn about using Giga anywhere →](/use-giga-anywhere/index)
+
+## Does Giga support different AI models?
+
+Model choice and provider flexibility are a first-class Giga product area.
+
+Exact providers, model availability, plan access, custom endpoints, enterprise agreements, and bring-your-own-model options should be verified from the current product configuration.
+
+Giga’s workspace context and permissions remain conceptually separate from any single model provider.
+
+## Can a Pulse run without an Agent?
+
+Yes.
+
+A Pulse can currently target:
+
+- an Agent
+- a Track
+- no target
+
+The live Pulse surface determines the exact schedule options and targets available.
+
+## What schedules do Pulses support?
+
+The current Pulse model supports:
+
+- shared named schedule slots
+- custom schedules
+- daily cadence
+- weekly cadence
+- monthly cadence
+- intra-day cadence
+
+[Learn about Pulse schedules →](/pulses/schedules)
+
+## What happens when a workspace member is removed?
+
+The current member-removal operation soft-archives the membership and preserves the member’s data.
+
+Owners cannot be removed through the current removal operation.
+
+Removing a member is a consequential access change and should be confirmed.
+
+## Where should I put company-wide instructions?
+
+Use workspace context for durable guidance that genuinely applies across the company.
+
+Use Group context for team-specific guidance.
+
+Use a Context Note for standing guidance tied to one Track.
+
+[Learn about Workspace settings →](/teams-and-admin/workspace-settings)
+
+## I still do not know which feature to use
+
+Start with the job:
+
+- direct task → Chat
+- team or access boundary → Group
+- ongoing work → Track
+- stable Track background → Context Note
+- reusable AI role → Agent
+- reusable task method → Skill
+- reusable ordered process → Workflow
+- recurring scheduled work → Pulse
+- live external system → Connection
+
+[See Choosing the right Giga feature →](/resources/choosing-the-right-feature)
+
+## Related resources
+
+- [Feature Overview](/resources/feature-overview)
+- [Giga Dictionary](/resources/dictionary)
+- [Choosing the right Giga feature](/resources/choosing-the-right-feature)
+- [Troubleshooting](/resources/troubleshooting)

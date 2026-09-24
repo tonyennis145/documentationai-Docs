@@ -1,0 +1,191 @@
+---
+title: Creating a Workflow
+description: >-
+  Learn how to turn a repeatable process into a small number of meaningful
+  Workflow steps.
+---
+Create a **Workflow** when you have a process with several meaningful stages that should be saved and run again.
+
+The strongest Workflows describe the process clearly while leaving Giga enough room to use the right tools and judgment inside each step.
+
+## Start with the outcome
+
+Before creating a Workflow, define what the completed process should accomplish.
+
+Good examples include:
+
+- research an account and prepare a sales brief
+- review a new support issue and prepare a response
+- collect candidate evidence and prepare an interview brief
+- research a topic and create a structured report
+- review a document and return required changes
+
+> **Start with the process people recognize**
+>
+> A Workflow should map to meaningful stages of work, rather than mirroring every technical action Giga might take underneath.
+
+## Check for an existing Workflow
+
+Before creating another Workflow, Giga should review the current reusable Workflows and avoid obvious duplicates.
+
+If an existing Workflow already represents the process, update or reuse it instead of creating a second copy with a slightly different name.
+
+## Create the Workflow
+
+<Steps>
+  <Step title="Name the Workflow" icon="file-text" title-type="p">
+    Use a clear name that describes the process people will recognize later.
+  </Step>
+
+  <Step title="Describe when to use it" icon="info" title-type="p">
+    Add a short description when it helps explain the purpose or trigger for the process.
+  </Step>
+
+  <Step title="Define the meaningful stages" icon="list-checks" title-type="p">
+    Break the process into a small number of ordered steps.
+  </Step>
+
+  <Step title="Write the instructions for each step" icon="edit-3" title-type="p">
+    Describe the outcome, constraints, relevant methods, and decision rules for that stage.
+  </Step>
+
+  <Step title="Add runtime inputs when needed" icon="sliders" title-type="p">
+    Ask for values that change from run to run while keeping the process itself reusable.
+  </Step>
+</Steps>
+
+## Keep steps coarse
+
+A Workflow step should represent a real unit of work.
+
+Good steps:
+
+1. Research the company
+2. Evaluate the opportunity
+3. Prepare the account brief
+
+Overly granular steps:
+
+1. Search the company name
+2. Open the website
+3. Read the homepage
+4. Search the CRM
+5. Read the CRM result
+6. Write a paragraph
+
+The second version hard-codes implementation detail that Giga can usually handle within a meaningful step.
+
+## Write step instructions around outcomes
+
+Each step has a **name** and **instructions**.
+
+Useful step instructions can define:
+
+- the goal of the step
+- evidence or information to collect
+- quality standards
+- relevant [Skills](/skills/index)
+- tools or [Connections](/connections/index) to use when available
+- conditions that should stop or change the work
+- what the step should return
+
+For example:
+
+> Research the account using current approved sources. Apply the Account Research Skill when available. Return confirmed facts, useful signals, and open questions. If the company cannot be reliably identified, stop rather than guessing.
+
+This gives Giga a clear outcome and boundary without scripting every click.
+
+## Add inputs for changing information
+
+Workflow inputs are useful when the process stays stable but each run has different values.
+
+The current Workflow model supports:
+
+| Input type  | Example                      |
+| ----------- | ---------------------------- |
+| **Text**    | Company name                 |
+| **URL**     | Company website              |
+| **Number**  | Maximum number of candidates |
+| **Choice**  | Report type                  |
+| **Boolean** | Include competitor research? |
+
+Inputs can be required and can include labels, help text, placeholders, and options where relevant.
+
+## Skills belong inside the method, not the structure
+
+Use a [Skill](/skills/index) when one Workflow stage has a reusable task method.
+
+For example:
+
+<Columns cols="2">
+  <Card title="Workflow" href="/workflows/index" icon="list-checks" horizontal="false">
+    Research account → evaluate fit → prepare outreach.
+  </Card>
+
+  <Card title="Skill" href="/skills/index" icon="sparkles" horizontal="false">
+    Defines the reusable account-research method used inside the first step.
+  </Card>
+</Columns>
+
+This keeps the process structure separate from reusable task expertise.
+
+## Use Connections when live systems matter
+
+A Workflow can instruct Giga to use approved [Connections](/connections/index) during a step.
+
+For example:
+
+- retrieve current CRM data
+- search a support platform
+- query an approved database
+- use an MCP tool
+- interact with a website through the browser when that is the appropriate connection path
+
+The Workflow should describe the needed outcome. The live environment determines which Connection and tools are actually available.
+
+## Conditions belong in plain-language instructions
+
+The current Workflow schema does not expose a separate visual or structured condition-builder.
+
+Decision rules can still be written into a step.
+
+For example:
+
+> If no active renewal exists, mark this step blocked and explain what is missing.
+
+Do not invent hidden condition nodes, branches, or action objects that the current product does not expose.
+
+## Confirm the overall process
+
+Creating a reusable Workflow captures a process your team may run again.
+
+Giga should confirm the overall intent before creating it, especially when translating a loose Chat request into a saved process.
+
+The individual implementation choices inside each step can stay flexible.
+
+## A simple example
+
+Imagine creating a **Candidate Interview Brief** Workflow.
+
+| Step                          | Instructions                                                                         |
+| ----------------------------- | ------------------------------------------------------------------------------------ |
+| **Gather candidate evidence** | Review the available candidate material and extract relevant evidence                |
+| **Evaluate against the role** | Apply the approved screening method and identify strengths, gaps, and open questions |
+| **Prepare the brief**         | Return a concise interview brief with evidence and recommended areas to probe        |
+
+Runtime inputs might include the candidate name, role, and a link to the source material.
+
+> **Image placeholder**
+>
+> Workflow builder showing Name + Description + Runtime Inputs + 3 ordered plain-language steps.
+
+## After creation
+
+Once the Workflow exists, you can:
+
+- [refine its steps](/workflows/steps)
+- [run it with new inputs](/workflows/running)
+- [edit and reuse it](/workflows/editing-and-reusing)
+- review [Workflow examples](/workflows/examples)
+
+Read the existing Workflow before changing its steps, because a step update replaces the complete ordered step list.

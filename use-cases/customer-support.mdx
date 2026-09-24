@@ -1,0 +1,177 @@
+---
+title: Customer Support
+description: Practical ways support teams can use Giga to investigate issues, reuse troubleshooting methods, and work from customer context.
+---
+
+Customer support work depends on finding the right context quickly, following a reliable troubleshooting method, and handing work between people without losing what has already been learned.
+
+Giga can connect those pieces while keeping customer context and external-system access permission-aware.
+
+## Investigate a customer issue
+
+A [Chat](/chats/index) can be used to work through an issue using the context and tools available in the current session.
+
+A typical investigation might include:
+
+<Steps>
+  <Step title="Gather the facts" icon="search">
+    Review the customer context, issue details, relevant files, and approved connected systems.
+  </Step>
+  <Step title="Check the evidence" icon="check-square">
+    Separate confirmed information from assumptions and identify anything still missing.
+  </Step>
+  <Step title="Work through the resolution" icon="tool">
+    Apply the team’s troubleshooting method and use available Connections where they help.
+  </Step>
+  <Step title="Prepare the response or handoff" icon="file-text">
+    Return the resolution, next step, or concise escalation context.
+  </Step>
+</Steps>
+
+## Reuse troubleshooting methods with Skills
+
+A [Skill](/skills/index) can store the team’s repeatable approach to a specific support task.
+
+Examples include:
+
+- troubleshooting a common issue category
+- reviewing an escalation
+- drafting a customer update
+- summarizing a case for engineering
+- checking a response against support standards
+
+The Skill stores the reusable method while the customer-specific facts stay with the current work.
+
+## Use Connections for live customer context
+
+When the relevant systems are connected, Giga can work with current information exposed by those [Connections](/connections/index).
+
+That might include information from a support platform, CRM, database, or other approved customer system.
+
+The exact capabilities depend on:
+
+- the Connection available to the user or Agent
+- provider-side permissions
+- the tools exposed in the current session
+- the action being requested
+
+Giga should check the live environment rather than assume a specific customer system or action is available.
+
+## Keep complex issues in Tracks
+
+A [Track](/tracks/index) is useful when a support issue or customer situation will continue beyond one Chat.
+
+For example:
+
+- a complex escalation
+- an ongoing implementation issue
+- a customer incident
+- a recurring problem under investigation
+- a cross-functional support case
+
+The Track can keep the durable background, Observations, Current Track State, files, and linked Chats around that issue.
+
+> **Use a Track when the issue has continuity**
+>
+> One-off questions can stay in Chat. Escalations that span people, systems, or time benefit from a durable home.
+
+## Prepare clean handoffs
+
+Support work frequently moves between frontline support, technical teams, customer success, and engineering.
+
+A useful handoff can include:
+
+- what the customer is experiencing
+- confirmed evidence
+- what has already been tried
+- what was ruled out
+- current status
+- open questions
+- the next action required
+
+Current Track State is useful for preserving where an ongoing escalation stands and how it got there.
+
+A reusable handoff Skill can standardize how that information is packaged.
+
+## Use a Support Agent for a stable role
+
+A [Support Agent](/agents/index) can carry a consistent support role across repeated work.
+
+It can have:
+
+- support-specific instructions
+- durable context
+- shared Skills
+- approved Connections
+
+For example, the Agent might consistently separate confirmed customer facts from assumptions and use a standard troubleshooting Skill where available.
+
+The live permission model still controls which customer information and systems it can access.
+
+## Standardize support processes with Workflows
+
+A [Workflow](/workflows/index) fits support work with several meaningful stages.
+
+For example, a **Customer Issue Review** Workflow might contain:
+
+1. investigate the issue
+2. determine the next action
+3. prepare the response or escalation
+
+The Workflow can tell Giga to stop when evidence is missing rather than continuing with an unsupported assumption.
+
+## Schedule recurring support reviews
+
+A [Pulse](/pulses/index) can handle support work that genuinely benefits from recurring checks.
+
+Examples include:
+
+- review an ongoing escalation Track for meaningful changes
+- prepare a recurring support summary
+- review unresolved issues on a selected cadence
+- run a scheduled check through a Support Agent
+
+The Pulse uses the live permissions, Agent or Track context, and Connections available at execution time.
+
+## Customer-facing actions require confirmation
+
+Giga can help draft customer-facing communication.
+
+When a live Connection supports an outward-facing action, normal confirmation rules still apply.
+
+For example, Giga should not silently send a customer message simply because a Workflow or Agent prepared the response.
+
+## Example: complex customer escalation
+
+Imagine a customer issue needs several days of investigation.
+
+<Columns cols={2}>
+  <Card title="Escalation Track" href="/tracks/index" icon="folder">
+    Keeps the customer issue, history, Current Track State, and work product together.
+  </Card>
+  <Card title="Support Connections" href="/connections/index" icon="plug">
+    Provide current customer-system information when permitted.
+  </Card>
+  <Card title="Troubleshooting Skill" href="/skills/index" icon="sparkles">
+    Gives the team a reusable investigation method.
+  </Card>
+  <Card title="Support Agent" href="/agents/index" icon="bot">
+    Provides a consistent support role and approved access.
+  </Card>
+</Columns>
+
+A Workflow can standardize the investigation and handoff, while a Pulse can check the ongoing Track when scheduled follow-up is useful.
+
+> **Image placeholder**
+>
+> Support escalation diagram showing Customer Issue Track + Support Agent + Troubleshooting Skill + approved Connections, feeding a structured response or handoff.
+
+## Related pages
+
+- [Use Cases overview](/use-cases/index)
+- [Introduction to Chats](/chats/index)
+- [Introduction to Tracks](/tracks/index)
+- [Introduction to Connections](/connections/index)
+- [Introduction to Agents](/agents/index)
+- [Introduction to Skills](/skills/index)
+- [Introduction to Workflows](/workflows/index)

@@ -1,0 +1,136 @@
+---
+title: Files in Tracks
+description: Learn how Giga keeps authored work product with the Track it belongs to, and when to use a file instead of context, memory, or a database.
+---
+
+Files give a [Track](/tracks/index) a durable place for **authored work product**.
+
+Use Track files for things people or Giga create and keep working on over time, such as reports, drafts, notes, code, exports, and other deliverables related to that body of work.
+
+## What files are for
+
+<Columns cols={2}>
+  <Card title="Drafts and documents" href="/tracks/files" icon="file-text">
+    Keep written work with the Track instead of scattering it across unrelated Chats.
+  </Card>
+  <Card title="Reports and exports" href="/tracks/files" icon="bar-chart">
+    Store outputs that people may need to review, share, or build on later.
+  </Card>
+  <Card title="Code and technical work" href="/tracks/files" icon="code">
+    Keep implementation files and other technical artifacts with the work they belong to.
+  </Card>
+  <Card title="Structured local data" href="/tracks/files" icon="database">
+    Use a Track-local SQLite database when records need to grow, filter, sort, or aggregate over time.
+  </Card>
+</Columns>
+
+> **Video placeholder**
+>
+> Files overview video.
+
+## Files are work product, not memory
+
+A Track’s files are only one part of its context.
+
+| If you are storing… | Best place |
+| --- | --- |
+| A report, draft, note, code file, or export | **Track file** |
+| Standing background or instructions | [Context Notes](/tracks/context-notes) |
+| Decisions, progress, changes, or learned context | [Memory](/tracks/memory) |
+| Structured records that grow over time | Database |
+
+An empty Track folder does **not** mean the Track has no history. [Memory](/tracks/memory), current Track state, and [Context Notes](/tracks/context-notes) are stored separately from authored files.
+
+> **Keep the layers separate**
+>
+> Files should hold the work itself. Context and memory should explain what the work means, what changed, and what matters now.
+
+## Choosing the right file format
+
+Giga’s product guidance favors simple formats when they fit the job.
+
+- Use **Markdown** for small plans, notes, summaries, and other human-readable narrative content.
+- Use **SQLite** when the data is repetitive, tabular, updated field by field, or expected to grow.
+- Use a **Giga-hosted database** when the work specifically needs a hosted database and that capability is available.
+
+The goal is to keep information in a form that is easy to inspect and maintain instead of forcing every kind of work into a document.
+
+## How Giga works with Track files
+
+Giga can read and write files inside a Track’s folder when the current workspace and permissions allow it.
+
+For a file task, Giga should use the Track’s file operations rather than treating an internal filesystem path as something the user needs to manage.
+
+<Steps>
+  <Step title="Find the right Track" icon="folder">
+    Work in the Track that already owns the subject whenever possible.
+  </Step>
+  <Step title="Inspect what is already there" icon="search">
+    Check existing files before creating a duplicate or putting related work somewhere else.
+  </Step>
+  <Step title="Create or update the work product" icon="edit-3">
+    Write the file in the Track, using a format that fits the job.
+  </Step>
+  <Step title="Share it through Giga" icon="share-2">
+    When a user needs a file link, Giga should use the validated file-sharing flow instead of inventing a URL from an internal path.
+  </Step>
+</Steps>
+
+## Files across Giga surfaces
+
+How a file is presented depends on where you are using Giga.
+
+- In [Giga Web](/use-giga-anywhere/web), supported files and visual work can be shown in the viewer.
+- In [Slack](/use-giga-anywhere/slack), generated files, charts, screenshots, and exports should be uploaded as actual files.
+- In a [Chat](/chats/index), Giga can create work product and keep the durable copy with the relevant Track when that is where the work belongs.
+
+The underlying file can stay attached to the Track even when people interact with it from different surfaces.
+
+## Files vs databases
+
+A file is often the right home for a human-readable artifact. A database is better when the information behaves like records.
+
+| Use a file when… | Use a database when… |
+| --- | --- |
+| People will read the artifact as a document | People will query, filter, sort, or aggregate records |
+| The content changes as a whole | Individual fields or rows change independently |
+| The artifact is a report, note, draft, or code file | The dataset is repetitive or expected to grow |
+| A standalone work artifact is enough | Structured retrieval matters |
+
+> **Hosted databases stay hosted**
+>
+> If the user asks for a Giga-hosted database and the hosted database tools are available, Giga should use that capability rather than quietly substituting a SQLite file.
+
+## A simple example
+
+Imagine a Track for **Customer research**.
+
+<Columns cols={2}>
+  <Card title="Research brief" href="/tracks/files" icon="file-text">
+    A Markdown file with the research plan and interview scope.
+  </Card>
+  <Card title="Interview tracker" href="/tracks/files" icon="database">
+    A SQLite database if interview records need to be filtered and updated over time.
+  </Card>
+  <Card title="Findings report" href="/tracks/files" icon="bar-chart">
+    A written report that summarizes themes and recommendations.
+  </Card>
+  <Card title="Memory" href="/tracks/memory" icon="brain">
+    Decisions, progress, and useful developments captured separately from the files.
+  </Card>
+</Columns>
+
+That keeps the artifacts easy to find without forcing the Track’s history or context into the file system.
+
+> **Image placeholder**
+>
+> Screenshot of a Track with several files visible, showing how authored work stays attached to the Track.
+
+## Related pages
+
+- [Introduction to Tracks](/tracks/index)
+- [Creating and organizing Tracks](/tracks/creating-and-organizing)
+- [Context Notes](/tracks/context-notes)
+- [Memory](/tracks/memory)
+- [Working with files in Chats](/chats/working-with-files)
+- [Sharing and permissions](/tracks/sharing-and-permissions)

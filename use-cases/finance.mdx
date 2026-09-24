@@ -1,0 +1,183 @@
+---
+title: Finance
+description: Practical ways finance teams can use Giga for recurring reporting, review processes, structured records, and approved financial data.
+---
+
+Finance work depends on current data, repeatable review methods, and clear separation between evidence, analysis, and the actions that change financial systems.
+
+Giga can help organize that work while keeping access scoped to the current workspace, Group, Connection, and provider permissions.
+
+## Keep recurring finance work in Tracks
+
+Use a [Track](/tracks/index) when finance work continues over time.
+
+Examples include:
+
+- a recurring reporting process
+- budgeting or planning work
+- a finance-system implementation
+- an ongoing vendor or cost review
+- a recurring analysis effort
+- a finance project that accumulates decisions and files
+
+A Track keeps the durable background, memory, Current Track State, files, and linked Chats around the work.
+
+<Columns cols={2}>
+  <Card title="Context Notes" href="/tracks/context-notes" icon="file-text">
+    Keep stable assumptions, terminology, scope, and standing instructions.
+  </Card>
+  <Card title="Current Track State" href="/tracks/memory" icon="activity">
+    Keep the current position, decisions, ruled-out options, and open questions easy to retrieve.
+  </Card>
+</Columns>
+
+## Work with approved financial data
+
+[Connections](/connections/index) can give Giga access to financial systems, databases, APIs, or other approved sources when the current workspace supports them.
+
+The exact data and actions available depend on:
+
+- current user access
+- Group sharing
+- credential ownership
+- provider permissions
+- the tools exposed by the Connection
+
+Giga should use the live source when the answer depends on current financial information.
+
+> **Current data should come from the current source**
+>
+> A stored summary or file can provide context, but Giga should not treat it as current financial state when a live approved source is available.
+
+## Keep structured finance records structured
+
+Some finance work is better represented as structured data than as narrative files.
+
+A database can be a good fit when records are:
+
+- repetitive
+- tabular
+- updated field by field
+- filtered or sorted
+- aggregated
+- expected to grow
+
+Use files for authored reports, notes, plans, summaries, and other human-readable work product.
+
+Use Track memory for context, decisions, and developments.
+
+## Reuse finance methods with Skills
+
+A [Skill](/skills/index) can capture the team’s repeatable method for a finance task.
+
+Examples include:
+
+- reviewing a recurring report
+- checking a dataset against an internal standard
+- preparing a finance summary
+- reviewing a vendor or cost category
+- creating a handoff for leadership
+- summarizing a period of financial activity from approved sources
+
+The Skill stores the method while the current data stays dynamic.
+
+## Standardize multi-step reviews with Workflows
+
+A [Workflow](/workflows/index) is useful when a finance process has several meaningful stages.
+
+For example, a **Recurring Finance Review** Workflow might include:
+
+<Steps>
+  <Step title="Gather the current data" icon="search">
+    Pull the approved information needed for the review from the live sources available in the workspace.
+  </Step>
+  <Step title="Check the evidence" icon="check-square">
+    Verify the relevant records and identify missing or inconsistent information.
+  </Step>
+  <Step title="Analyze the result" icon="bar-chart-2">
+    Apply the team’s approved review method and surface meaningful changes or exceptions.
+  </Step>
+  <Step title="Prepare the report" icon="file-text">
+    Return a concise summary, clearly separated from any action that would change a financial system.
+  </Step>
+</Steps>
+
+The Workflow stores the process. Skills can provide the reusable method inside one or more steps.
+
+## Use a Finance Agent for a stable role
+
+A [Finance Agent](/agents/index) can provide a consistent role for recurring finance work.
+
+It can carry:
+
+- finance-specific instructions
+- durable context
+- approved Skills
+- permitted Connections
+- a consistent reporting structure
+
+The Agent’s actual access still depends on the live Group, user, credential, and provider permissions.
+
+## Schedule recurring reporting with Pulses
+
+A [Pulse](/pulses/index) can schedule finance work that should happen repeatedly.
+
+Examples include:
+
+- a weekly finance summary
+- a monthly review
+- a recurring exception check
+- a scheduled review of an ongoing finance Track
+- recurring work through a Finance Agent
+
+The Pulse can target an Agent, a Track, or run without a target.
+
+## Keep financial actions deliberate
+
+Giga can help gather evidence, analyze information, and prepare a recommendation or report.
+
+When a live Connection exposes an action that changes a financial system or moves money, the applicable confirmation rules still apply.
+
+A safe pattern is:
+
+1. gather the current evidence
+2. analyze it
+3. prepare the proposed action
+4. confirm the consequential action before execution
+
+This keeps analysis and execution clearly separated.
+
+## Example: monthly finance review
+
+Imagine a team running a monthly finance review.
+
+<Columns cols={2}>
+  <Card title="Finance Track" href="/tracks/index" icon="folder">
+    Keeps the review context, decisions, Current Track State, and authored reports together.
+  </Card>
+  <Card title="Approved Connections" href="/connections/index" icon="plug">
+    Provide current financial data when the live workspace and provider permissions allow it.
+  </Card>
+  <Card title="Finance Review Skill" href="/skills/index" icon="sparkles">
+    Applies the same review method each period.
+  </Card>
+  <Card title="Monthly Pulse" href="/pulses/index" icon="clock">
+    Runs the recurring review on the selected schedule.
+  </Card>
+</Columns>
+
+A Finance Agent can add a stable role and reporting format when that is useful to the team.
+
+> **Image placeholder**
+>
+> Finance review diagram showing Finance Track + approved Connections + Finance Review Skill + optional Finance Agent, with a monthly Pulse triggering the review.
+
+## Related pages
+
+- [Use Cases overview](/use-cases/index)
+- [Introduction to Tracks](/tracks/index)
+- [Introduction to Connections](/connections/index)
+- [Introduction to Agents](/agents/index)
+- [Introduction to Skills](/skills/index)
+- [Introduction to Workflows](/workflows/index)
+- [Introduction to Pulses](/pulses/index)

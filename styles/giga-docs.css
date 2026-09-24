@@ -1,0 +1,41 @@
+:root {
+  --giga-brand: #EA580C;
+  --giga-brand-light: #F97316;
+  --giga-brand-lighter: #FB923C;
+  --giga-brand-dark: #C2410C;
+  --giga-ink: #2B211A;
+  --giga-cream: #FAF8F4;
+  --giga-sand-100: #EFE9E1;
+  --giga-sand-200: #EAE4D9;
+}
+
+::selection {
+  background: rgba(234, 88, 12, 0.20);
+}
+
+/* Warm, brand-aligned editorial callout used for notes/media placeholders. */
+blockquote {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--giga-brand);
+  border-radius: 12px;
+  background: rgba(234, 88, 12, 0.08);
+}
+
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Keep inline code and table borders visually warm instead of cool blue/grey. */
+table {
+  border-color: rgba(107, 93, 82, 0.28);
+}
+
+th,
+td {
+  border-color: rgba(107, 93, 82, 0.22);
+}

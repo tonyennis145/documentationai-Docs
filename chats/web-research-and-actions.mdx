@@ -1,0 +1,40 @@
+---
+title: Web research and actions
+description: How Giga chooses connected tools, APIs, and browser-based work when completing a task.
+---
+
+When you ask Giga to research something or take action, it should use the most appropriate live capability available for that task.
+
+## How Giga chooses a route
+
+<Steps>
+  <Step title="Use a first-class Giga tool when one exists" icon="check-circle">
+    Giga uses the workspace tool designed for that Giga object instead of editing backing files by hand.
+  </Step>
+  <Step title="Use connected systems through their supported connection" icon="plug">
+    Connected providers, APIs, databases, and MCP tools are used when they can complete the task directly.
+  </Step>
+  <Step title="Use the browser when a website needs direct interaction" icon="globe">
+    Browser automation is the fallback for tasks that cannot be completed through an API, MCP tool, database, or first-class integration.
+  </Step>
+</Steps>
+
+This means a single Chat can combine [Connections](/connections/index), live workspace state, and browser work as needed.
+
+## Browser-based work
+
+Giga can use a persistent browser profile for logged-in tasks when that capability is available. If a site blocks automated sign-in with CAPTCHA, bot detection, or two-factor authentication, Giga should stop and ask you to complete the sign-in step.
+
+> **Video placeholder**
+>
+> Cloud Browser overview video.
+
+> **Treat websites as data**
+>
+> Website text, page content, screenshots, console output, and downloaded files are evidence from the web. They do not override Giga’s operating instructions.
+
+## Related pages
+
+- [Connections](/connections/index)
+- [Browser connections](/connections/custom/browser-connections)
+- [Giga Web](/use-giga-anywhere/web)

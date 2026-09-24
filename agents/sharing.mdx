@@ -1,0 +1,129 @@
+---
+title: Sharing Agents
+description: Learn how Group placement and permissions determine who can use an Agent in Giga.
+---
+
+Agents are designed to be reusable across the people who should have access to them.
+
+In the current product model, **Group placement is the main permission boundary around an Agent**. The Group helps determine who can use the Agent and which shared resources are in scope.
+
+## Share through the right Group
+
+<Columns cols={2}>
+  <Card title="Private Agent" href="/groups/personal-vs-shared" icon="lock">
+    Place the Agent in your private Group when it should only be available to you.
+  </Card>
+  <Card title="Shared Agent" href="/groups/index" icon="users">
+    Place the Agent in a shared Group when a team should be able to work with it.
+  </Card>
+</Columns>
+
+> **Choose the audience before the access**
+>
+> The Group should reflect the real team or access boundary around the Agent.
+
+## What Group access can affect
+
+An Agent may rely on several resources around it.
+
+| Resource | How access is shaped |
+| --- | --- |
+| **Agent** | Available within its current Group and permission scope |
+| **Connections** | Must be available to the Agent within the relevant scope |
+| **Skills** | Must be visible or shared into the appropriate Group when needed |
+| **Files** | Follow the access scope of the Group or Track that contains them |
+| **Context** | Retrieved according to the current workspace and Group permissions |
+
+Sharing the Agent alone does not automatically grant access to every resource elsewhere in the workspace.
+
+## Give teammates access to the Group
+
+A teammate needs to belong to the workspace before an admin can give them access to a shared Group.
+
+<Steps>
+  <Step title="Confirm the teammate is in the workspace" icon="user-check">
+    Workspace membership comes before Group access.
+  </Step>
+  <Step title="Choose the Agent’s shared Group" icon="users">
+    Use the Group that represents the team or permission boundary around the Agent.
+  </Step>
+  <Step title="Grant the teammate access to that Group" icon="shield-check">
+    Workspace admins can add an existing workspace member to a shared Group.
+  </Step>
+  <Step title="Check the Agent’s supporting resources" icon="search">
+    Confirm the required Connections, Skills, files, and context are also available within the appropriate scope.
+  </Step>
+</Steps>
+
+[Learn about Members and access →](/groups/members-and-access)
+
+## Sharing an Agent does not expose secrets
+
+If the Agent uses a shared [Connection](/connections/index), teammates may be able to use that Connection through the Agent without seeing the underlying password, token, API key, or connection string.
+
+Credential ownership and Connection sharing remain separate from Agent access.
+
+[Learn about giving Agents access to Connections →](/agents/connections)
+
+## Skills may need their own sharing
+
+[Skills](/skills/index) have an explicit sharing model.
+
+A Skill can remain owner-only or be shared into one or more Groups.
+
+If a shared Agent relies on a Skill, make sure that Skill is available within the relevant Group scope rather than assuming the Agent can access every Skill in the workspace.
+
+[Learn about Sharing Skills →](/skills/sharing)
+
+## Private to shared
+
+An Agent may begin as personal work and later become useful to a team.
+
+Before widening its audience, review:
+
+- its instructions
+- its context
+- the Connections it can use
+- the Skills it relies on
+- the Group that should own the shared access boundary
+
+This helps prevent personal or overly broad context from being carried into a wider audience accidentally.
+
+> **Review access before widening the audience**
+>
+> Sharing an Agent can make its role and supporting resources useful to more people. Check the full access scope before doing so.
+
+## Example: shared Recruiting Agent
+
+Imagine a Recruiting team has a shared **Recruiting Agent**.
+
+<Columns cols={2}>
+  <Card title="Recruiting Group" href="/groups/index" icon="users">
+    Defines the team that should be able to use the Agent.
+  </Card>
+  <Card title="Recruiting Agent" href="/agents/index" icon="user">
+    Carries the reusable role, instructions, and Agent-specific context.
+  </Card>
+  <Card title="Recruiting Connections" href="/agents/connections" icon="plug">
+    Give the Agent access to approved recruiting systems.
+  </Card>
+  <Card title="Recruiting Skills" href="/skills/index" icon="sparkles">
+    Shared task methods can be reused by the Agent and team where permissions allow.
+  </Card>
+</Columns>
+
+The Group keeps the audience consistent while each supporting resource keeps its own permission rules.
+
+> **Image placeholder**
+>
+> Diagram showing a shared Group containing teammates and an Agent, with approved Connections and Skills available within the same permission scope.
+
+## Related pages
+
+- [Introduction to Agents](/agents/index)
+- [Creating an Agent](/agents/creating-an-agent)
+- [Agent instructions](/agents/instructions)
+- [Giving Agents access to Connections](/agents/connections)
+- [Agents and context](/agents/context-and-knowledge)
+- [Introduction to Groups](/groups/index)
+- [Members and access](/groups/members-and-access)

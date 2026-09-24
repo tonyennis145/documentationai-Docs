@@ -1,0 +1,166 @@
+---
+title: Editing and reusing Workflows
+description: Learn how to update a Workflow safely, preserve its ordered steps, and reuse the same process with new inputs.
+---
+
+A **Workflow** is meant to be reused.
+
+The process can stay stable while the inputs, live data, available Connections, and task-specific context change from one run to the next.
+
+## Reuse the same process
+
+A saved Workflow is useful when the sequence of work repeats.
+
+For example, one **Account Research Workflow** can be run for different companies without recreating its steps every time.
+
+The Workflow keeps:
+
+- the ordered process
+- the instructions for each step
+- the runtime inputs it expects
+
+Each run can bring different values and live workspace context.
+
+[Learn about running a Workflow →](/workflows/running)
+
+## Edit when the process changes
+
+Update a Workflow when the reusable process itself needs to change.
+
+Common reasons include:
+
+- a step needs clearer instructions
+- the order of steps has changed
+- a new meaningful stage belongs in the process
+- an old stage is no longer required
+- runtime inputs need to change
+- the name or description should better explain the Workflow
+
+Temporary task-specific directions can stay in the current run rather than being baked into the Workflow.
+
+## Read the current Workflow first
+
+Giga should fetch the current Workflow before changing it.
+
+The current update behavior treats some Workflow fields differently:
+
+| Field | Update behavior |
+| --- | --- |
+| **Name** | Can be changed independently |
+| **Description** | Can be changed independently |
+| **Steps** | Replaces the complete ordered step list when supplied |
+| **Inputs** | Should be reviewed as part of the current Workflow before changing the runtime form |
+
+> **Protect the existing process**
+>
+> When changing steps, send the full revised sequence. Omitting an existing step from that replacement means it will no longer be part of the Workflow.
+
+## Editing steps safely
+
+A safe step edit follows a simple pattern:
+
+<Steps>
+  <Step title="Read the Workflow" icon="search">
+    Review the current name, description, inputs, and complete ordered step list.
+  </Step>
+  <Step title="Change the intended stage" icon="edit-3">
+    Update the instructions, order, or step structure that actually needs to change.
+  </Step>
+  <Step title="Preserve the rest" icon="list-checks">
+    Keep every existing step that should remain in the Workflow.
+  </Step>
+  <Step title="Save the full revised sequence" icon="save">
+    Replace the step list with the complete desired version.
+  </Step>
+</Steps>
+
+[Learn more about Workflow steps →](/workflows/steps)
+
+## Keep reusable logic in the right place
+
+As a Workflow grows, avoid stuffing every kind of reusable guidance into its steps.
+
+Use:
+
+- a [Skill](/skills/index) for a reusable task method
+- an [Agent](/agents/index) for a reusable AI role
+- a [Connection](/connections/index) for live external system access
+- the Workflow for the ordered process
+
+For example, the step **Research the account** can stay concise while an Account Research Skill carries the detailed research method.
+
+## Changing runtime inputs
+
+Inputs are useful when the process stays the same but the subject changes between runs.
+
+If the Workflow starts asking for unnecessary information, remove or simplify those inputs.
+
+If a new value is required for every run, add it to the runtime form.
+
+The current input types include:
+
+- text
+- URL
+- number
+- choice
+- boolean
+
+Keep inputs focused on information the user needs to provide at run time.
+
+## Reuse with different live context
+
+Running the same Workflow twice does not guarantee identical data or available actions.
+
+The live environment can change between runs:
+
+- Connections may change
+- provider permissions may change
+- Skills may be added or removed
+- workspace access may change
+- external data may be newer
+
+The Workflow defines the process. Giga still checks the current environment each time it runs.
+
+## What to do when a process grows
+
+A Workflow does not need a separate step for every action.
+
+If the process becomes hard to read, look for opportunities to:
+
+- merge implementation details into a meaningful step
+- move reusable task guidance into a Skill
+- separate a genuinely different process into its own Workflow
+
+A Workflow should still read like a process a teammate could understand quickly.
+
+## Deleting a Workflow
+
+Deleting a Workflow removes the saved reusable process.
+
+Giga should confirm before deleting it.
+
+If the process may still be useful but needs changes, edit it instead.
+
+## A simple example
+
+Imagine a **Customer Renewal Review** Workflow with 3 steps:
+
+1. Gather current account context
+2. Evaluate renewal risks and opportunities
+3. Prepare the review brief
+
+Later, the team decides legal review should be a distinct stage.
+
+A safe edit would read the current Workflow, insert **Check contract constraints** in the correct position, preserve the other 3 steps, then save the complete 4-step sequence.
+
+> **Image placeholder**
+>
+> Before-and-after Workflow editor showing one new step inserted while the existing steps and runtime inputs are preserved.
+
+## Related pages
+
+- [Introduction to Workflows](/workflows/index)
+- [Creating a Workflow](/workflows/creating-a-workflow)
+- [Workflow steps](/workflows/steps)
+- [Running a Workflow](/workflows/running)
+- [Workflow examples](/workflows/examples)

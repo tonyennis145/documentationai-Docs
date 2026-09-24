@@ -1,0 +1,142 @@
+---
+title: Members and roles
+description: Learn how workspace membership, Owner, Admin, and Member roles, and shared Group access work in Giga.
+---
+
+Workspace membership determines who belongs to your Giga workspace.
+
+The current role model includes **Owner**, **Admin**, and **Member**. Access to specific work is then shaped further by [Groups](/groups/index) and individual resource permissions.
+
+## Current workspace roles
+
+| Role | What the current product model confirms |
+| --- | --- |
+| **Owner** | A workspace role whose membership cannot be removed through the current member-removal operation |
+| **Admin** | Can add workspace members and grant existing members access to shared Groups |
+| **Member** | Standard workspace membership; resource access depends on Groups and other permissions |
+
+The role name alone should not be used to infer every possible capability.
+
+Giga should check the live tool permissions for the exact operation being requested.
+
+> **Use the live permission model**
+>
+> The current product surface is the source of truth for whether a specific admin or resource action is allowed.
+
+## Add a workspace member
+
+The current membership flow allows a workspace admin to add a person by email.
+
+The new member can be created with one of the supported workspace roles.
+
+<Steps>
+  <Step title="Confirm who should be added" icon="user-plus">
+    Identify the person and the intended workspace role.
+  </Step>
+  <Step title="Add them to the workspace" icon="users">
+    A workspace admin creates the membership through the supported admin flow.
+  </Step>
+  <Step title="Add shared Group access where needed" icon="layers">
+    Grant access to the relevant shared Groups after the person exists in the workspace.
+  </Step>
+</Steps>
+
+Workspace membership and Group membership are separate.
+
+## Give a member access to a Group
+
+An existing workspace member can be added to a shared Group by a workspace admin.
+
+That Group can then make its shared resources available according to the current permission model.
+
+Those resources can include:
+
+- Tracks
+- Agents
+- files
+- shared credentials and Connections
+- Group-level context
+- other resources scoped to that Group
+
+[Learn about Members and access in Groups →](/groups/members-and-access)
+
+## Workspace role vs Group membership
+
+These 2 concepts solve different problems.
+
+| Workspace role | Group membership |
+| --- | --- |
+| Describes the person’s role in the broader workspace | Determines access to a specific shared Group |
+| Can affect admin-level operations | Shapes access to resources inside that Group |
+| Includes Owner, Admin, and Member | Depends on which shared Groups the person belongs to |
+
+A Member can belong to several Groups.
+
+Being an Admin does not mean Giga should skip live resource-level permission checks.
+
+## Removing a member
+
+The current member-removal operation is restricted to workspace admins.
+
+Removing a member currently **soft-archives the membership and preserves their data** rather than erasing the person’s historical workspace data.
+
+Owners cannot be removed through the current removal operation.
+
+Because removal affects access and provisioning, Giga should confirm before carrying it out.
+
+> **Removal is an access change**
+>
+> Confirm the exact member before removing them. The current operation removes them from active workspace provisioning while preserving their data.
+
+## Roles and resource ownership
+
+Workspace role is only one part of access.
+
+A user may also own resources such as credentials or Skills.
+
+That ownership can affect who is allowed to edit or delete those resources even when other users can access them through a Group.
+
+For example, a teammate may be able to use a shared credential without being able to rename or delete it.
+
+[Learn about Permissions →](/teams-and-admin/permissions)
+
+## Private and shared work
+
+Each member can access shared Groups they belong to plus their own private Group.
+
+Private work should use the member’s existing private Group.
+
+A new Group is generally unnecessary simply to make one Track private.
+
+[Learn about Personal vs shared work →](/groups/personal-vs-shared)
+
+## A simple example
+
+Imagine Maya joins the workspace as a Member and needs access to the Sales team’s work.
+
+<Columns cols={2}>
+  <Card title="Workspace membership" href="/teams-and-admin/members-and-roles" icon="user-check">
+    Maya is added to the workspace as a Member.
+  </Card>
+  <Card title="Sales Group" href="/groups/index" icon="users">
+    An admin gives Maya access to the existing shared Sales Group.
+  </Card>
+  <Card title="Shared resources" href="/teams-and-admin/permissions" icon="layers">
+    Maya can use the resources available through that Group according to their own permission rules.
+  </Card>
+  <Card title="Private Group" href="/groups/personal-vs-shared" icon="lock">
+    Maya also has her own private place for personal work.
+  </Card>
+</Columns>
+
+> **Image placeholder**
+>
+> Diagram showing one workspace with Owner, Admin, and Member roles, then shared Group membership branching into team resources.
+
+## Related pages
+
+- [Teams & Admin overview](/teams-and-admin/index)
+- [Permissions](/teams-and-admin/permissions)
+- [Managing company Connections](/teams-and-admin/managing-company-connections)
+- [Workspace settings](/teams-and-admin/workspace-settings)
+- [Members and access in Groups](/groups/members-and-access)

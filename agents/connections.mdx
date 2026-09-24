@@ -1,0 +1,146 @@
+---
+title: Giving Agents access to Connections
+description: Learn how Agents can use approved Connections while respecting Group, credential, and provider permissions.
+---
+
+[Connections](/connections/index) let an Agent work with live external tools and systems.
+
+An Agent might use a CRM, support platform, analytics tool, database, MCP server, or browser-based service when that Connection is available within its current permission scope.
+
+## Connections extend what an Agent can do
+
+<Columns cols={2}>
+  <Card title="Read live information" href="/connections/index" icon="search">
+    Let the Agent retrieve current data from an approved external system.
+  </Card>
+  <Card title="Take supported actions" href="/connections/index" icon="zap">
+    Let the Agent perform provider actions when both Giga and the external service allow them.
+  </Card>
+  <Card title="Use company systems" href="/connections/index" icon="database">
+    Give the Agent access to systems your team already works in.
+  </Card>
+  <Card title="Keep access controlled" href="/connections/sharing-connections" icon="shield-check">
+    Make Connections available only within the right permission scope.
+  </Card>
+</Columns>
+
+## Access is permission-aware
+
+An Agent should only use a Connection when the live Giga environment says it is available.
+
+Several layers can affect that:
+
+| Layer | What it controls |
+| --- | --- |
+| **Agent placement** | The Group and scope the Agent operates within |
+| **Group membership** | Who can access the Agent and shared resources |
+| **Connection sharing** | Whether the credential or Connection is available in that scope |
+| **Credential ownership** | Who can manage or remove the underlying credential |
+| **Provider permissions** | What the connected external account can actually do |
+| **Live tool surface** | Which actions the Connection currently exposes |
+
+> **Existing in the workspace is not enough**
+>
+> An Agent should never assume it can use every Connection simply because that Connection exists somewhere in Giga.
+
+## How to give an Agent access
+
+The exact controls can vary with the current product surface, but the access model is consistent.
+
+<Steps>
+  <Step title="Start with the Agent’s job" icon="user">
+    Identify which external systems the Agent genuinely needs for its role.
+  </Step>
+  <Step title="Check the Agent’s Group" icon="users">
+    Confirm the Agent sits in the permission scope intended for that work.
+  </Step>
+  <Step title="Make the Connection available in the right scope" icon="plug">
+    Use the current Giga sharing and Agent configuration controls to make the approved Connection available.
+  </Step>
+  <Step title="Confirm provider permissions" icon="shield-check">
+    Check that the connected external account can perform the actions the Agent needs.
+  </Step>
+  <Step title="Use the live Connection" icon="zap">
+    The Agent can use the tools exposed by that Connection when the current session allows it.
+  </Step>
+</Steps>
+
+## Share the narrowest useful access
+
+Give an Agent the Connections required for its role rather than every company Connection.
+
+For example:
+
+- a **Sales Research Agent** may need the CRM and approved research tools
+- a **Support Agent** may need the support platform and customer systems
+- a **Finance Agent** may need approved financial data sources
+
+Keeping access focused makes the Agent easier to reason about and keeps the permission boundary aligned with its actual job.
+
+## Shared Connection vs owned credential
+
+A Connection can be usable by an Agent or teammate without transferring ownership of the credential behind it.
+
+The credential owner may retain management controls such as renaming, rotating, or deleting the credential.
+
+The Agent uses the Connection through Giga’s secure connection layer. It does not need the raw secret.
+
+[Learn about Sharing Connections →](/connections/sharing-connections)
+
+## Secrets stay out of Agent instructions
+
+Do not place passwords, API keys, access tokens, OAuth secrets, or database connection strings in:
+
+- [Agent instructions](/agents/instructions)
+- Agent context
+- [Track Context Notes](/tracks/context-notes)
+- files
+- normal Chats
+
+Secrets belong in the secure Connection flow.
+
+> **Connections carry access. Instructions carry behavior.**
+>
+> Keep authentication in Giga’s secure connection layer and keep the Agent’s durable instructions focused on how it should work.
+
+## Provider permissions still apply
+
+Giving an Agent access to a Connection does not expand the permissions of the external account.
+
+If the connected account is read-only, the Agent remains limited to read-only actions through that Connection.
+
+If the provider exposes only certain tools, Giga should use the live tool surface rather than assume broader capabilities.
+
+## Example: Sales Research Agent
+
+Imagine a shared **Sales Research Agent** in the Sales Group.
+
+<Columns cols={2}>
+  <Card title="CRM Connection" href="/connections/index" icon="database">
+    Gives the Agent current account and pipeline context when available.
+  </Card>
+  <Card title="Research Connection" href="/connections/index" icon="search">
+    Gives the Agent approved external research capabilities.
+  </Card>
+  <Card title="Sales Group" href="/groups/index" icon="users">
+    Defines the broader access scope around the Agent and shared resources.
+  </Card>
+  <Card title="Agent instructions" href="/agents/instructions" icon="file-text">
+    Tell the Agent how to use those systems and what outputs the team expects.
+  </Card>
+</Columns>
+
+The Agent can work across those systems without exposing the underlying credentials.
+
+> **Image placeholder**
+>
+> Diagram showing Agent → approved Connections → external systems, with Group access and provider permissions around the path.
+
+## Related pages
+
+- [Introduction to Agents](/agents/index)
+- [Creating an Agent](/agents/creating-an-agent)
+- [Agent instructions](/agents/instructions)
+- [Agents and context](/agents/context-and-knowledge)
+- [Introduction to Connections](/connections/index)
+- [Sharing Connections](/connections/sharing-connections)

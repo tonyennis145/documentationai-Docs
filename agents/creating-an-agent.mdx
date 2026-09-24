@@ -1,0 +1,167 @@
+---
+title: Creating an Agent
+description: Learn how to set up a reusable Agent with the right role, context, access, and Group placement.
+---
+
+Create an **Agent** when your team needs a named AI role that should behave consistently across repeated work.
+
+A good Agent has a clear purpose, durable instructions, the right context, and only the Connections and Skills it actually needs.
+
+## Start with the job the Agent should do
+
+Before creating an Agent, define the role in plain language.
+
+For example:
+
+- **Sales Research Agent** that prepares account research
+- **Recruiting Agent** that helps screen candidates
+- **Support Agent** that works with customer context
+- **Operations Agent** that handles recurring operational tasks
+
+> **Give the Agent a real job**
+>
+> A clear role makes it easier to decide what instructions, context, Connections, and Skills belong with the Agent.
+
+## Choose the right Group
+
+Agents operate within Giga’s [Group](/groups/index) permission model.
+
+Choose the Group based on who should be able to use the Agent and which shared resources should be in scope.
+
+| Placement | Good fit |
+| --- | --- |
+| **Private Group** | An Agent only you should use |
+| **Shared Group** | An Agent intended for a team or shared function |
+
+The Group helps determine the audience around the Agent.
+
+[Learn about personal vs shared work →](/groups/personal-vs-shared)
+
+## Build the Agent
+
+<Steps>
+  <Step title="Name the Agent" icon="user">
+    Use a clear name that reflects the role people will recognize later.
+  </Step>
+  <Step title="Define its role" icon="briefcase">
+    Describe what the Agent is responsible for and the kind of work it should handle.
+  </Step>
+  <Step title="Add durable instructions" icon="file-text">
+    Capture the working rules, constraints, terminology, and expected approach the Agent should follow repeatedly.
+  </Step>
+  <Step title="Add relevant context" icon="brain">
+    Give the Agent the durable background it needs for its role.
+  </Step>
+  <Step title="Give it the right Connections" icon="plug">
+    Make approved external systems available when the Agent needs live data or actions.
+  </Step>
+  <Step title="Add useful Skills" icon="sparkles">
+    Reuse task-specific instructions instead of packing every method into the Agent itself.
+  </Step>
+</Steps>
+
+The exact creation controls can vary with the current Giga product surface. The live workspace remains the source of truth for what can be configured.
+
+## Keep the role focused
+
+An Agent should have a coherent job.
+
+If the instructions start covering several unrelated roles, consider creating separate Agents or moving reusable task methods into [Skills](/skills/index).
+
+For example:
+
+<Columns cols={2}>
+  <Card title="Sales Research Agent" href="/agents/index" icon="user">
+    Owns the broader role of researching prospects and accounts.
+  </Card>
+  <Card title="Account Research Skill" href="/skills/index" icon="sparkles">
+    Stores a reusable method for researching a company.
+  </Card>
+</Columns>
+
+This keeps the Agent readable and makes the Skill reusable elsewhere.
+
+## Add instructions that will still matter later
+
+Agent instructions should describe durable behavior.
+
+Good examples include:
+
+- what the Agent is responsible for
+- which goals matter most
+- terminology it should use
+- recurring constraints
+- how it should structure its output
+- when it should ask for confirmation
+- which kinds of tasks should be escalated or left to a person
+
+One-off requests belong in the current [Chat](/chats/index).
+
+[Learn about Agent instructions →](/agents/instructions)
+
+## Give the Agent only the context it needs
+
+An Agent can use durable context relevant to its role.
+
+That context should stay focused on what the Agent repeatedly needs to understand, rather than becoming a dump of every piece of company information.
+
+The live permission model still controls what the Agent can actually retrieve.
+
+[Learn about Agents and context →](/agents/context-and-knowledge)
+
+## Add Connections deliberately
+
+A Connection can give the Agent access to live systems such as a CRM, support tool, database, or MCP server.
+
+Before making a Connection available, check:
+
+- whether the Agent actually needs it
+- whether the Agent’s Group has the right access scope
+- what actions the external account allows
+- whether the Connection should be shared with that audience
+
+An Agent should not automatically gain every Connection in the workspace.
+
+[Learn about giving Agents access to Connections →](/agents/connections)
+
+## Add Skills for reusable methods
+
+Use [Skills](/skills/index) for methods the Agent may need repeatedly.
+
+For example, a Recruiting Agent could use:
+
+- a candidate-screening Skill
+- an interview-summary Skill
+- a sourcing-research Skill
+
+This keeps **what the Agent is** separate from **how a specific task should be done**.
+
+## A simple example
+
+Imagine you are creating a **Customer Support Agent**.
+
+| Part | Example |
+| --- | --- |
+| **Role** | Help the support team investigate and resolve customer issues |
+| **Instructions** | Be concise, cite the source of customer facts, confirm before outward-facing actions |
+| **Context** | Support terminology and durable team guidance |
+| **Connections** | Support platform and approved customer systems |
+| **Skills** | Troubleshooting and response-drafting methods |
+| **Group** | Customer Support |
+
+The result is a reusable Agent the support team can return to with the same working model each time.
+
+> **Image placeholder**
+>
+> Creation flow showing Role → Group → Instructions → Context → Connections → Skills → Ready to use.
+
+## After creation
+
+Once the Agent exists, you can refine:
+
+- [Agent instructions](/agents/instructions)
+- [Connections](/agents/connections)
+- [context](/agents/context-and-knowledge)
+- [sharing](/agents/sharing)
+
+Start focused. Add more access or instructions when the Agent’s real work shows that it needs them.

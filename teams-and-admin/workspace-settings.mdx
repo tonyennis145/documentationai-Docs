@@ -1,0 +1,125 @@
+---
+title: Workspace settings
+description: Learn how workspace-level context and other administrative settings are handled in Giga.
+---
+
+Workspace settings control company-level behavior that applies above individual [Groups](/groups/index), [Tracks](/tracks/index), and users.
+
+The exact settings available can change with the product, so Giga should use the current workspace surface as the source of truth rather than assuming a fixed settings menu.
+
+## Workspace-level context
+
+One confirmed workspace-level setting is **workspace context**.
+
+Workspace context is standing guidance that should apply broadly across the company’s Giga environment.
+
+Good examples include:
+
+- company-wide terminology
+- durable operating principles
+- broad instructions that should apply across teams
+- shared company context that does not belong to one specific Group or Track
+
+Workspace-level context changes are admin-controlled in the current model.
+
+## Use the narrowest useful context level
+
+Giga supports context at several levels.
+
+| Context level | Good fit |
+| --- | --- |
+| **Workspace** | Company-wide standing guidance |
+| **Group** | Guidance for one team or shared area |
+| **Track** | Durable background for one ongoing body of work |
+| **User** | Preferences or context specific to one workspace member |
+
+Putting context at the right level keeps Company Brain easier to reason about and avoids spreading team-specific guidance across the entire workspace.
+
+> **Keep company-wide guidance genuinely company-wide**
+>
+> If an instruction only matters to Sales, put it with Sales. If it only matters to one project, put it with that Track.
+
+## Editing workspace context
+
+Workspace context is stored as a complete body of standing guidance.
+
+Giga should read the current workspace context before changing it, then preserve anything that should remain.
+
+<Steps>
+  <Step title="Read the current context" icon="search">
+    Review the existing company-wide guidance before editing it.
+  </Step>
+  <Step title="Make the intended change" icon="edit-3">
+    Add, revise, or remove the specific standing guidance that needs to change.
+  </Step>
+  <Step title="Preserve useful existing guidance" icon="layers">
+    Keep everything that should still apply across the workspace.
+  </Step>
+  <Step title="Confirm the meaningful change" icon="check-circle">
+    Confirm before saving a change that will affect company-wide AI behavior.
+  </Step>
+</Steps>
+
+The underlying context update replaces the stored content, so read-before-write matters.
+
+## Other workspace administration
+
+Other administrative areas are documented separately because they have their own access rules.
+
+<Columns cols={2}>
+  <Card title="Members and roles" href="/teams-and-admin/members-and-roles" icon="users">
+    Manage workspace membership and understand the current Owner, Admin, and Member roles.
+  </Card>
+  <Card title="Permissions" href="/teams-and-admin/permissions" icon="shield-check">
+    Understand how roles, Groups, ownership, and provider access combine.
+  </Card>
+  <Card title="Company Connections" href="/teams-and-admin/managing-company-connections" icon="plug">
+    Manage approved external-system access and credential ownership.
+  </Card>
+  <Card title="Groups" href="/groups/index" icon="layers">
+    Organize shared resources and the people who should be able to use them.
+  </Card>
+</Columns>
+
+## Settings are live product state
+
+Giga should not assume that every workspace exposes the same setting controls or that a setting visible in one environment exists everywhere.
+
+When a user asks to change a workspace setting, Giga should verify:
+
+- the current workspace
+- the user’s role
+- the setting or operation exposed by the live product
+- whether confirmation is needed
+- whether the change affects other users
+
+## Current documentation boundary
+
+This page only documents workspace settings supported by the current canonical product sources.
+
+Topics such as SSO, authentication policies, audit logs, data residency, retention controls, DPA terms, and security-control exports are separate documentation backlog items until Giga has a canonical product source for them.
+
+We should not infer those capabilities from general enterprise software conventions.
+
+## A simple example
+
+Imagine your company wants Giga to use one internal term consistently across every team.
+
+That belongs in **workspace context** because the guidance should apply broadly.
+
+If the terminology only belongs to Marketing, the Marketing Group is the better scope.
+
+If it only belongs to one launch, the launch Track is the better scope.
+
+> **Image placeholder**
+>
+> Context hierarchy diagram showing Workspace → Group → Track → User, with examples of what belongs at each level.
+
+## Related pages
+
+- [Teams & Admin overview](/teams-and-admin/index)
+- [Members and roles](/teams-and-admin/members-and-roles)
+- [Permissions](/teams-and-admin/permissions)
+- [Managing company Connections](/teams-and-admin/managing-company-connections)
+- [Introduction to Groups](/groups/index)
+- [Using context in a Chat](/chats/context)
