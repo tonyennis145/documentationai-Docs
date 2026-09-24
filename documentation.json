@@ -1,11 +1,15 @@
 {
-  "name": "Giga",
+  "name": "Giga | Docs",
   "colors": {
     "light": {
-      "brand": "#EA580C"
+      "brand": "#EA580C",
+      "heading": "#2B211A",
+      "text": "6B5D52"
     },
     "dark": {
-      "brand": "#F97316"
+      "brand": "#ea580c",
+      "heading": "#FAF8F4",
+      "text": "#D8CEBF"
     }
   },
   "navigation": {
@@ -462,5 +466,10 @@
       "destination": "/resources/troubleshooting",
       "statusCode": 301
     }
-  ]
+  ],
+  "title": "Giga | Docs",
+  "template": "classic",
+  "logo-dark": "https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1790260396013-dt4epouql8r-1-dark-theme-logo.png?fm=auto&auto=compress%2Cformat",
+  "logo-light": "https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1790260404863-c30swyzfqkp-2-light-theme-logo.png?fm=auto&auto=compress%2Cformat",
+  "favicon": "https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1790260412204-3qluf15objd-3-favicon.png?fm=auto&auto=compress%2Cformat"
 }
