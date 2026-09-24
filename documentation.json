@@ -54,7 +54,8 @@
                 "title": "Using context in a chat",
                 "path": "chats/context"
               }
-            ]
+            ],
+            "icon": "message-square"
           },
           {
             "group": "Tracks",
@@ -85,7 +86,8 @@
                 "title": "Sharing and permissions",
                 "path": "tracks/sharing-and-permissions"
               }
-            ]
+            ],
+            "icon": "folder"
           },
           {
             "group": "Groups",
@@ -108,7 +110,8 @@
                 "title": "Groups and Tracks",
                 "path": "groups/groups-and-tracks"
               }
-            ]
+            ],
+            "icon": "users"
           },
           {
             "group": "Connections",
@@ -156,13 +159,15 @@
                     "title": "Browser connections",
                     "path": "connections/custom/browser-connections"
                   }
-                ]
+                ],
+                "icon": "wrench"
               },
               {
                 "title": "Troubleshooting Connections",
                 "path": "connections/troubleshooting"
               }
-            ]
+            ],
+            "icon": "plug"
           },
           {
             "group": "Agents",
@@ -193,7 +198,8 @@
                 "title": "Sharing Agents",
                 "path": "agents/sharing"
               }
-            ]
+            ],
+            "icon": "bot"
           },
           {
             "group": "Skills",
@@ -220,7 +226,8 @@
                 "title": "Examples",
                 "path": "skills/examples"
               }
-            ]
+            ],
+            "icon": "sparkles"
           },
           {
             "group": "Workflows",
@@ -251,7 +258,8 @@
                 "title": "Examples",
                 "path": "workflows/examples"
               }
-            ]
+            ],
+            "icon": "workflow"
           },
           {
             "group": "Pulses",
@@ -282,7 +290,8 @@
                 "title": "Examples",
                 "path": "pulses/examples"
               }
-            ]
+            ],
+            "icon": "activity"
           },
           {
             "group": "Use Giga Anywhere",
@@ -313,7 +322,8 @@
                 "title": "Microsoft Teams",
                 "path": "use-giga-anywhere/microsoft-teams"
               }
-            ]
+            ],
+            "icon": "globe"
           },
           {
             "group": "Teams & Admin",
@@ -340,7 +350,8 @@
                 "title": "Workspace settings",
                 "path": "teams-and-admin/workspace-settings"
               }
-            ]
+            ],
+            "icon": "shield-check"
           },
           {
             "group": "Use Cases",
@@ -383,7 +394,8 @@
                 "title": "Product & Engineering",
                 "path": "use-cases/product-and-engineering"
               }
-            ]
+            ],
+            "icon": "layout-grid"
           },
           {
             "group": "Resources",
@@ -414,7 +426,8 @@
                 "title": "Troubleshooting",
                 "path": "resources/troubleshooting"
               }
-            ]
+            ],
+            "icon": "book-open"
           }
         ]
       }
@@ -467,7 +480,6 @@
       "statusCode": 301
     }
   ],
-  "title": "Giga | Docs",
   "template": "classic",
   "logo-dark": "https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1790260396013-dt4epouql8r-1-dark-theme-logo.png?fm=auto&auto=compress%2Cformat",
   "logo-light": "https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1790260404863-c30swyzfqkp-2-light-theme-logo.png?fm=auto&auto=compress%2Cformat",
