@@ -483,5 +483,13 @@
   "template": "classic",
   "logo-dark": "https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1790260396013-dt4epouql8r-1-dark-theme-logo.png?fm=auto&auto=compress%2Cformat",
   "logo-light": "https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1790260404863-c30swyzfqkp-2-light-theme-logo.png?fm=auto&auto=compress%2Cformat",
-  "favicon": "https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1790261283503-o5rakv5wnbs-3-favicon.png?fm=auto&auto=compress%2Cformat"
+  "favicon": "https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1790261283503-o5rakv5wnbs-3-favicon.png?fm=auto&auto=compress%2Cformat",
+  "navbar": {
+    "actions": {
+      "primary": {
+        "title": "Back to app",
+        "link": "https://app.getgiga.com"
+      }
+    }
+  }
 }
