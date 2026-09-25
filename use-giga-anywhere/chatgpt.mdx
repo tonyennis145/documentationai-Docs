@@ -1,145 +1,104 @@
 ---
 title: ChatGPT
-description: Learn how Giga can be used from ChatGPT while keeping Giga's live workspace context and permissions in place.
+description: Connect Giga to ChatGPT with a custom MCP app and keep Giga's company context, permissions, and Connections available from ChatGPT.
 ---
 
-**ChatGPT** is an official Giga surface.
+Use **Giga from ChatGPT** when you want to work in ChatGPT while keeping Giga's permission-aware company context and connected tools underneath.
 
-When Giga is available in your ChatGPT environment, you can work with Giga from ChatGPT while Giga continues to resolve the current workspace, context, permissions, and connected capabilities underneath.
+Giga is not yet listed in ChatGPT's public app directory, so the current setup uses a **custom MCP app**.
 
-## Giga stays the workspace layer
-
-Using ChatGPT changes the interface you are working from.
-
-The underlying Giga model remains the same.
-
-Depending on the current session and permissions, Giga can resolve relevant:
-
-- [Groups](/groups/index)
-- [Tracks](/tracks/index)
-- Context Notes
-- Observations
-- Current Track State
-- [Connections](/connections/index)
-- [Skills](/skills/index)
-- files and other permitted company context
-
-The live Giga environment remains the source of truth for what is available.
-
-> **ChatGPT does not widen access**
+> **Before you start**
 >
-> Opening Giga from ChatGPT does not make every company resource available. Giga continues to enforce the current user and workspace permission boundaries.
+> ChatGPT controls who can create and use custom MCP apps. Full MCP support, including write actions, is currently available on ChatGPT Business and Enterprise/Edu on the web. Pro users can connect MCPs with read/fetch permissions in Developer Mode. If you do not see the settings below, your plan or workspace permissions may not support custom MCP apps yet.
 
-## Work with Giga from ChatGPT
-
-The exact experience depends on the Giga capabilities exposed in the current ChatGPT environment.
-
-Where supported, you can use Giga to work with company context and connected systems instead of treating the ChatGPT session as an isolated blank slate.
-
-That can include tasks such as:
-
-- asking questions about permitted company context
-- working with an explicitly selected Track
-- using available Connections
-- applying available Skills
-- creating or updating supported Giga work
-- taking supported actions through the tools exposed in the session
-
-Giga should check the live tool environment before claiming a specific action is available.
-
-## Tracks still work the same way
-
-A [Chat](/chats/index) can be linked to at most one Track.
-
-Giga should never silently infer the Track from the subject of a ChatGPT discussion.
-
-The Track should be explicitly selected or confirmed because Track attachment affects where observations from the Chat can become retrievable.
-
-Once selected, Giga can use the Track context available to the current user.
-
-## Company Brain remains permission-aware
-
-Giga’s Company Brain is the structured company context layer behind the work.
-
-From ChatGPT, that can include the same permitted company knowledge Giga can resolve elsewhere, such as:
-
-- workspace and Group guidance
-- Track context and memory
-- files
-- Agent and Skill context
-- Connections and live external information
-- user-level context
-
-What is actually retrieved should stay relevant to the task and within the current permission scope.
-
-## Connections stay live
-
-[Connections](/connections/index) are resolved from the current Giga workspace.
-
-If a connected tool is available and the current user has access, Giga can use the capability exposed in the ChatGPT session.
-
-If the capability is unavailable, Giga should not assume that an integration available elsewhere in the workspace can automatically be used from ChatGPT.
-
-> **Surface capability is dynamic**
->
-> A Connection existing in Giga does not prove that every action or file behavior is exposed in every interface.
-
-## File behavior can differ
-
-Giga does not assume that ChatGPT handles files exactly like Giga Web or Slack.
-
-The current ChatGPT integration determines:
-
-- what file operations are supported
-- how files are displayed or returned
-- which artifact or preview capabilities are available
-- which actions can be completed directly from the session
-
-For exact file behavior, follow the capabilities exposed in the current environment.
-
-[Learn about file behavior across Giga →](/chats/working-with-files)
-
-## ChatGPT vs Giga Web
-
-<Columns cols={2}>
-  <Card title="ChatGPT" href="/use-giga-anywhere/chatgpt" icon="message-circle">
-    Use Giga from the ChatGPT interface with the tools and capabilities exposed there.
-  </Card>
-  <Card title="Giga Web" href="/use-giga-anywhere/web" icon="monitor">
-    Use Giga’s first-party web interface, including its web-specific viewer and rich UI where supported.
-  </Card>
-</Columns>
-
-The underlying Giga permissions and company context remain governed by the live workspace in both cases.
-
-## A simple example
-
-Imagine you are discussing a customer account in ChatGPT.
+## Connect Giga to ChatGPT
 
 <Steps>
-  <Step title="Work through ChatGPT" icon="message-circle">
-    Ask Giga for the account context or task you need.
+  <Step title="Enable Developer Mode" icon="settings">
+    In ChatGPT, open **Settings → Apps → Advanced Settings** and turn on **Developer Mode** if it is available to your account.
+
+    Workspace admins can also start from **Workspace settings → Apps → Create**.
   </Step>
-  <Step title="Resolve live Giga access" icon="shield-check">
-    Giga checks the current user, Groups, Connections, and explicitly selected Track.
+  <Step title="Create a custom app" icon="plus">
+    Open **Settings → Apps → Create** or **Workspace settings → Apps → Create**, depending on your workspace role.
+
+    Name the app **Giga**.
   </Step>
-  <Step title="Use available company context" icon="layers">
-    Giga retrieves the relevant permitted context and live capabilities available in the session.
+  <Step title="Add Giga's MCP endpoint" icon="link">
+    Enter the Giga remote MCP endpoint:
+
+    ```
+    https://app.getgiga.com/mcp
+    ```
+
+    Use **OAuth** for authentication.
   </Step>
-  <Step title="Return the result in ChatGPT" icon="check-circle">
-    The response follows the capabilities and presentation supported by the current ChatGPT surface.
+  <Step title="Scan Giga's tools" icon="search">
+    Select **Scan Tools** and wait for ChatGPT to discover the tools exposed by Giga.
+
+    ChatGPT will open Giga's normal OAuth flow. Sign in to Giga if prompted, approve access, then return to ChatGPT.
+  </Step>
+  <Step title="Create and use Giga" icon="check-circle">
+    Select **Create** when the scan finishes.
+
+    Start a new Chat, open the tools/apps menu, and select **Giga** when you want ChatGPT to use current company context or take an action through Giga.
   </Step>
 </Steps>
 
-> **Image placeholder**
+## Screenshot guide
+
+> **Screenshot placeholder 1**
 >
-> Diagram showing ChatGPT → Giga permission layer → Company Brain / Track / Connections → response back in ChatGPT.
+> ChatGPT Settings showing **Apps → Advanced Settings → Developer Mode**.
+
+> **Screenshot placeholder 2**
+>
+> The **Create app** screen with the name **Giga** and the Giga MCP endpoint entered.
+
+> **Screenshot placeholder 3**
+>
+> ChatGPT after **Scan Tools**, followed by Giga's OAuth sign-in and authorization flow.
+
+> **Screenshot placeholder 4**
+>
+> A ChatGPT Chat with **Giga** selected from the apps/tools menu.
+
+## What carries through from Giga
+
+Connecting Giga to ChatGPT changes the interface around the work. Giga still resolves the current user's permitted workspace context and capabilities.
+
+Depending on the task and current permissions, that can include:
+
+- [Groups](/groups/index)
+- [Tracks](/tracks/index) and Track memory
+- [Connections](/connections/index)
+- [Agents](/agents/index)
+- [Skills](/skills/index)
+- files and other permitted company context
+
+Giga's Company Brain remains permission-aware. Using Giga from ChatGPT does not widen access to company information or Connections.
+
+## Using Giga in a Chat
+
+When a request needs fresh company data or an action through Giga, select or mention Giga for that message.
+
+For example:
+
+- "Use Giga to catch me up on the Acme rollout."
+- "Use Giga to find the latest account context before my renewal call."
+- "Use Giga to check the connected CRM and summarize what changed."
+
+A Chat can link to at most one [Track](/tracks/index), and the Track should be explicitly selected or confirmed.
+
+## If you do not see Create
+
+ChatGPT's custom MCP controls depend on your plan and workspace role.
+
+For the latest ChatGPT requirements, see [OpenAI's guide to Developer Mode and MCP apps](https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt).
 
 ## Related pages
 
 - [Use Giga anywhere](/use-giga-anywhere/index)
-- [Giga Web](/use-giga-anywhere/web)
-- [Introduction to Chats](/chats/index)
+- [Introduction to Connections](/connections/index)
 - [Using context in a Chat](/chats/context)
 - [Introduction to Tracks](/tracks/index)
-- [Introduction to Connections](/connections/index)

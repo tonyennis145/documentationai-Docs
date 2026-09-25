@@ -317,10 +317,6 @@
               {
                 "title": "Claude",
                 "path": "use-giga-anywhere/claude"
-              },
-              {
-                "title": "Microsoft Teams",
-                "path": "use-giga-anywhere/microsoft-teams"
               }
             ],
             "icon": "globe"

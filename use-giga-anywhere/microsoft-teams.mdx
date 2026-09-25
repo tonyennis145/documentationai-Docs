@@ -1,139 +1,21 @@
 ---
 title: Microsoft Teams
-description: Learn how Giga can be used from Microsoft Teams while keeping Giga's live company context and permissions underneath.
+description: Microsoft Teams support for Giga is coming soon.
 ---
 
-**Microsoft Teams** is an official Giga surface.
+# Microsoft Teams
 
-When Giga is available in your Teams environment, you can work with Giga from Microsoft Teams while the underlying workspace context, permissions, and connected capabilities continue to come from Giga.
+**Coming soon.**
 
-## The Giga model stays consistent
+Microsoft Teams will be another way to work with Giga while keeping the same permission-aware company context and access underneath.
 
-Using Microsoft Teams changes the interface around the work.
+Setup instructions will be added here when the Teams integration is ready for customers.
 
-The same core Giga primitives still apply:
+## Available now
 
-- [Chats](/chats/index)
-- [Groups](/groups/index)
-- [Tracks](/tracks/index)
-- Context Notes
-- Current Track State
-- [Agents](/agents/index)
-- [Skills](/skills/index)
-- [Connections](/connections/index)
+You can currently use Giga from:
 
-The current Teams integration determines how those capabilities are presented.
-
-## Company Brain remains permission-aware
-
-Giga’s Company Brain stays scoped to what the current user is allowed to access.
-
-Depending on the current session, that can include relevant:
-
-- workspace and Group context
-- Track context and memory
-- files
-- Agent and Skill context
-- Connections and live external data
-- user-level context
-
-Opening Giga from Teams does not widen that access.
-
-> **Permissions stay with Giga**
->
-> Giga should only retrieve or use company context the current user and session are allowed to access, regardless of the interface being used.
-
-## Work with Giga from Teams
-
-The exact actions available depend on the current Microsoft Teams integration and live tool environment.
-
-Where supported, Giga can help with work such as:
-
-- answering questions from permitted company context
-- working with an explicitly selected Track
-- using available Connections
-- applying available Skills
-- creating or updating supported work product
-- taking actions exposed by the current Teams and Giga environment
-
-Giga should verify the live surface before claiming that a specific Teams action is supported.
-
-## Tracks still require explicit selection
-
-A [Chat](/chats/index) can link to at most one Track.
-
-Giga should never infer a Track from a Teams chat, channel, meeting, or topic alone.
-
-The Track should be explicitly selected or confirmed because Track attachment affects where observations from the Chat can become retrievable.
-
-## Connections stay permission-aware
-
-[Connections](/connections/index) continue to come from the Giga workspace.
-
-A Connection being available elsewhere in Giga does not prove every related action is exposed in Microsoft Teams.
-
-Giga should resolve:
-
-- whether the user can access the Connection
-- whether the current Teams surface exposes the needed capability
-- what the external provider allows
-- whether the requested action needs confirmation
-
-## File behavior follows the current Teams surface
-
-File display and upload behavior can differ across Giga surfaces.
-
-For Microsoft Teams, Giga should use the file capabilities exposed by the current integration rather than assuming the same viewer, upload, or artifact behavior as Web or Slack.
-
-[Learn about working with files →](/chats/working-with-files)
-
-## Teams vs other surfaces
-
-<Columns cols={2}>
-  <Card title="Microsoft Teams" href="/use-giga-anywhere/microsoft-teams" icon="users">
-    Use Giga from the Teams environment with the capabilities available there.
-  </Card>
-  <Card title="Giga Web" href="/use-giga-anywhere/web" icon="monitor">
-    Use Giga’s first-party web interface with its web-specific viewer and rich UI where supported.
-  </Card>
-  <Card title="Slack" href="/use-giga-anywhere/slack" icon="message-square">
-    Use Giga from Slack with Slack-specific messaging, file, and action behavior.
-  </Card>
-  <Card title="ChatGPT and Claude" href="/use-giga-anywhere/index" icon="message-circle">
-    Use Giga from other supported AI interfaces while keeping the same permission-aware workspace underneath.
-  </Card>
-</Columns>
-
-## A simple example
-
-Imagine a team member asks Giga for project context from Microsoft Teams.
-
-<Steps>
-  <Step title="Ask from Teams" icon="message-square">
-    Start the request from the Teams surface.
-  </Step>
-  <Step title="Resolve Giga permissions" icon="shield-check">
-    Giga checks the current user, Groups, Connections, and explicitly selected Track.
-  </Step>
-  <Step title="Use the relevant context" icon="layers">
-    Giga retrieves the permitted company context and capabilities available for the task.
-  </Step>
-  <Step title="Return the result in Teams" icon="check-circle">
-    Giga responds through the presentation and action capabilities supported by the current Teams integration.
-  </Step>
-</Steps>
-
-> **Image placeholder**
->
-> Diagram showing Microsoft Teams → Giga permission layer → Company Brain / Track / Connections → response back in Teams.
-
-## Related pages
-
-- [Use Giga anywhere](/use-giga-anywhere/index)
 - [Giga Web](/use-giga-anywhere/web)
 - [Slack](/use-giga-anywhere/slack)
 - [ChatGPT](/use-giga-anywhere/chatgpt)
 - [Claude](/use-giga-anywhere/claude)
-- [Introduction to Chats](/chats/index)
-- [Introduction to Tracks](/tracks/index)
-- [Introduction to Connections](/connections/index)
