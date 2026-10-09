@@ -27,14 +27,13 @@ Giga has a catalog of apps you can browse and search by category. If a tool is i
 
 Different tools connect in different ways. Giga picks the right one for each app, and some apps offer more than one:
 
-| Method | What it looks like |
-| --- | --- |
-| **Sign in** | Approve access with your account on the app's own sign-in screen |
-| **MCP server** | Connect an app's MCP server so Giga can use its tools |
-| **API key** | Paste a key or access token into Giga's secure form |
-| **Database** | Connect a database so Giga can look things up in it |
-| **Cloud browser** | Sign in to a website once in Giga's cloud browser, for sites with no other way in |
-| **Other agents** | Hand work off to another AI agent your company runs |
+- **OAuth:** approve access on the app's own sign-in screen
+- **Email and password:** enter your login details in Giga's secure form
+- **API key:** paste a key or access token into Giga's secure form
+- **MCP server:** connect an app's MCP server so Giga can use its tools
+- **Database:** connect a database so Giga can look things up in it
+- **Cloud browser:** sign in to a website once, for sites with no other way in
+- **Other agents:** hand work off to another AI agent your company runs
 
 Some tools have their own setup: **Slack** installs into your workspace, and **WhatsApp** connects by scanning a QR code.
 
@@ -111,20 +110,58 @@ When you or a teammate works with Giga, it only uses the connections that person
 - **[Agents](/agents/index)** and **[Workflows](/workflows/index)** use connections as part of their work.
 - **[Pulses](/pulses/index)** run as the person who owns them, using that person's connections.
 
-## Your secrets stay secret
+## The secure proxy: how Giga keeps your secrets safe
 
-- The AI never sees your passwords or keys — Giga adds them behind the scenes when it talks to the app.
-- Secrets are encrypted and never sent back to your browser.
-- Connections can be limited to the sites they're meant for.
-- Database connections can be set to read-only.
+When Giga uses one of your connections, the request goes through Giga's **secure proxy**. The proxy adds your key or token on Giga's servers just before the request leaves, so the AI does the work without ever seeing the secret itself.
 
-## When something isn't working
+```mermaid
+graph LR
+    AI[Giga AI] -->|request, no secret| P[Secure proxy]
+    V[(Encrypted vault)] -->|adds key or token| P
+    P --> T[Your tool]
+```
 
-| Problem | What to check |
-| --- | --- |
-| Connection shows **Needs reconnect** | Click Reconnect and sign in again |
-| You can't see a connection | It may be private to a teammate, or shared to a Group you're not in |
-| You can use it but can't edit it | Only the person who added it can manage it |
-| Reading works but changes fail | The connected account may not have permission in the app itself |
-| Browser login is stuck | Use the sign-in link Giga sends to complete the CAPTCHA or 2FA yourself |
-| The tool isn't listed | Ask Giga to add it for your workspace |
+The proxy handles each kind of connection:
+
+- **API requests:** Giga calls your tool's API, and the proxy adds the API key or OAuth token.
+- **Large files:** Giga can send a file as the request, or save a response straight to a file, so big payloads never pass through the AI.
+- **Database queries:** Giga runs queries against your PostgreSQL databases through the proxy. Connections can be set to **read-only**, and results are capped so a query can't return unlimited rows.
+- **MCP tools:** tools from your connected MCP servers run through Giga, which adds the sign-in for you.
+
+On top of that:
+
+- Secrets are **encrypted** and never sent back to your browser.
+- The proxy **blocks requests to internal network addresses**, so a connection can't be used to reach private systems.
+- A connection can be **limited to the sites it's meant for**.
+- **Every request is logged**, so you can see what was called and when.
+
+<Callout kind="info">**The one exception: email and password logins.** Some websites only offer a username and password. To sign in for you, Giga has to use the actual password, so these (along with connections to other AI agents) are the only ones where Giga can see the secret. Each time a password is used, it's recorded in the audit log.</Callout>
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Can I connect more than one account for the same app?">
+    Yes. Connect as many accounts as you need, for example a production and a test account, and give each a clear name so you and your team can tell them apart.
+  </Expandable>
+  <Expandable title="Who can use a connection I add?">
+    Only you, until you share it. You can share a connection with a Group or with a specific person. People you share with can use it, but only you can rename, rotate or disconnect it.
+  </Expandable>
+  <Expandable title="The tool I need isn't in the catalog. What can I do?">
+    Ask Giga to add it. Giga can work out how the tool connects and create a private integration just for your workspace. You can also bring your own MCP server or OAuth app.
+  </Expandable>
+  <Expandable title="A connection says Needs reconnect. What happened?">
+    The sign-in expired or was revoked in the app. Click **Reconnect** and sign in again. Giga also checks your connections daily and messages you in Slack when one needs attention.
+  </Expandable>
+  <Expandable title="I can see a connection but can't edit it. Why?">
+    Someone else added it and shared it with you. Only the person who added a connection can manage it.
+  </Expandable>
+  <Expandable title="Giga can read from an app but can't make changes. Why?">
+    The connected account may not have permission to make changes in the app itself. Giga never gets more access than the account you connected.
+  </Expandable>
+  <Expandable title="Can the AI see my passwords and API keys?">
+    No, with one exception. API keys, OAuth tokens and database credentials are added by Giga's secure proxy, so the AI never sees them. Email and password logins are the exception: Giga needs the real password to sign in for you, and every use is logged.
+  </Expandable>
+  <Expandable title="The browser login is stuck on a CAPTCHA or 2FA. What do I do?">
+    Use the sign-in link Giga sends you to complete the login yourself. Giga reuses that sign-in next time.
+  </Expandable>
+</ExpandableGroup>
