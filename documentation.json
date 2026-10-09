@@ -125,11 +125,6 @@
                 "expandable": true
               },
               {
-                "title": "Giga Apps",
-                "path": "apps/index",
-                "icon": "layout-grid"
-              },
-              {
                 "group": "Giga MCP",
                 "pages": [
                   {
@@ -142,14 +137,15 @@
                 "expandable": true
               },
               {
-                "title": "Giga Gateway",
-                "path": "gateway/index",
-                "icon": "key"
+                "title": "Giga Apps",
+                "path": "apps/index",
+                "icon": "layout-grid"
               },
               {
-                "title": "Giga Kits",
-                "path": "kits/index",
-                "icon": "package"
+                "title": "Giga Gateway",
+                "path": "gateway/index",
+                "icon": "key",
+                "badge": "Coming soon"
               }
             ]
           },
