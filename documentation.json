@@ -13,10 +13,10 @@
     }
   },
   "navigation": {
-    "products": [
+    "tabs": [
       {
-        "product": "Giga",
-        "icon": "home",
+        "tab": "Documentation",
+        "icon": "book",
         "groups": [
           {
             "group": "Getting Started",
@@ -29,116 +29,6 @@
               }
             ]
           },
-          {
-            "group": "Teams & Admin",
-            "path": "teams-and-admin/index",
-            "expandable": true,
-            "pages": [
-              {
-                "title": "Overview",
-                "path": "teams-and-admin/index"
-              },
-              {
-                "title": "Members and roles",
-                "path": "teams-and-admin/members-and-roles"
-              },
-              {
-                "title": "Permissions",
-                "path": "teams-and-admin/permissions"
-              },
-              {
-                "title": "Managing company Connections",
-                "path": "teams-and-admin/managing-company-connections"
-              },
-              {
-                "title": "Workspace settings",
-                "path": "teams-and-admin/workspace-settings"
-              }
-            ],
-            "icon": "shield-check"
-          },
-          {
-            "group": "Use Cases",
-            "path": "use-cases/index",
-            "expandable": true,
-            "pages": [
-              {
-                "title": "Overview",
-                "path": "use-cases/index"
-              },
-              {
-                "title": "Leadership",
-                "path": "use-cases/leadership"
-              },
-              {
-                "title": "Operations",
-                "path": "use-cases/operations"
-              },
-              {
-                "title": "Sales",
-                "path": "use-cases/sales"
-              },
-              {
-                "title": "Customer Support",
-                "path": "use-cases/customer-support"
-              },
-              {
-                "title": "Marketing",
-                "path": "use-cases/marketing"
-              },
-              {
-                "title": "Recruiting",
-                "path": "use-cases/recruiting"
-              },
-              {
-                "title": "Finance",
-                "path": "use-cases/finance"
-              },
-              {
-                "title": "Product & Engineering",
-                "path": "use-cases/product-and-engineering"
-              }
-            ],
-            "icon": "layout-grid"
-          },
-          {
-            "group": "Resources",
-            "path": "resources/index",
-            "expandable": true,
-            "pages": [
-              {
-                "title": "Overview",
-                "path": "resources/index"
-              },
-              {
-                "title": "Feature Overview",
-                "path": "resources/feature-overview"
-              },
-              {
-                "title": "Giga Dictionary",
-                "path": "resources/dictionary"
-              },
-              {
-                "title": "Choosing the right Giga feature",
-                "path": "resources/choosing-the-right-feature"
-              },
-              {
-                "title": "FAQ",
-                "path": "resources/faq"
-              },
-              {
-                "title": "Troubleshooting",
-                "path": "resources/troubleshooting"
-              }
-            ],
-            "icon": "book-open"
-          }
-        ]
-      },
-      {
-        "product": "Giga Connect",
-        "icon": "plug",
-        "groups": [
           {
             "group": "Giga Connect",
             "pages": [
@@ -202,14 +92,9 @@
                 ],
                 "icon": "plug"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga Library",
-        "icon": "library",
-        "groups": [
+            ],
+            "icon": "plug"
+          },
           {
             "group": "Giga Library",
             "pages": [
@@ -261,14 +146,9 @@
                 "title": "Datastores",
                 "path": "library/datastores"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga Memory",
-        "icon": "brain",
-        "groups": [
+            ],
+            "icon": "library"
+          },
           {
             "group": "Giga Memory",
             "pages": [
@@ -280,14 +160,9 @@
                 "title": "Memory",
                 "path": "tracks/memory"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga Apps",
-        "icon": "layout-grid",
-        "groups": [
+            ],
+            "icon": "brain"
+          },
           {
             "group": "Giga Apps",
             "pages": [
@@ -295,14 +170,9 @@
                 "title": "Overview",
                 "path": "apps/index"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga Workspace",
-        "icon": "briefcase",
-        "groups": [
+            ],
+            "icon": "layout-grid"
+          },
           {
             "group": "Giga Workspace",
             "pages": [
@@ -458,14 +328,9 @@
                 ],
                 "icon": "users"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga Chat",
-        "icon": "message-square",
-        "groups": [
+            ],
+            "icon": "briefcase"
+          },
           {
             "group": "Giga Chat",
             "pages": [
@@ -509,14 +374,9 @@
                 ],
                 "icon": "message-square"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga Computer",
-        "icon": "monitor",
-        "groups": [
+            ],
+            "icon": "message-square"
+          },
           {
             "group": "Giga Computer",
             "pages": [
@@ -524,14 +384,9 @@
                 "title": "Overview",
                 "path": "computer/index"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga Coworker",
-        "icon": "users",
-        "groups": [
+            ],
+            "icon": "monitor"
+          },
           {
             "group": "Giga Coworker",
             "pages": [
@@ -551,14 +406,9 @@
                 "title": "Giga for ChatGPT",
                 "path": "use-giga-anywhere/chatgpt"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga MCP",
-        "icon": "server",
-        "groups": [
+            ],
+            "icon": "users"
+          },
           {
             "group": "Giga MCP",
             "pages": [
@@ -570,14 +420,9 @@
                 "title": "Claude",
                 "path": "use-giga-anywhere/claude"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga Gateway",
-        "icon": "key",
-        "groups": [
+            ],
+            "icon": "server"
+          },
           {
             "group": "Giga Gateway",
             "pages": [
@@ -585,22 +430,122 @@
                 "title": "Overview",
                 "path": "gateway/index"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "product": "Giga Kits",
-        "icon": "package",
-        "groups": [
+            ],
+            "icon": "key"
+          },
           {
-            "group": "Giga Kits (later)",
+            "group": "Giga Kits",
             "pages": [
               {
                 "title": "Overview",
                 "path": "kits/index"
               }
-            ]
+            ],
+            "icon": "package"
+          },
+          {
+            "group": "Teams & Admin",
+            "path": "teams-and-admin/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Overview",
+                "path": "teams-and-admin/index"
+              },
+              {
+                "title": "Members and roles",
+                "path": "teams-and-admin/members-and-roles"
+              },
+              {
+                "title": "Permissions",
+                "path": "teams-and-admin/permissions"
+              },
+              {
+                "title": "Managing company Connections",
+                "path": "teams-and-admin/managing-company-connections"
+              },
+              {
+                "title": "Workspace settings",
+                "path": "teams-and-admin/workspace-settings"
+              }
+            ],
+            "icon": "shield-check"
+          },
+          {
+            "group": "Use Cases",
+            "path": "use-cases/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Overview",
+                "path": "use-cases/index"
+              },
+              {
+                "title": "Leadership",
+                "path": "use-cases/leadership"
+              },
+              {
+                "title": "Operations",
+                "path": "use-cases/operations"
+              },
+              {
+                "title": "Sales",
+                "path": "use-cases/sales"
+              },
+              {
+                "title": "Customer Support",
+                "path": "use-cases/customer-support"
+              },
+              {
+                "title": "Marketing",
+                "path": "use-cases/marketing"
+              },
+              {
+                "title": "Recruiting",
+                "path": "use-cases/recruiting"
+              },
+              {
+                "title": "Finance",
+                "path": "use-cases/finance"
+              },
+              {
+                "title": "Product & Engineering",
+                "path": "use-cases/product-and-engineering"
+              }
+            ],
+            "icon": "layout-grid"
+          },
+          {
+            "group": "Resources",
+            "path": "resources/index",
+            "expandable": true,
+            "pages": [
+              {
+                "title": "Overview",
+                "path": "resources/index"
+              },
+              {
+                "title": "Feature Overview",
+                "path": "resources/feature-overview"
+              },
+              {
+                "title": "Giga Dictionary",
+                "path": "resources/dictionary"
+              },
+              {
+                "title": "Choosing the right Giga feature",
+                "path": "resources/choosing-the-right-feature"
+              },
+              {
+                "title": "FAQ",
+                "path": "resources/faq"
+              },
+              {
+                "title": "Troubleshooting",
+                "path": "resources/troubleshooting"
+              }
+            ],
+            "icon": "book-open"
           }
         ]
       }
