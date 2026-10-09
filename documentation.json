@@ -36,28 +36,8 @@
                 "group": "Giga Connect",
                 "pages": [
                   {
-                    "title": "Introduction to Connections",
-                    "path": "connections/index"
-                  },
-                  {
-                    "title": "Connect a tool",
-                    "path": "connections/connect-a-tool"
-                  },
-                  {
-                    "title": "Managing Connections",
-                    "path": "connections/managing-connections"
-                  },
-                  {
-                    "title": "Sharing Connections",
-                    "path": "connections/sharing-connections"
-                  },
-                  {
-                    "title": "Custom Connections",
-                    "path": "connections/custom-connections"
-                  },
-                  {
-                    "title": "Troubleshooting Connections",
-                    "path": "connections/troubleshooting"
+                    "title": "Introduction to Connect",
+                    "path": "connect/index"
                   }
                 ],
                 "icon": "plug",
@@ -511,7 +491,7 @@
     },
     {
       "source": "/integrations",
-      "destination": "/connections/index",
+      "destination": "/connect/index",
       "statusCode": 301
     },
     {
@@ -540,23 +520,53 @@
       "statusCode": 301
     },
     {
+      "source": "/connections/index",
+      "destination": "/connect/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/connections/connect-a-tool",
+      "destination": "/connect/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/connections/managing-connections",
+      "destination": "/connect/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/connections/sharing-connections",
+      "destination": "/connect/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/connections/custom-connections",
+      "destination": "/connect/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/connections/troubleshooting",
+      "destination": "/connect/index",
+      "statusCode": 301
+    },
+    {
       "source": "/connections/custom/mcp",
-      "destination": "/connections/custom-connections#mcp",
+      "destination": "/connect/index",
       "statusCode": 301
     },
     {
       "source": "/connections/custom/oauth",
-      "destination": "/connections/custom-connections#oauth",
+      "destination": "/connect/index",
       "statusCode": 301
     },
     {
       "source": "/connections/custom/api-keys",
-      "destination": "/connections/custom-connections#api-keys",
+      "destination": "/connect/index",
       "statusCode": 301
     },
     {
       "source": "/connections/custom/browser-connections",
-      "destination": "/connections/custom-connections#browser-connections",
+      "destination": "/connect/index",
       "statusCode": 301
     }
   ],

@@ -1,8 +1,130 @@
 ---
-title: Giga Connect
+title: Introduction to Connect
 description: Connect Giga to all your tools in one place, then connect them to other tools
 ---
 
-Connect Giga to all your tools in one place, then connect them to other tools.
+**Giga Connect** is how you connect your team's tools to Giga — your CRM, docs, analytics, databases, support desk, and the rest.
 
-_Placeholder — content coming soon._
+The key idea: **connect a tool once, then use it everywhere.** Once a tool is connected to Giga, you can use it from Giga Web and Slack, from your Agents, Workflows and Pulses — and from other AI tools like ChatGPT and Claude through [Giga MCP](/mcp/index), without connecting each app there separately.
+
+```mermaid
+graph LR
+    T1[CRM] --> C[Giga Connect]
+    T2[Docs & wikis] --> C
+    T3[Databases] --> C
+    T4[Websites with no API] --> C
+    C --> G[Giga Web & Slack]
+    C --> A[Agents, Workflows & Pulses]
+    C --> M[Giga MCP]
+    M --> X[ChatGPT, Claude & other AI tools]
+```
+
+[Learn how to use your connected tools from other AI tools →](/mcp/index)
+
+## What you can connect
+
+Giga has a catalog of apps you can browse and search by category. If a tool is in the catalog, connecting it is usually a couple of clicks.
+
+Different tools connect in different ways. Giga picks the right one for each app, and some apps offer more than one:
+
+| Method | What it looks like |
+| --- | --- |
+| **Sign in** | Approve access with your account on the app's own sign-in screen |
+| **MCP server** | Connect an app's MCP server so Giga can use its tools |
+| **API key** | Paste a key or access token into Giga's secure form |
+| **Database** | Connect a database so Giga can look things up in it |
+| **Cloud browser** | Sign in to a website once in Giga's cloud browser, for sites with no other way in |
+| **Other agents** | Hand work off to another AI agent your company runs |
+
+Some tools have their own setup: **Slack** installs into your workspace, and **WhatsApp** connects by scanning a QR code.
+
+You can connect **more than one account** for the same app — for example a production and a test account — and give each a clear name.
+
+## How to connect a tool
+
+<Columns cols={2}>
+  <Card title="From the Integrations page" icon="layout-grid">
+    Find the app, choose how you want to connect, and follow the steps.
+  </Card>
+  <Card title="From a chat" icon="message-square">
+    Ask Giga to connect something. It sends you a secure setup link — no need to leave the conversation.
+  </Card>
+  <Card title="From ChatGPT or Claude" icon="sparkles">
+    Giga can show a connect card right inside the chat.
+  </Card>
+  <Card title="During onboarding" icon="rocket">
+    Pick the tools your work lives in and connect them one after another.
+  </Card>
+</Columns>
+
+After connecting, give the connection a name so you and your team can tell it apart.
+
+> **Keep secrets out of chat**
+>
+> Always use the secure setup form for passwords, API keys and tokens rather than pasting them into a message.
+
+## Tools that aren't in the catalog
+
+If the tool you need isn't listed, you still have options:
+
+- **Ask Giga to add it.** Giga can work out how the tool connects and create a private integration just for your workspace.
+- **Bring your own MCP server.** Point Giga at your company's own MCP server.
+- **Bring your own OAuth app.** Use your company's own sign-in app for a tool, and share that setup with your workspace — teammates still sign in with their own accounts.
+- **Use the cloud browser.** For websites with no API, Giga can work in the site directly. If a login needs a CAPTCHA or 2FA, Giga sends you a link to sign in yourself, then reuses that sign-in next time.
+
+## Sharing connections with your team
+
+New connections are **private by default** — only you can use them.
+
+You can share a connection with a [Group](/groups/index) (or with a specific person), and everyone with access can use it in their chats, Agents and Pulses.
+
+| | Can use it | Can rename, rotate or disconnect it |
+| --- | --- | --- |
+| **The person who added it** | ✅ | ✅ |
+| **People it's shared with** | ✅ | — |
+
+Sharing never reveals the underlying password or key, and it never gives more access than the connected account itself has in the app.
+
+## Managing your connections
+
+Each connection shows who added it and its current status:
+
+- 🟢 **Healthy** — working normally
+- 🔴 **Needs reconnect** — the sign-in expired or was revoked
+- ⚪ **Disconnected**
+
+Giga checks your connections every day, refreshes sign-ins automatically where it can, and sends you a single Slack message listing anything that needs reconnecting.
+
+From a connection you own, you can:
+
+- **Rename** it or add a note
+- **Rotate** the key or password
+- **Reconnect** it if it stopped working
+- **Disconnect** it — this removes it for everyone it was shared with
+
+## How Giga uses your connections
+
+When you or a teammate works with Giga, it only uses the connections that person is allowed to use: their own, plus those shared with them.
+
+- **Chats** can use any connection you have access to, and you can @-mention one to point Giga at it.
+- **Tracks** can have connections and databases linked to them.
+- **[Agents](/agents/index)** and **[Workflows](/workflows/index)** use connections as part of their work.
+- **[Pulses](/pulses/index)** run as the person who owns them, using that person's connections.
+
+## Your secrets stay secret
+
+- The AI never sees your passwords or keys — Giga adds them behind the scenes when it talks to the app.
+- Secrets are encrypted and never sent back to your browser.
+- Connections can be limited to the sites they're meant for.
+- Database connections can be set to read-only.
+
+## When something isn't working
+
+| Problem | What to check |
+| --- | --- |
+| Connection shows **Needs reconnect** | Click Reconnect and sign in again |
+| You can't see a connection | It may be private to a teammate, or shared to a Group you're not in |
+| You can use it but can't edit it | Only the person who added it can manage it |
+| Reading works but changes fail | The connected account may not have permission in the app itself |
+| Browser login is stuck | Use the sign-in link Giga sends to complete the CAPTCHA or 2FA yourself |
+| The tool isn't listed | Ask Giga to add it for your workspace |
