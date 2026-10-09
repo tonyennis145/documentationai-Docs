@@ -69,23 +69,23 @@
                 "pages": [
                   {
                     "title": "Skills",
-                    "path": "skills/index"
+                    "path": "skills/index",
+                    "icon": "sparkles"
                   },
                   {
                     "title": "Context Cards",
-                    "path": "library/context-cards"
+                    "path": "library/context-cards",
+                    "icon": "id-card"
                   },
                   {
                     "title": "Saved Prompts",
-                    "path": "library/saved-prompts"
-                  },
-                  {
-                    "title": "Documents",
-                    "path": "library/documents"
+                    "path": "library/saved-prompts",
+                    "icon": "bookmark"
                   },
                   {
                     "title": "Datastores",
-                    "path": "library/datastores"
+                    "path": "library/datastores",
+                    "icon": "database"
                   }
                 ],
                 "icon": "library",
