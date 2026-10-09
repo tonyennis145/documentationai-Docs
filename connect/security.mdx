@@ -34,11 +34,10 @@ The proxy handles each kind of connection:
 | Databases | No |
 | MCP servers | No |
 | Email and password | Yes, when needed to sign in (see below) |
-| Other AI agents | Yes, to hand work over |
 
 ## The exception: email and password logins
 
-Some websites only offer a username and password: no API, no OAuth. To sign in to those sites, something has to type the real password into the login form. That makes email and password connections the main case where the secret can reach the AI.
+Some websites only offer a username and password: no API, no OAuth. To sign in to those sites, something has to type the real password into the login form. That makes email and password connections the one case where the secret can reach the AI.
 
 When it does, Giga keeps it as contained as possible:
 
