@@ -140,31 +140,6 @@
                 "icon": "layout-grid"
               },
               {
-                "title": "Giga Computer",
-                "path": "computer/index",
-                "icon": "monitor"
-              },
-              {
-                "group": "Giga Coworker",
-                "pages": [
-                  {
-                    "title": "Giga for Slack",
-                    "path": "use-giga-anywhere/slack"
-                  },
-                  {
-                    "title": "Giga for Teams",
-                    "path": "coworker/teams"
-                  },
-                  {
-                    "title": "Giga for ChatGPT",
-                    "path": "use-giga-anywhere/chatgpt"
-                  }
-                ],
-                "icon": "users",
-                "path": "coworker/index",
-                "expandable": true
-              },
-              {
                 "group": "Giga MCP",
                 "pages": [
                   {
@@ -185,6 +160,31 @@
                 "title": "Giga Kits",
                 "path": "kits/index",
                 "icon": "package"
+              }
+            ]
+          },
+          {
+            "group": "Surfaces",
+            "pages": [
+              {
+                "title": "Giga Chat",
+                "path": "chats/index",
+                "icon": "message-square"
+              },
+              {
+                "title": "Giga in Slack",
+                "path": "use-giga-anywhere/slack",
+                "icon": "hash"
+              },
+              {
+                "title": "Giga for Teams",
+                "path": "coworker/teams",
+                "icon": "users"
+              },
+              {
+                "title": "Giga for ChatGPT",
+                "path": "use-giga-anywhere/chatgpt",
+                "icon": "message-circle"
               }
             ]
           },
@@ -470,6 +470,16 @@
                 "icon": "book-open"
               }
             ]
+          },
+          {
+            "group": "Other",
+            "pages": [
+              {
+                "title": "Cloud Computer",
+                "path": "computer/index",
+                "icon": "monitor"
+              }
+            ]
           }
         ]
       }
@@ -584,6 +594,11 @@
     {
       "source": "/chat/web-chat-ui",
       "destination": "/chats/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/coworker/index",
+      "destination": "/use-giga-anywhere/slack",
       "statusCode": 301
     }
   ],
