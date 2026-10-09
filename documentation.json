@@ -60,6 +60,11 @@
                 "group": "Giga Workspace",
                 "pages": [
                   {
+                    "title": "Chat",
+                    "path": "chats/index",
+                    "icon": "message-square"
+                  },
+                  {
                     "title": "Workflows",
                     "path": "workflows/index",
                     "icon": "workflow"
@@ -133,26 +138,6 @@
                 "title": "Giga Apps",
                 "path": "apps/index",
                 "icon": "layout-grid"
-              },
-              {
-                "group": "Giga Chat",
-                "pages": [
-                  {
-                    "title": "Web Chat UI",
-                    "path": "chat/web-chat-ui"
-                  },
-                  {
-                    "title": "Giga Web",
-                    "path": "use-giga-anywhere/web"
-                  },
-                  {
-                    "title": "Chats",
-                    "path": "chats/index"
-                  }
-                ],
-                "icon": "message-square",
-                "path": "chat/index",
-                "expandable": true
               },
               {
                 "title": "Giga Computer",
@@ -589,6 +574,16 @@
     {
       "source": "/core/index",
       "destination": "/introduction",
+      "statusCode": 301
+    },
+    {
+      "source": "/chat/index",
+      "destination": "/chats/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/chat/web-chat-ui",
+      "destination": "/chats/index",
       "statusCode": 301
     }
   ],
