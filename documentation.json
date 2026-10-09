@@ -137,9 +137,32 @@
                 "expandable": true
               },
               {
-                "title": "Giga Apps",
+                "group": "Giga Apps",
                 "path": "apps/index",
-                "icon": "layout-grid"
+                "icon": "layout-grid",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Mini Apps",
+                    "path": "apps/mini-apps",
+                    "icon": "app-window"
+                  },
+                  {
+                    "title": "Building an app",
+                    "path": "apps/building",
+                    "icon": "hammer"
+                  },
+                  {
+                    "title": "Data for your apps",
+                    "path": "apps/data",
+                    "icon": "database"
+                  },
+                  {
+                    "title": "Sharing apps",
+                    "path": "apps/sharing",
+                    "icon": "users"
+                  }
+                ]
               },
               {
                 "title": "Giga Gateway",
