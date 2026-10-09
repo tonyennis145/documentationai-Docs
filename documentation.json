@@ -33,6 +33,11 @@
             "group": "Products",
             "pages": [
               {
+                "title": "Giga Core",
+                "path": "core/index",
+                "icon": "layers"
+              },
+              {
                 "group": "Giga Connect",
                 "pages": [
                   {
