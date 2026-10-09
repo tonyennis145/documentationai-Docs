@@ -36,60 +36,28 @@
                 "group": "Giga Connect",
                 "pages": [
                   {
-                    "group": "Connections",
-                    "path": "connections/index",
-                    "expandable": true,
-                    "pages": [
-                      {
-                        "title": "Introduction to Connections",
-                        "path": "connections/index"
-                      },
-                      {
-                        "title": "Connect a tool",
-                        "path": "connections/connect-a-tool"
-                      },
-                      {
-                        "title": "Managing Connections",
-                        "path": "connections/managing-connections"
-                      },
-                      {
-                        "title": "Sharing Connections",
-                        "path": "connections/sharing-connections"
-                      },
-                      {
-                        "group": "Custom Connections",
-                        "path": "connections/custom-connections",
-                        "expandable": true,
-                        "pages": [
-                          {
-                            "title": "Overview",
-                            "path": "connections/custom-connections"
-                          },
-                          {
-                            "title": "MCP",
-                            "path": "connections/custom/mcp"
-                          },
-                          {
-                            "title": "OAuth",
-                            "path": "connections/custom/oauth"
-                          },
-                          {
-                            "title": "API keys",
-                            "path": "connections/custom/api-keys"
-                          },
-                          {
-                            "title": "Browser connections",
-                            "path": "connections/custom/browser-connections"
-                          }
-                        ],
-                        "icon": "wrench"
-                      },
-                      {
-                        "title": "Troubleshooting Connections",
-                        "path": "connections/troubleshooting"
-                      }
-                    ],
-                    "icon": "plug"
+                    "title": "Introduction to Connections",
+                    "path": "connections/index"
+                  },
+                  {
+                    "title": "Connect a tool",
+                    "path": "connections/connect-a-tool"
+                  },
+                  {
+                    "title": "Managing Connections",
+                    "path": "connections/managing-connections"
+                  },
+                  {
+                    "title": "Sharing Connections",
+                    "path": "connections/sharing-connections"
+                  },
+                  {
+                    "title": "Custom Connections",
+                    "path": "connections/custom-connections"
+                  },
+                  {
+                    "title": "Troubleshooting Connections",
+                    "path": "connections/troubleshooting"
                   }
                 ],
                 "icon": "plug",
@@ -100,32 +68,8 @@
                 "group": "Giga Library",
                 "pages": [
                   {
-                    "group": "Skills",
-                    "path": "skills/index",
-                    "expandable": true,
-                    "pages": [
-                      {
-                        "title": "Introduction to Skills",
-                        "path": "skills/index"
-                      },
-                      {
-                        "title": "Creating a Skill",
-                        "path": "skills/creating-a-skill"
-                      },
-                      {
-                        "title": "How Skills are used",
-                        "path": "skills/how-skills-are-used"
-                      },
-                      {
-                        "title": "Sharing Skills",
-                        "path": "skills/sharing"
-                      },
-                      {
-                        "title": "Examples",
-                        "path": "skills/examples"
-                      }
-                    ],
-                    "icon": "sparkles"
+                    "title": "Skills",
+                    "path": "skills/index"
                   },
                   {
                     "title": "Context Cards",
@@ -169,152 +113,24 @@
                 "group": "Giga Workspace",
                 "pages": [
                   {
-                    "group": "Workflows",
-                    "path": "workflows/index",
-                    "expandable": true,
-                    "pages": [
-                      {
-                        "title": "Introduction to Workflows",
-                        "path": "workflows/index"
-                      },
-                      {
-                        "title": "Creating a Workflow",
-                        "path": "workflows/creating-a-workflow"
-                      },
-                      {
-                        "title": "Workflow steps",
-                        "path": "workflows/steps"
-                      },
-                      {
-                        "title": "Running a Workflow",
-                        "path": "workflows/running"
-                      },
-                      {
-                        "title": "Editing and reusing Workflows",
-                        "path": "workflows/editing-and-reusing"
-                      },
-                      {
-                        "title": "Examples",
-                        "path": "workflows/examples"
-                      }
-                    ],
-                    "icon": "workflow"
+                    "title": "Workflows",
+                    "path": "workflows/index"
                   },
                   {
-                    "group": "Tracks",
-                    "path": "tracks/index",
-                    "expandable": true,
-                    "pages": [
-                      {
-                        "title": "Introduction to Tracks",
-                        "path": "tracks/index"
-                      },
-                      {
-                        "title": "Creating and organizing Tracks",
-                        "path": "tracks/creating-and-organizing"
-                      },
-                      {
-                        "title": "Context Notes",
-                        "path": "tracks/context-notes"
-                      },
-                      {
-                        "title": "Files in Tracks",
-                        "path": "tracks/files"
-                      },
-                      {
-                        "title": "Sharing and permissions",
-                        "path": "tracks/sharing-and-permissions"
-                      }
-                    ],
-                    "icon": "folder"
+                    "title": "Tracks",
+                    "path": "tracks/index"
                   },
                   {
-                    "group": "Agents",
-                    "path": "agents/index",
-                    "expandable": true,
-                    "pages": [
-                      {
-                        "title": "Introduction to Agents",
-                        "path": "agents/index"
-                      },
-                      {
-                        "title": "Creating an Agent",
-                        "path": "agents/creating-an-agent"
-                      },
-                      {
-                        "title": "Agent instructions",
-                        "path": "agents/instructions"
-                      },
-                      {
-                        "title": "Giving Agents access to Connections",
-                        "path": "agents/connections"
-                      },
-                      {
-                        "title": "Agents and context",
-                        "path": "agents/context-and-knowledge"
-                      },
-                      {
-                        "title": "Sharing Agents",
-                        "path": "agents/sharing"
-                      }
-                    ],
-                    "icon": "bot"
+                    "title": "Agents",
+                    "path": "agents/index"
                   },
                   {
-                    "group": "Pulses",
-                    "path": "pulses/index",
-                    "expandable": true,
-                    "pages": [
-                      {
-                        "title": "Introduction to Pulses",
-                        "path": "pulses/index"
-                      },
-                      {
-                        "title": "Creating a Pulse",
-                        "path": "pulses/creating-a-pulse"
-                      },
-                      {
-                        "title": "Schedules",
-                        "path": "pulses/schedules"
-                      },
-                      {
-                        "title": "Pulses with Agents",
-                        "path": "pulses/with-agents"
-                      },
-                      {
-                        "title": "Managing Pulses",
-                        "path": "pulses/managing"
-                      },
-                      {
-                        "title": "Examples",
-                        "path": "pulses/examples"
-                      }
-                    ],
-                    "icon": "activity"
+                    "title": "Pulses",
+                    "path": "pulses/index"
                   },
                   {
-                    "group": "Groups",
-                    "path": "groups/index",
-                    "expandable": true,
-                    "pages": [
-                      {
-                        "title": "Introduction to Groups",
-                        "path": "groups/index"
-                      },
-                      {
-                        "title": "Personal vs shared work",
-                        "path": "groups/personal-vs-shared"
-                      },
-                      {
-                        "title": "Members and access",
-                        "path": "groups/members-and-access"
-                      },
-                      {
-                        "title": "Groups and Tracks",
-                        "path": "groups/groups-and-tracks"
-                      }
-                    ],
-                    "icon": "users"
+                    "title": "Groups",
+                    "path": "groups/index"
                   }
                 ],
                 "icon": "briefcase",
@@ -333,32 +149,8 @@
                     "path": "use-giga-anywhere/web"
                   },
                   {
-                    "group": "Chats",
-                    "path": "chats/index",
-                    "expandable": true,
-                    "pages": [
-                      {
-                        "title": "Introduction to Chats",
-                        "path": "chats/index"
-                      },
-                      {
-                        "title": "Working with files",
-                        "path": "chats/working-with-files"
-                      },
-                      {
-                        "title": "Web research and actions",
-                        "path": "chats/web-research-and-actions"
-                      },
-                      {
-                        "title": "Chat history",
-                        "path": "chats/history"
-                      },
-                      {
-                        "title": "Using context in a chat",
-                        "path": "chats/context"
-                      }
-                    ],
-                    "icon": "message-square"
+                    "title": "Chats",
+                    "path": "chats/index"
                   }
                 ],
                 "icon": "message-square",
@@ -411,6 +203,180 @@
                 "title": "Giga Kits",
                 "path": "kits/index",
                 "icon": "package"
+              }
+            ]
+          },
+          {
+            "group": "Learn",
+            "pages": [
+              {
+                "group": "Skills",
+                "icon": "sparkles",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Creating a Skill",
+                    "path": "skills/creating-a-skill"
+                  },
+                  {
+                    "title": "How Skills are used",
+                    "path": "skills/how-skills-are-used"
+                  },
+                  {
+                    "title": "Sharing Skills",
+                    "path": "skills/sharing"
+                  },
+                  {
+                    "title": "Examples",
+                    "path": "skills/examples"
+                  }
+                ]
+              },
+              {
+                "group": "Workflows",
+                "icon": "workflow",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Creating a Workflow",
+                    "path": "workflows/creating-a-workflow"
+                  },
+                  {
+                    "title": "Workflow steps",
+                    "path": "workflows/steps"
+                  },
+                  {
+                    "title": "Running a Workflow",
+                    "path": "workflows/running"
+                  },
+                  {
+                    "title": "Editing and reusing Workflows",
+                    "path": "workflows/editing-and-reusing"
+                  },
+                  {
+                    "title": "Examples",
+                    "path": "workflows/examples"
+                  }
+                ]
+              },
+              {
+                "group": "Tracks",
+                "icon": "folder",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Creating and organizing Tracks",
+                    "path": "tracks/creating-and-organizing"
+                  },
+                  {
+                    "title": "Context Notes",
+                    "path": "tracks/context-notes"
+                  },
+                  {
+                    "title": "Files in Tracks",
+                    "path": "tracks/files"
+                  },
+                  {
+                    "title": "Sharing and permissions",
+                    "path": "tracks/sharing-and-permissions"
+                  }
+                ]
+              },
+              {
+                "group": "Agents",
+                "icon": "bot",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Creating an Agent",
+                    "path": "agents/creating-an-agent"
+                  },
+                  {
+                    "title": "Agent instructions",
+                    "path": "agents/instructions"
+                  },
+                  {
+                    "title": "Giving Agents access to Connections",
+                    "path": "agents/connections"
+                  },
+                  {
+                    "title": "Agents and context",
+                    "path": "agents/context-and-knowledge"
+                  },
+                  {
+                    "title": "Sharing Agents",
+                    "path": "agents/sharing"
+                  }
+                ]
+              },
+              {
+                "group": "Pulses",
+                "icon": "activity",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Creating a Pulse",
+                    "path": "pulses/creating-a-pulse"
+                  },
+                  {
+                    "title": "Schedules",
+                    "path": "pulses/schedules"
+                  },
+                  {
+                    "title": "Pulses with Agents",
+                    "path": "pulses/with-agents"
+                  },
+                  {
+                    "title": "Managing Pulses",
+                    "path": "pulses/managing"
+                  },
+                  {
+                    "title": "Examples",
+                    "path": "pulses/examples"
+                  }
+                ]
+              },
+              {
+                "group": "Groups",
+                "icon": "users",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Personal vs shared work",
+                    "path": "groups/personal-vs-shared"
+                  },
+                  {
+                    "title": "Members and access",
+                    "path": "groups/members-and-access"
+                  },
+                  {
+                    "title": "Groups and Tracks",
+                    "path": "groups/groups-and-tracks"
+                  }
+                ]
+              },
+              {
+                "group": "Chats",
+                "icon": "message-square",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Working with files",
+                    "path": "chats/working-with-files"
+                  },
+                  {
+                    "title": "Web research and actions",
+                    "path": "chats/web-research-and-actions"
+                  },
+                  {
+                    "title": "Chat history",
+                    "path": "chats/history"
+                  },
+                  {
+                    "title": "Using context in a chat",
+                    "path": "chats/context"
+                  }
+                ]
               }
             ]
           },
@@ -571,6 +537,26 @@
     {
       "source": "/help-center/troubleshooting/login-issues",
       "destination": "/resources/troubleshooting",
+      "statusCode": 301
+    },
+    {
+      "source": "/connections/custom/mcp",
+      "destination": "/connections/custom-connections#mcp",
+      "statusCode": 301
+    },
+    {
+      "source": "/connections/custom/oauth",
+      "destination": "/connections/custom-connections#oauth",
+      "statusCode": 301
+    },
+    {
+      "source": "/connections/custom/api-keys",
+      "destination": "/connections/custom-connections#api-keys",
+      "statusCode": 301
+    },
+    {
+      "source": "/connections/custom/browser-connections",
+      "destination": "/connections/custom-connections#browser-connections",
       "statusCode": 301
     }
   ],
