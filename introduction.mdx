@@ -15,15 +15,10 @@ Giga brings company work, connected tools, and durable context into one AI works
 Everything in Giga is built on one simple model for who can see and use what.
 
 ```mermaid
-graph LR
-    U[User] -->|member of| G[Group]
-    subgraph Items[Anything in Giga]
-        I1[Integrations]
-        I2[Skills]
-        I3[Context Cards]
-    end
-    Items -->|share with a Group| G
-    Items -->|share with a person| U
+graph TB
+    A["Anything in Giga<br/>Integrations, Skills, Context Cards, etc."]
+    A -->|share with a person| U[User]
+    A -->|share with a Group| G[Group]
 ```
 
 - **Users.** Everyone on your team has their own Giga account. What you create starts out private to you.
