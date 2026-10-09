@@ -33,11 +33,6 @@
             "group": "Products",
             "pages": [
               {
-                "title": "Giga Core",
-                "path": "core/index",
-                "icon": "layers"
-              },
-              {
                 "group": "Giga Connect",
                 "pages": [
                   {
@@ -572,6 +567,11 @@
     {
       "source": "/connections/custom/browser-connections",
       "destination": "/connect/index",
+      "statusCode": 301
+    },
+    {
+      "source": "/core/index",
+      "destination": "/introduction",
       "statusCode": 301
     }
   ],

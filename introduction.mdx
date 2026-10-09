@@ -10,6 +10,28 @@ Giga brings company work, connected tools, and durable context into one AI works
 >
 > Product overview video. We’ll replace this block with the final video when it’s ready.
 
+## Users, Groups and sharing
+
+Everything in Giga is built on one simple model for who can see and use what.
+
+```mermaid
+graph LR
+    U[User] -->|member of| G[Group]
+    subgraph Items[Anything in Giga]
+        I1[Integrations]
+        I2[Skills]
+        I3[Context Cards]
+    end
+    Items -->|share with a Group| G
+    Items -->|share with a person| U
+```
+
+- **Users.** Everyone on your team has their own Giga account. What you create starts out private to you.
+- **Groups.** A Group is a set of people — a team, a department, a project, or the whole company. You add users to Groups.
+- **Sharing.** Almost anything in Giga can be shared with a whole Group or with one specific person.
+
+The same model applies everywhere — in Giga Web, Slack, ChatGPT, and Claude — and Giga only ever draws on the things each person has been given access to.
+
 ## Explore Giga
 
 <Columns cols="2">
