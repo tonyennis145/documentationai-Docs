@@ -38,6 +38,10 @@
                   {
                     "title": "Introduction to Connect",
                     "path": "connect/index"
+                  },
+                  {
+                    "title": "Safety and security",
+                    "path": "connect/security"
                   }
                 ],
                 "icon": "plug",

@@ -82,7 +82,7 @@ You can share a connection with a [Group](/groups/index) (or with a specific per
 | **The person who added it** | ✅ | ✅ |
 | **People it's shared with** | ✅ | — |
 
-Sharing never reveals the underlying password or key, and it never gives more access than the connected account itself has in the app.
+Sharing never gives more access than the connected account itself has in the app. [How sharing works with secrets →](/connect/security#sharing-without-exposing)
 
 ## Managing your connections
 
@@ -110,32 +110,11 @@ When you or a teammate works with Giga, it only uses the connections that person
 - **[Agents](/agents/index)** and **[Workflows](/workflows/index)** use connections as part of their work.
 - **[Pulses](/pulses/index)** run as the person who owns them, using that person's connections.
 
-## The secure proxy: how Giga keeps your secrets safe
+## Safety and security
 
-When Giga uses one of your connections, the request goes through Giga's **secure proxy**. The proxy adds your key or token on Giga's servers just before the request leaves, so the AI does the work without ever seeing the secret itself.
+When Giga uses one of your connections, the request goes through Giga's **secure proxy**, which adds your key or token on Giga's servers. For API keys, OAuth sign-ins, databases and MCP servers, the AI does the work without ever seeing the secret.
 
-```mermaid
-graph LR
-    AI[Giga AI] -->|request, no secret| P[Secure proxy]
-    V[(Encrypted vault)] -->|adds key or token| P
-    P --> T[Your tool]
-```
-
-The proxy handles each kind of connection:
-
-- **API requests:** Giga calls your tool's API, and the proxy adds the API key or OAuth token.
-- **Large files:** Giga can send a file as the request, or save a response straight to a file, so big payloads never pass through the AI.
-- **Database queries:** Giga runs queries against your PostgreSQL databases through the proxy. Connections can be set to **read-only**, and results are capped so a query can't return unlimited rows.
-- **MCP tools:** tools from your connected MCP servers run through Giga, which adds the sign-in for you.
-
-On top of that:
-
-- Secrets are **encrypted** and never sent back to your browser.
-- The proxy **blocks requests to internal network addresses**, so a connection can't be used to reach private systems.
-- A connection can be **limited to the sites it's meant for**.
-- **Every request is logged**, so you can see what was called and when.
-
-<Callout kind="info">**The one exception: email and password logins.** Some websites only offer a username and password. To sign in for you, Giga has to use the actual password, so these (along with connections to other AI agents) are the only ones where Giga can see the secret. Each time a password is used, it's recorded in the audit log.</Callout>
+[Read how Giga keeps your connections safe →](/connect/security)
 
 ## Frequently asked questions
 
@@ -159,7 +138,7 @@ On top of that:
     The connected account may not have permission to make changes in the app itself. Giga never gets more access than the account you connected.
   </Expandable>
   <Expandable title="Can the AI see my passwords and API keys?">
-    No, with one exception. API keys, OAuth tokens and database credentials are added by Giga's secure proxy, so the AI never sees them. Email and password logins are the exception: Giga needs the real password to sign in for you, and every use is logged.
+    No, with one exception. API keys, OAuth tokens and database credentials are added by Giga's secure proxy, so the AI never sees them. Email and password logins are the exception: Giga needs the real password to sign in for you, and every use is logged. [Learn more →](/connect/security)
   </Expandable>
   <Expandable title="The browser login is stuck on a CAPTCHA or 2FA. What do I do?">
     Use the sign-in link Giga sends you to complete the login yourself. Giga reuses that sign-in next time.
