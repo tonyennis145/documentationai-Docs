@@ -57,6 +57,39 @@
                 "expandable": true
               },
               {
+                "group": "Giga Workspace",
+                "pages": [
+                  {
+                    "title": "Workflows",
+                    "path": "workflows/index",
+                    "icon": "workflow"
+                  },
+                  {
+                    "title": "Tracks",
+                    "path": "tracks/index",
+                    "icon": "folder"
+                  },
+                  {
+                    "title": "Agents",
+                    "path": "agents/index",
+                    "icon": "bot"
+                  },
+                  {
+                    "title": "Pulses",
+                    "path": "pulses/index",
+                    "icon": "activity"
+                  },
+                  {
+                    "title": "Groups",
+                    "path": "groups/index",
+                    "icon": "users"
+                  }
+                ],
+                "icon": "briefcase",
+                "path": "workspace/index",
+                "expandable": true
+              },
+              {
                 "group": "Giga Library",
                 "pages": [
                   {
@@ -100,34 +133,6 @@
                 "title": "Giga Apps",
                 "path": "apps/index",
                 "icon": "layout-grid"
-              },
-              {
-                "group": "Giga Workspace",
-                "pages": [
-                  {
-                    "title": "Workflows",
-                    "path": "workflows/index"
-                  },
-                  {
-                    "title": "Tracks",
-                    "path": "tracks/index"
-                  },
-                  {
-                    "title": "Agents",
-                    "path": "agents/index"
-                  },
-                  {
-                    "title": "Pulses",
-                    "path": "pulses/index"
-                  },
-                  {
-                    "title": "Groups",
-                    "path": "groups/index"
-                  }
-                ],
-                "icon": "briefcase",
-                "path": "workspace/index",
-                "expandable": true
               },
               {
                 "group": "Giga Chat",
