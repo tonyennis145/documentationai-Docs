@@ -1,0 +1,68 @@
+---
+title: Connecting your tools
+description: What you can connect to Giga, the ways to connect, and what to do when a tool isn't in the catalog.
+---
+
+Giga has a catalog of apps you can browse and search by category. If a tool is in the catalog, connecting it is usually a couple of clicks.
+
+## Connection methods
+
+Different tools connect in different ways. Giga picks the right one for each app, and some apps offer more than one:
+
+- **OAuth:** approve access on the app's own sign-in screen
+- **Email and password:** enter your login details in Giga's secure form
+- **API key:** paste a key or access token into Giga's secure form
+- **MCP server:** connect an app's MCP server so Giga can use its tools
+- **Database:** connect a PostgreSQL database so Giga can look things up in it
+- **Cloud browser:** sign in to a website once, for sites with no other way in
+- **Other agents:** hand work off to another AI agent your company runs
+
+Some tools have their own setup: **Slack** installs into your workspace, and **WhatsApp** connects by scanning a QR code.
+
+## Ways to connect
+
+<Columns cols={2}>
+  <Card title="From the Integrations page" icon="layout-grid">
+    Find the app, choose how you want to connect, and follow the steps.
+  </Card>
+  <Card title="From a chat" icon="message-square">
+    Ask Giga to connect something. It sends you a secure setup link — no need to leave the conversation.
+  </Card>
+  <Card title="From ChatGPT or Claude" icon="sparkles">
+    Giga can show a connect card right inside the chat.
+  </Card>
+  <Card title="During onboarding" icon="rocket">
+    Pick the tools your work lives in and connect them one after another.
+  </Card>
+</Columns>
+
+After connecting, give the connection a name so you and your team can tell it apart.
+
+<Callout kind="tip">**Keep secrets out of chat.** Always use the secure setup form for passwords, API keys and tokens rather than pasting them into a message. [Read about safety and security →](/connect/security)</Callout>
+
+## Multiple accounts
+
+You can connect **more than one account** for the same app — for example a production and a test account — and give each a clear name.
+
+## Tools that aren't in the catalog
+
+If the tool you need isn't listed, you still have options:
+
+- **Ask Giga to add it.** Giga can work out how the tool connects and create a private integration just for your workspace.
+- **Bring your own MCP server.** Point Giga at your company's own MCP server.
+- **Bring your own OAuth app.** Use your company's own sign-in app for a tool, and share that setup with your workspace — teammates still sign in with their own accounts.
+- **Use the cloud browser.** For websites with no API, Giga can work in the site directly. If a login needs a CAPTCHA or 2FA, Giga sends you a link to sign in yourself, then reuses that sign-in next time.
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Can I connect more than one account for the same app?">
+    Yes. Connect as many accounts as you need, for example a production and a test account, and give each a clear name so you and your team can tell them apart.
+  </Expandable>
+  <Expandable title="The tool I need isn't in the catalog. What can I do?">
+    Ask Giga to add it. Giga can work out how the tool connects and create a private integration just for your workspace. You can also bring your own MCP server or OAuth app.
+  </Expandable>
+  <Expandable title="The browser login is stuck on a CAPTCHA or 2FA. What do I do?">
+    Use the sign-in link Giga sends you to complete the login yourself. Giga reuses that sign-in next time.
+  </Expandable>
+</ExpandableGroup>

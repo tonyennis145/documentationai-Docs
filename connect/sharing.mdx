@@ -1,0 +1,53 @@
+---
+title: Sharing and managing
+description: Share connections with your team, control who can manage them, and keep them healthy.
+---
+
+## Sharing connections with your team
+
+New connections are **private by default** — only you can use them.
+
+You can share a connection with a [Group](/introduction#users-groups-and-sharing) (or with a specific person), and everyone with access can use it in their chats, Agents and Pulses.
+
+| | Can use it | Can rename, rotate or disconnect it |
+| --- | --- | --- |
+| **The person who added it** | ✅ | ✅ |
+| **People it's shared with** | ✅ | — |
+
+Sharing never gives more access than the connected account itself has in the app. [How sharing works with secrets →](/connect/security#sharing-without-exposing)
+
+## Connection status
+
+Each connection shows who added it and its current status:
+
+- 🟢 **Healthy** — working normally
+- 🔴 **Needs reconnect** — the sign-in expired or was revoked
+- ⚪ **Disconnected**
+
+Giga checks your connections every day, refreshes sign-ins automatically where it can, and sends you a single Slack message listing anything that needs reconnecting.
+
+## Managing your connections
+
+From a connection you own, you can:
+
+- **Rename** it or add a note
+- **Rotate** the key or password
+- **Reconnect** it if it stopped working
+- **Disconnect** it — this removes it for everyone it was shared with
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Who can use a connection I add?">
+    Only you, until you share it. You can share a connection with a Group or with a specific person. People you share with can use it, but only you can rename, rotate or disconnect it.
+  </Expandable>
+  <Expandable title="I can see a connection but can't edit it. Why?">
+    Someone else added it and shared it with you. Only the person who added a connection can manage it.
+  </Expandable>
+  <Expandable title="A connection says Needs reconnect. What happened?">
+    The sign-in expired or was revoked in the app. Click **Reconnect** and sign in again. Giga also checks your connections daily and messages you in Slack when one needs attention.
+  </Expandable>
+  <Expandable title="Giga can read from an app but can't make changes. Why?">
+    The connected account may not have permission to make changes in the app itself. Giga never gets more access than the account you connected.
+  </Expandable>
+</ExpandableGroup>

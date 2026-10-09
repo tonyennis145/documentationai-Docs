@@ -40,6 +40,14 @@
                     "path": "connect/index"
                   },
                   {
+                    "title": "Connecting your tools",
+                    "path": "connect/connecting"
+                  },
+                  {
+                    "title": "Sharing and managing",
+                    "path": "connect/sharing"
+                  },
+                  {
                     "title": "Safety and security",
                     "path": "connect/security"
                   }

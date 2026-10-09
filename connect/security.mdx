@@ -78,3 +78,11 @@ For email and password logins, anyone you share the connection with can use the 
 - **Site limits:** a connection can be limited to the sites it's meant for.
 - **Audit log:** every request made with a connection is logged, so you can see what was called and when.
 - **Keep secrets out of chat:** always use Giga's secure setup form for passwords, keys and tokens, not a chat message.
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Can the AI see my passwords and API keys?">
+    No, with one exception. API keys, OAuth tokens and database credentials are added by Giga's secure proxy, so the AI never sees them. Email and password logins are the exception: Giga needs the real password to sign in for you, and every use is logged.
+  </Expandable>
+</ExpandableGroup>
