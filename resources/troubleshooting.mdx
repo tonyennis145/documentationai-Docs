@@ -22,8 +22,7 @@ Review:
 - Group context
 - the explicitly selected Track
 - Track Context Notes
-- Current Track State
-- relevant Observations
+- the Track's memory (in **Brain**)
 - user-level context
 - current Connections
 
@@ -54,8 +53,7 @@ An empty file area does not mean the Track has no context or history.
 Check the Track’s:
 
 - Context Note
-- Observations
-- Current Track State
+- memory (in **Brain**)
 - linked Chats
 - files
 
@@ -65,11 +63,13 @@ Track memory lives separately from authored files.
 
 ## Giga keeps missing an old decision
 
-Read **Current Track State** before continuing work that depends on previous decisions, rejected options, or open questions.
+Check whether the decision is in the Track's memory: open **Brain → Decisions** and search for it.
 
-Current Track State is the curated decision record for the Track.
+- **It's not there.** It was never saved, or it was saved without a Track and is waiting, private, in **Brain → To file**. File it to the Track, or ask Giga to "save this" and choose the Track.
+- **It's there but out of date.** A newer decision replaces it once saved. Tell Giga the new decision, or correct it ("that's wrong", "we changed this").
+- **It's in a different Track.** Memory only appears in the Track it's filed to. Make sure the Chat is linked to the right Track.
 
-Observations can also contain meaningful developments that happened over time.
+[Learn about Giga Memory →](/memory/index)
 
 ## I cannot see an Agent
 
@@ -111,7 +111,7 @@ A credential can be:
 
 Also check whether the requested provider already exists in Giga’s integration catalog.
 
-[Learn about Managing Connections →](/connections/managing-connections)
+[Learn about sharing and managing connections →](/connect/sharing)
 
 ## A Connection exists but the action still fails
 
@@ -179,7 +179,7 @@ When that happens, complete the login step through the supported user-facing bro
 
 Repeated automated login attempts are unlikely to fix a human verification step.
 
-[Learn about Browser Connections →](/connections/custom/browser-connections)
+[Learn about connecting websites with the cloud browser →](/connect/connecting#tools-that-arent-in-the-catalog)
 
 ## Giga is trying to use the browser for something with an API
 
@@ -319,17 +319,9 @@ The underlying Company Brain and permission boundaries stay consistent across su
 
 ## A model or provider I expected is missing
 
-Model availability is dynamic.
+Check **Vault → Model Providers**. It lists the always-available **Giga managed** provider plus any model keys your workspace has added. To use a provider Giga doesn't manage for you, add your own key there (or from **Integrations → Models**).
 
-Verify the current workspace configuration for:
-
-- supported providers
-- models available to the workspace
-- plan-specific availability
-- custom endpoint support
-- any bring-your-own-model option
-
-Avoid relying on old documentation or assumptions about current provider availability.
+[Learn about model providers →](/gateway/index#models)
 
 ## Still stuck?
 
@@ -342,7 +334,7 @@ Use the smallest diagnostic path that matches the issue:
   <Card title="Access problem" href="/teams-and-admin/permissions" icon="shield-check">
     Check workspace membership, Group access, ownership, and provider permissions.
   </Card>
-  <Card title="Connection problem" href="/connections/troubleshooting" icon="plug">
+  <Card title="Connection problem" href="/connect/sharing" icon="plug">
     Check authentication, provider permissions, connected account, and available tools.
   </Card>
   <Card title="Feature choice problem" href="/resources/choosing-the-right-feature" icon="git-branch">
@@ -359,4 +351,4 @@ Use the smallest diagnostic path that matches the issue:
 - [FAQ](/resources/faq)
 - [Giga Dictionary](/resources/dictionary)
 - [Choosing the right Giga feature](/resources/choosing-the-right-feature)
-- [Troubleshooting Connections](/connections/troubleshooting)
+- [Sharing and managing connections](/connect/sharing)

@@ -19,7 +19,7 @@ Its core primitives include Chats, Groups, Tracks, Context Notes, Agents, Skills
 
 **Company Brain** is Giga’s permission-aware company context layer.
 
-Depending on relevance and access, it can draw from workspace and Group guidance, Tracks, Context Notes, Observations, Current Track State, files, Connections, Agents, Skills, Workflows, and user-level context.
+Depending on relevance and access, it can draw from workspace and Group guidance, Tracks, Context Notes, [memory](/memory/index), files, Connections, Agents, Skills, Workflows, and user-level context.
 
 The current user and workspace permissions determine what Giga can retrieve and use.
 
@@ -35,11 +35,11 @@ A Chat can link to at most **1 explicitly selected Track**.
 
 ## Can Giga choose a Track automatically?
 
-Track attachment should be explicitly selected or confirmed by the user.
+No. Track attachment is always chosen or confirmed by you.
 
-That matters because Track attachment affects where Observations from the Chat can become retrievable.
+That matters because memory saved from the Chat becomes available to everyone on its Track.
 
-Giga can help identify relevant Tracks, while the actual attachment stays explicit.
+Giga can suggest the most likely Track. Anything saved without a Track stays private to you in **Brain → To file**, with Giga's suggestion, until you file it.
 
 ## What is a Context Note?
 
@@ -47,15 +47,21 @@ A [Context Note](/tracks/context-notes) is the durable standing context for a Tr
 
 Use it for stable background, terminology, constraints, standing instructions, and durable handoff context.
 
-Changing progress and decisions belong in Track memory or Current Track State.
+Changing progress and decisions belong in Track memory.
 
-## What is Current Track State?
+## What does Giga remember?
 
-**Current Track State** is the curated current position and decision record for a Track.
+Giga's memory holds one clear statement per memory, sorted into seven types: decisions, commitments, ideas, requests (open questions), preferences, facts and procedures. Each keeps who said it, a quote, and where it came from.
 
-It captures where the work stands, how it got there, what was ruled out and why, and what remains open.
+Memory stays current: a new decision replaces the old one, and a commitment closes when someone says it's done. You can see and search all of it in **Brain**.
 
-[Learn about Track memory →](/tracks/memory)
+[Learn about Giga Memory →](/memory/index)
+
+## How do I save something to memory?
+
+In ChatGPT, Claude or Slack, say "save this" and choose the Track. In the Giga web app, lasting points from your chats are saved automatically, and you can paste notes or import a meeting link in **Brain → Add to memory**.
+
+[Learn about Giga Memory →](/memory/index)
 
 ## What is the difference between an Agent and a Skill?
 
@@ -117,7 +123,7 @@ A teammate may be able to use a shared Connection while management actions such 
 
 The external provider’s own permissions still apply.
 
-[Learn about Sharing Connections →](/connections/sharing-connections)
+[Learn about sharing connections →](/connect/sharing)
 
 ## Can Giga connect to custom tools?
 
@@ -176,11 +182,9 @@ The underlying Giga workspace context and permission model stays consistent, whi
 
 ## Does Giga support different AI models?
 
-Model choice and provider flexibility are a first-class Giga product area.
+Yes. Giga runs on its own managed models out of the box, and you can add your own model provider keys in **Vault → Model Providers** (or **Integrations → Models**). Your workspace context and permissions stay the same whichever model you use.
 
-Exact providers, model availability, plan access, custom endpoints, enterprise agreements, and bring-your-own-model options should be verified from the current product configuration.
-
-Giga’s workspace context and permissions remain conceptually separate from any single model provider.
+[Learn about model providers →](/gateway/index#models)
 
 ## Can a Pulse run without an Agent?
 

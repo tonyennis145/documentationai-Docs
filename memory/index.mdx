@@ -3,83 +3,110 @@ title: Giga Memory
 description: Shared memory for your whole company
 ---
 
-As your team works with Giga — in the web app, in Slack, or from tools like ChatGPT and Claude — Giga picks up what people are working on, pulls out the useful details, and keeps them in one place that Giga can search.
+Tools like ChatGPT and Claude remember things about **you**. Giga Memory remembers things about **your company**: what's been decided, who's doing what, what's still open, and how your team likes things done. Anyone on your team can ask about it, from Giga Web, Slack, ChatGPT or Claude, and only ever gets answers from what they're allowed to see.
 
-The result is an organizational memory that understands what's going on across the business, so anyone on your team can ask questions and get answers in real time.
-
-## More than personal AI memory
-
-Tools like ChatGPT and Claude remember things about **you**. Giga Memory remembers things about **your company**.
+In the Giga web app, your memory lives in **Brain**.
 
 | Personal AI memory | Giga Memory |
 | --- | --- |
-| Remembers one person's preferences and chats | Learns from your whole team's work |
-| Lives inside one app | Captures from Giga Web, Slack, ChatGPT, Claude, and more |
-| Answers "what do I like?" | Answers "what's happening across the business?" |
-| Private to one user | Shared with the right people, based on access |
+| Remembers one person's preferences and chats | Remembers your whole team's decisions, commitments and know-how |
+| Lives inside one app | Saved from and used in Giga Web, Slack, ChatGPT, Claude, and more |
+| Answers "what do I like?" | Answers "what did we decide, and who's on it?" |
+| Private to one user | Shared through [Tracks](/tracks/index), or kept private until you file it |
 
-## How information flows into memory
+## What Giga remembers
 
-```mermaid
-graph LR
-    A[Giga Web chats] --> E[Extract observations]
-    B[Slack] --> E
-    C[ChatGPT, Claude & other tools via MCP] --> E
-    D[Connected tools - coming soon] -.-> E
-    M[Memories you add directly] --> O
-    E --> O[(Company memory)]
-    O --> Q[Answers in Giga, Slack, ChatGPT, Claude]
-    O --> I[Inspect your memory]
-```
+Every memory is one clear statement, sorted into one of seven types:
 
-## Observations
+| Type | What it is | Example |
+| --- | --- | --- |
+| **Decision** | Something settled for the group, including an agreed plan | "We're dropping the free tier" |
+| **Commitment** | Someone named has said they'll do something | "Warda will finish September payouts by Oct 19" |
+| **Idea** | A proposal nobody has agreed to yet | "Faith suggests a bonus for comments over 20 likes" |
+| **Request** | Something asked for, or an open question | "Should the inbox auto-file confident items?" |
+| **Preference** | What someone wants or thinks should happen, with how strongly they feel | "Tony prefers short bullet summaries" |
+| **Fact** | How things are, including someone's view of how things are | "New TikTok accounts can comment 5 times a day" |
+| **Procedure** | How to do something | "To deploy: merge to main, then restart in Hatchbox" |
 
-The building blocks of Giga Memory are **observations**: short records of something useful that came up in your team's work.
+Each memory keeps **who said it**, a **short quote** from the source where there is one, and a link back to **where it came from**.
 
-Observations capture things like:
+### Memory keeps itself current
 
-- a decision that was made
-- a change in direction
-- an important fact that was learned
-- progress on a piece of work
-- a preference or constraint worth remembering
+Memory isn't a pile of notes. When something new comes in, Giga links it to what it already knows:
 
-Giga extracts observations automatically, so your team doesn't have to stop and write things down.
+- a new decision **replaces** the old one, and settles competing preferences
+- saying a commitment is done **closes** it
+- someone taking on a request **answers** it
+- a plan built on an idea marks the idea **adopted**
+- hearing the same thing again **adds evidence** rather than a duplicate
+- two people wanting different things marks the preference **disputed**
 
-## Ways information gets into memory
+So when someone asks "what did we decide about pricing?", they get the current answer, with the history behind it.
+
+## How memory gets in
 
 <Columns cols={2}>
-  <Card title="From conversations" icon="message-square">
-    Giga extracts observations from your team's conversations with Giga, wherever they happen — Giga Web, Slack, ChatGPT, Claude, and other MCP-connected tools.
+  <Card title="Ask to save it" icon="bookmark">
+    In ChatGPT, Claude or Slack, say "save this" or "remember that". Giga asks which Track it belongs to, then saves the key points word for word with who said them.
   </Card>
-  <Card title="Added directly" icon="plus-circle">
-    Save a memory on purpose from any tool connected through [Giga MCP](/mcp/index).
+  <Card title="From your Giga chats" icon="message-square">
+    When you work with Giga in the web app, the decisions, commitments and other lasting points from the conversation are saved automatically.
   </Card>
-  <Card title="From your tools (coming soon)" icon="plug">
-    Giga will scan your [connected tools](/connect/index) and extract observations from them too.
+  <Card title="Paste notes into Brain" icon="clipboard">
+    In **Brain → Add to memory**, paste meeting notes, a transcript or a brain dump and hit Save. Giga sorts it into memories in seconds.
+  </Card>
+  <Card title="Import a link" icon="link">
+    Paste a link, such as a Granola meeting or a Notion page. Giga reads it with the right connected tool, using the full transcript where there is one, and shows its progress in the bottom-right corner while you keep working.
   </Card>
 </Columns>
 
-## Ask your company anything
+Giga only saves what will still matter later. Small talk, one-off checks and status that will be stale in a few days are left out.
 
-Because memory spans your whole team, Giga can answer questions no single person or chat history could.
+<Callout kind="tip">For meetings, the transcript beats the summary. When you import a meeting, Giga takes memories and quotes from the transcript itself, and uses the meeting's AI summary only to work out who's who and who owns what.</Callout>
 
-> **Placeholder**
->
-> List of example questions Giga Memory helps answer — to be added.
+## Where memory goes: Tracks, or private until you file it
+
+Memory belongs to a [Track](/tracks/index), and a Track's memory is only available to the people on that Track. That's how memory about the Acme deal never shows up for someone who isn't on it.
+
+When you save something without choosing a Track, it stays **private to you** and waits in **Brain → To file**, with Giga's suggestion for where it belongs. For each item you can:
+
+- **File it** to the suggested Track
+- choose **another Track**
+- **keep it private**
+
+Filing is sharing: once filed, everyone on that Track can see it. Giga suggests a Track but never files for you. For another person's view, it asks you to choose the Track yourself.
 
 ## Inspect your memory
 
-You can look inside your company's memory to see what Giga has captured, so it's never a black box.
+Memory is never a black box. In **Brain** you can:
 
-_Placeholder — details coming soon._
+- browse current memory by type: Decisions, Commitments, Ideas, Requests, Preferences, Facts, Procedures
+- open any memory to see its quote, who said it, when, and every piece of evidence behind it
+- read the **Evidence log**, the full record of everything saved, in order
+- follow **Brainstorms**: a brainstorm saved from a chat, showing how ideas built on each other and where you ended up
+- search and filter everything from the sidebar
+
+You can also correct memory by asking Giga: "Neil shipped that", "that's wrong", "park that idea". Giga records the correction first, so there's always a trail.
+
+## Ask your company anything
+
+Because memory spans your whole team, Giga can answer questions no single chat history could:
+
+- "Where are we on the Acme renewal?"
+- "What did we decide about the free tier, and why?"
+- "What's Warda committed to this week?"
+- "What's still open on the website redesign?"
+- "How do we deploy?"
+
+When you start work on a Track, Giga reads that Track's memory first, so it picks up where things left off.
 
 ## Memory follows access
 
-Giga Memory respects your workspace permissions. People only get answers drawn from the information they're allowed to see, based on [Groups](/groups/index) and [Tracks](/tracks/index).
+People only get answers drawn from memory they're allowed to see: memory filed to Tracks they're on, plus their own private memory. This works the same in Giga Web, Slack, ChatGPT and Claude.
 
 ## Related pages
 
 - [Track memory](/tracks/memory)
 - [Giga MCP](/mcp/index)
+- [Giga for ChatGPT](/use-giga-anywhere/chatgpt)
 - [Giga Connect](/connect/index)

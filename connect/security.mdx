@@ -42,7 +42,7 @@ Some websites only offer a username and password: no API, no OAuth. To sign in t
 When it does, Giga keeps it as contained as possible:
 
 - Giga is designed to pass the password straight into the browser rather than into the conversation
-- **every time a password is used, it's recorded in the audit log**
+- **every time a password is used, it's recorded**, and you can see it in **Activity & usage → Credential activity**
 
 ### Ways to avoid sharing the password at all
 
@@ -72,10 +72,10 @@ For email and password logins, anyone you share the connection with can use the 
 
 ## Other protections
 
-- **Encrypted storage:** secrets are encrypted and never sent back to your browser.
+- **Encrypted storage:** secrets are kept encrypted in the [Vault](/connect/vault) and never sent back to your browser.
 - **No internal access:** the proxy blocks requests to internal network addresses, so a connection can't be used to reach private systems.
 - **Site limits:** a connection can be limited to the sites it's meant for.
-- **Audit log:** every request made with a connection is logged, so you can see what was called and when.
+- **Audit log:** every use of a credential is recorded with who, when and what it was used for, never the secret itself. See it in [Activity & usage → Credential activity](/teams-and-admin/activity-and-usage#credential-activity). The record is kept even after a credential is deleted.
 - **Keep secrets out of chat:** always use Giga's secure setup form for passwords, keys and tokens, not a chat message.
 
 ## Frequently asked questions

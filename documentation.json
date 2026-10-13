@@ -48,6 +48,10 @@
                     "path": "connect/sharing"
                   },
                   {
+                    "title": "The Vault",
+                    "path": "connect/vault"
+                  },
+                  {
                     "title": "Safety and security",
                     "path": "connect/security"
                   }
@@ -106,6 +110,11 @@
                     "title": "Datastores",
                     "path": "library/datastores",
                     "icon": "database"
+                  },
+                  {
+                    "title": "Bookmarks",
+                    "path": "library/bookmarks",
+                    "icon": "link"
                   }
                 ],
                 "icon": "library",
@@ -116,7 +125,7 @@
                 "group": "Giga Memory",
                 "pages": [
                   {
-                    "title": "Memory",
+                    "title": "Track memory",
                     "path": "tracks/memory"
                   }
                 ],
@@ -130,6 +139,10 @@
                   {
                     "title": "Claude",
                     "path": "use-giga-anywhere/claude"
+                  },
+                  {
+                    "title": "ChatGPT",
+                    "path": "use-giga-anywhere/chatgpt"
                   }
                 ],
                 "icon": "server",
@@ -398,6 +411,10 @@
                   {
                     "title": "Workspace settings",
                     "path": "teams-and-admin/workspace-settings"
+                  },
+                  {
+                    "title": "Activity & usage",
+                    "path": "teams-and-admin/activity-and-usage"
                   }
                 ],
                 "icon": "shield-check"
@@ -474,6 +491,10 @@
                   {
                     "title": "Troubleshooting",
                     "path": "resources/troubleshooting"
+                  },
+                  {
+                    "title": "Changelog",
+                    "path": "resources/changelog"
                   }
                 ],
                 "icon": "book-open"
@@ -517,7 +538,7 @@
     },
     {
       "source": "/changelog",
-      "destination": "/resources/index",
+      "destination": "/resources/changelog",
       "statusCode": 301
     },
     {

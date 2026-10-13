@@ -1,82 +1,67 @@
 ---
 title: Memory
 description: >-
-  Learn how Giga keeps useful continuity around a Track without turning every
-  past message or file into one giant memory.
+  How a Track keeps its decisions, commitments and know-how, so the next person
+  picks up where things left off.
 ---
-**Memory** helps Giga keep continuity around long-running work.
+**Memory** keeps continuity around long-running work.
 
-Inside a [Track](/tracks/index), Giga separates **standing context**, **what happened over time**, **Current Track State**, and **work product** so it can retrieve the right kind of information later.
+Every [Track](/tracks/index) has its own memory: the decisions made, who committed to what, the ideas on the table, open questions, preferences, facts and procedures for that piece of work. When you or Giga start work in the Track, Giga reads its memory first, so nobody has to re-explain where things stand.
 
-That means a Track can get more useful as work continues without relying on one giant transcript.
+For the full picture of how memory works across Giga, see [Giga Memory](/memory/index).
 
-## How Track memory is structured
+## How a Track's context is structured
 
-| Layer                                      | Purpose                                                       |
-| ------------------------------------------ | ------------------------------------------------------------- |
-| [**Context Notes**](/tracks/context-notes) | Durable background and standing instructions                  |
-| **Observations**                           | Append-only records of what happened or was learned           |
-| **Current Track State**                    | The curated current state and decision record for the Track   |
-| [**Files**](/tracks/files)                 | Authored work product such as reports, drafts, code, and data |
+| Layer | Purpose |
+| --- | --- |
+| [**Context Notes**](/tracks/context-notes) | Durable background and standing instructions |
+| **Memory** | Decisions, commitments, ideas, requests, preferences, facts and procedures, kept current |
+| **Evidence** | The append-only record behind each memory: what was said, by whom, when, and where |
+| [**Files**](/tracks/files) | Authored work product such as reports, drafts, code and data |
 
-> **Memory is structured on purpose**
->
-> Giga keeps these layers separate so a file is not mistaken for memory, a temporary update is not treated like a standing instruction, and a long transcript does not become the only source of context.
+<Callout kind="info">Memory is structured on purpose. Giga keeps these layers separate so a file isn't mistaken for a decision, a temporary update isn't treated like a standing instruction, and a long transcript isn't the only source of context.</Callout>
 
-## Observations
+## Memory stays current
 
-**Observations** are the append-only capture layer of Giga’s memory.
+Each memory is one clear statement with a type, such as a **decision** or a **commitment**. As new information arrives, Giga updates the Track's memory rather than piling up notes:
 
-They record useful developments from work as it happens, such as:
+- a new decision replaces the old one, and the old one is kept as history
+- a commitment is closed when someone says it's done
+- the same point heard again adds evidence instead of a duplicate
 
-- a decision that was made
-- a change in direction
-- an important fact that was learned
-- progress that will matter later
-- a preference or constraint that should be remembered for future work
+So "where are we on this?" has a current answer: the Track's open commitments, latest decisions and open questions.
 
-Because Observations are append-only, they preserve a record of what happened instead of constantly rewriting history.
+## Evidence
 
-> **Video placeholder**
->
-> Observations overview video.
+Behind every memory is its **evidence**: append-only records of what was actually said, with a quote, who said it, when, and where it came from (a chat, a saved passage, pasted notes or an imported meeting). Evidence is never rewritten, so you can always see how the Track's memory got to where it is.
 
-## Current Track State
+## How memory gets into a Track
 
-A Track also keeps a **Current Track State**: the curated current state and decision record for the work.
-
-It can capture where things stand, how the work got here, what has been ruled out and why, and what remains open.
-
-This is different from Observations:
-
-- Observations preserve individual developments over time.
-- Current Track State curates where the work stands and the decisions that shape it.
-- [Context Notes](/tracks/context-notes) hold standing background and instructions.
-
-When someone asks “where are we on this?” or “what changed?”, Giga should use the Track’s structured memory rather than assuming the answer is buried in a file.
+- **From chats in the Track.** When you work with Giga inside a Track, lasting points from the conversation are saved to that Track.
+- **When you ask.** In ChatGPT, Claude or Slack, say "save this" and choose the Track.
+- **By filing.** Anything saved without a Track waits, private to you, in **Brain → To file** until you file it to a Track.
+- **From notes and meetings.** In **Brain → Add to memory**, paste notes or import a meeting link and choose the Track.
 
 ## Why this matters
 
-A useful memory system should help Giga answer questions like:
+A useful memory helps Giga answer:
 
 - What has already been decided?
-- What changed since the last time we worked on this?
-- What issues are still open?
+- What changed since we last worked on this?
+- Who is doing what, and by when?
+- What's still open?
 - What has already been tried?
-- What context should I know before making another recommendation?
-
-Keeping these things connected to the relevant Track reduces repeated explanation and makes long-running work easier to resume.
 
 ## Memory vs Context Notes
 
-[Context Notes](/tracks/context-notes) and Memory work together, but they serve different jobs.
+[Context Notes](/tracks/context-notes) and Memory work together but do different jobs.
 
-| Use a Context Note when…                              | Use Memory when…                                  |
-| ----------------------------------------------------- | ------------------------------------------------- |
-| The information should remain true across future work | The information describes something that happened |
-| It is a standing instruction or constraint            | It is a decision, change, or learned fact         |
-| It explains what the Track is about                   | It explains how the Track evolved                 |
-| You want to deliberately curate the background        | You want continuity from work over time           |
+| Use a Context Note when… | Use Memory when… |
+| --- | --- |
+| The information should stay true across future work | It's a decision, commitment, change or learned fact |
+| It's a standing instruction or constraint | It came up during the work |
+| It explains what the Track is about | It explains how the Track has evolved |
+| You want to curate the background deliberately | You want continuity from the work itself |
 
 A useful rule of thumb:
 
@@ -84,46 +69,13 @@ A useful rule of thumb:
 
 ## Memory vs files
 
-Files are authored work product. Memory is structured context about the work.
-
-A Track can have rich memory even when its file folder is empty.
-
-Likewise, a folder full of files does not automatically tell Giga:
-
-- which decision was final
-- what changed recently
-- what was ruled out
-- what still needs attention
-
-That is why Giga uses Track memory alongside [Files](/tracks/files), rather than treating the file system as the entire history of the work.
+Files are authored work product. Memory is structured knowledge about the work. A Track can have rich memory even when its file folder is empty, and a folder full of files doesn't tell Giga which decision was final, what changed recently, or what still needs attention.
 
 ## Memory and permissions
 
-Memory follows the access boundaries around the Track.
+A Track's memory is only available to the people on that Track, in Giga Web, Slack, ChatGPT and Claude.
 
-Giga should only attach observations to a Track when that Track has been **explicitly selected or confirmed** for the Chat. It should never infer a Track attachment silently, because that affects where the resulting memory can be retrieved.
-
-This is one reason [Groups](/groups/index) and [Track permissions](/tracks/sharing-and-permissions) matter: they help determine who can access the context stored around the work.
-
-> **Track selection matters**
->
-> Linking a Chat to a Track can affect where its durable memory becomes available. Giga should ask or rely on an explicit user selection rather than guessing.
-
-## What should Giga remember?
-
-Useful memory is selective.
-
-Good candidates include information that would help someone continue the work later:
-
-- confirmed decisions
-- meaningful changes
-- durable facts
-- issues that affect the work
-- important progress
-- stated preferences
-- context that will matter in the next session
-
-Giga uses memory to preserve useful developments around the work. The exact capture behavior can vary by interface, while important decisions, changes, facts, preferences, and progress remain useful signals for future work.
+Giga never picks a Track for you. Saving to a Track shares it with everyone on that Track, so Giga asks you to choose, suggests the most likely Track, or keeps the memory private until you file it.
 
 ## A simple example
 
@@ -131,33 +83,27 @@ Imagine a Track for **Website redesign**.
 
 <Columns cols="2">
   <Card title="Context Note" href="/tracks/context-notes" icon="file-text" horizontal="false">
-    The audience, positioning, brand constraints, and standing design principles.
+    The audience, positioning, brand constraints and standing design principles.
   </Card>
 
-  <Card title="Observation" href="/tracks/memory" icon="eye" horizontal="false">
+  <Card title="Decision" href="/memory/index" icon="gavel" horizontal="false">
     The team decided to remove the pricing calculator from the launch scope.
   </Card>
 
-  <Card title="Current Track State" href="/tracks/memory" icon="activity" horizontal="false">
-    Homepage approved, pricing page in review, launch date still open.
+  <Card title="Commitment" href="/memory/index" icon="list-todo" horizontal="false">
+    Sam will have the pricing page ready for review by Friday.
   </Card>
 
   <Card title="Files" href="/tracks/files" icon="folder" horizontal="false">
-    Copy drafts, screenshots, design exports, and implementation files.
+    Copy drafts, screenshots, design exports and implementation files.
   </Card>
 </Columns>
 
-Together, those layers give Giga a much better picture of the work than any one of them could provide alone.
-
-> **Image placeholder**
->
-> Diagram showing Context Notes, Observations, Current Track State, and Files feeding into one Track.
-
 ## Related pages
 
+- [Giga Memory](/memory/index)
 - [Introduction to Tracks](/tracks/index)
 - [Context Notes](/tracks/context-notes)
 - [Files in Tracks](/tracks/files)
 - [Chat history](/chats/history)
-- [Using context in a Chat](/chats/context)
 - [Sharing and permissions](/tracks/sharing-and-permissions)

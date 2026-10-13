@@ -24,6 +24,8 @@ Slack uses Giga's normal integration flow, so setup is much simpler than the cus
   </Step>
 </Steps>
 
+You can also start from **Connect → Slack** in the app's left rail, or **Settings → Slack Setup**.
+
 > **Screenshot placeholder 1**
 >
 > Giga's workspace menu with **Use Giga in…** highlighted.
@@ -41,7 +43,7 @@ Depending on the request and current permissions, Giga can use relevant:
 - [Groups](/groups/index)
 - [Tracks](/tracks/index)
 - Context Notes and Track memory
-- [Connections](/connections/index)
+- [Connections](/connect/index)
 - [Skills](/skills/index)
 - files
 - current user and workspace permissions
@@ -50,17 +52,21 @@ Depending on the request and current permissions, Giga can use relevant:
 >
 > Using Giga from Slack does not give someone access to a Giga resource they could not otherwise use.
 
-## Slack channels and Groups
+## Slack channels, Groups and Tracks
 
-A Slack channel can be linked to a Giga [Group](/groups/index) when that relationship has been configured.
+Workspace admins can link a Slack channel to a Giga [Group](/groups/index) or [Track](/tracks/index) in **Settings → Slack Setup → Slack channel mappings**. For example, **#acme-deal** goes to the _Acme renewal_ Track, so what Giga learns there stays in that Track.
 
-Giga uses the live channel-to-Group relationship when one exists rather than guessing which Group a Slack discussion belongs to.
+Giga uses the configured mapping when one exists rather than guessing where a Slack discussion belongs.
 
 ## Tracks still require explicit selection
 
 A [Chat](/chats/index) can link to at most one Track.
 
-Giga should not silently attach a Track based on a Slack channel or message topic. The Track should be explicitly selected or confirmed because Track attachment affects where observations from the Chat can become retrievable.
+Giga doesn't attach a Track based on a message's topic. It uses the channel's configured mapping, or asks, because memory saved to a Track becomes available to everyone on that Track.
+
+## Saving to memory from Slack
+
+Say "@Giga save this" in a thread. Giga saves the key points, word for word with who said them, to the channel's Track, or asks which Track to use. [Learn about Giga Memory →](/memory/index)
 
 ## Files and Slack actions
 
@@ -74,4 +80,4 @@ Consequential outward-facing actions still follow Giga's normal confirmation rul
 - [Introduction to Groups](/groups/index)
 - [Introduction to Tracks](/tracks/index)
 - [Working with files](/chats/working-with-files)
-- [Introduction to Connections](/connections/index)
+- [Giga Connect](/connect/index)
