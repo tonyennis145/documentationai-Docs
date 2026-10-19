@@ -26,6 +26,10 @@
                 "title": "Introduction to Giga",
                 "path": "introduction",
                 "icon": "home"
+              },
+              {
+                "title": "Start here",
+                "path": "start"
               }
             ]
           },
