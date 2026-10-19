@@ -3,35 +3,40 @@ title: Changelog
 description: Product updates and notable changes to Giga.
 ---
 
-We’ll use this page to document meaningful product changes as they ship.
+Meaningful product changes, newest first.
 
-> **No release notes have been published yet.**
->
-> Future product updates will appear here as they ship.
+<Update label="New app layout, Brain and company memory" description="October 2026" tags={["feature", "change", "removal"]}>
 
-## What will appear here
+### New features
 
-Future changelog entries can cover things such as:
+- **Giga Memory, in Brain.** Giga now remembers your company's work as clear, typed memories: decisions, commitments, ideas, requests, preferences, facts and procedures. Each keeps who said it, a quote and where it came from. Memory stays current: new decisions replace old ones, and commitments close when they're done. [Learn more →](/memory/index)
+- **Save to memory from ChatGPT, Claude and Slack.** Say "save this", choose the Track from a card, and Giga saves the key points. Nothing is saved without you choosing where it goes. [Learn more →](/mcp/index#memory-from-chatgpt-and-claude)
+- **To file inbox.** Memory saved without a Track stays private to you in **Brain → To file**, with a suggested Track, until you file it or keep it private.
+- **Add to memory.** Paste meeting notes or a brain dump into Brain, or import a link such as a Granola meeting. Giga reads it, using the transcript where there is one, and shows progress in a small panel in the bottom-right corner while you keep working.
+- **New app layout.** A left rail with Home, Workspace, Vault, Library, Brain, Apps, Integrations, Activity & usage, Settings and Connect, plus **Cmd/Ctrl+K** search. [Learn more →](/workspace/index)
+- **Vault.** One place for every credential behind your connections, with sharing and Track links on each one. [Learn more →](/connect/vault)
+- **Activity & usage.** Credits and spending, your runs, and a record of every credential use. [Learn more →](/teams-and-admin/activity-and-usage)
+- **Library additions.** Each Library item has its own page with access and Track links, and **Bookmarks** are now part of the Library. [Learn more →](/library/index)
+- **Instant tools (beta).** Browse thousands of data tools and dozens of AI models your agents can use on Giga's account, and manage them per workspace. [Learn more →](/gateway/index)
+- **Model providers.** Bring your own model keys next to the Giga managed provider, in **Vault → Model Providers** or **Integrations → Models**.
+- **Team members and Groups** pages in **Workspace**, where admins can edit roles and group membership.
 
-- new product features
-- meaningful changes to existing behavior
-- new supported surfaces or major Connection capabilities
-- important changes to permissions or administration
-- deprecated or removed functionality
-- other user-facing changes worth knowing about
+### Changes
 
-Small documentation edits, internal experiments, and work that has not shipped should stay out of the changelog.
+- **Settings** has a new sidebar. AI providers moved to **Integrations → Models**, Gateway became **Integrations → Instant**, and Run activity and Credits moved to **Activity & usage**. [Learn more →](/teams-and-admin/workspace-settings)
+- Giga no longer saves to memory after every message in ChatGPT and Claude. It saves when you ask.
+- Every use of a credential is now recorded, and the record is kept after a credential is deleted.
 
-## How entries should be written
+### Removed
 
-Each entry should explain:
+- **State of Play** (Current Track State) is gone from the Track page and from Giga's tools. Ask Giga where a Track stands, and it answers from the Track's memory instead.
+- Observation lists on Track pages now show real observations only, not memory system records.
 
-1. **what changed**
-2. **who it affects**
-3. **what someone should do differently, if anything**
-4. **where to learn more**
+</Update>
 
-The changelog should reflect shipped product behavior rather than plans or assumptions.
+## How entries are written
+
+Each entry explains what changed, who it affects, what to do differently if anything, and where to learn more. The changelog reflects shipped product behavior, not plans.
 
 ## Related resources
 

@@ -4,82 +4,79 @@ description: A high-level guide to Giga's core building blocks and where to find
 ---
 Giga brings company work, connected tools, and durable context into one AI workspace. The building blocks below help you decide **where work belongs**, **what Giga can access**, and **how repeatable work gets reused**.
 
-## Product overview
+## Core concepts
 
-> **Video placeholder**
->
-> Product overview video. We’ll replace this block with the final video when it’s ready.
+### Users, Groups and sharing
+
+Everything in Giga is built on one simple model for who can see and use what.
+
+```mermaid
+graph TB
+    A["<b>Anything in Giga</b><br/><span style='font-weight:400'>Integrations, Skills, Context Cards, etc.</span>"]
+    A -->|share with a person| U[User]
+    A -->|share with a Group| G[Group]
+```
+
+- **Users.** Everyone on your team has their own Giga account. What you create starts out private to you.
+- **Groups.** A Group is a set of people, such as a team, a department, a project, or the whole company. You add users to Groups.
+- **Sharing.** Almost anything in Giga can be shared with a whole Group or with one specific person.
+
+The same model applies everywhere, in Giga Web, Slack, ChatGPT, and Claude, and Giga only ever draws on the things each person has been given access to.
+
+### Tracks
+
+A **Track** is a project: one ongoing piece of work, like _Acme renewal_, _Q4 hiring plan_, or _Website redesign_.
+
+It's the place where everything about that work comes together:
+
+- **Chats** about the work, so conversations aren't scattered
+- **Memory** of what's been decided, learned and done along the way
+- **Context** such as background notes, links and reference material
+
+When you work in a Track, Giga automatically brings in that Track's memory and context, and what you learn gets saved back to it. The next person to pick up the work starts from where things left off, not from scratch.
+
+Tracks do a slightly different job depending on where you use Giga:
+
+<Columns cols="3">
+  <Card title="In the Giga web app" icon="monitor" horizontal="false">
+    A Track is mainly a place to **organize** your chats and references for a piece of work.
+  </Card>
+
+  <Card title="In ChatGPT, Claude and other tools" icon="lock" horizontal="false">
+    A Track is mainly a **memory container**. Memory saved to a Track is only ever available to the people added to that Track, so it never leaks to anyone else.
+  </Card>
+
+  <Card title="In Slack" icon="hash" horizontal="false">
+    Link a Slack channel to a Track, and everything Giga learns in that channel stays in that Track. For example, **#acme-deal** goes to the _Acme renewal_ Track, so its memory and context never leak into other channels.
+  </Card>
+</Columns>
+
+You share a Track with a Group (or add specific people), and only those people can see its chats, memory and context. One Group can have many Tracks. For example, the Sales Group might have a Track for each major deal.
 
 ## Explore Giga
 
 <Columns cols="2">
-  <Card title="Chats" href="/chats/index" icon="message-circle" horizontal="false">
-    Ask questions, work through tasks, and hand off work to Giga.
+  <Card title="Giga Connect" href="/connect/index" icon="plug" horizontal="false">
+    Connect Giga to all your tools in one place, then connect them to other tools.
   </Card>
 
-  <Card title="Tracks" href="/tracks/index" icon="folder" horizontal="false">
-    Keep long-running work, context, files, and history together.
+  <Card title="Giga Library" href="/library/index" icon="library" horizontal="false">
+    Store shared resources your team can access wherever they are.
   </Card>
 
-  <Card title="Connections" href="/connections/index" icon="plug" horizontal="false">
-    Give Giga secure access to the tools and systems your company already uses.
+  <Card title="Giga Memory" href="/memory/index" icon="brain" horizontal="false">
+    Shared memory for your whole company.
   </Card>
 
-  <Card title="Groups" href="/groups/index" icon="users" horizontal="false">
-    Organize shared work and control who can access it.
+  <Card title="Giga Apps" href="/apps/index" icon="layout-grid" horizontal="false">
+    Build applications on top of your data.
   </Card>
 
-  <Card title="Agents" href="/agents/index" icon="bot" horizontal="false">
-    Create named AI agents with their own instructions, context, and access.
+  <Card title="Giga Workspace" href="/workspace/index" icon="briefcase" horizontal="false">
+    The Giga web app, with Chat, Tracks and Pulses.
   </Card>
 
-  <Card title="Skills" href="/skills/index" icon="sparkles" horizontal="false">
-    Reuse instructions for specific kinds of work.
-  </Card>
-
-  <Card title="Workflows" href="/workflows/index" icon="git-branch" horizontal="false">
-    Save repeatable multi-step processes that can be run again.
-  </Card>
-
-  <Card title="Pulses" href="/pulses/index" icon="clock" horizontal="false">
-    Run recurring work on a schedule.
+  <Card title="Giga MCP" href="/mcp/index" icon="server" horizontal="false">
+    Connect to Giga from whatever tools you use.
   </Card>
 </Columns>
-
-## Use Giga where your team works
-
-Giga can be used through different interfaces while the underlying workspace context and permissions continue to apply.
-
-<Columns cols="3">
-  <Card title="Giga Web" href="/use-giga-anywhere/web" icon="monitor" horizontal="false">
-    Work directly in the Giga web app.
-  </Card>
-
-  <Card title="Slack" href="/use-giga-anywhere/slack" icon="message-square" horizontal="false">
-    Work with Giga inside Slack.
-  </Card>
-
-  <Card title="ChatGPT" href="/use-giga-anywhere/chatgpt" icon="message-circle" horizontal="false">
-    Use Giga from ChatGPT.
-  </Card>
-
-  <Card title="Claude" href="/use-giga-anywhere/claude" icon="sparkles" horizontal="false">
-    Use Giga from Claude.
-  </Card>
-
-  <Card title="Microsoft Teams" href="/use-giga-anywhere/microsoft-teams" icon="users" horizontal="false">
-    Use Giga from Microsoft Teams.
-  </Card>
-</Columns>
-
-## How Giga stays grounded
-
-Giga’s product doctrine stays stable, while live workspace details stay dynamic. Current **permissions**, **Tracks**, **Groups**, **Connections**, and available tools are checked from the live workspace instead of being assumed.
-
-> **Live workspace is the source of truth**
->
-> If something depends on access, connected tools, or workspace state, Giga checks the live workspace rather than relying on a hard-coded list.
-
-> **Image placeholder**
->
-> Product overview diagram showing how Chats, Tracks, Groups, Connections, Agents, Skills, Workflows, and Pulses fit together.

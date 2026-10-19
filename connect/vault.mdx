@@ -1,0 +1,62 @@
+---
+title: The Vault
+description: Where the keys, sign-ins and logins behind your connections are kept, shared and audited.
+---
+
+The **Vault** is where Giga keeps the credentials behind your connections. Find it in the **Vault** section of the Giga web app.
+
+Secrets in the Vault are encrypted, never sent back to your browser, and never shown to the AI. When Giga uses a connection, the [secure proxy](/connect/security#the-secure-proxy) adds the secret on Giga's servers.
+
+## What's in the Vault
+
+| Section | What it holds |
+| --- | --- |
+| **API Keys** | Keys and tokens for services that don't use OAuth. Giga attaches them to requests for you, so they're never pasted into a chat. |
+| **OAuth Connections** | Accounts you've signed in to with OAuth, like Google or Slack. Giga refreshes them automatically. |
+| **Logins** | Usernames and passwords for sites without an API. Agents use them in a browser session. |
+| **Databases** | Connection details for your own databases, so agents can query them. |
+| **Browser Sessions** | Saved signed-in browser state, so agents can pick up where you left off without logging in again. |
+| **Model Providers** | Your own AI model keys, next to the always-available **Giga managed** provider. [Learn more →](/gateway/index#models) |
+
+You see the credentials you added, plus the ones shared with you.
+
+## Adding a credential
+
+Use **New** at the top of the Vault sidebar:
+
+- **Integration:** opens the [Integrations](/connect/connecting) search, where you find an app and connect it.
+- **API key, login, database and other custom types:** opens a secure form where you enter the details directly.
+
+## Each credential's page
+
+Open a credential to see its details. If you added it, you can:
+
+- **Rename** it, and change its **handle**, the short name agents use to refer to it
+- add a **note** for your team
+- **share** it with Groups or specific people
+- **link it to Tracks**, so it's at hand when someone works on that Track
+
+People it's shared with can use it, but only the person who added it can change or remove it. [How sharing works →](/connect/sharing)
+
+## Every use is recorded
+
+Each time a credential is used, Giga records who used it, when, and what for (the site or API it called, or a preview of the query). Secrets, request headers and bodies are never recorded.
+
+See the record in **Activity & usage → Credential activity**: your own uses, plus every use of credentials you own. [Learn about Activity & usage →](/teams-and-admin/activity-and-usage)
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Can anyone see my API key once it's in the Vault?">
+    No. Secrets are encrypted and never sent back to the browser, not even to you. People you share a credential with can use it without seeing the secret. Email and password logins are the one exception: they're typed into a website to sign in, so share those only with people you'd trust with the login.
+  </Expandable>
+  <Expandable title="What happens to the activity record if I delete a credential?">
+    The record of past uses is kept, so you can still see what it was used for.
+  </Expandable>
+</ExpandableGroup>
+
+## Related pages
+
+- [Connecting your tools](/connect/connecting)
+- [Sharing and managing](/connect/sharing)
+- [Safety and security](/connect/security)

@@ -1,0 +1,63 @@
+---
+title: Introduction to Connect
+description: Connect Giga to all your tools in one place, then connect them to other tools
+---
+
+**Giga Connect** is how you connect your team's tools to Giga — your CRM, docs, analytics, databases, support desk, and the rest.
+
+The key idea: **connect a tool once, then use it everywhere.** Once a tool is connected to Giga, you can use it from Giga Web and Slack, from your Agents, Workflows and Pulses — and from other AI tools like ChatGPT and Claude through [Giga MCP](/mcp/index), without connecting each app there separately.
+
+```mermaid
+graph LR
+    T1[CRM] --> C[Giga Connect]
+    T2[Docs & wikis] --> C
+    T3[Databases] --> C
+    T4[Websites with no API] --> C
+    C --> G[Giga Web & Slack]
+    C --> A[Agents, Workflows & Pulses]
+    C --> M[Giga MCP]
+    M --> X[ChatGPT, Claude & other AI tools]
+```
+
+[Learn how to use your connected tools from other AI tools →](/mcp/index)
+
+## Where to find it in the app
+
+- **Integrations** is where you connect tools: **Search** the catalog, see what's **Connected**, and browse **Instant** tools your agents can use with nothing to connect.
+- **Vault** holds the keys, sign-ins and logins behind your connections. [Learn about the Vault →](/connect/vault)
+
+<Callout kind="info">The app's **Connect** section is about the other direction: bringing Giga into Slack, Claude and ChatGPT. See [Giga MCP](/mcp/index).</Callout>
+
+## What you can connect
+
+Apps from Giga's catalog, your own MCP servers, APIs, PostgreSQL databases, and even websites with no API at all through Giga's cloud browser. If a tool isn't in the catalog, Giga can add it just for your workspace.
+
+For many data tools and AI models you don't need to connect anything: [Instant tools](/gateway/index) let your agents use them on Giga's account, paid from credits.
+
+[See how to connect your tools →](/connect/connecting)
+
+## How Giga uses your connections
+
+When you or a teammate works with Giga, it only uses the connections that person is allowed to use: their own, plus those shared with them.
+
+- **Chats** can use any connection you have access to, and you can @-mention one to point Giga at it.
+- **Tracks** can have connections and databases linked to them.
+- **[Agents](/agents/index)** and **[Workflows](/workflows/index)** use connections as part of their work.
+- **[Pulses](/pulses/index)** run as the person who owns them, using that person's connections.
+
+## Explore Giga Connect
+
+<Columns cols={2}>
+  <Card title="Connecting your tools" href="/connect/connecting" icon="plug">
+    What you can connect, the ways to connect, and tools that aren't in the catalog.
+  </Card>
+  <Card title="Sharing and managing" href="/connect/sharing" icon="users">
+    Share connections with your team and keep them healthy.
+  </Card>
+  <Card title="The Vault" href="/connect/vault" icon="vault">
+    Where your keys, sign-ins and logins are kept, shared and audited.
+  </Card>
+  <Card title="Safety and security" href="/connect/security" icon="shield-check">
+    How Giga keeps your passwords, keys and tokens safe.
+  </Card>
+</Columns>

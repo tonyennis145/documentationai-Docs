@@ -17,6 +17,12 @@ Use an Agent when a reusable operating identity should be available across multi
 
 [Learn about Agents →](/agents/index)
 
+## Brain
+
+**Brain** is where your memory lives in the Giga web app. It shows current memory by type, the **To file** inbox, the Evidence log and Brainstorms, and lets you add memory by pasting notes or importing a link.
+
+[Learn about Giga Memory →](/memory/index)
+
 ## Chat
 
 A **Chat** is the direct working surface between a user and Giga.
@@ -31,7 +37,7 @@ A Chat can be linked to at most **1 explicitly selected Track**.
 
 **Chat history** is the transcript of the interaction inside a Chat.
 
-It is separate from durable Track context such as Context Notes, Observations, Current Track State, and files.
+It is separate from durable Track context such as Context Notes, memory, and files.
 
 [Learn about Chat history →](/chats/history)
 
@@ -39,7 +45,7 @@ It is separate from durable Track context such as Context Notes, Observations, C
 
 **Company Brain** is Giga’s permission-aware company context layer.
 
-Depending on relevance and access, it can draw from workspace and Group guidance, Tracks, Context Notes, Observations, Current Track State, files, Connections, Agents, Skills, Workflows, and user-level context.
+Depending on relevance and access, it can draw from workspace and Group guidance, Tracks, Context Notes, memory, files, Connections, Agents, Skills, Workflows, and user-level context.
 
 Company Brain is structured around permissions and the work it belongs to.
 
@@ -53,7 +59,13 @@ Connections can represent apps, APIs, databases, MCP servers, browser sessions, 
 
 A Connection can provide live information and support actions when the current Giga and provider permissions allow it.
 
-[Learn about Connections →](/connections/index)
+[Learn about Giga Connect →](/connect/index)
+
+## Context Card
+
+A **Context Card** is background information kept in the [Library](/library/index), such as who you are, what your company does, or how a Track works. Giga adds it to every relevant chat, like a briefing it always reads first.
+
+[Learn about Context Cards →](/library/context-cards)
 
 ## Context Note
 
@@ -67,7 +79,7 @@ Use it for stable background such as:
 - durable constraints
 - long-lived handoff context
 
-Fast-changing progress belongs in Track memory or Current Track State.
+Fast-changing progress and decisions belong in Track memory.
 
 [Learn about Context Notes →](/tracks/context-notes)
 
@@ -77,24 +89,9 @@ A **credential** is secure authentication material behind some Connections.
 
 Examples can include authentication tokens, API credentials, connection strings, or login material depending on the Connection method.
 
-Credentials should stay in the secure connection flow rather than ordinary Chats, Context Notes, or files.
+Credentials are kept in the [Vault](/connect/vault) and should stay in the secure connection flow rather than ordinary Chats, Context Notes, or files.
 
-[Learn about Managing Connections →](/connections/managing-connections)
-
-## Current Track State
-
-**Current Track State** is the curated current state and decision record for a Track.
-
-It can capture:
-
-- where the work stands now
-- how it got there
-- what was ruled out and why
-- what remains open
-
-It is mutable and should stay current as the work develops.
-
-[Learn about Track memory →](/tracks/memory)
+[Learn about the Vault →](/connect/vault)
 
 ## Database
 
@@ -126,36 +123,29 @@ Use a Group when there is a real team boundary, shared area, or top-level access
 
 [Learn about Groups →](/groups/index)
 
+## Evidence
+
+**Evidence** is the append-only record behind each memory: what was said, a quote, who said it, when, and where it came from. Evidence is never rewritten. You can read all of it in **Brain → Evidence log**.
+
+[Learn about Giga Memory →](/memory/index)
+
+## Instant tools
+
+**Instant tools** are data tools and AI models your agents can use on Giga's account, with nothing to connect and no API key needed. Calls are paid from your workspace credits. You'll find them in **Integrations → Instant**. Instant tools are part of [Giga Gateway](/gateway/index).
+
 ## Memory
 
-**Memory** is the durable Track context that preserves meaningful developments and helps future work understand what happened.
+**Memory** is what Giga knows about your company's work: one clear statement per memory, each with a type (decision, commitment, idea, request, preference, fact or procedure), who said it, and the evidence behind it.
 
-The Track memory model includes:
+Memory belongs to a Track and is visible to the people on that Track, or stays private to the person who saved it until they file it. It stays current: a new decision replaces the old one, and a commitment closes when someone says it's done.
 
-- **Observations**, which preserve append-only developments
-- **Current Track State**, which keeps the curated current state and decision record
+[Learn about Giga Memory →](/memory/index)
 
-Context Notes and files serve different jobs and remain separate.
+## Model provider
 
-[Learn about Memory →](/tracks/memory)
+A **model provider** is a source of AI models Giga can use. Every workspace has the **Giga managed** provider; you can add your own keys for other providers in **Vault → Model Providers**.
 
-## Model flexibility
-
-**Model flexibility** is Giga’s product area for working across AI models and providers while keeping Giga’s workspace context and permissions conceptually separate from any single provider.
-
-Exact providers, model availability, plan access, custom endpoints, and bring-your-own-model options must be verified from the current product configuration.
-
-[See the Feature Overview →](/resources/feature-overview)
-
-## Observation
-
-An **Observation** is an append-only development in Giga’s memory layer.
-
-Observations can capture meaningful facts, changes, decisions, progress, preferences, or learned context.
-
-They should only be attached to a Track or Group when that attachment has been explicitly selected or confirmed.
-
-[Learn about Memory →](/tracks/memory)
+[Learn about model providers →](/gateway/index#models)
 
 ## Private Group
 
@@ -215,11 +205,23 @@ A **Track** is Giga’s core long-running work primitive.
 
 Use a Track when context, decisions, files, and progress should accumulate around an effort over time.
 
-A Track can contain durable context across Context Notes, Observations, Current Track State, linked Chats, and files.
+A Track can contain durable context across Context Notes, memory, linked Chats, and files.
 
 Track visibility currently follows the Group it lives in.
 
 [Learn about Tracks →](/tracks/index)
+
+## To file
+
+**To file** is the inbox in Brain for memory saved without a Track. Items there are private to you, each with Giga's suggested Track. File them to a Track to share them with that Track's people, or keep them private.
+
+[Learn about Giga Memory →](/memory/index#where-memory-goes-tracks-or-private-until-you-file-it)
+
+## Vault
+
+The **Vault** is where the credentials behind your connections are kept: API keys, OAuth connections, logins, databases, browser sessions and model provider keys. Secrets are encrypted and never shown to the AI or sent back to your browser.
+
+[Learn about the Vault →](/connect/vault)
 
 ## Workflow
 
@@ -249,8 +251,10 @@ The current workspace state is the source of truth for what a user can access.
 | **Group** | Placement and permission scope |
 | **Track** | Ongoing work with continuity |
 | **Context Note** | Durable standing Track background |
-| **Observation** | Append-only development |
-| **Current Track State** | Curated current state and decision record |
+| **Memory** | What's been decided, committed, proposed and learned |
+| **Evidence** | The record behind each memory |
+| **Brain** | Where memory lives in the web app |
+| **Vault** | Where credentials are kept |
 | **Agent** | Named reusable AI role |
 | **Skill** | Reusable task method |
 | **Workflow** | Reusable ordered process |

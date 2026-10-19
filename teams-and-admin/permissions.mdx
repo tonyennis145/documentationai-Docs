@@ -68,9 +68,18 @@ A Track currently inherits visibility from the Group it lives in.
   </Card>
 </Columns>
 
-Track context, Observations, Current Track State, and files stay inside that access boundary.
+Track context, memory, and files stay inside that access boundary.
 
-A Chat should only be attached to a Track after the user explicitly selects or confirms it because attachment affects where Observations can become retrievable.
+A Chat is only attached to a Track after the user explicitly selects or confirms it, because memory saved from the Chat becomes available to everyone on that Track.
+
+## Memory permissions
+
+- Memory filed to a Track is visible to the people on that Track.
+- Memory saved without a Track is private to the person who saved it. It waits in their **Brain → To file** inbox until they file it.
+- Only the person who saved an unfiled memory can file it, and only into a Track they can access.
+- This works the same in Giga Web, Slack, ChatGPT and Claude.
+
+[Learn about Giga Memory →](/memory/index)
 
 ## Agent permissions
 

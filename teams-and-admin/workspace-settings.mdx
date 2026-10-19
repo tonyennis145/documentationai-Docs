@@ -5,7 +5,22 @@ description: Learn how workspace-level context and other administrative settings
 
 Workspace settings control company-level behavior that applies above individual [Groups](/groups/index), [Tracks](/tracks/index), and users.
 
-The exact settings available can change with the product, so Giga should use the current workspace surface as the source of truth rather than assuming a fixed settings menu.
+Open **Settings** in the Giga web app. The Settings sidebar has:
+
+| Section | What it's for | Who sees it |
+| --- | --- | --- |
+| **Account Settings** | Your profile, password, signed-in devices, and your Slack link | Everyone |
+| **Workspace Settings** | The workspace name and what your business does, so Giga can suggest the most relevant integrations | Admins |
+| **Invite member** | Invite people to the workspace | Admins |
+| **Slack Setup** | Your Slack connection, the workspace's Slack install, and (for admins) which Slack channels map to which Groups or Tracks | Everyone |
+| **Browser Profiles** | Saved browser sign-ins Giga's cloud browser can reuse | Everyone |
+
+Some things that used to live in Settings have moved:
+
+- **AI providers** (model keys) → **Vault → Model Providers** or **Integrations → Models**. [Learn more →](/gateway/index#models)
+- **Gateway** → **Integrations → Instant**. [Learn more →](/gateway/index)
+- **Run activity** and **Credits** → [Activity & usage](/teams-and-admin/activity-and-usage)
+- **Team members** and **Groups** → the **Workspace** section. [Learn more →](/teams-and-admin/members-and-roles)
 
 ## Workspace-level context
 
@@ -97,7 +112,7 @@ When a user asks to change a workspace setting, Giga should verify:
 
 This page only documents workspace settings supported by the current canonical product sources.
 
-Topics such as SSO, authentication policies, audit logs, data residency, retention controls, DPA terms, and security-control exports are separate documentation backlog items until Giga has a canonical product source for them.
+Topics such as SSO, authentication policies, data residency, retention controls, DPA terms, and security-control exports are separate documentation backlog items until Giga has a canonical product source for them. For the credential audit log, see [Activity & usage](/teams-and-admin/activity-and-usage#credential-activity).
 
 We should not infer those capabilities from general enterprise software conventions.
 
@@ -121,5 +136,6 @@ If it only belongs to one launch, the launch Track is the better scope.
 - [Members and roles](/teams-and-admin/members-and-roles)
 - [Permissions](/teams-and-admin/permissions)
 - [Managing company Connections](/teams-and-admin/managing-company-connections)
+- [Activity & usage](/teams-and-admin/activity-and-usage)
 - [Introduction to Groups](/groups/index)
 - [Using context in a Chat](/chats/context)

@@ -16,7 +16,7 @@ You can use it to:
 - ask questions
 - work through tasks
 - create or edit supported work product
-- use [Connections](/connections/index)
+- use [Connections](/connect/index)
 - work with an explicitly selected [Track](/tracks/index)
 - ask Giga to take supported actions
 
@@ -75,8 +75,7 @@ That can include relevant:
 - Group context
 - one explicitly selected Track
 - Context Notes
-- Observations
-- Current Track State
+- memory: decisions, commitments, open questions and more
 - user-level context
 - files
 - Skills
@@ -88,17 +87,15 @@ The live workspace determines what can actually be retrieved.
 
 A Chat can be linked to at most one [Track](/tracks/index).
 
-Selecting a Track can make its durable context relevant to the Chat, including Context Notes, memory, Current Track State, and files that the current user can access.
+Selecting a Track makes its durable context available to the Chat, including Context Notes, memory, and files that the current user can access. Giga reads the Track's memory first, so it picks up where the work left off.
 
 Giga should never choose a Track silently.
 
-> **Track selection affects durable context**
->
-> The user should explicitly select or confirm the Track because observations from the Chat may become retrievable within that Track’s access scope.
+<Callout kind="info">You choose or confirm the Track, because lasting points from the Chat are saved to that Track's memory, where everyone on the Track can see them.</Callout>
 
 ## Work with connected systems
 
-Giga Web can use the [Connections](/connections/index) available to the current user and session.
+Giga Web can use the [Connections](/connect/index) available to the current user and session.
 
 Giga should prefer the strongest first-class route available for the job, such as an existing tool, API, database, or MCP Connection.
 
@@ -114,7 +111,7 @@ For logged-in work, a persistent browser profile can be used when available.
 
 If login is blocked by CAPTCHA, bot detection, or two-factor authentication, Giga should hand the login step to the user rather than repeatedly retrying it.
 
-[Learn about Browser Connections →](/connections/custom/browser-connections)
+[Learn about connecting websites with the cloud browser →](/connect/connecting#tools-that-arent-in-the-catalog)
 
 ## Web content stays untrusted
 
@@ -168,4 +165,4 @@ Imagine you are working on a product-launch Track.
 - [Web research and actions](/chats/web-research-and-actions)
 - [Using context in a Chat](/chats/context)
 - [Introduction to Tracks](/tracks/index)
-- [Introduction to Connections](/connections/index)
+- [Giga Connect](/connect/index)

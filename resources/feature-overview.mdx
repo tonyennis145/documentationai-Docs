@@ -16,8 +16,7 @@ It can combine relevant information from:
 - workspace and Group guidance
 - Tracks
 - Context Notes
-- Observations
-- Current Track State
+- memory
 - files
 - Connections and live external data
 - Agents
@@ -39,7 +38,7 @@ Use a Chat to ask questions, reason through work, create or edit supported work 
 
 A Chat can link to at most **1 explicitly selected Track**.
 
-Track selection should never be inferred silently because it affects where observations can become retrievable.
+Track selection is never inferred silently, because memory saved from the Chat becomes available to everyone on that Track.
 
 ## Groups
 
@@ -68,8 +67,7 @@ A Track’s durable context is split across several layers:
 | Layer | Purpose |
 | --- | --- |
 | [Context Note](/tracks/context-notes) | Stable background and standing instructions |
-| [Observations](/tracks/memory) | Append-only developments and learned context |
-| **Current Track State** | Curated current position and decision record |
+| [Memory](/tracks/memory) | Current decisions, commitments, ideas, open questions, preferences, facts and procedures |
 | [Files](/tracks/files) | Authored work product |
 | Linked Chats | Working history around the Track |
 
@@ -87,17 +85,17 @@ Use it for things such as:
 - standing instructions
 - handoff context that should continue to matter
 
-Fast-changing progress belongs in Memory or Current Track State instead.
+Fast-changing progress and decisions belong in Memory instead.
 
 ## Memory
 
-Track memory has 2 important layers.
+[Giga Memory](/memory/index) remembers your company's work: one clear statement per memory, sorted into seven types (decision, commitment, idea, request, preference, fact, procedure), each with who said it and the evidence behind it.
 
-**Observations** preserve meaningful developments over time.
+- **It gets in** when someone says "save this" in ChatGPT, Claude or Slack, from chats in the Giga web app, or by pasting notes or importing a meeting link in **Brain**.
+- **It stays current**: a new decision replaces the old one, a commitment closes when it's done, and repeats add evidence instead of duplicates.
+- **It follows access**: memory filed to a Track is visible to that Track's people, and anything unfiled stays private in **Brain → To file** until you file it.
 
-**Current Track State** keeps the curated view of where the Track stands, how it got there, what was ruled out and why, and what remains open.
-
-These layers serve different jobs and should stay distinct from authored files.
+Memory stays separate from authored files.
 
 ## Files and databases
 
@@ -111,7 +109,7 @@ Specific rich file-format claims should follow the current live capability rathe
 
 ## Connections
 
-A [Connection](/connections/index) gives Giga permissioned access to an external system.
+A [Connection](/connect/index) gives Giga permissioned access to an external system.
 
 Connections can represent:
 
@@ -132,7 +130,11 @@ For custom Connections, Giga currently prefers the strongest supported self-serv
 3. API key or PAT
 4. browser login
 
-Credentials stay in the secure connection layer rather than normal Chats, files, or Context Notes.
+Credentials are kept in the encrypted [Vault](/connect/vault), not in Chats, files, or Context Notes. Every use of a credential is recorded and visible in **Activity & usage → Credential activity**.
+
+## Instant tools (beta)
+
+[Instant tools](/gateway/index) give your agents thousands of data tools and AI models on Giga's account, with no separate sign-ups or keys. Calls are paid from workspace credits, and admins can switch tools off, set monthly limits and give the agent instructions per tool.
 
 ## Agents
 
@@ -239,11 +241,9 @@ Surface presentation can differ. The underlying Giga workspace remains the autho
 
 ## Model flexibility
 
-Model choice and provider flexibility are a first-class Giga product area.
+Giga's workspace context, permissions, Tracks, Skills, Workflows, and Connections are separate from any single model provider.
 
-Giga’s workspace context, permissions, Tracks, Skills, Workflows, and Connections are conceptually separate from a single model provider.
-
-Exact providers, model availability, plan access, enterprise agreements, custom endpoints, and bring-your-own-model options should be verified from the current product configuration before they are documented as available.
+Every workspace can use the **Giga managed** models out of the box. You can also bring your own model provider keys in **Vault → Model Providers**, and use hundreds of models through [Instant tools](/gateway/index).
 
 > **Video placeholder: Model Flexibility**
 >
@@ -263,7 +263,8 @@ A quick rule of thumb:
 | A reusable task method | [Skill](/skills/index) |
 | A reusable ordered process | [Workflow](/workflows/index) |
 | Recurring scheduled work | [Pulse](/pulses/index) |
-| Live external-system access | [Connection](/connections/index) |
+| Live external-system access | [Connection](/connect/index) |
+| Something to remember | [Memory](/memory/index) |
 | Growing structured records | Database |
 | Auth or secrets | Secure Connection flow |
 
