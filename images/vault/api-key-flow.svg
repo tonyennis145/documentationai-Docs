@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 190" width="680" height="190" font-family="Inter, -apple-system, Segoe UI, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9B9895"/></marker>
+  </defs>
+  <!-- Agent asks by handle -->
+  <rect x="200" y="8" width="280" height="34" rx="17" fill="#F4F2EF"/>
+  <text x="340" y="30" text-anchor="middle" font-size="13" fill="#2B2724">Agent: “call Airtable with <tspan font-family="ui-monospace, Menlo, monospace" fill="#C2410C">airtable</tspan>”</text>
+  <path d="M340 42 V70" stroke="#9B9895" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+  <!-- Row: You -> Vault -> Proxy -> Service -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="10" y="80" width="140" height="70" rx="12" fill="#FFFFFF" stroke="#E4E1DD"/>
+    <text x="80" y="110" font-weight="600" fill="#2B2724">You</text>
+    <text x="80" y="130" fill="#65625F">paste the key once</text>
+
+    <rect x="185" y="80" width="140" height="70" rx="12" fill="#FFFFFF" stroke="#E4E1DD"/>
+    <text x="255" y="110" font-weight="600" fill="#2B2724">🔒 Vault</text>
+    <text x="255" y="130" fill="#65625F">encrypted, never shown</text>
+
+    <rect x="360" y="80" width="140" height="70" rx="12" fill="#2B2724"/>
+    <text x="430" y="110" font-weight="600" fill="#FFFFFF">Giga's proxy</text>
+    <text x="430" y="130" fill="#D6D3CF">adds the key server-side</text>
+
+    <rect x="535" y="80" width="135" height="70" rx="12" fill="#FFFFFF" stroke="#E4E1DD"/>
+    <text x="602" y="110" font-weight="600" fill="#2B2724">Airtable API</text>
+    <text x="602" y="130" fill="#65625F">sees a normal request</text>
+  </g>
+  <path d="M150 115 H180" stroke="#9B9895" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M325 115 H355" stroke="#9B9895" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M500 115 H530" stroke="#9B9895" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+  <text x="340" y="180" text-anchor="middle" font-size="12" fill="#9B9895">The agent gets the answer back. It never sees the key, and neither does the chat.</text>
+</svg>

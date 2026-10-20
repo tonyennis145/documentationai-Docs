@@ -3,85 +3,67 @@ title: API keys
 description: Keys and tokens for services that don't use OAuth. Giga attaches them to requests for you, so they never appear in a chat.
 ---
 
-An **API key** lets Giga call a service on your behalf when that service doesn't offer a "Sign in with…" (OAuth) connection. Think personal access tokens, secret keys and bearer tokens: an Airtable token, a Stripe secret key, a key for your own internal API.
+**Add a key once. Agents use it by name. Nobody, not even the AI, sees it again.**
 
-You'll find them in **Vault → API Keys**.
+<Columns cols={3}>
+  <Card title="Encrypted" icon="lock" href="/connect/security#the-secure-proxy">
+    Stored in the Vault, never sent back to a browser.
+  </Card>
+  <Card title="Never in chat" icon="message-square" href="/connect/security#the-secure-proxy">
+    Giga adds the key on its servers, not in the conversation.
+  </Card>
+  <Card title="Every use logged" icon="activity" href="/connect/vault#every-use-is-recorded">
+    Who used it, when, and which API it called.
+  </Card>
+</Columns>
 
-## How API keys work
+<Tabs>
+  <Tab title="1 · How it works" icon="key-round">
+    <SVG src="/images/vault/api-key-flow.svg" />
 
-- **You add the key once.** It's encrypted and stored in the [Vault](/connect/vault). It's never sent back to your browser and never shown to the AI, not even to you.
-- **Agents refer to it by its handle**, a short name like `airtable-hiring`. When an agent calls the service, Giga's [secure proxy](/connect/security#the-secure-proxy) adds the key to the request on Giga's servers. The agent sees the response, never the key.
-- **Giga knows where the key goes.** Most services expect it as a bearer token in the `Authorization` header, which is the default. Others want it in a different header (like `X-API-Key`), in the URL, or as a Basic-auth username. Giga picks the right one when it saves the key.
-- **It's private until you share it.** Share a key with Groups or people so their agents can use it too. They can use it, but can't see it, change it or delete it.
-- **Every use is recorded:** who used it, when, and which API it called. See [Every use is recorded](/connect/vault#every-use-is-recorded).
+    Agents refer to a key by its **handle**, like `airtable`. Giga's proxy attaches the key to the request, so the agent only ever sees the answer.
+  </Tab>
+  <Tab title="2 · Add one" icon="plus">
+    Ask in any chat:
 
-<Callout kind="tip">If the service offers a "Connect" or "Sign in with…" option in [Integrations](/connect/connecting), use that instead. OAuth connections refresh themselves and can be revoked from the service's side.</Callout>
+    > **You:** Hey Giga, I need to add an API key for Airtable.
+    >
+    > **Giga:** Here's a secure link. I've filled in the name and handle, so just paste the key.
 
-## Use them in chat
+    Or click **+** at the top of **Vault → API Keys**.
+  </Tab>
+  <Tab title="3 · Use it" icon="sparkles">
+    Just ask for the work. Giga picks the right key.
 
-You don't need to visit the Vault to add or use a key. Ask Giga in any chat.
+    > **You:** List the tables in our Airtable Hiring base.
 
-### Add a key
+    > **You:** Any new Sentry errors since yesterday?
 
-> **You:** Hey Giga, I need to add an API key for Airtable.
->
-> **Giga:** Here's a secure link to add it. I've filled in the name and handle (`airtable`), so you only need to paste the key.
+    > **You:** Which API keys can I use?
+  </Tab>
+  <Tab title="4 · Share it" icon="users">
+    Keys are **private until you share them.** Open a key to share it with a Group or a person, or link it to a Track.
 
-Open the link, paste the key and save. It's now in **Vault → API Keys**, private to you.
+    People you share with can **use** it, but can't see, change or delete it.
+  </Tab>
+</Tabs>
 
-<Callout kind="alert">You can paste a key straight into a chat and Giga will save it, but the key then sits in that chat's history. The secure link keeps it out of the conversation entirely.</Callout>
-
-### Use a key
-
-Just ask for the work. Giga picks the key by its service, or you can name the handle:
-
-> **You:** Use my Airtable key to list the tables in the Hiring base.
-
-> **You:** Check our Sentry project for new errors since yesterday.
-
-> **You:** Call `https://api.example.com/v1/orders?status=open` with the `example-internal` key and summarise what's late.
-
-### See what you have
-
-> **You:** Which API keys can I use?
-
-> **You:** Rename the `http-3cdba9f5` key to `anthropic-research` and add a note that it's for the research track.
-
-Giga lists the keys you own plus the ones shared with you, showing names and handles but never the secrets. You can rename a key or change its note from chat. To replace the key itself, use the Vault.
-
-## Add one in the Vault
-
-1. Go to **Vault → API Keys** and click **+** at the top of the list.
-2. Give it a **Label** (what people see) and an **Identifier** (the handle agents use).
-3. Paste the **API key** and choose who to share it with.
-
-## Share it and link it to a track
-
-Open the key in the Vault to:
-
-- **share** it with Groups or specific people
-- **link it to Tracks**, so it's at hand when someone works on that track
-- **rename** it, change its handle, or add a **note** for your team
-
-Only the person who added a key can change or remove it. [How sharing works →](/connect/sharing)
-
-## Frequently asked questions
+<Callout kind="tip">Does the service have a "Sign in with…" option? Use [Integrations](/connect/connecting) instead. OAuth connections refresh themselves.</Callout>
 
 <ExpandableGroup>
-  <Expandable title="Can I see the key again after I've saved it?">
-    No. Keys are never sent back to the browser. If you've lost the original, create a new key with the service and add it again.
+  <Expandable title="Why not just paste the key into chat?">
+    Giga can save a key you paste, but it then sits in that chat's history. The secure link keeps it out of the conversation entirely.
   </Expandable>
-  <Expandable title="How do I replace a key that's expired or been rotated?">
-    Add the new key in the Vault with the same handle, after removing the old one. Agents that refer to the handle pick up the new key straight away.
+  <Expandable title="Can I see the key again after saving it?">
+    No. Keys are never sent back to the browser. If you've lost it, create a new key with the service and add that.
   </Expandable>
-  <Expandable title="Can Giga call any address with my key?">
-    Only public addresses. Giga refuses requests to internal, loopback or cloud-metadata addresses, so a key can't be pointed at Giga's own network.
+  <Expandable title="How do I replace an expired key?">
+    Remove the old key and add the new one with the same handle. Agents using the handle pick it up straight away.
+  </Expandable>
+  <Expandable title="Where does Giga put the key in the request?">
+    Usually as a bearer token in the `Authorization` header. Some services want a different header (like `X-API-Key`), a URL parameter or Basic auth. Giga picks the right one when it saves the key.
+  </Expandable>
+  <Expandable title="Can a key be pointed at any address?">
+    Only public ones. Giga refuses requests to internal, loopback or cloud-metadata addresses.
   </Expandable>
 </ExpandableGroup>
-
-## Related pages
-
-- [The Vault](/connect/vault)
-- [Connecting your tools](/connect/connecting)
-- [Sharing and managing](/connect/sharing)
-- [Safety and security](/connect/security)
