@@ -56,6 +56,10 @@
                     "path": "connect/vault"
                   },
                   {
+                    "title": "API keys",
+                    "path": "connect/api-keys"
+                  },
+                  {
                     "title": "Safety and security",
                     "path": "connect/security"
                   }
