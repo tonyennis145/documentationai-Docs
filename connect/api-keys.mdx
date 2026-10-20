@@ -19,7 +19,7 @@ description: Keys and tokens for services that don't use OAuth. Giga attaches th
 
 <Tabs>
   <Tab title="1 · How it works" icon="key-round">
-    <SVG src="/images/vault/api-key-flow.svg" />
+    ![You paste the key once; the Vault keeps it encrypted; Giga's proxy adds it to the request; the service sees a normal request](/images/vault/api-key-flow.svg)
 
     Agents refer to a key by its **handle**, like `airtable`. Giga's proxy attaches the key to the request, so the agent only ever sees the answer.
   </Tab>
