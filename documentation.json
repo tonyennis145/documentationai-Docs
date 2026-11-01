@@ -28,6 +28,10 @@
                 "icon": "home"
               },
               {
+                "title": "Key Phrases",
+                "path": "key-phrases"
+              },
+              {
                 "title": "Start here",
                 "path": "start"
               }
