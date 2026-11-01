@@ -38,38 +38,20 @@
             "group": "Products",
             "pages": [
               {
-                "group": "Giga Cloud",
+                "group": "Giga Context",
+                "icon": "brain",
+                "path": "memory/index",
+                "expandable": true,
                 "pages": [
                   {
-                    "group": "Integrations",
-                    "icon": "link-2",
-                    "expandable": true,
-                    "pages": [
-                      {
-                        "title": "Introduction to Connect",
-                        "path": "connect/index"
-                      },
-                      {
-                        "title": "Connecting your tools",
-                        "path": "connect/connecting"
-                      },
-                      {
-                        "title": "Sharing and managing",
-                        "path": "connect/sharing"
-                      },
-                      {
-                        "title": "The Vault",
-                        "path": "connect/vault"
-                      },
-                      {
-                        "title": "API keys",
-                        "path": "connect/api-keys"
-                      },
-                      {
-                        "title": "Safety and security",
-                        "path": "connect/security"
-                      }
-                    ]
+                    "title": "Track memory",
+                    "path": "tracks/memory",
+                    "icon": "brain"
+                  },
+                  {
+                    "title": "References",
+                    "path": "library/bookmarks",
+                    "icon": "link"
                   },
                   {
                     "title": "Skills",
@@ -85,30 +67,43 @@
                     "title": "Saved Prompts",
                     "path": "library/saved-prompts",
                     "icon": "bookmark"
-                  },
-                  {
-                    "title": "Datastores",
-                    "path": "library/datastores",
-                    "icon": "database"
-                  },
-                  {
-                    "title": "Bookmarks",
-                    "path": "library/bookmarks",
-                    "icon": "link"
                   }
-                ],
-                "icon": "library",
-                "path": "library/index",
-                "expandable": true
+                ]
+              },
+              {
+                "group": "Giga Connect",
+                "icon": "link-2",
+                "path": "connect/index",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Connecting your tools",
+                    "path": "connect/connecting"
+                  },
+                  {
+                    "title": "Sharing and managing",
+                    "path": "connect/sharing"
+                  },
+                  {
+                    "title": "The Vault",
+                    "path": "connect/vault"
+                  },
+                  {
+                    "title": "API keys",
+                    "path": "connect/api-keys"
+                  },
+                  {
+                    "title": "Safety and security",
+                    "path": "connect/security"
+                  }
+                ]
               },
               {
                 "group": "Giga Workspace",
+                "icon": "briefcase",
+                "path": "workspace/index",
+                "expandable": true,
                 "pages": [
-                  {
-                    "title": "Introduction to Giga",
-                    "path": "introduction",
-                    "icon": "home"
-                  },
                   {
                     "title": "Chat",
                     "path": "chats/index",
@@ -123,44 +118,18 @@
                     "title": "Pulses",
                     "path": "pulses/index",
                     "icon": "activity"
-                  }
-                ],
-                "icon": "briefcase",
-                "path": "workspace/index",
-                "expandable": true
-              },
-              {
-                "group": "Giga Brain",
-                "pages": [
-                  {
-                    "title": "Track memory",
-                    "path": "tracks/memory"
-                  }
-                ],
-                "icon": "brain",
-                "path": "memory/index",
-                "expandable": true
-              },
-              {
-                "group": "Giga MCP",
-                "pages": [
-                  {
-                    "title": "Claude",
-                    "path": "use-giga-anywhere/claude"
                   },
                   {
-                    "title": "ChatGPT",
-                    "path": "use-giga-anywhere/chatgpt"
+                    "title": "Workflows",
+                    "path": "workflows/index",
+                    "icon": "workflow"
                   }
-                ],
-                "icon": "server",
-                "path": "mcp/index",
-                "expandable": true
+                ]
               },
               {
                 "group": "Giga Apps",
-                "path": "apps/index",
                 "icon": "layout-grid",
+                "path": "apps/index",
                 "expandable": true,
                 "pages": [
                   {
@@ -176,6 +145,11 @@
                   {
                     "title": "Data for your apps",
                     "path": "apps/data",
+                    "icon": "database"
+                  },
+                  {
+                    "title": "Datastores",
+                    "path": "library/datastores",
                     "icon": "database"
                   },
                   {
@@ -206,9 +180,20 @@
                 "icon": "users"
               },
               {
-                "title": "Giga for ChatGPT",
-                "path": "use-giga-anywhere/chatgpt",
-                "icon": "message-circle"
+                "group": "Giga MCP",
+                "icon": "server",
+                "path": "mcp/index",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Claude",
+                    "path": "use-giga-anywhere/claude"
+                  },
+                  {
+                    "title": "ChatGPT",
+                    "path": "use-giga-anywhere/chatgpt"
+                  }
+                ]
               }
             ]
           },
