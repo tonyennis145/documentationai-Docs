@@ -29,11 +29,8 @@
               },
               {
                 "title": "Key Phrases",
-                "path": "key-phrases"
-              },
-              {
-                "title": "Start here",
-                "path": "start"
+                "path": "key-phrases",
+                "icon": "fa-solid:key"
               }
             ]
           },
