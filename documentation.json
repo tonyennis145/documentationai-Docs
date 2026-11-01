@@ -37,68 +37,39 @@
             "group": "Products",
             "pages": [
               {
-                "group": "Giga Connect",
+                "group": "Giga Cloud",
                 "pages": [
                   {
-                    "title": "Introduction to Connect",
-                    "path": "connect/index"
+                    "group": "Integrations",
+                    "icon": "link-2",
+                    "expandable": true,
+                    "pages": [
+                      {
+                        "title": "Introduction to Connect",
+                        "path": "connect/index"
+                      },
+                      {
+                        "title": "Connecting your tools",
+                        "path": "connect/connecting"
+                      },
+                      {
+                        "title": "Sharing and managing",
+                        "path": "connect/sharing"
+                      },
+                      {
+                        "title": "The Vault",
+                        "path": "connect/vault"
+                      },
+                      {
+                        "title": "API keys",
+                        "path": "connect/api-keys"
+                      },
+                      {
+                        "title": "Safety and security",
+                        "path": "connect/security"
+                      }
+                    ]
                   },
-                  {
-                    "title": "Connecting your tools",
-                    "path": "connect/connecting"
-                  },
-                  {
-                    "title": "Sharing and managing",
-                    "path": "connect/sharing"
-                  },
-                  {
-                    "title": "The Vault",
-                    "path": "connect/vault"
-                  },
-                  {
-                    "title": "API keys",
-                    "path": "connect/api-keys"
-                  },
-                  {
-                    "title": "Safety and security",
-                    "path": "connect/security"
-                  }
-                ],
-                "icon": "plug",
-                "path": "connect/index",
-                "expandable": true
-              },
-              {
-                "group": "Giga Workspace",
-                "pages": [
-                  {
-                    "title": "Introduction to Giga",
-                    "path": "introduction",
-                    "icon": "home"
-                  },
-                  {
-                    "title": "Chat",
-                    "path": "chats/index",
-                    "icon": "message-square"
-                  },
-                  {
-                    "title": "Tracks",
-                    "path": "tracks/index",
-                    "icon": "folder"
-                  },
-                  {
-                    "title": "Pulses",
-                    "path": "pulses/index",
-                    "icon": "activity"
-                  }
-                ],
-                "icon": "briefcase",
-                "path": "workspace/index",
-                "expandable": true
-              },
-              {
-                "group": "Giga Library",
-                "pages": [
                   {
                     "title": "Skills",
                     "path": "skills/index",
@@ -130,7 +101,35 @@
                 "expandable": true
               },
               {
-                "group": "Giga Memory",
+                "group": "Giga Workspace",
+                "pages": [
+                  {
+                    "title": "Introduction to Giga",
+                    "path": "introduction",
+                    "icon": "home"
+                  },
+                  {
+                    "title": "Chat",
+                    "path": "chats/index",
+                    "icon": "message-square"
+                  },
+                  {
+                    "title": "Tracks",
+                    "path": "tracks/index",
+                    "icon": "folder"
+                  },
+                  {
+                    "title": "Pulses",
+                    "path": "pulses/index",
+                    "icon": "activity"
+                  }
+                ],
+                "icon": "briefcase",
+                "path": "workspace/index",
+                "expandable": true
+              },
+              {
+                "group": "Giga Brain",
                 "pages": [
                   {
                     "title": "Track memory",
@@ -184,12 +183,6 @@
                     "icon": "users"
                   }
                 ]
-              },
-              {
-                "title": "Giga Gateway",
-                "path": "gateway/index",
-                "icon": "key",
-                "badge": "Beta"
               }
             ]
           },

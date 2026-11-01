@@ -1,22 +1,23 @@
 ---
 title: The Vault
-description: Where the keys, sign-ins and logins behind your connections are kept, shared and audited.
+description: >-
+  Where the keys, sign-ins and logins behind your connections are kept, shared
+  and audited.
 ---
-
 The **Vault** is where Giga keeps the credentials behind your connections. Find it in the **Vault** section of the Giga web app.
 
 Secrets in the Vault are encrypted, never sent back to your browser, and never shown to the AI. When Giga uses a connection, the [secure proxy](/connect/security#the-secure-proxy) adds the secret on Giga's servers.
 
 ## What's in the Vault
 
-| Section | What it holds |
-| --- | --- |
-| **API Keys** | Keys and tokens for services that don't use OAuth. Giga attaches them to requests for you, so they're never pasted into a chat. |
-| **OAuth Connections** | Accounts you've signed in to with OAuth, like Google or Slack. Giga refreshes them automatically. |
-| **Logins** | Usernames and passwords for sites without an API. Agents use them in a browser session. |
-| **Databases** | Connection details for your own databases, so agents can query them. |
-| **Browser Sessions** | Saved signed-in browser state, so agents can pick up where you left off without logging in again. |
-| **Model Providers** | Your own AI model keys, next to the always-available **Giga managed** provider. [Learn more →](/gateway/index#models) |
+| Section               | What it holds                                                                                                                   |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **API Keys**          | Keys and tokens for services that don't use OAuth. Giga attaches them to requests for you, so they're never pasted into a chat. |
+| **OAuth Connections** | Accounts you've signed in to with OAuth, like Google or Slack. Giga refreshes them automatically.                               |
+| **Logins**            | Usernames and passwords for sites without an API. Agents use them in a browser session.                                         |
+| **Databases**         | Connection details for your own databases, so agents can query them.                                                            |
+| **Browser Sessions**  | Saved signed-in browser state, so agents can pick up where you left off without logging in again.                               |
+| **Model Providers**   | Your own AI model keys, next to the always-available **Giga managed** provider. [Learn more →](/gateway/index#models)           |
 
 You see the credentials you added, plus the ones shared with you.
 
@@ -47,10 +48,11 @@ See the record in **Activity & usage → Credential activity**: your own uses, p
 ## Frequently asked questions
 
 <ExpandableGroup>
-  <Expandable title="Can anyone see my API key once it's in the Vault?">
+  <Expandable title="Can anyone see my API key once it's in the Vault?" default-open="false">
     No. Secrets are encrypted and never sent back to the browser, not even to you. People you share a credential with can use it without seeing the secret. Email and password logins are the one exception: they're typed into a website to sign in, so share those only with people you'd trust with the login.
   </Expandable>
-  <Expandable title="What happens to the activity record if I delete a credential?">
+
+  <Expandable title="What happens to the activity record if I delete a credential?" default-open="false">
     The record of past uses is kept, so you can still see what it was used for.
   </Expandable>
 </ExpandableGroup>
@@ -60,3 +62,4 @@ See the record in **Activity & usage → Credential activity**: your own uses, p
 - [Connecting your tools](/connect/connecting)
 - [Sharing and managing](/connect/sharing)
 - [Safety and security](/connect/security)
+
