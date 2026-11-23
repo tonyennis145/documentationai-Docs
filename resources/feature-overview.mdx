@@ -15,10 +15,10 @@ It can combine relevant information from:
 
 - workspace and Group guidance
 - Tracks
-- Context Notes
+- System Instructions
 - memory
 - files
-- Connections and live external data
+- Integrations and live external data
 - Agents
 - Skills
 - Workflows
@@ -26,15 +26,11 @@ It can combine relevant information from:
 
 Giga retrieves context according to the current user, permissions, and task.
 
-> **Video placeholder: Company Brain**
->
-> Add the approved Company Brain product video here.
-
 ## Chats
 
 A [Chat](/chats/index) is the direct working surface between a user and Giga.
 
-Use a Chat to ask questions, reason through work, create or edit supported work product, use Connections, and take supported actions.
+Use a Chat to ask questions, reason through work, create or edit supported work product, use Integrations, and take supported actions.
 
 A Chat can link to at most **1 explicitly selected Track**.
 
@@ -49,12 +45,12 @@ Groups can contain or scope resources such as:
 - Tracks
 - Agents
 - files
-- credentials and Connections
+- credentials and Integrations
 - shared context
 
-A user can access shared Groups they belong to plus their own private Group.
+A user can access the Groups they belong to. For private work, set a Track to **Only me** instead of using a Group.
 
-Use a Group when there is a real team boundary, shared area, or top-level access scope.
+Use a Group when there is a real team boundary, shared area, or top-level access scope. Groups are managed in **Cloud → Organize → Groups**.
 
 ## Tracks
 
@@ -66,26 +62,26 @@ A Track’s durable context is split across several layers:
 
 | Layer | Purpose |
 | --- | --- |
-| [Context Note](/tracks/context-notes) | Stable background and standing instructions |
+| Track brief | Stable background and standing instructions, in the Track's **Settings** tab |
 | [Memory](/tracks/memory) | Current decisions, commitments, ideas, open questions, preferences, facts and procedures |
 | [Files](/tracks/files) | Authored work product |
 | Linked Chats | Working history around the Track |
 
-Track visibility currently follows the Group it lives in.
+Each Track has a Kind (Project, Area or Exploration). Track visibility follows the Group it lives in, or is set to **Only me**.
 
-## Context Notes
+## System Instructions
 
-A **Context Note** is the durable standing background for a Track.
+[System Instructions](/library/context-cards) are standing background Giga reads before it works, kept in **Cloud → Shared Resources**. Each one can be shared with just you, a Group, a Track or the whole workspace.
 
-Use it for things such as:
+Use them for things such as:
 
-- what the Track is about
+- what your company or team does
 - stable constraints
 - durable terminology
 - standing instructions
 - handoff context that should continue to matter
 
-Fast-changing progress and decisions belong in Memory instead.
+Background that belongs to a single Track goes in its **Track brief**. Fast-changing progress and decisions belong in Memory instead.
 
 ## Memory
 
@@ -107,34 +103,30 @@ For structured growing records, Giga can use SQLite or a hosted Giga database wh
 
 Specific rich file-format claims should follow the current live capability rather than a fixed universal format list.
 
-## Connections
+## Integrations
 
-A [Connection](/connect/index) gives Giga permissioned access to an external system.
+An [Integration](/connect/index) gives Giga permissioned access to an external system.
 
-Connections can represent:
+Integrations can represent:
 
 - apps
 - APIs
 - databases
 - MCP servers
-- browser sessions
+- Cloud Browser Sessions
 - messaging systems
 - other supported services
 
-A Connection can provide current information and, where the provider and Giga permissions allow it, support actions.
+An Integration can provide current information and, where the provider and Giga permissions allow it, support actions.
 
-For custom Connections, Giga currently prefers the strongest supported self-serve route in this order:
+For custom Integrations, Giga currently prefers the strongest supported self-serve route in this order:
 
 1. MCP
 2. OAuth with supported self-serve registration
 3. API key or PAT
 4. browser login
 
-Credentials are kept in the encrypted [Vault](/connect/vault), not in Chats, files, or Context Notes. Every use of a credential is recorded and visible in **Activity & usage → Credential activity**.
-
-## Instant tools (beta)
-
-[Instant tools](/gateway/index) give your agents thousands of data tools and AI models on Giga's account, with no separate sign-ups or keys. Calls are paid from workspace credits, and admins can switch tools off, set monthly limits and give the agent instructions per tool.
+Credentials are kept encrypted in [Cloud → Integrations](/connect/vault), not in Chats, files, or System Instructions. Every use of a credential is recorded and visible in **Settings → Activity & usage → Credential activity**.
 
 ## Agents
 
@@ -145,7 +137,7 @@ An Agent can have:
 - a role
 - instructions
 - durable context
-- access to permitted Connections
+- access to permitted Integrations
 - Skills
 
 Use an Agent when a reusable operating identity should work across multiple tasks or people.
@@ -174,7 +166,7 @@ The current Workflow model supports:
 - plain-language instructions
 - optional runtime inputs
 
-Current input types can include text, URL, number, choice, and boolean where exposed by the live Workflow surface.
+Current input types can include text, Link, number, choice, and Yes / no where exposed by the live Workflow surface.
 
 Keep Workflow steps focused on meaningful stages rather than individual tool calls.
 
@@ -193,7 +185,7 @@ Current Pulse scheduling supports:
 - monthly cadence
 - intra-day cadence
 
-A Pulse can target an Agent, target a Track, or run without a target.
+A Pulse can target an Agent, target a Track, or run without a target. Each Pulse has an On/Paused toggle.
 
 Creating recurring work should be confirmed before it is scheduled.
 
@@ -207,7 +199,7 @@ Important layers include:
 - workspace role
 - Group membership
 - resource ownership
-- Connection sharing
+- Integration sharing
 - external provider permissions
 - current live tool permissions
 
@@ -220,7 +212,7 @@ A resource existing in the workspace does not automatically make it available to
 Giga’s official user-facing surfaces are:
 
 <Columns cols={2}>
-  <Card title="Giga Web" href="/use-giga-anywhere/web" icon="monitor">
+  <Card title="Giga Web" href="/workspace/index" icon="monitor">
     Giga’s first-party web experience, including web-specific viewer and rich UI capabilities where supported.
   </Card>
   <Card title="Slack" href="/use-giga-anywhere/slack" icon="message-square">
@@ -241,13 +233,9 @@ Surface presentation can differ. The underlying Giga workspace remains the autho
 
 ## Model flexibility
 
-Giga's workspace context, permissions, Tracks, Skills, Workflows, and Connections are separate from any single model provider.
+Giga's workspace context, permissions, Tracks, Skills, Workflows, and Integrations are separate from any single model provider.
 
-Every workspace can use the **Giga managed** models out of the box. You can also bring your own model provider keys in **Vault → Model Providers**, and use hundreds of models through [Instant tools](/gateway/index).
-
-> **Video placeholder: Model Flexibility**
->
-> Add the approved Model Flexibility product video here.
+Every workspace can use the **Giga managed** models out of the box. Admins can also bring their own model provider keys in **Settings → Model Providers**.
 
 ## Choosing the right feature
 
@@ -258,21 +246,17 @@ A quick rule of thumb:
 | Direct ad hoc work | [Chat](/chats/index) |
 | A team or access boundary | [Group](/groups/index) |
 | Ongoing work with history | [Track](/tracks/index) |
-| Stable Track background | [Context Note](/tracks/context-notes) |
+| Standing background | [System Instructions](/library/context-cards) |
 | A named reusable AI role | [Agent](/agents/index) |
 | A reusable task method | [Skill](/skills/index) |
 | A reusable ordered process | [Workflow](/workflows/index) |
 | Recurring scheduled work | [Pulse](/pulses/index) |
-| Live external-system access | [Connection](/connect/index) |
+| Live external-system access | [Integration](/connect/index) |
 | Something to remember | [Memory](/memory/index) |
 | Growing structured records | Database |
-| Auth or secrets | Secure Connection flow |
+| Auth or secrets | Secure Integration flow |
 
 [See the full Choosing the right Giga feature guide →](/resources/choosing-the-right-feature)
-
-> **Image placeholder**
->
-> Full product architecture diagram showing Company Brain and permissions underneath Groups, Tracks, Chats, Agents, Skills, Workflows, Pulses, Connections, Files, and the supported user-facing surfaces.
 
 ## Related resources
 

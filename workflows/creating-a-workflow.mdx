@@ -32,6 +32,8 @@ If an existing Workflow already represents the process, update or reuse it inste
 
 ## Create the Workflow
 
+Go to **Cloud → Build & Automate → Workflows** to create one, or ask Giga in a Chat.
+
 <Steps>
   <Step title="Name the Workflow" icon="file-text" title-type="p">
     Use a clear name that describes the process people will recognize later.
@@ -85,7 +87,7 @@ Useful step instructions can define:
 - evidence or information to collect
 - quality standards
 - relevant [Skills](/skills/index)
-- tools or [Connections](/connections/index) to use when available
+- tools or [Integrations](/connect/index) to use when available
 - conditions that should stop or change the work
 - what the step should return
 
@@ -101,13 +103,13 @@ Workflow inputs are useful when the process stays stable but each run has differ
 
 The current Workflow model supports:
 
-| Input type  | Example                      |
-| ----------- | ---------------------------- |
-| **Text**    | Company name                 |
-| **URL**     | Company website              |
-| **Number**  | Maximum number of candidates |
-| **Choice**  | Report type                  |
-| **Boolean** | Include competitor research? |
+| Input type   | Example                      |
+| ------------ | ---------------------------- |
+| **Text**     | Company name                 |
+| **Link**     | Company website              |
+| **Number**   | Maximum number of candidates |
+| **Choice**   | Report type                  |
+| **Yes / no** | Include competitor research? |
 
 Inputs can be required and can include labels, help text, placeholders, and options where relevant.
 
@@ -129,9 +131,9 @@ For example:
 
 This keeps the process structure separate from reusable task expertise.
 
-## Use Connections when live systems matter
+## Use Integrations when live systems matter
 
-A Workflow can instruct Giga to use approved [Connections](/connections/index) during a step.
+A Workflow can instruct Giga to use approved [Integrations](/connect/index) during a step.
 
 For example:
 
@@ -139,9 +141,9 @@ For example:
 - search a support platform
 - query an approved database
 - use an MCP tool
-- interact with a website through the browser when that is the appropriate connection path
+- interact with a website through a Cloud Browser Session when that is the appropriate path
 
-The Workflow should describe the needed outcome. The live environment determines which Connection and tools are actually available.
+The Workflow should describe the needed outcome. The live environment determines which Integration and tools are actually available.
 
 ## Conditions belong in plain-language instructions
 
@@ -174,10 +176,6 @@ Imagine creating a **Candidate Interview Brief** Workflow.
 | **Prepare the brief**         | Return a concise interview brief with evidence and recommended areas to probe        |
 
 Runtime inputs might include the candidate name, role, and a link to the source material.
-
-> **Image placeholder**
->
-> Workflow builder showing Name + Description + Runtime Inputs + 3 ordered plain-language steps.
 
 ## After creation
 

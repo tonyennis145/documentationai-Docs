@@ -23,7 +23,7 @@ Examples include:
 A Track can keep the durable background, decisions, files, and linked Chats around the initiative.
 
 <Columns cols={2}>
-  <Card title="Context Notes" href="/tracks/context-notes" icon="file-text">
+  <Card title="System Instructions" href="/library/context-cards" icon="file-text">
     Keep durable audience context, terminology, positioning constraints, and standing instructions.
   </Card>
   <Card title="Memory" href="/memory/index" icon="activity">
@@ -56,16 +56,16 @@ The Agent can carry:
 - marketing-specific instructions
 - durable context
 - approved Skills
-- permitted Connections
+- permitted Integrations
 - a consistent way of structuring output
 
-For example, a shared Marketing Agent could apply the team’s content-review Skill and use approved research or analytics Connections when they are available.
+For example, a shared Marketing Agent could apply the team’s content-review Skill and use approved research or analytics Integrations when they are available.
 
 The live Group and permission model still determines what that Agent can access.
 
-## Work with current information through Connections
+## Work with current information through Integrations
 
-[Connections](/connections/index) can give Giga access to approved marketing systems and data when the workspace supports them.
+[Integrations](/connect/index) can give Giga access to approved marketing systems and data when the workspace supports them.
 
 Depending on the live setup, Giga can use connected information alongside Company Brain and Track context for work such as:
 
@@ -75,11 +75,11 @@ Depending on the live setup, Giga can use connected information alongside Compan
 - reporting
 - checking current information before a review
 
-The exact providers, records, and actions available depend on the current Connection and external-service permissions.
+The exact providers, records, and actions available depend on the current Integration and external-service permissions.
 
 > **Use live data when the work depends on current performance**
 >
-> Giga should resolve current information from approved Connections rather than treating an old summary or static file as automatically current.
+> Giga should resolve current information from approved Integrations rather than treating an old summary or static file as automatically current.
 
 ## Standardize campaign work with Workflows
 
@@ -112,7 +112,7 @@ Use the right layer for each:
 
 | Information | Best home |
 | --- | --- |
-| Stable audience or positioning background | [Context Note](/tracks/context-notes) |
+| Stable audience or positioning background | [System Instructions](/library/context-cards) |
 | Meaningful decisions and developments | [Memory](/tracks/memory) |
 | Current direction and unresolved questions | [Brain](/memory/index): decisions and requests |
 | Drafts, reports, briefs, and deliverables | [Files](/tracks/files) |
@@ -138,7 +138,7 @@ The Pulse can target an Agent, a Track, or run without a target.
 
 Giga can help research, draft, revise, and prepare marketing work.
 
-When a live Connection supports an outward-facing action, such as posting or sending content, the applicable confirmation rules still apply.
+When a live Integration supports an outward-facing action, such as posting or sending content, the applicable confirmation rules still apply.
 
 A useful pattern is:
 
@@ -161,16 +161,12 @@ Imagine a marketing team running a product launch.
   <Card title="Brand Review Skill" href="/skills/index" icon="sparkles">
     Applies the same review standard across briefs and drafts.
   </Card>
-  <Card title="Connections" href="/connections/index" icon="plug">
+  <Card title="Integrations" href="/connect/index" icon="plug">
     Bring in current approved information when the live workspace supports it.
   </Card>
 </Columns>
 
 A Pulse can add a recurring campaign review when the team wants scheduled monitoring.
-
-> **Image placeholder**
->
-> Marketing launch diagram showing Launch Track + Marketing Agent + Brand Review Skill + approved Connections, with an optional recurring Pulse.
 
 ## Related pages
 
@@ -179,5 +175,5 @@ A Pulse can add a recurring campaign review when the team wants scheduled monito
 - [Introduction to Agents](/agents/index)
 - [Introduction to Skills](/skills/index)
 - [Introduction to Workflows](/workflows/index)
-- [Introduction to Connections](/connections/index)
+- [Introduction to Integrations](/connect/index)
 - [Introduction to Pulses](/pulses/index)

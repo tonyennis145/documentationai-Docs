@@ -35,43 +35,28 @@
             ]
           },
           {
-            "group": "Products",
+            "group": "Cloud",
+            "icon": "cloud",
             "pages": [
               {
-                "group": "Giga Context",
-                "icon": "brain",
-                "path": "memory/index",
+                "group": "Organize",
+                "icon": "folder",
                 "expandable": true,
                 "pages": [
                   {
-                    "title": "Track memory",
-                    "path": "tracks/memory",
-                    "icon": "brain"
+                    "title": "Groups",
+                    "path": "groups/index",
+                    "icon": "users"
                   },
                   {
-                    "title": "References",
-                    "path": "library/bookmarks",
-                    "icon": "link"
-                  },
-                  {
-                    "title": "Skills",
-                    "path": "skills/index",
-                    "icon": "sparkles"
-                  },
-                  {
-                    "title": "Context Cards",
-                    "path": "library/context-cards",
-                    "icon": "id-card"
-                  },
-                  {
-                    "title": "Saved Prompts",
-                    "path": "library/saved-prompts",
-                    "icon": "bookmark"
+                    "title": "Tracks",
+                    "path": "tracks/index",
+                    "icon": "folder"
                   }
                 ]
               },
               {
-                "group": "Giga Connect",
+                "group": "Integrations",
                 "icon": "link-2",
                 "path": "connect/index",
                 "expandable": true,
@@ -85,7 +70,7 @@
                     "path": "connect/sharing"
                   },
                   {
-                    "title": "The Vault",
+                    "title": "Credentials in Cloud",
                     "path": "connect/vault"
                   },
                   {
@@ -99,20 +84,42 @@
                 ]
               },
               {
-                "group": "Giga Workspace",
-                "icon": "briefcase",
-                "path": "workspace/index",
+                "group": "Shared Resources",
+                "icon": "library",
+                "path": "library/index",
                 "expandable": true,
                 "pages": [
                   {
-                    "title": "Chat",
-                    "path": "chats/index",
-                    "icon": "message-square"
+                    "title": "Skills",
+                    "path": "skills/index",
+                    "icon": "sparkles"
                   },
                   {
-                    "title": "Tracks",
-                    "path": "tracks/index",
-                    "icon": "folder"
+                    "title": "References",
+                    "path": "library/bookmarks",
+                    "icon": "bookmark"
+                  },
+                  {
+                    "title": "System Instructions",
+                    "path": "library/context-cards",
+                    "icon": "layers"
+                  }
+                ]
+              },
+              {
+                "group": "Build & Automate",
+                "icon": "workflow",
+                "expandable": true,
+                "pages": [
+                  {
+                    "title": "Agents",
+                    "path": "agents/index",
+                    "icon": "bot"
+                  },
+                  {
+                    "title": "Workflows",
+                    "path": "workflows/index",
+                    "icon": "workflow"
                   },
                   {
                     "title": "Pulses",
@@ -120,50 +127,66 @@
                     "icon": "activity"
                   },
                   {
-                    "title": "Workflows",
-                    "path": "workflows/index",
-                    "icon": "workflow"
-                  }
-                ]
-              },
-              {
-                "group": "Giga Apps",
-                "icon": "layout-grid",
-                "path": "apps/index",
-                "expandable": true,
-                "pages": [
-                  {
-                    "title": "Mini Apps",
-                    "path": "apps/mini-apps",
-                    "icon": "app-window"
-                  },
-                  {
-                    "title": "Building an app",
-                    "path": "apps/building",
-                    "icon": "hammer"
-                  },
-                  {
-                    "title": "Data for your apps",
-                    "path": "apps/data",
-                    "icon": "database"
-                  },
-                  {
-                    "title": "Datastores",
+                    "title": "Data Stores",
                     "path": "library/datastores",
                     "icon": "database"
                   },
                   {
-                    "title": "Sharing apps",
-                    "path": "apps/sharing",
-                    "icon": "users"
+                    "group": "Apps",
+                    "icon": "layout-grid",
+                    "path": "apps/index",
+                    "expandable": true,
+                    "pages": [
+                      {
+                        "title": "What apps are",
+                        "path": "apps/mini-apps"
+                      },
+                      {
+                        "title": "Building an app",
+                        "path": "apps/building"
+                      },
+                      {
+                        "title": "Data for your apps",
+                        "path": "apps/data"
+                      },
+                      {
+                        "title": "Sharing apps",
+                        "path": "apps/sharing"
+                      }
+                    ]
                   }
                 ]
               }
             ]
           },
           {
+            "group": "Brain",
+            "icon": "brain",
+            "pages": [
+              {
+                "title": "Brain",
+                "path": "memory/index",
+                "icon": "brain"
+              },
+              {
+                "title": "How Brain works",
+                "path": "memory/how-it-works"
+              },
+              {
+                "title": "Track memory",
+                "path": "tracks/memory",
+                "icon": "folder"
+              }
+            ]
+          },
+          {
             "group": "Surfaces",
             "pages": [
+              {
+                "title": "Overview",
+                "path": "use-giga-anywhere/index",
+                "icon": "globe"
+              },
               {
                 "title": "Giga Chat",
                 "path": "chats/index",
@@ -175,8 +198,8 @@
                 "icon": "hash"
               },
               {
-                "title": "Giga for Teams",
-                "path": "coworker/teams",
+                "title": "Microsoft Teams",
+                "path": "use-giga-anywhere/microsoft-teams",
                 "icon": "users"
               },
               {
@@ -260,7 +283,7 @@
                     "path": "tracks/creating-and-organizing"
                   },
                   {
-                    "title": "Context Notes",
+                    "title": "Track brief",
                     "path": "tracks/context-notes"
                   },
                   {
@@ -487,16 +510,6 @@
                 "icon": "book-open"
               }
             ]
-          },
-          {
-            "group": "Other",
-            "pages": [
-              {
-                "title": "Cloud Computer",
-                "path": "computer/index",
-                "icon": "monitor"
-              }
-            ]
           }
         ]
       }
@@ -616,6 +629,26 @@
     {
       "source": "/coworker/index",
       "destination": "/use-giga-anywhere/slack",
+      "statusCode": 301
+    },
+    {
+      "source": "/coworker/teams",
+      "destination": "/use-giga-anywhere/microsoft-teams",
+      "statusCode": 301
+    },
+    {
+      "source": "/computer/index",
+      "destination": "/introduction",
+      "statusCode": 301
+    },
+    {
+      "source": "/kits/index",
+      "destination": "/introduction",
+      "statusCode": 301
+    },
+    {
+      "source": "/library/documents",
+      "destination": "/library/index",
       "statusCode": 301
     }
   ],

@@ -2,44 +2,47 @@
 title: Giga MCP
 description: Connect to Giga from whatever tools you use
 ---
-
-**Giga MCP** brings your company's Giga into the AI tools your team already uses: Claude, ChatGPT, and any other app that supports MCP (Model Context Protocol). Connect once, and those tools can use your connected apps, your Library and your company's memory, with each person's own Giga permissions.
+**Giga MCP** brings your company's Giga into the AI tools your team already uses: Claude, ChatGPT, and any other app that supports MCP (Model Context Protocol). Connect once, and those tools can use your integrations, your Shared Resources and your company's memory, with each person's own Giga permissions.
 
 ## Connect
 
 Every tool connects to the same address:
 
-```
+```typescript
 https://app.getgiga.com/mcp
 ```
 
 Sign-in uses Giga's normal OAuth flow, so there's no key to copy. You approve access once, and the tool then acts as you, with exactly your Giga access.
 
-<Columns cols={2}>
-  <Card title="Claude" href="/use-giga-anywhere/claude" icon="sparkles">
+<Columns cols="2">
+  <Card title="Claude" href="/use-giga-anywhere/claude" icon="sparkles" horizontal="false">
     Add Giga as a custom connector, for yourself or your whole organization.
   </Card>
-  <Card title="ChatGPT" href="/use-giga-anywhere/chatgpt" icon="message-circle">
+
+  <Card title="ChatGPT" href="/use-giga-anywhere/chatgpt" icon="message-circle" horizontal="false">
     Add Giga as a custom app in Developer Mode.
   </Card>
 </Columns>
 
-In the Giga web app, the **Connect** section shows the address and step-by-step setup for Slack, Claude and ChatGPT.
+In the Giga web app, **Use Giga in…** in the profile menu shows the address and step-by-step setup for Slack, Claude and ChatGPT.
 
 ## What you can do through Giga MCP
 
-<Columns cols={2}>
-  <Card title="Use your connected tools" href="/connect/index" icon="plug">
+<Columns cols="2">
+  <Card title="Use your connected tools" href="/connect/index" icon="plug" horizontal="false">
     Everything connected in Giga (your CRM, docs, databases, MCP servers) is available without connecting each one again. Giga finds the right tool for the job from your whole catalog.
   </Card>
-  <Card title="Use and edit your Library" href="/library/index" icon="library">
-    Follow a Skill, pull in a Context Card, run a Saved Prompt, or update a Skill. Changes are saved back for everyone.
+
+  <Card title="Use and edit your Shared Resources" href="/library/index" icon="library" horizontal="false">
+    Follow a Skill, pull in System Instructions, or update a Skill. Changes are saved back for everyone.
   </Card>
-  <Card title="Remember and recall" href="/memory/index" icon="brain">
+
+  <Card title="Remember and recall" href="/memory/index" icon="brain" horizontal="false">
     Ask what's been decided or who's on what, and save what matters with "save this".
   </Card>
-  <Card title="Work with Tracks and more" href="/tracks/index" icon="folder">
-    Read and update Tracks, run Workflows, manage Pulses, post to Slack, and open Mini Apps, browser sessions and question cards right in the chat.
+
+  <Card title="Work with Tracks and more" href="/tracks/index" icon="folder" horizontal="false">
+    Read and update Tracks, run Workflows, manage Pulses, post to Slack, and open Apps, cloud browser sessions and question cards right in the chat.
   </Card>
 </Columns>
 
@@ -48,13 +51,15 @@ In the Giga web app, the **Connect** section shows the address and step-by-step 
 Giga saves memory when you ask, not after every message.
 
 <Steps>
-  <Step title="Say what to keep" icon="message-square">
+  <Step title="Say what to keep" icon="message-square" title-type="p">
     "Save this", "remember that", "@Giga save the decisions from this chat".
   </Step>
-  <Step title="Choose the Track" icon="folder">
+
+  <Step title="Choose the Track" icon="folder" title-type="p">
     Giga shows a card asking which Track it belongs to: the conversation's Track first, then the most likely Tracks, plus **Keep it private**. Saving to a Track shares it with everyone on that Track, so Giga never picks for you.
   </Step>
-  <Step title="Giga saves the key points" icon="check-circle">
+
+  <Step title="Giga saves the key points" icon="check-circle" title-type="p">
     Giga sends only the specific statements you want kept, word for word with who said each one, never the whole conversation. It sorts them into decisions, commitments, ideas and so on, links them to what it already knows, and tells you what changed.
   </Step>
 </Steps>
@@ -65,7 +70,7 @@ To pick up work, ask Giga to catch you up on a Track. It reads that Track's memo
 
 ## Permissions
 
-Giga MCP never widens anyone's access. Every request runs as the signed-in person, using only what they can use in Giga: their Tracks and Groups, their connections and those shared with them, and their Library items.
+Giga MCP never widens anyone's access. Every request runs as the signed-in person, using only what they can use in Giga: their Tracks and Groups, their integrations and those shared with them, and their Shared Resources.
 
 Access is grouped into scopes, such as memory, skills, workflows, pulses and Slack. You see what you're approving when you connect.
 

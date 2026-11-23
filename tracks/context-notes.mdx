@@ -1,16 +1,20 @@
 ---
-title: Context Notes
+title: Track brief
 description: >-
-  Learn how Context Notes give a Track durable background, instructions, and
-  handoff context that Giga can reuse over time.
+  Learn how a Track brief gives a Track durable background and instructions that
+  every agent working in the Track can reuse over time.
 ---
-A **Context Note** gives a [Track](/tracks/index) durable background that should remain useful across multiple [Chats](/chats/index).
+A **Track brief** gives a [Track](/tracks/index) durable background that should remain useful across multiple [Chats](/chats/index).
+
+You write it in the Track's **Settings** tab. The brief is shown to any agent that works within the Track, to explain what the Track is about and how to work within it.
 
 Use it for the things Giga and your teammates should **know before they start working**: what the Track is about, important constraints, standing instructions, terminology, or a handoff from someone who already understands the work.
 
-## What belongs in a Context Note?
+For standing instructions you want to share more widely, with just you, a Group, a Track or the whole workspace, use [System Instructions](/library/context-cards).
 
-A good Context Note captures information that is **stable enough to reuse**.
+## What belongs in a Track brief?
+
+A good Track brief captures information that is **stable enough to reuse**.
 
 <Columns cols="2">
   <Card title="Background" href="/tracks/context-notes" icon="info" horizontal="false">
@@ -32,26 +36,26 @@ A good Context Note captures information that is **stable enough to reuse**.
 
 > **Think “what should still be true next time?”**
 >
-> Context Notes work best for durable background. Fast-changing progress belongs in [Memory](/tracks/memory), while authored work product belongs in [Files](/tracks/files).
+> The Track brief works best for durable background. Fast-changing progress belongs in [Memory](/tracks/memory), while authored work product belongs in [Files](/tracks/files).
 
-## Context Notes vs other Track information
+## The Track brief vs other Track information
 
 Giga separates standing context from the things that change as work happens.
 
 | If you want to keep…                                           | Best place               |
 | -------------------------------------------------------------- | ------------------------ |
-| Background, definitions, constraints, or standing instructions | **Context Note**         |
+| Background, definitions, constraints, or standing instructions | **Track brief**          |
 | Progress, decisions, changes, or things learned over time      | [Memory](/tracks/memory) |
 | Reports, drafts, code, and other outputs                       | [Files](/tracks/files)   |
 | The active back-and-forth where work gets done                 | [Chats](/chats/index)    |
 
 This keeps the Track useful without turning one giant note into a dumping ground for every detail.
 
-## Why Context Notes matter
+## Why the Track brief matters
 
 Without durable context, every new Chat starts closer to a blank slate.
 
-A Context Note gives Giga a stable point of reference, which can help it:
+A Track brief gives Giga a stable point of reference, which can help it:
 
 - understand the purpose of the Track
 - avoid asking for information that has already been provided
@@ -60,13 +64,13 @@ A Context Note gives Giga a stable point of reference, which can help it:
 - pick up work with less repeated explanation
 - make handoffs between people smoother
 
-A Context Note is especially useful when several people work inside the same Track or when someone is joining work that already has history.
+A Track brief is especially useful when several people work inside the same Track or when someone is joining work that already has history.
 
 ## Example: a client Track
 
 Imagine a Track called **Acme rollout**.
 
-Its Context Note might contain:
+Its Track brief might contain:
 
 > **Acme rollout**
 >
@@ -78,14 +82,14 @@ Its Context Note might contain:
 
 That information is useful across many Chats, so it belongs in the Track’s standing context rather than being rewritten every time.
 
-## Example: an onboarding handoff
+## Example: a handoff
 
-A Context Note can also act as a handoff.
+A Track brief can also act as a handoff.
 
-Someone inviting a teammate into Giga could leave a short note explaining:
+Someone handing the work to a teammate could add a short section explaining:
 
-- what they are responsible for
-- which part of the business they are joining
+- what the work is responsible for
+- which part of the business it belongs to
 - the most useful source or system to connect first
 - anything important Giga should already know
 
@@ -93,21 +97,22 @@ That lets a new Chat begin with relevant context instead of asking the person to
 
 > **Keep handoffs useful and selective**
 >
-> Context should make the next interaction better. Avoid dumping an entire history into the note when a few durable facts will do.
+> Context should make the next interaction better. Avoid dumping an entire history into the brief when a few durable facts will do.
 
-## What should stay out of a Context Note?
+## What should stay out of a Track brief?
 
 Some information has a better home elsewhere.
 
-- **Passwords, API keys, tokens, and other secrets** belong in Giga’s secure credential system, never in a Context Note.
+- **Passwords, API keys, tokens, and other secrets** belong in **Cloud → Integrations**, never in a Track brief.
 - **Meaningful progress and changes** belong in [Memory](/tracks/memory).
 - **Large reports or working documents** belong in [Files](/tracks/files).
 - **Structured records that will grow over time** are usually better kept in a database.
 - **One-off instructions for a single Chat** can stay in that Chat unless they should become a standing rule.
+- **Instructions that apply beyond this Track** belong in [System Instructions](/library/context-cards).
 
-## Updating a Context Note
+## Updating the Track brief
 
-Context changes sometimes. When it does, update the note so it reflects the standing truth of the Track.
+Context changes sometimes. When it does, update the brief in the Track's **Settings** tab so it reflects the standing truth of the Track.
 
 A good edit usually does one of three things:
 
@@ -115,30 +120,25 @@ A good edit usually does one of three things:
 2. changes a standing instruction or constraint
 3. removes context that is no longer true
 
-Giga should read the existing Track context before changing it, so useful background is amended rather than accidentally overwritten.
+Giga should read the existing Track brief before changing it, so useful background is amended rather than accidentally overwritten.
 
-> **Context Notes are deliberate**
+> **The Track brief is deliberate**
 >
-> They are the curated background you choose to keep with the Track. Automatic or event-like memory is handled separately.
+> It is the curated background you choose to keep with the Track. Automatic or event-like memory is handled separately.
 
 ## Permissions
 
-A Context Note belongs to its Track, so the Track’s access boundary matters.
+The Track brief belongs to its Track, so the Track’s access boundary matters.
 
-Because a Track lives inside a [Group](/groups/index), the Group helps determine who can access the Track and its context. Put sensitive or personal work in the appropriate private Group rather than creating context in a broadly shared place.
+A Track shared with a [Group](/groups/index) is visible to everyone in that Group, brief included. Keep sensitive or personal work in a Track set to **Only me** rather than writing it into a broadly shared Track.
 
 [Learn about Track sharing and permissions →](/tracks/sharing-and-permissions)
-
-## Image placeholder
-
-> **Image placeholder**
->
-> Show a Track with a Context Note open beside a Chat, illustrating how durable background carries into the work.
 
 ## Related pages
 
 - [Introduction to Tracks](/tracks/index)
 - [Creating and organizing Tracks](/tracks/creating-and-organizing)
+- [System Instructions](/library/context-cards)
 - [Memory](/tracks/memory)
 - [Files in Tracks](/tracks/files)
 - [Using context in a Chat](/chats/context)

@@ -3,11 +3,11 @@ title: Giga Workspace
 description: A complete AI workspace for your team, with your company's tools, memory and context built in.
 ---
 
-**Giga Workspace** is the Giga web app. Anything you'd normally do in ChatGPT or Claude, you can do right here: ask questions, research, write, analyze files and get work done. The difference is that Giga Workspace already has your company's connected tools, shared library and memory built in, so every conversation starts with the context your team needs.
+**Giga Workspace** is the Giga web app. Anything you'd normally do in ChatGPT or Claude, you can do right here: ask questions, research, write, analyze files and get work done. The difference is that Giga Workspace already has your company's integrations, Shared Resources and memory built in, so every conversation starts with the context your team needs.
 
 ## Use it as much or as little as you like
 
-Giga Workspace is there if you want it, but you don't have to switch. If your team prefers to stay in ChatGPT, Claude or Slack, they can use Giga from those tools instead, with the same connections, library and memory underneath.
+Giga Workspace is there if you want it, but you don't have to switch. If your team prefers to stay in ChatGPT, Claude or Slack, they can use Giga from those tools instead, with the same integrations, Shared Resources and memory underneath.
 
 <Columns cols={2}>
   <Card title="Work in the Giga web app" icon="monitor">
@@ -24,33 +24,42 @@ The rail down the left side of the app takes you to each part of Giga:
 
 | Section | What's there |
 | --- | --- |
-| **Home** | Start a chat, and pick up recent chats and Tracks |
-| **Workspace** | Your team's work: Tracks, Assistants, Skills, Workflows, Pulses, Apps, Team members and Groups |
-| **Vault** | The keys, sign-ins and logins behind your connections. [Learn more →](/connect/vault) |
-| **Library** | Skills, Context Cards, Saved Prompts, Data Stores and Bookmarks. [Learn more →](/library/index) |
+| **Home** | Get started with Giga, and pick up recent chats and Tracks |
+| **Cloud** | Your team's work and resources: Groups and Tracks, Integrations, Shared Resources, and Agents, Workflows, Pulses, Data Stores and Apps. See below |
+| **Work** | Chat with Giga. Only visible to super admins for now. [Learn more →](/chats/index) |
 | **Brain** | Your company's memory, and the **To file** inbox. [Learn more →](/memory/index) |
-| **Apps** | Your workspace's mini apps. [Learn more →](/apps/index) |
-| **Integrations** | Connect your tools, see what's connected, and Instant tools. [Learn more →](/connect/index) |
-| **Activity & usage** | Credits and spending, your runs, and credential activity. [Learn more →](/teams-and-admin/activity-and-usage) |
-| **Settings** | Your account and workspace settings. [Learn more →](/teams-and-admin/workspace-settings) |
-| **Connect** | Bring Giga into Slack, Claude and ChatGPT. [Learn more →](/mcp/index) |
+| **Settings** | Your account and workspace settings, including **Activity & usage** and, for admins, **Model Providers**. [Learn more →](/teams-and-admin/workspace-settings) |
+
+To bring Giga into Slack, Claude and ChatGPT, open the profile menu and choose **Use Giga in…**. [Learn more →](/mcp/index)
 
 Press **Cmd+K** (or **Ctrl+K**) anywhere to search.
 
-## What's in the Workspace section
+## What's in Cloud
+
+The Cloud sidebar is split into four sections:
+
+| Section | What's there |
+| --- | --- |
+| **Organize** | [Groups](/groups/index) and [Tracks](/tracks/index) |
+| **Integrations** | Direct (OAuth & MCP), API Keys, Logins, Databases and Cloud Browser Sessions. [Learn more →](/connect/vault) |
+| **Shared Resources** | Skills, References and System Instructions. [Learn more →](/library/index) |
+| **Build & Automate** | Agents, Workflows, Pulses, Data Stores and Apps |
 
 <Columns cols={2}>
   <Card title="Tracks" href="/tracks/index" icon="folder">
     Keep each project's chats, memory and context together in one place.
   </Card>
-  <Card title="Assistants" href="/agents/index" icon="bot">
-    Named, reusable AI roles with their own instructions, Skills and connections.
+  <Card title="Groups" href="/groups/index" icon="users">
+    The people you share skills, credentials and tracks with.
+  </Card>
+  <Card title="Agents" href="/agents/index" icon="bot">
+    Named, reusable AI roles with their own instructions, Skills and integrations. Super admins only for now.
   </Card>
   <Card title="Skills" href="/skills/index" icon="sparkles">
     Reusable instructions for how your team does things.
   </Card>
   <Card title="Workflows" href="/workflows/index" icon="workflow">
-    Multi-step processes you can run again and again.
+    Multi-step processes you can run again and again. Super admins only for now.
   </Card>
   <Card title="Pulses" href="/pulses/index" icon="activity">
     Run recurring work on a schedule, so it happens automatically.
@@ -58,11 +67,8 @@ Press **Cmd+K** (or **Ctrl+K**) anywhere to search.
   <Card title="Apps" href="/apps/index" icon="layout-grid">
     Small apps your team has built with Giga.
   </Card>
-  <Card title="Team members and Groups" href="/teams-and-admin/members-and-roles" icon="users">
-    Who's in the workspace, their roles, and which Groups they're in.
-  </Card>
-  <Card title="Chat" href="/chats/index" icon="message-square">
-    Ask questions, research, write and work through tasks with Giga.
+  <Card title="Data Stores" href="/library/datastores" icon="database">
+    Live data your apps and agents share.
   </Card>
 </Columns>
 

@@ -1,15 +1,14 @@
 ---
 title: Workflows
-description: Learn how reusable Workflows turn repeatable multi-step processes into ordered steps Giga can run again.
+description: >-
+  Learn how reusable Workflows turn repeatable multi-step processes into ordered
+  steps Giga can run again.
 ---
+Workflows are currently available to super admins only.
 
-A **Workflow** is a reusable multi-step process in Giga.
+A **Workflow** is a reusable multi-step process in Giga. You'll find Workflows under **Cloud → Build & Automate → Workflows**.
 
 Use a Workflow when the same process should be saved, standardized, and run again instead of rebuilding the sequence in every [Chat](/chats/index).
-
-> **Video placeholder**
->
-> Skills & Workflows overview video.
 
 ## What a Workflow contains
 
@@ -34,32 +33,34 @@ Each step describes a meaningful stage of the process.
 Imagine a Workflow for preparing outbound account research.
 
 <Steps>
-  <Step title="Research the account" icon="search">
+  <Step title="Research the account" icon="search" title-type="p">
     Gather the relevant company facts and evidence.
   </Step>
-  <Step title="Identify useful signals" icon="filter">
+
+  <Step title="Identify useful signals" icon="filter" title-type="p">
     Pull out the information that matters for the sales team.
   </Step>
-  <Step title="Prepare the brief" icon="file-text">
+
+  <Step title="Prepare the brief" icon="file-text" title-type="p">
     Return the findings in the team’s expected format.
   </Step>
 </Steps>
 
-Each step gives Giga room to use the tools, [Connections](/connections/index), and judgment available in the live environment.
+Each step gives Giga room to use the tools, [Integrations](/connect/index), and judgment available in the live environment.
 
 ## Workflow vs Skill vs Agent vs Pulse
 
-| Primitive | Best fit |
-| --- | --- |
-| **Workflow** | A reusable ordered multi-step process |
-| **Skill** | A reusable method for one kind of task |
-| **Agent** | A named reusable AI role |
-| **Pulse** | Recurring scheduled work |
-| **Chat** | Direct ad hoc work |
+| Primitive    | Best fit                               |
+| ------------ | -------------------------------------- |
+| **Workflow** | A reusable ordered multi-step process  |
+| **Skill**    | A reusable method for one kind of task |
+| **Agent**    | A named reusable AI role               |
+| **Pulse**    | Recurring scheduled work               |
+| **Chat**     | Direct ad hoc work                     |
 
 These primitives can work together.
 
-For example, a Workflow may apply an [Account Research Skill](/skills/index) inside one step, use an approved Connection to retrieve live information, and be run with an [Agent](/agents/index) when the current product surface supports that relationship.
+For example, a Workflow may apply an [Account Research Skill](/skills/index) inside one step, use an approved Integration to retrieve live information, and be run with an [Agent](/agents/index) when the current product surface supports that relationship.
 
 ## Workflows and Skills
 
@@ -69,17 +70,17 @@ A Workflow stores **which stages happen, and in what order**.
 
 For example:
 
-| Workflow step | Reusable method |
-| --- | --- |
+| Workflow step        | Reusable method        |
+| -------------------- | ---------------------- |
 | Research the account | Account Research Skill |
-| Draft the message | Sales Outreach Skill |
-| Review the result | Brand Review Skill |
+| Draft the message    | Sales Outreach Skill   |
+| Review the result    | Brand Review Skill     |
 
 The Workflow provides the process structure. Skills can provide reusable task methods within that process when available.
 
-## Workflows and Connections
+## Workflows and Integrations
 
-Workflow steps can instruct Giga to use relevant [Connections](/connections/index) and tools.
+Workflow steps can instruct Giga to use relevant [Integrations](/connect/index) and tools.
 
 For example, a Workflow might ask Giga to:
 
@@ -108,10 +109,10 @@ A Workflow can ask for structured inputs when it runs.
 The current Workflow tools support inputs such as:
 
 - text
-- URL
+- link
 - number
 - choice
-- boolean
+- yes / no
 
 This is useful when the process stays the same but the subject changes each time.
 
@@ -158,26 +159,26 @@ For one-off work, a [Chat](/chats/index) may be enough.
 
 For scheduled recurring work, use a [Pulse](/pulses/index) for the timing.
 
-> **Image placeholder**
->
-> Diagram showing Inputs → ordered Workflow steps → Skills / Connections / tools → Result.
-
 ## Explore Workflows
 
-<Columns cols={2}>
-  <Card title="Creating a Workflow" href="/workflows/creating-a-workflow" icon="plus-circle">
+<Columns cols="2">
+  <Card title="Creating a Workflow" href="/workflows/creating-a-workflow" icon="plus-circle" horizontal="false">
     Turn a repeatable process into a saved Workflow.
   </Card>
-  <Card title="Workflow steps" href="/workflows/steps" icon="list-checks">
+
+  <Card title="Workflow steps" href="/workflows/steps" icon="list-checks" horizontal="false">
     Write useful steps without over-specifying every tool action.
   </Card>
-  <Card title="Running a Workflow" href="/workflows/running" icon="play">
+
+  <Card title="Running a Workflow" href="/workflows/running" icon="play" horizontal="false">
     Understand how a Workflow moves through its ordered steps.
   </Card>
-  <Card title="Editing and reusing" href="/workflows/editing-and-reusing" icon="refresh-cw">
+
+  <Card title="Editing and reusing" href="/workflows/editing-and-reusing" icon="refresh-cw" horizontal="false">
     Update a Workflow as the process changes.
   </Card>
-  <Card title="Examples" href="/workflows/examples" icon="book-open">
+
+  <Card title="Examples" href="/workflows/examples" icon="book-open" horizontal="false">
     See practical Workflow patterns.
   </Card>
 </Columns>

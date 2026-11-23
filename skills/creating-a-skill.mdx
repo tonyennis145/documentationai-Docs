@@ -2,7 +2,6 @@
 title: Creating a Skill
 description: Learn how to turn a repeatable task method into a reusable Skill in Giga.
 ---
-
 Create a **Skill** when you have a repeatable way of doing a specific task and want Giga to reuse that method later.
 
 A good Skill is focused, clear, and portable. It captures the instructions and supporting context for one kind of task without turning into a full [Agent](/agents/index) or [Workflow](/workflows/index).
@@ -26,20 +25,26 @@ Good examples include:
 
 ## Create the Skill
 
+Skills live under **Cloud → Shared Resources → Skills**.
+
 <Steps>
-  <Step title="Name the Skill" icon="sparkles">
+  <Step title="Name the Skill" icon="sparkles" title-type="p">
     Use a clear name that describes the task or method people will recognize later.
   </Step>
-  <Step title="Describe what it does" icon="file-text">
+
+  <Step title="Describe what it does" icon="file-text" title-type="p">
     Add a short description that explains when the Skill is useful.
   </Step>
-  <Step title="Write the core instructions" icon="list-checks">
+
+  <Step title="Write the core instructions" icon="list-checks" title-type="p">
     Capture the repeatable method, rules, standards, and expected output.
   </Step>
-  <Step title="Add supporting files when useful" icon="folder">
+
+  <Step title="Add supporting files when useful" icon="folder" title-type="p">
     Include templates, examples, references, or helper files that genuinely support the task.
   </Step>
-  <Step title="Choose whether to share it" icon="users">
+
+  <Step title="Choose whether to share it" icon="users" title-type="p">
     Keep the Skill owner-only or share it into one or more Groups when the method should be reusable by a team.
   </Step>
 </Steps>
@@ -54,11 +59,11 @@ Supporting files can sit alongside it when the task benefits from extra material
 
 For example:
 
-| File | Purpose |
-| --- | --- |
-| **SKILL.md** | Main Skill definition and instructions |
-| **template.md** | Reusable output template |
-| **examples.md** | Examples of strong results |
+| File             | Purpose                                     |
+| ---------------- | ------------------------------------------- |
+| **SKILL.md**     | Main Skill definition and instructions      |
+| **template.md**  | Reusable output template                    |
+| **examples.md**  | Examples of strong results                  |
 | **reference.md** | Supporting task-specific reference material |
 
 The exact supporting files depend on the Skill.
@@ -87,11 +92,12 @@ Use a Skill for a reusable task method.
 
 For example:
 
-<Columns cols={2}>
-  <Card title="Sales Research Agent" href="/agents/index" icon="user">
+<Columns cols="2">
+  <Card title="Sales Research Agent" href="/agents/index" icon="user" horizontal="false">
     Defines the broader role, responsibilities, context, and access.
   </Card>
-  <Card title="Account Research Skill" href="/skills/index" icon="sparkles">
+
+  <Card title="Account Research Skill" href="/skills/index" icon="sparkles" horizontal="false">
     Defines the repeatable method for researching one account.
   </Card>
 </Columns>
@@ -114,7 +120,7 @@ If the method is personal, leave it unshared.
 
 If a team should use the same method, share it into the relevant Group.
 
-You can also change the sharing later.
+You can also change the sharing later, or link the Skill to the [Tracks](/tracks/index) it supports.
 
 [Learn about Sharing Skills →](/skills/sharing)
 
@@ -128,7 +134,7 @@ The live update behavior replaces the full Skill file set when files are supplie
 >
 > Editing a Skill without first reading its current files can accidentally drop supporting material.
 
-Only the Skill owner can update the Skill in the current model.
+Only the Skill owner or a workspace admin can update the Skill.
 
 ## A simple example
 
@@ -141,10 +147,6 @@ You create an **Account Research Skill** with:
 - **examples.md** showing what a strong result looks like
 
 The Skill can then be reused wherever it is available instead of rebuilding that method from scratch.
-
-> **Image placeholder**
->
-> Show the Skill creation flow: Task → SKILL.md → optional supporting files → private or shared Group access.
 
 ## Related pages
 

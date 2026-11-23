@@ -16,11 +16,11 @@ You can use it to:
 - ask questions
 - work through tasks
 - create or edit supported work product
-- use [Connections](/connect/index)
+- use [Integrations](/connect/index)
 - work with an explicitly selected [Track](/tracks/index)
 - ask Giga to take supported actions
 
-What is actually available depends on the current workspace, permissions, Connections, and live web tool surface.
+What is actually available depends on the current workspace, permissions, Integrations, and live web tool surface.
 
 ## The web viewer
 
@@ -74,12 +74,12 @@ That can include relevant:
 - workspace context
 - Group context
 - one explicitly selected Track
-- Context Notes
+- System Instructions and the Track brief
 - memory: decisions, commitments, open questions and more
 - user-level context
 - files
 - Skills
-- Connections and live external data
+- Integrations and live external data
 
 The live workspace determines what can actually be retrieved.
 
@@ -87,7 +87,7 @@ The live workspace determines what can actually be retrieved.
 
 A Chat can be linked to at most one [Track](/tracks/index).
 
-Selecting a Track makes its durable context available to the Chat, including Context Notes, memory, and files that the current user can access. Giga reads the Track's memory first, so it picks up where the work left off.
+Selecting a Track makes its durable context available to the Chat, including its Track brief, memory, and files that the current user can access. Giga reads the Track's memory first, so it picks up where the work left off.
 
 Giga should never choose a Track silently.
 
@@ -95,9 +95,9 @@ Giga should never choose a Track silently.
 
 ## Work with connected systems
 
-Giga Web can use the [Connections](/connect/index) available to the current user and session.
+Giga Web can use the [Integrations](/connect/index) available to the current user and session.
 
-Giga should prefer the strongest first-class route available for the job, such as an existing tool, API, database, or MCP Connection.
+Giga should prefer the strongest first-class route available for the job, such as an existing tool, API, database, or MCP Integration.
 
 When no stronger route can complete a website task, browser-based work may be used where the current web capability supports it.
 
@@ -107,7 +107,7 @@ When no stronger route can complete a website task, browser-based work may be us
 
 When browser execution is the appropriate route, Giga can interact with websites through the supported browser capability.
 
-For logged-in work, a persistent browser profile can be used when available.
+For logged-in work, a Cloud Browser Session can be used when available.
 
 If login is blocked by CAPTCHA, bot detection, or two-factor authentication, Giga should hand the login step to the user rather than repeatedly retrying it.
 
@@ -149,13 +149,9 @@ Imagine you are working on a product-launch Track.
     When supported, Giga can show the resulting document, code, webpage, or visual artifact alongside the Chat.
   </Step>
   <Step title="Keep working from live context" icon="layers">
-    Continue using the Track, Connections, files, and current workspace permissions as the work evolves.
+    Continue using the Track, Integrations, files, and current workspace permissions as the work evolves.
   </Step>
 </Steps>
-
-> **Image placeholder**
->
-> Giga Web interface showing a Chat on one side and the viewer displaying a document or visual artifact on the other.
 
 ## Related pages
 

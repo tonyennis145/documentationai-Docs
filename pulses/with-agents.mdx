@@ -3,13 +3,13 @@ title: Pulses with Agents
 description: Learn how recurring scheduled work can run through a named Agent and its current role, context, and permitted resources.
 ---
 
-A Pulse can target an **Agent** when recurring work should run through a consistent AI role.
+A Pulse can be connected to an **Agent** when recurring work should run through a consistent AI role. Choose the Agent in the Pulse's **Connected to** setting.
 
-The Pulse provides the schedule and recurring instruction. The [Agent](/agents/index) provides the reusable role, durable instructions, context, and permitted resources available at run time.
+The Pulse provides the schedule and **Prompt**. The [Agent](/agents/index) provides the reusable role, durable instructions, context, and permitted resources available at run time.
 
-## Why target an Agent?
+## Why connect an Agent?
 
-Use an Agent-targeted Pulse when the recurring job benefits from a stable operating role.
+Use a Pulse connected to an Agent when the recurring job benefits from a stable operating role.
 
 Examples include:
 
@@ -24,29 +24,29 @@ The Agent gives the recurring work a consistent way of operating across runs.
 
 <Columns cols={2}>
   <Card title="Pulse" href="/pulses/index" icon="clock">
-    Defines the recurring instruction and when it runs.
+    Defines the Prompt and when it runs.
   </Card>
   <Card title="Agent" href="/agents/index" icon="bot">
-    Provides the reusable role, instructions, context, Skills, and approved Connections available at run time.
+    Provides the reusable role, instructions, context, Skills, and approved Integrations available at run time.
   </Card>
 </Columns>
 
 The current live environment determines what the Agent can actually use during each scheduled run.
 
-## Create an Agent-targeted Pulse
+## Create a Pulse connected to an Agent
 
 <Steps>
   <Step title="Choose the recurring job" icon="file-text">
-    Write the instruction around the result you want each time the Pulse runs.
+    Write the Prompt around the result you want each time the Pulse runs.
   </Step>
   <Step title="Choose the Agent" icon="bot">
-    Select the named Agent whose role matches that recurring work.
+    Under **Connected to**, select the named Agent whose role matches that recurring work.
   </Step>
   <Step title="Choose the schedule" icon="clock">
-    Use a shared schedule slot or a supported custom cadence.
+    Use Saved times or its own schedule.
   </Step>
   <Step title="Review the Agent’s access" icon="shield-check">
-    Confirm that the Agent has the context, Skills, and Connections the recurring job needs.
+    Confirm that the Agent has the context, Skills, and Integrations the recurring job needs.
   </Step>
   <Step title="Confirm creation" icon="check-circle">
     Confirm the future scheduled behavior before the Pulse is created.
@@ -55,7 +55,7 @@ The current live environment determines what the Agent can actually use during e
 
 ## The Agent stays live
 
-An Agent-targeted Pulse does not freeze the Agent as it existed on the day the Pulse was created.
+A Pulse connected to an Agent does not freeze the Agent as it existed on the day the Pulse was created.
 
 When the Pulse runs, the current Agent configuration and live workspace state matter.
 
@@ -64,22 +64,22 @@ That can include:
 - Agent instructions
 - Agent context
 - available [Skills](/skills/index)
-- approved [Connections](/connections/index)
+- approved [Integrations](/connect/index)
 - Group permissions
 - provider-side permissions
 - current external data
 
 Changes to those resources can affect future Pulse runs.
 
-## Connections still follow permissions
+## Integrations still follow permissions
 
-An Agent-targeted Pulse can use Connections available to that Agent when the current permissions allow it.
+A Pulse connected to an Agent can use Integrations available to that Agent when the current permissions allow it.
 
 The schedule itself does not create access.
 
-For example, a weekly Sales Pulse can only use the CRM if the relevant CRM Connection is available to the Agent and the connected account has the required provider permissions.
+For example, a weekly Sales Pulse can only use the CRM if the relevant CRM Integration is available to the Agent and the connected account has the required provider permissions.
 
-[Learn about giving Agents access to Connections →](/agents/connections)
+[Learn about giving Agents access to Integrations →](/agents/connections)
 
 ## Skills can shape the recurring method
 
@@ -87,18 +87,18 @@ An Agent may have access to [Skills](/skills/index) that help with the scheduled
 
 For example, a Reporting Agent could use a reusable reporting Skill when that Skill is available in its current scope.
 
-The Pulse still defines the recurring instruction and timing. The Skill supplies the reusable task method.
+The Pulse still defines the Prompt and timing. The Skill supplies the reusable task method.
 
-## Agent target vs Track target
+## Agent vs Track
 
-Both are valid Pulse targets, but they solve different needs.
+A Pulse can be connected to either, but they solve different needs.
 
-| Target | Use it when |
+| Connected to | Use it when |
 | --- | --- |
 | **Agent** | The recurring work should run through a named role and its operating context |
 | **Track** | The recurring work belongs to one ongoing body of work and its Track context |
 
-A Pulse can also run without a target.
+A Pulse can also run without being connected to either. It still runs, but writes no updates.
 
 [Learn about creating a Pulse →](/pulses/creating-a-pulse)
 
@@ -110,28 +110,24 @@ If a scheduled run reaches an action that requires confirmation, such as sending
 
 ## Example: weekly pipeline review
 
-Imagine a **Weekly Pipeline Review** Pulse targeting a **Sales Reporting Agent**.
+Imagine a **Weekly Pipeline Review** Pulse connected to a **Sales Reporting Agent**.
 
 <Columns cols={2}>
   <Card title="Agent role" href="/agents/instructions" icon="file-text">
     Review sales data and surface meaningful changes clearly.
   </Card>
-  <Card title="Connections" href="/agents/connections" icon="plug">
+  <Card title="Integrations" href="/agents/connections" icon="plug">
     Use approved sales systems when they are available.
   </Card>
   <Card title="Pulse schedule" href="/pulses/schedules" icon="clock">
     Run weekly.
   </Card>
-  <Card title="Pulse instruction" href="/pulses/creating-a-pulse" icon="activity">
+  <Card title="Pulse Prompt" href="/pulses/creating-a-pulse" icon="activity">
     Summarize pipeline movement, risks, and items needing attention.
   </Card>
 </Columns>
 
 Each run uses the current Agent configuration and live access available at that time.
-
-> **Image placeholder**
->
-> Diagram showing Weekly schedule → Pulse → Sales Reporting Agent → Agent context + Skills + Connections → recurring pipeline summary.
 
 ## Related pages
 
@@ -141,4 +137,4 @@ Each run uses the current Agent configuration and live access available at that 
 - [Managing Pulses](/pulses/managing)
 - [Introduction to Agents](/agents/index)
 - [Agent instructions](/agents/instructions)
-- [Giving Agents access to Connections](/agents/connections)
+- [Giving Agents access to Integrations](/agents/connections)

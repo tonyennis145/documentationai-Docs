@@ -28,21 +28,21 @@ For a quick one-off question with no need for continuity, a normal [Chat](/chats
 
 ## Choose the right Group
 
-Every Track lives inside a [Group](/groups/index), which determines the access scope around it.
+A Track's **Group** decides who can see it and its work. You choose it when you create the Track, and it can't be changed afterwards.
 
-| If the work is…                              | Put the Track in…                         |
+| If the work is…                              | Set the Group to…                         |
 | -------------------------------------------- | ----------------------------------------- |
-| Personal or private to you                   | Your existing private Group               |
-| Shared with a team                           | The relevant shared Group                 |
+| Personal or private to you                   | **Only me**                               |
+| Shared with a team                           | The relevant Group                        |
 | Part of an existing department or workstream | The Group that already contains that work |
 
-You generally **do not need a new Group just to make a Track private**. Each member already has a private Group for personal work.
+You **do not need a Group to make a Track private**. Choose **Only me** and the Track has no group: it stays with you.
 
 [Learn how Groups work →](/groups/index)
 
 ## Create a Track
 
-You can ask Giga to create a Track from a Chat.
+Go to **Cloud → Organize → Tracks** and click **New track**. You can also ask Giga to create a Track from a Chat.
 
 <Steps>
   <Step title="Name the work" icon="edit-3" title-type="p">
@@ -50,19 +50,21 @@ You can ask Giga to create a Track from a Chat.
   </Step>
 
   <Step title="Choose where it belongs" icon="users" title-type="p">
-    Tell Giga which Group should contain the Track. If the work is private, use your existing private Group.
+    Pick the Group that should share the Track. If the work is private, choose **Only me**.
   </Step>
 
-  <Step title="Add a short description" icon="file-text" title-type="p">
-    Explain what belongs in the Track so teammates can understand its purpose when they encounter it later.
+  <Step title="Choose a Kind" icon="tag" title-type="p">
+    Pick **Project** (a focused effort with a finish line), **Area** (an ongoing responsibility with no end date) or **Exploration** (an open question you're working through). New Tracks default to Exploration.
+  </Step>
+
+  <Step title="Write the Track brief" icon="file-text" title-type="p">
+    Explain what belongs in the Track and how to work on it in the [Track brief](/tracks/context-notes), so teammates and agents understand its purpose.
   </Step>
 
   <Step title="Start adding useful context" icon="layers" title-type="p">
-    Add [Context Notes](/tracks/context-notes), relevant files, and the Chats that belong to the work.
+    Add relevant files, references, and the Chats that belong to the work.
   </Step>
 </Steps>
-
-Giga may use internal metadata to understand the type of work behind the scenes. You should not need to classify the Track yourself.
 
 ## Avoid duplicate Tracks
 
@@ -80,11 +82,10 @@ A freshly created Track becomes more useful once it has a small amount of durabl
 
 A good starting point is:
 
-- a short description of what the Track covers
-- a [Context Note](/tracks/context-notes) with important background or instructions
+- a [Track brief](/tracks/context-notes) covering what the Track is about, with important background or instructions
 - the first relevant [Chat](/chats/index)
 - any files that people will need repeatedly
-- an owner, target date, or check-in cadence when those are useful for the work
+- a check-in cadence, if you use Giga in Slack and want it to check in on the work
 
 You do not need to document everything up front. Add context when it will help Giga or your teammates work more effectively.
 
@@ -94,7 +95,7 @@ A Track can hold authored files, but files are only one part of its state.
 
 | What you are storing                               | Where it belongs                        |
 | -------------------------------------------------- | --------------------------------------- |
-| Standing background or instructions                | [Context Notes](/tracks/context-notes)  |
+| Standing background or instructions                | [Track brief](/tracks/context-notes)    |
 | Decisions, changes, progress, and learned context  | [Memory](/tracks/memory)                |
 | Reports, drafts, code, and other supported outputs | [Files in Tracks](/tracks/files)        |
 | Structured data that grows over time               | A database rather than a narrative file |
@@ -106,15 +107,15 @@ This separation helps Giga retrieve the right information without treating every
 As work changes, keep Tracks aligned with reality.
 
 - Keep active work easy to find.
-- Pause work that is temporarily inactive instead of creating a replacement.
+- Let inactive work go quiet instead of creating a replacement. Tracks go **dormant** on their own after 30 days without activity (60 days for areas), and new activity makes them active again.
 - Archive work that is finished but still worth keeping for reference.
 - Reuse an existing Track when the same subject becomes active again.
 
-A Track can also have an **owner**, **target date**, and **check-in settings** when the work benefits from them.
+A Track can also have **Slack check-ins** when the work benefits from them.
 
-> **Avoid deleting a Track just because work has paused**
+> **Archive rather than trash finished work**
 >
-> Deleting a Track also removes its files and is irreversible. Pausing or archiving is safer when the history may still matter.
+> **Move to Trash** (in the Track's **Settings** tab) hides the Track and what's filed to it. Nothing is deleted, and you can restore it from Trash on the Tracks page. Archiving is the better fit when the work is simply done.
 
 ## A simple example
 
@@ -125,7 +126,7 @@ Imagine your team is preparing a new website.
     The Track holds the ongoing body of work.
   </Card>
 
-  <Card title="Context Note" href="/tracks/context-notes" icon="file-text" horizontal="false">
+  <Card title="Track brief" href="/tracks/context-notes" icon="file-text" horizontal="false">
     Brand goals, audience, constraints, and standing instructions.
   </Card>
 
@@ -140,14 +141,10 @@ Imagine your team is preparing a new website.
 
 The result is one place where the subject can accumulate useful context instead of being scattered across unrelated Chats and folders.
 
-> **Image placeholder**
->
-> Screenshot showing the Track creation flow and Group placement in Giga.
-
 ## Related pages
 
 - [Introduction to Tracks](/tracks/index)
-- [Context Notes](/tracks/context-notes)
+- [Track brief](/tracks/context-notes)
 - [Memory](/tracks/memory)
 - [Files in Tracks](/tracks/files)
 - [Sharing and permissions](/tracks/sharing-and-permissions)

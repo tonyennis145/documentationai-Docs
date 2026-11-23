@@ -25,7 +25,7 @@ Being in the workspace does not automatically mean someone belongs to every shar
 
 Workspace admins can add a person to the workspace by email.
 
-When someone is added, Giga can provision their default workspace setup, including their personal/private area.
+When someone is added, Giga can provision their default workspace setup. Their private work doesn't need a Group: anything not shared with a Group stays with the person who made it.
 
 <Steps>
   <Step title="Add them to the workspace" icon="user-plus">
@@ -35,7 +35,7 @@ When someone is added, Giga can provision their default workspace setup, includi
     Choose the Group that already contains the Tracks and resources relevant to their work.
   </Step>
   <Step title="Grant Group access" icon="users">
-    An admin can add the existing workspace member to that shared Group.
+    An admin can add the existing workspace member to that Group in **Cloud → Organize → Groups**.
   </Step>
   <Step title="Work from the same shared context" icon="layers">
     The teammate can then access the resources available within that Group according to their permissions.
@@ -72,20 +72,18 @@ A shared Group can contain or scope several kinds of resources:
   <Card title="Files" href="/tracks/files" icon="file-text">
     Shared work product stored with Tracks or within the Group.
   </Card>
-  <Card title="Credentials and Connections" href="/connections/index" icon="plug">
+  <Card title="Credentials and Integrations" href="/connect/index" icon="plug">
     Connected access that may be available to members of the relevant Group.
   </Card>
 </Columns>
 
 Because Group membership affects access to these resources, it should be managed deliberately.
 
-## Private Groups are different
+## Private work has no Group
 
-Each member has a private Group for their own work.
+There is no private Group. Personal [Tracks](/tracks/index) are set to **Only me** and have no Group, so they are never shared with teammates.
 
-That private Group is intended for personal [Tracks](/tracks/index) and other resources that should not automatically be shared with teammates.
-
-You do not add other teammates to someone else’s private Group as a normal sharing pattern. Shared collaboration belongs in a **shared Group**.
+Anything not shared with a Group stays with the person who made it. Shared collaboration belongs in a **Group**.
 
 [Learn about personal vs shared work →](/groups/personal-vs-shared)
 
@@ -121,10 +119,6 @@ Because this changes someone’s access, Giga should confirm before carrying it 
 > **Access changes deserve confirmation**
 >
 > Adding or removing access can affect what company information someone can reach. Giga should verify the current workspace state and confirm consequential changes before acting.
-
-> **Image placeholder**
->
-> Diagram showing Workspace → Shared Groups → Tracks and shared resources, with different members accessing different Groups.
 
 ## Related pages
 

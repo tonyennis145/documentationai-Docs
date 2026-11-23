@@ -5,7 +5,7 @@ description: Learn how to update a Workflow safely, preserve its ordered steps, 
 
 A **Workflow** is meant to be reused.
 
-The process can stay stable while the inputs, live data, available Connections, and task-specific context change from one run to the next.
+The process can stay stable while the inputs, live data, available Integrations, and task-specific context change from one run to the next.
 
 ## Reuse the same process
 
@@ -84,7 +84,7 @@ Use:
 
 - a [Skill](/skills/index) for a reusable task method
 - an [Agent](/agents/index) for a reusable AI role
-- a [Connection](/connections/index) for live external system access
+- an [Integration](/connect/index) for live external system access
 - the Workflow for the ordered process
 
 For example, the step **Research the account** can stay concise while an Account Research Skill carries the detailed research method.
@@ -100,10 +100,10 @@ If a new value is required for every run, add it to the runtime form.
 The current input types include:
 
 - text
-- URL
+- link
 - number
 - choice
-- boolean
+- yes / no
 
 Keep inputs focused on information the user needs to provide at run time.
 
@@ -113,7 +113,7 @@ Running the same Workflow twice does not guarantee identical data or available a
 
 The live environment can change between runs:
 
-- Connections may change
+- Integrations may change
 - provider permissions may change
 - Skills may be added or removed
 - workspace access may change
@@ -152,10 +152,6 @@ Imagine a **Customer Renewal Review** Workflow with 3 steps:
 Later, the team decides legal review should be a distinct stage.
 
 A safe edit would read the current Workflow, insert **Check contract constraints** in the correct position, preserve the other 3 steps, then save the complete 4-step sequence.
-
-> **Image placeholder**
->
-> Before-and-after Workflow editor showing one new step inserted while the existing steps and runtime inputs are preserved.
 
 ## Related pages
 

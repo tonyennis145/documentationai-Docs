@@ -3,36 +3,36 @@ title: Sharing and permissions
 description: Learn how Track access follows Groups, how private and shared work differ, and what changes when a Chat is linked to a Track.
 ---
 
-A [Track](/tracks/index) lives inside a [Group](/groups/index), and the Group sets the Track’s access boundary.
+A [Track](/tracks/index) is either shared with a [Group](/groups/index) or kept to yourself, and that choice sets the Track’s access boundary.
 
-In the current Giga model, **Track visibility follows the Group it lives in**. That makes Group placement one of the most important decisions when creating or organizing a Track.
+In the current Giga model, **Track visibility follows its Group**. You choose the Group when you create the Track, and it can't be changed afterwards, which makes it one of the most important decisions when creating a Track.
 
 ## How Track access works
 
-| Track location | Who it is for |
+| Track's Group | Who it is for |
 | --- | --- |
-| **Your private Group** | Personal work that should stay private to you |
-| **A shared Group** | Work intended for members who have access to that Group |
+| **Only me** | Personal work that should stay private to you |
+| **A Group** | Work intended for members of that Group |
 
-You generally do not create a separate Group just to make one Track private. Each member already has a private Group for personal work.
+You do not need a Group to make a Track private. Set the Group to **Only me** and the Track has no group: anything not shared with a group stays with the person who made it.
 
 > **Choose the Group before you add sensitive context**
 >
-> A Track’s files, context, and memory live within that access scope. Put the Track in the right Group before adding information that should only be available to a specific audience.
+> A Track’s files, context, and memory live within that access scope. Choose the right Group when you create the Track, before adding information that should only be available to a specific audience.
 
 ## Sharing a Track with teammates
 
-Because Track access follows its Group, sharing the Track means making sure the right teammate has access to the **shared Group** that contains it.
+Because Track access follows its Group, sharing the Track means making sure the right teammate is a member of the **Group** it is shared with.
 
 <Steps>
   <Step title="Check which Group the Track belongs to" icon="folder">
-    Confirm that the Track is already in the right shared access scope.
+    Confirm that the Track is shared with the right Group. A Track set to **Only me** can't be moved to a Group later.
   </Step>
   <Step title="Make sure the teammate is in the workspace" icon="user-check">
     Workspace membership comes first.
   </Step>
-  <Step title="Give them access to the shared Group" icon="users">
-    Workspace admins can add an existing member to the relevant shared Group.
+  <Step title="Add them to the Group" icon="users">
+    Workspace admins can add an existing member to the relevant Group in **Cloud → Organize → Groups**.
   </Step>
   <Step title="Work from the same Track" icon="layers">
     The teammate can then use the Track’s shared context, files, and history according to the permissions available to them.
@@ -45,10 +45,10 @@ Because Track access follows its Group, sharing the Track means making sure the 
 
 <Columns cols={2}>
   <Card title="Private Track" href="/groups/personal-vs-shared" icon="lock">
-    Lives in your existing private Group and is suited to personal work or context that should stay private.
+    Set to **Only me**, with no group. Suited to personal work or context that should stay private.
   </Card>
   <Card title="Shared Track" href="/groups/personal-vs-shared" icon="users">
-    Lives in a shared Group so the right teammates can work from the same body of context.
+    Shared with a Group so the right teammates can work from the same body of context.
   </Card>
 </Columns>
 
@@ -58,14 +58,14 @@ The Track itself stays focused on the work. The [Group](/groups/index) provides 
 
 A shared Track can contain several kinds of information:
 
-- [Context Notes](/tracks/context-notes)
+- the [Track brief](/tracks/context-notes)
 - [Memory](/tracks/memory)
 - [Files](/tracks/files)
 - linked [Chats](/chats/index)
 
 Memory filed to the Track is visible to everyone on it. Memory saved without a Track stays private to the person who saved it until they file it.
 
-That is why Track selection and Group placement should be deliberate.
+That is why Track selection and the Track's Group should be deliberate.
 
 > **Track attachment can affect visibility**
 >
@@ -75,7 +75,7 @@ That is why Track selection and Group placement should be deliberate.
 
 Access and the ability to make changes are related, but they are not always the same thing.
 
-For example, some Giga operations require a user to be able to **manage the Group** that owns the Track. Updating standing Track context is one such operation.
+For example, some Giga operations require a user to be able to **manage the Group** that owns the Track. Updating the Track brief is one such operation.
 
 When a task depends on permissions, Giga should check the **live workspace state** rather than assume what a person can do.
 
@@ -105,7 +105,7 @@ Imagine your company has a shared Group called **Marketing** with a Track called
     Keeps the campaign’s ongoing context, Chats, memory, and files together.
   </Card>
   <Card title="New teammate" href="/groups/members-and-access" icon="user-plus">
-    Gets access by being added to the shared Marketing Group.
+    Gets access by being added to the Marketing Group.
   </Card>
   <Card title="Shared context" href="/tracks/context-notes" icon="layers">
     Once they have access, they can work from the same Track context instead of rebuilding it from scratch.
@@ -116,14 +116,6 @@ Imagine your company has a shared Group called **Marketing** with a Track called
 
 Sharing is broader than Tracks. Giga can also make reusable assets such as [Agents](/agents/index), [Skills](/skills/index), and other shared resources available to the right people.
 
-> **Video placeholder**
->
-> Sharing overview video.
-
-> **Image placeholder**
->
-> Show a shared Group containing multiple Tracks, with teammates accessing the same Track context and files.
-
 ## Related pages
 
 - [Introduction to Tracks](/tracks/index)
@@ -131,6 +123,6 @@ Sharing is broader than Tracks. Giga can also make reusable assets such as [Agen
 - [Groups](/groups/index)
 - [Personal vs shared work](/groups/personal-vs-shared)
 - [Members and access](/groups/members-and-access)
-- [Context Notes](/tracks/context-notes)
+- [Track brief](/tracks/context-notes)
 - [Memory](/tracks/memory)
 - [Files in Tracks](/tracks/files)

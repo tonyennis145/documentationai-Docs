@@ -1,8 +1,9 @@
 ---
 title: Workflow steps
-description: Learn how to write clear, outcome-oriented Workflow steps without scripting every tool action.
+description: >-
+  Learn how to write clear, outcome-oriented Workflow steps without scripting
+  every tool action.
 ---
-
 Workflow steps are the meaningful stages of a reusable process.
 
 Each step has a **name** and **plain-language instructions** that tell Giga what should be accomplished at that stage.
@@ -39,7 +40,7 @@ A step can explain:
 - relevant constraints
 - quality standards
 - a [Skill](/skills/index) to apply when available
-- [Connections](/connections/index) or tools that may be useful
+- [Integrations](/connect/index) or tools that may be useful
 - conditions that should change or stop the work
 - what the step should return before the Workflow continues
 
@@ -49,7 +50,7 @@ For example:
 
 That gives Giga a clear target while leaving the implementation flexible.
 
-## Steps can use live tools and Connections
+## Steps can use live tools and Integrations
 
 Workflow steps do not need to hard-code every underlying tool.
 
@@ -57,16 +58,16 @@ A step can ask Giga to use the systems relevant to the outcome, such as:
 
 - a CRM
 - a database
-- an MCP Connection
+- an MCP Integration
 - a research tool
-- a browser session
+- a Cloud Browser Session
 - files or other available work product
 
 The actual capabilities come from the live session and current permissions.
 
 > **The Workflow does not create access**
 >
-> Asking a step to use a system does not make that Connection available. Giga still checks the current workspace, Connection, and provider permissions at run time.
+> Asking a step to use a system does not make that Integration available. Giga still checks the current workspace, Integration, and provider permissions at run time.
 
 ## Skills inside steps
 
@@ -74,11 +75,11 @@ A [Skill](/skills/index) can provide a reusable task method inside a Workflow st
 
 For example:
 
-| Workflow step | Skill that may help |
-| --- | --- |
+| Workflow step        | Skill that may help    |
+| -------------------- | ---------------------- |
 | Research the account | Account Research Skill |
-| Draft the update | Customer Update Skill |
-| Review the result | Brand Review Skill |
+| Draft the update     | Customer Update Skill  |
+| Review the result    | Brand Review Skill     |
 
 The step defines **what happens at this stage**. The Skill can define **how a particular task should be done**.
 
@@ -113,13 +114,15 @@ Keep actions together when they are simply implementation details needed to reac
 A useful Workflow might look like this:
 
 <Steps>
-  <Step title="Investigate the issue" icon="search">
+  <Step title="Investigate the issue" icon="search" title-type="p">
     Gather the relevant customer facts, recent activity, and available evidence from approved systems.
   </Step>
-  <Step title="Determine the next action" icon="git-branch">
+
+  <Step title="Determine the next action" icon="git-branch" title-type="p">
     Identify the likely resolution or what information is still missing. Stop if the evidence is insufficient.
   </Step>
-  <Step title="Prepare the response" icon="file-text">
+
+  <Step title="Prepare the response" icon="file-text" title-type="p">
     Draft a concise response using the approved support guidance. Ask for confirmation before any outward-facing action.
   </Step>
 </Steps>

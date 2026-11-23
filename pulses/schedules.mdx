@@ -1,32 +1,32 @@
 ---
 title: Schedules
-description: Learn how shared schedule slots and custom cadences control when a Pulse runs.
+description: Learn how Saved times and custom cadences control when a Pulse runs.
 ---
 
 A Pulse schedule controls **when recurring work runs**.
 
-The current Pulse model supports 2 scheduling approaches: shared named schedule slots and custom recurring schedules.
+You set it under **When it runs** in the Pulse's Settings. The current Pulse model supports 2 scheduling approaches: **Saved times** and **its own schedule**.
 
-## Shared schedule slots
+## Saved times
 
-A shared schedule slot is a named time already available in the workspace.
+Saved times are reusable named times already available in the workspace, like “Morning”.
 
-A Pulse can attach to one or more of those slots.
+A Pulse can attach to one or more Saved times.
 
 <Columns cols={2}>
   <Card title="Shared timing" href="/pulses/schedules" icon="calendar">
-    Use an existing workspace schedule slot instead of defining a separate cadence for the Pulse.
+    Use an existing Saved time instead of defining a separate cadence for the Pulse.
   </Card>
   <Card title="Current workspace" href="/pulses/managing" icon="clock">
-    The available slot names and timing come from the live workspace.
+    The available Saved times and their timing come from the live workspace.
   </Card>
 </Columns>
 
-Giga should read the current Pulse configuration to see which named slots are available rather than assuming a fixed list.
+Giga should read the current Pulse configuration to see which Saved times are available rather than assuming a fixed list.
 
-## Custom schedules
+## Its own schedule
 
-A custom schedule gives the Pulse its own recurring cadence.
+Choosing **Its own schedule** gives the Pulse its own recurring cadence.
 
 The current Pulse model supports:
 
@@ -39,22 +39,22 @@ Choose the cadence that matches how often the recurring job should run.
 
 > **Use the live schedule options**
 >
-> Exact schedule details and available shared slots can change. Giga should use the current Pulse configuration as the source of truth.
+> Exact schedule details and available Saved times can change. Giga should use the current Pulse configuration as the source of truth.
 
-## Slot vs custom
+## Saved times vs its own schedule
 
 | Schedule type | Good fit |
 | --- | --- |
-| **Shared slot** | The Pulse should run at an existing workspace schedule time |
-| **Custom schedule** | The Pulse needs its own daily, weekly, monthly, or intra-day cadence |
+| **Saved times** | The Pulse should run at an existing workspace time |
+| **Its own schedule** | The Pulse needs its own daily, weekly, monthly, or intra-day cadence |
 
-The work itself still comes from the Pulse instruction and optional [Agent](/agents/index) or [Track](/tracks/index) target.
+The work itself still comes from the Pulse Prompt and the optional [Agent](/agents/index) or [Track](/tracks/index) it is connected to.
 
-## Schedule and target are separate
+## Schedule and connection are separate
 
 The schedule answers **when the Pulse runs**.
 
-The target answers **what context or role the Pulse runs against**.
+**Connected to** answers **what context or role the Pulse runs as**.
 
 For example:
 
@@ -62,12 +62,12 @@ For example:
   <Card title="Schedule" href="/pulses/schedules" icon="clock">
     Weekly.
   </Card>
-  <Card title="Target" href="/pulses/with-agents" icon="bot">
+  <Card title="Connected to" href="/pulses/with-agents" icon="bot">
     Sales Reporting Agent.
   </Card>
 </Columns>
 
-A Pulse can also target a Track or run without a target.
+A Pulse can also be connected to a Track, or not connected at all.
 
 ## Editing a schedule
 
@@ -78,10 +78,10 @@ Giga should read the current Pulse before editing it because the current update 
 That means an update should preserve every setting that should remain, including:
 
 - name
-- instruction
+- Prompt
 - schedule type
-- cadence or selected slots
-- target
+- cadence or selected Saved times
+- Connected to
 
 > **Read before updating**
 >
@@ -108,16 +108,12 @@ Imagine a **Weekly Pipeline Review** Pulse.
 
 | Setting | Example |
 | --- | --- |
-| **Instruction** | Review meaningful pipeline changes and summarize what needs attention |
-| **Schedule type** | Custom |
+| **Prompt** | Review meaningful pipeline changes and summarize what needs attention |
+| **Schedule type** | Its own schedule |
 | **Cadence** | Weekly |
-| **Target** | Sales Reporting Agent |
+| **Connected to** | Sales Reporting Agent |
 
-Another Pulse could use a shared workspace slot instead while keeping the same instruction.
-
-> **Image placeholder**
->
-> Schedule selector showing Shared schedule slots on one side and Custom cadence with Daily, Weekly, Monthly, and Intra-day options on the other.
+Another Pulse could use a Saved time instead while keeping the same Prompt.
 
 ## Related pages
 

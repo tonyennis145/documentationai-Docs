@@ -1,6 +1,6 @@
 ---
 title: Claude
-description: Connect Giga to Claude with a custom remote MCP connector and use Giga's company context, permissions, and Connections from Claude.
+description: Connect Giga to Claude with a custom remote MCP connector and use Giga's company context, permissions, and Integrations from Claude.
 ---
 
 Use **Giga from Claude** when you want Claude's interface with Giga's company context and connected systems underneath.
@@ -58,24 +58,6 @@ On Claude Team and Enterprise, an **Owner or Primary Owner** first adds Giga for
   </Step>
 </Steps>
 
-## Screenshot guide
-
-> **Screenshot placeholder 1**
->
-> Claude **Customize → Connectors** with the **Add custom connector** option visible.
-
-> **Screenshot placeholder 2**
->
-> The custom connector form with **Giga** and `https://app.getgiga.com/mcp` entered.
-
-> **Screenshot placeholder 3**
->
-> Giga shown as connected in Claude's Connectors list.
-
-> **Screenshot placeholder 4**
->
-> A Claude Chat with **Giga** enabled from the **+ → Connectors** menu.
-
 ## What carries through from Giga
 
 Claude remains the interface. Giga continues to resolve the current user's permitted company context and capabilities.
@@ -84,7 +66,7 @@ Depending on the task and permissions, that can include:
 
 - [Groups](/groups/index)
 - [Tracks](/tracks/index) and Track memory
-- [Connections](/connect/index)
+- [Integrations](/connect/index)
 - [Agents](/agents/index)
 - [Skills](/skills/index)
 - files and other permitted company context
@@ -108,6 +90,32 @@ A Chat can link to at most one [Track](/tracks/index), and the Track should be e
 Say "save this" or "remember that". Giga asks which Track it belongs to, with **Keep it private** as an option, then saves the specific points you want kept, never the whole conversation. Anything kept private waits in **Brain → To file** in the Giga web app until you file it.
 
 [Learn how memory works from ChatGPT and Claude →](/mcp/index#memory-from-chatgpt-and-claude)
+
+## Claude Code
+
+Claude Code connects to the same Giga MCP server. Run this in a terminal, then restart Claude Code and sign in to Giga when asked:
+
+```bash
+claude mcp add --scope user --transport http giga https://app.getgiga.com/mcp
+```
+
+### Save Claude Code conversations automatically
+
+Giga can ask which Track each Claude Code conversation belongs to and keep it saved there, so you don't have to remember to type **Giga save**. To set it up, paste this into Claude Code:
+
+```
+Follow the instructions at https://app.getgiga.com/install/claude-code/SKILL.md
+```
+
+Claude Code installs a small hook on your computer. Then quit and reopen Claude Code. After that:
+
+- At the end of its first reply in each conversation, Claude asks which Track the conversation belongs to. Reply with a Track name, or **skip**.
+- Once you pick a Track, Claude saves the conversation to it as a recap, then updates that same recap every 5 replies.
+- **Giga save** still saves straight away whenever you want.
+
+To change how often it saves, set `GIGA_SAVE_EVERY` in your shell profile (for example `export GIGA_SAVE_EVERY=3`). To pause it, set `GIGA_CAPTURE=off`. To remove it, delete the `Stop` hook that runs `~/.claude/giga/capture.sh` from `~/.claude/settings.json`, and delete the `~/.claude/giga` folder.
+
+The hook needs bash, so it works on macOS, Linux and WSL, but not on native Windows.
 
 ## Availability
 

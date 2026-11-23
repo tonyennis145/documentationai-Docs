@@ -5,7 +5,7 @@ description: Learn how to set up a reusable Agent with the right role, context, 
 
 Create an **Agent** when your team needs a named AI role that should behave consistently across repeated work.
 
-A good Agent has a clear purpose, durable instructions, the right context, and only the Connections and Skills it actually needs.
+A good Agent has a clear purpose, durable instructions, the right context, and only the Integrations and Skills it actually needs.
 
 ## Start with the job the Agent should do
 
@@ -20,7 +20,7 @@ For example:
 
 > **Give the Agent a real job**
 >
-> A clear role makes it easier to decide what instructions, context, Connections, and Skills belong with the Agent.
+> A clear role makes it easier to decide what instructions, context, Integrations, and Skills belong with the Agent.
 
 ## Choose the right Group
 
@@ -30,7 +30,7 @@ Choose the Group based on who should be able to use the Agent and which shared r
 
 | Placement | Good fit |
 | --- | --- |
-| **Private Group** | An Agent only you should use |
+| **Only me** | An Agent only you should use |
 | **Shared Group** | An Agent intended for a team or shared function |
 
 The Group helps determine the audience around the Agent.
@@ -52,7 +52,7 @@ The Group helps determine the audience around the Agent.
   <Step title="Add relevant context" icon="brain">
     Give the Agent the durable background it needs for its role.
   </Step>
-  <Step title="Give it the right Connections" icon="plug">
+  <Step title="Give it the right Integrations" icon="plug">
     Make approved external systems available when the Agent needs live data or actions.
   </Step>
   <Step title="Add useful Skills" icon="sparkles">
@@ -109,20 +109,20 @@ The live permission model still controls what the Agent can actually retrieve.
 
 [Learn about Agents and context →](/agents/context-and-knowledge)
 
-## Add Connections deliberately
+## Add Integrations deliberately
 
-A Connection can give the Agent access to live systems such as a CRM, support tool, database, or MCP server.
+An Integration can give the Agent access to live systems such as a CRM, support tool, database, or MCP server.
 
-Before making a Connection available, check:
+Before making an Integration available, check:
 
 - whether the Agent actually needs it
 - whether the Agent’s Group has the right access scope
 - what actions the external account allows
-- whether the Connection should be shared with that audience
+- whether the Integration should be shared with that audience
 
-An Agent should not automatically gain every Connection in the workspace.
+An Agent should not automatically gain every Integration in the workspace.
 
-[Learn about giving Agents access to Connections →](/agents/connections)
+[Learn about giving Agents access to Integrations →](/agents/connections)
 
 ## Add Skills for reusable methods
 
@@ -145,22 +145,18 @@ Imagine you are creating a **Customer Support Agent**.
 | **Role** | Help the support team investigate and resolve customer issues |
 | **Instructions** | Be concise, cite the source of customer facts, confirm before outward-facing actions |
 | **Context** | Support terminology and durable team guidance |
-| **Connections** | Support platform and approved customer systems |
+| **Integrations** | Support platform and approved customer systems |
 | **Skills** | Troubleshooting and response-drafting methods |
 | **Group** | Customer Support |
 
 The result is a reusable Agent the support team can return to with the same working model each time.
-
-> **Image placeholder**
->
-> Creation flow showing Role → Group → Instructions → Context → Connections → Skills → Ready to use.
 
 ## After creation
 
 Once the Agent exists, you can refine:
 
 - [Agent instructions](/agents/instructions)
-- [Connections](/agents/connections)
+- [Integrations](/agents/connections)
 - [context](/agents/context-and-knowledge)
 - [sharing](/agents/sharing)
 

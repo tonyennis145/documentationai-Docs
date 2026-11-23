@@ -21,7 +21,7 @@ A typical investigation might include:
     Separate confirmed information from assumptions and identify anything still missing.
   </Step>
   <Step title="Work through the resolution" icon="tool">
-    Apply the team’s troubleshooting method and use available Connections where they help.
+    Apply the team’s troubleshooting method and use available Integrations where they help.
   </Step>
   <Step title="Prepare the response or handoff" icon="file-text">
     Return the resolution, next step, or concise escalation context.
@@ -42,15 +42,15 @@ Examples include:
 
 The Skill stores the reusable method while the customer-specific facts stay with the current work.
 
-## Use Connections for live customer context
+## Use Integrations for live customer context
 
-When the relevant systems are connected, Giga can work with current information exposed by those [Connections](/connections/index).
+When the relevant systems are connected, Giga can work with current information exposed by those [Integrations](/connect/index).
 
 That might include information from a support platform, CRM, database, or other approved customer system.
 
 The exact capabilities depend on:
 
-- the Connection available to the user or Agent
+- the Integration available to the user or Agent
 - provider-side permissions
 - the tools exposed in the current session
 - the action being requested
@@ -102,7 +102,7 @@ It can have:
 - support-specific instructions
 - durable context
 - shared Skills
-- approved Connections
+- approved Integrations
 
 For example, the Agent might consistently separate confirmed customer facts from assumptions and use a standard troubleshooting Skill where available.
 
@@ -131,13 +131,13 @@ Examples include:
 - review unresolved issues on a selected cadence
 - run a scheduled check through a Support Agent
 
-The Pulse uses the live permissions, Agent or Track context, and Connections available at execution time.
+The Pulse uses the live permissions, Agent or Track context, and Integrations available at execution time.
 
 ## Customer-facing actions require confirmation
 
 Giga can help draft customer-facing communication.
 
-When a live Connection supports an outward-facing action, normal confirmation rules still apply.
+When a live Integration supports an outward-facing action, normal confirmation rules still apply.
 
 For example, Giga should not silently send a customer message simply because a Workflow or Agent prepared the response.
 
@@ -149,7 +149,7 @@ Imagine a customer issue needs several days of investigation.
   <Card title="Escalation Track" href="/tracks/index" icon="folder">
     Keeps the customer issue, history, decisions, and work product together.
   </Card>
-  <Card title="Support Connections" href="/connect/index" icon="plug">
+  <Card title="Support Integrations" href="/connect/index" icon="plug">
     Provide current customer-system information when permitted.
   </Card>
   <Card title="Troubleshooting Skill" href="/skills/index" icon="sparkles">
@@ -162,16 +162,12 @@ Imagine a customer issue needs several days of investigation.
 
 A Workflow can standardize the investigation and handoff, while a Pulse can check the ongoing Track when scheduled follow-up is useful.
 
-> **Image placeholder**
->
-> Support escalation diagram showing Customer Issue Track + Support Agent + Troubleshooting Skill + approved Connections, feeding a structured response or handoff.
-
 ## Related pages
 
 - [Use Cases overview](/use-cases/index)
 - [Introduction to Chats](/chats/index)
 - [Introduction to Tracks](/tracks/index)
-- [Introduction to Connections](/connections/index)
+- [Introduction to Integrations](/connect/index)
 - [Introduction to Agents](/agents/index)
 - [Introduction to Skills](/skills/index)
 - [Introduction to Workflows](/workflows/index)

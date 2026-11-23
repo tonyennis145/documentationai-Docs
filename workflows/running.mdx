@@ -1,23 +1,24 @@
 ---
 title: Running a Workflow
-description: Learn how a Workflow uses runtime inputs, moves through its ordered steps, and reports progress.
+description: >-
+  Learn how a Workflow uses runtime inputs, moves through its ordered steps, and
+  reports progress.
 ---
-
 Running a **Workflow** means taking its saved process and executing the ordered steps for a specific task.
 
 The process stays reusable while the inputs and live workspace context can change from one run to the next.
 
 ## Before the run starts
 
-A Workflow may ask for runtime inputs.
+To start a run, open the Workflow and click **Run now**. A Workflow may ask for runtime inputs first.
 
 Depending on how the Workflow was created, those inputs can include:
 
 - text
-- URL
+- link
 - number
 - choice
-- boolean
+- yes / no
 
 For example, an account-research Workflow might ask for a **company name** and **company website**.
 
@@ -28,16 +29,19 @@ The Workflow keeps the process stable while those values change each time.
 Giga works through the Workflow in order.
 
 <Steps>
-  <Step title="Start the first step" icon="play">
+  <Step title="Start the first step" icon="play" title-type="p">
     Giga begins the first meaningful stage using the Workflow instructions and current inputs.
   </Step>
-  <Step title="Use the live workspace" icon="layers">
-    Giga can use relevant Skills, Connections, tools, files, and context that are actually available in the current session.
+
+  <Step title="Use the live workspace" icon="layers" title-type="p">
+    Giga can use relevant Skills, Integrations, tools, files, and context that are actually available in the current session.
   </Step>
-  <Step title="Report the step result" icon="check-circle">
+
+  <Step title="Report the step result" icon="check-circle" title-type="p">
     The step is marked completed, blocked, or failed based on what happened.
   </Step>
-  <Step title="Continue when appropriate" icon="arrow-right">
+
+  <Step title="Continue when appropriate" icon="arrow-right" title-type="p">
     A completed step moves the run to the next stage. A blocked or failed step stops the run.
   </Step>
 </Steps>
@@ -46,12 +50,12 @@ Giga works through the Workflow in order.
 
 The current Workflow execution model supports these statuses:
 
-| Status | Meaning |
-| --- | --- |
-| **Running** | Giga is currently working on the step |
-| **Completed** | The step finished successfully |
-| **Blocked** | The step cannot continue because something required is missing or needs intervention |
-| **Failed** | The step encountered an error and did not complete |
+| Status        | Meaning                                                                              |
+| ------------- | ------------------------------------------------------------------------------------ |
+| **Running**   | Giga is currently working on the step                                                |
+| **Completed** | The step finished successfully                                                       |
+| **Blocked**   | The step cannot continue because something required is missing or needs intervention |
+| **Failed**    | The step encountered an error and did not complete                                   |
 
 Giga can include a short summary of what happened, or an error when a step is blocked or failed.
 
@@ -66,7 +70,7 @@ A step can become blocked when the process needs something Giga cannot safely or
 Examples include:
 
 - a required input is missing
-- a Connection is unavailable
+- an Integration is unavailable
 - the user does not have the necessary permission
 - a browser login needs human 2FA or CAPTCHA completion
 - the step requires confirmation before an outward-facing action
@@ -80,7 +84,7 @@ A Workflow does not bypass Giga’s access model.
 
 During a run, Giga should check the live environment for:
 
-- available [Connections](/connections/index)
+- available [Integrations](/connect/index)
 - current user permissions
 - accessible Groups and resources
 - provider-side permissions
@@ -97,27 +101,28 @@ The Workflow provides the process order. The Skill provides a reusable method fo
 
 For example:
 
-<Columns cols={2}>
-  <Card title="Workflow step" href="/workflows/steps" icon="list-checks">
+<Columns cols="2">
+  <Card title="Workflow step" href="/workflows/steps" icon="list-checks" horizontal="false">
     Research the account.
   </Card>
-  <Card title="Skill" href="/skills/index" icon="sparkles">
+
+  <Card title="Skill" href="/skills/index" icon="sparkles" horizontal="false">
     Apply the company’s reusable account-research method.
   </Card>
 </Columns>
 
-## Connections during a run
+## Integrations during a run
 
-A step can use live external systems through approved Connections.
+A step can use live external systems through approved Integrations.
 
 For example, Giga may:
 
 - retrieve current CRM data
 - query an approved database
 - use tools exposed by an MCP server
-- interact with a website through a browser Connection when needed
+- interact with a website through a Cloud Browser Session when needed
 
-The exact route depends on the Connections and tools available when the Workflow runs.
+The exact route depends on the Integrations and tools available when the Workflow runs.
 
 ## Consequential actions still need confirmation
 
@@ -161,10 +166,6 @@ The same saved process can be run again with a different account, candidate, doc
 If the process itself changes, edit the Workflow rather than rewriting it for every run.
 
 [Learn about editing and reusing Workflows →](/workflows/editing-and-reusing)
-
-> **Image placeholder**
->
-> Workflow run view showing runtime inputs at the top and ordered steps progressing through Running → Completed, with a Blocked state example.
 
 ## Related pages
 

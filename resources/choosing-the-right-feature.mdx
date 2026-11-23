@@ -14,13 +14,13 @@ Start with the job you need to accomplish, then choose the smallest set of primi
 | Direct, ad hoc work | [Chat](/chats/index) |
 | A team or access boundary | [Group](/groups/index) |
 | Ongoing work with history | [Track](/tracks/index) |
-| Stable background for a Track | [Context Note](/tracks/context-notes) |
+| Standing background Giga should always read | [System Instructions](/library/context-cards) |
 | A named reusable AI role | [Agent](/agents/index) |
 | A reusable task method | [Skill](/skills/index) |
 | A reusable ordered process | [Workflow](/workflows/index) |
 | Recurring scheduled work | [Pulse](/pulses/index) |
-| Live access to an external system | [Connection](/connections/index) |
-| Auth or secrets | Secure Connection flow |
+| Live access to an external system | [Integration](/connect/index) |
+| Auth or secrets | Secure Integration flow |
 | Authored work product | [File](/tracks/files) |
 | Growing structured records | Database |
 
@@ -33,7 +33,7 @@ Examples:
 - answer a question
 - research a topic
 - draft or revise work
-- use an approved Connection
+- use an approved Integration
 - reason through a decision
 - take a supported action
 
@@ -45,7 +45,7 @@ If the work develops continuity, pair the Chat with a Track that the user explic
 
 Choose a **Group** when the main need is deciding **who should share this area of work**.
 
-Groups are the placement and permission scope for shared resources such as Tracks, Agents, files, and Connections.
+Groups are the placement and permission scope for shared resources such as Tracks, Agents, files, and Integrations.
 
 Good reasons to create or use a Group include:
 
@@ -53,7 +53,7 @@ Good reasons to create or use a Group include:
 - a client or business unit needs its own access boundary
 - several resources should be available to the same audience
 
-Private work can use the member’s existing private Group.
+Private work doesn't need a Group: set the Track to **Only me**.
 
 [Learn about Groups and Tracks →](/groups/groups-and-tracks)
 
@@ -71,9 +71,9 @@ Good signals include:
 
 Examples include a customer account, product launch, research effort, implementation, hiring process, or ongoing analysis.
 
-## Use a Context Note for stable Track background
+## Use System Instructions for stable background
 
-Choose a **Context Note** when information should remain useful across future work in one Track.
+Choose **System Instructions** when information should remain useful across future work. Share each one with just you, a Group, a Track or the whole workspace. Background for a single Track can also go in its **Track brief**, in the Track's Settings tab.
 
 Good examples include:
 
@@ -99,7 +99,7 @@ Examples include:
 - Support Agent
 - Operations Agent
 
-An Agent can carry its own role, instructions, context, permitted Connections, and Skills.
+An Agent can carry its own role, instructions, context, permitted Integrations, and Skills.
 
 Choose a Chat for a one-off interaction that does not need a reusable identity.
 
@@ -155,15 +155,15 @@ A Pulse can target an Agent, a Track, or run without a target.
 
 Creating recurring work should be confirmed before it is scheduled.
 
-## Use a Connection for live external systems
+## Use an Integration for live external systems
 
-Choose a **Connection** when Giga needs current information or supported actions from an external system.
+Choose an **Integration** when Giga needs current information or supported actions from an external system.
 
-Connections can cover apps, APIs, databases, MCP servers, browser sessions, messaging systems, and other supported services.
+Integrations can cover apps, APIs, databases, MCP servers, Cloud Browser Sessions, messaging systems, and other supported services.
 
 Use the live integration surface to determine the exact capability.
 
-For secrets or authentication, use the secure Connection flow rather than placing credentials into normal Chat messages or files.
+For secrets or authentication, use the secure Integration flow rather than placing credentials into normal Chat messages or files.
 
 ## Use a file for authored work product
 
@@ -211,7 +211,7 @@ Use a **Group** for the broader placement and permission boundary.
 
 Use a **Track** for one ongoing body of work inside that boundary.
 
-A private Track belongs in the user’s existing private Group.
+A private Track is set to **Only me** and doesn't belong to a Group.
 
 ### Agent or Skill?
 
@@ -237,7 +237,7 @@ The current product should determine any exact relationship between the 2 rather
 
 ### Track memory or file?
 
-Use **Context Notes** for durable background, and **memory** for decisions, commitments, open questions and other developments.
+Use **System Instructions** or the **Track brief** for durable background, and **memory** for decisions, commitments, open questions and other developments.
 
 Use a **file** for authored work product.
 
@@ -253,7 +253,7 @@ For example, an account-review setup might use:
   <Card title="Track" href="/tracks/index" icon="folder">
     Keeps the ongoing account context and decisions together.
   </Card>
-  <Card title="Connection" href="/connections/index" icon="plug">
+  <Card title="Integration" href="/connect/index" icon="plug">
     Provides current information from approved external systems.
   </Card>
   <Card title="Skill" href="/skills/index" icon="sparkles">
@@ -285,7 +285,7 @@ Each feature has one clear job. The combination should follow the work rather th
     Choose an Agent for the role, a Skill for the method, or a Workflow for the ordered process.
   </Step>
   <Step title="Does it need current external data or actions?" icon="plug">
-    Use an approved Connection.
+    Use an approved Integration.
   </Step>
   <Step title="Should it run on a schedule?" icon="clock">
     Add a Pulse.

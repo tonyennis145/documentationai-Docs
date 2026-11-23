@@ -7,7 +7,7 @@ description: Keys and tokens for services that don't use OAuth. Giga attaches th
 
 <Columns cols={3}>
   <Card title="Encrypted" icon="lock" href="/connect/security#the-secure-proxy">
-    Stored in the Vault, never sent back to a browser.
+    Stored in Cloud, never sent back to a browser.
   </Card>
   <Card title="Never in chat" icon="message-square" href="/connect/security#the-secure-proxy">
     Giga adds the key on its servers, not in the conversation.
@@ -19,7 +19,7 @@ description: Keys and tokens for services that don't use OAuth. Giga attaches th
 
 <Tabs>
   <Tab title="1 · How it works" icon="key-round">
-    <Image src="https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1792478921501-hi9g06d4jjq-vault-api-key-flow.svg?rasterize-bypass=true" alt="You paste the key once; the Vault keeps it encrypted; Giga's proxy adds it to the request; the service sees a normal request" />
+    <Image src="https://blob-cdn.documentation.ai/org-d896f59c-62b4-41f0-9b51-36d7bf1ed9d0/doc-ed7f1cc1-783d-498c-8dca-196c97bbef03/1792478921501-hi9g06d4jjq-vault-api-key-flow.svg?rasterize-bypass=true" alt="You paste the key once; Cloud keeps it encrypted; Giga's proxy adds it to the request; the service sees a normal request" />
 
     Agents refer to a key by its **handle**, like `airtable`. Giga's proxy attaches the key to the request, so the agent only ever sees the answer.
   </Tab>
@@ -30,7 +30,7 @@ description: Keys and tokens for services that don't use OAuth. Giga attaches th
     >
     > **Giga:** Here's a secure link. I've filled in the name and handle, so just paste the key.
 
-    Or click **+** at the top of **Vault → API Keys**.
+    Or click **+** on **API Keys** in **Cloud → Integrations**.
   </Tab>
   <Tab title="3 · Use it" icon="sparkles">
     Just ask for the work. Giga picks the right key.
@@ -48,7 +48,7 @@ description: Keys and tokens for services that don't use OAuth. Giga attaches th
   </Tab>
 </Tabs>
 
-<Callout kind="tip">Does the service have a "Sign in with…" option? Use [Integrations](/connect/connecting) instead. OAuth connections refresh themselves.</Callout>
+<Callout kind="tip">Does the service have a "Sign in with…" option? Use [Integrations](/connect/connecting) instead. Direct (OAuth & MCP) integrations refresh themselves.</Callout>
 
 <ExpandableGroup>
   <Expandable title="Why not just paste the key into chat?">

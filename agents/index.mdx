@@ -1,17 +1,15 @@
 ---
 title: Agents
-description: Learn how named AI Agents in Giga combine role, instructions, context, Skills, and Connections.
+description: Learn how named AI Agents in Giga combine role, instructions, context, Skills, and Integrations.
 ---
+
+<Callout kind="info">Agents are currently available to super admins only.</Callout>
 
 An **Agent** is a named, reusable AI role in Giga.
 
 Agents are useful when you want Giga to operate with a consistent role, instructions, context, and access across repeated work.
 
-In the Giga web app, you'll find your Agents under **Workspace → Assistants**.
-
-> **Video placeholder**
->
-> Agents overview video.
+In the Giga web app, you'll find your Agents under **Cloud → Build & Automate → Agents**.
 
 ## What an Agent can bring together
 
@@ -22,7 +20,7 @@ In the Giga web app, you'll find your Agents under **Workspace → Assistants**.
   <Card title="Context" href="/agents/context-and-knowledge" icon="brain">
     Give the Agent durable background relevant to the work it handles.
   </Card>
-  <Card title="Connections" href="/agents/connections" icon="plug">
+  <Card title="Integrations" href="/agents/connections" icon="plug">
     Give the Agent access to external tools and systems when permissions allow it.
   </Card>
   <Card title="Skills" href="/skills/index" icon="sparkles">
@@ -30,7 +28,7 @@ In the Giga web app, you'll find your Agents under **Workspace → Assistants**.
   </Card>
 </Columns>
 
-The exact capabilities available to an Agent depend on the current workspace, Group, Connections, Skills, and live tool surface.
+The exact capabilities available to an Agent depend on the current workspace, Group, Integrations, Skills, and live tool surface.
 
 ## When to use an Agent
 
@@ -70,7 +68,7 @@ That means an Agent’s availability can depend on:
 
 - the Group it belongs to
 - the user’s Group membership
-- the Connections available in that scope
+- the Integrations available in that scope
 - the Skills available to the Agent
 - the current live permissions
 
@@ -99,13 +97,13 @@ Agents can also have durable context relevant to their role.
 
 The live Giga environment determines what context and resources the Agent can actually retrieve.
 
-Giga should never assume an Agent has access to every Track, Connection, file, or piece of company context simply because those resources exist in the workspace.
+Giga should never assume an Agent has access to every Track, Integration, file, or piece of company context simply because those resources exist in the workspace.
 
 [Learn about Agents and context →](/agents/context-and-knowledge)
 
-## Agents and Connections
+## Agents and Integrations
 
-Connections let an Agent work with live external systems.
+Integrations let an Agent work with live external systems.
 
 For example, an Agent might be allowed to use:
 
@@ -115,9 +113,9 @@ For example, an Agent might be allowed to use:
 - an internal database
 - an MCP server
 
-The Agent can only use Connections that are available within its current configuration and permission scope.
+The Agent can only use Integrations that are available within its current configuration and permission scope.
 
-[Learn about giving Agents access to Connections →](/agents/connections)
+[Learn about giving Agents access to Integrations →](/agents/connections)
 
 ## Agents and Skills
 
@@ -159,7 +157,7 @@ Imagine your Sales team creates a **Sales Research Agent**.
   <Card title="Context" href="/agents/context-and-knowledge" icon="brain">
     Uses the durable background relevant to the sales team.
   </Card>
-  <Card title="Connections" href="/agents/connections" icon="plug">
+  <Card title="Integrations" href="/agents/connections" icon="plug">
     Can use approved sales tools when permissions allow it.
   </Card>
   <Card title="Skills" href="/skills/index" icon="sparkles">
@@ -168,10 +166,6 @@ Imagine your Sales team creates a **Sales Research Agent**.
 </Columns>
 
 The team gets a consistent AI role they can return to, while access remains controlled by the workspace and Group permission model.
-
-> **Image placeholder**
->
-> Diagram showing an Agent at the center with Role + Instructions, Context, Skills, Connections, Group permissions, and Pulses around it.
 
 ## Explore Agents
 
@@ -182,7 +176,7 @@ The team gets a consistent AI role they can return to, while access remains cont
   <Card title="Agent instructions" href="/agents/instructions" icon="file-text">
     Define how the Agent should behave and work.
   </Card>
-  <Card title="Connections" href="/agents/connections" icon="plug">
+  <Card title="Integrations" href="/agents/connections" icon="plug">
     Give an Agent access to approved external systems.
   </Card>
   <Card title="Agents and context" href="/agents/context-and-knowledge" icon="brain">

@@ -1,13 +1,13 @@
 ---
 title: Troubleshooting
-description: Diagnose common Giga issues across context, permissions, Connections, files, Workflows, Pulses, and supported surfaces.
+description: Diagnose common Giga issues across context, permissions, Integrations, files, Workflows, Pulses, and supported surfaces.
 ---
 
 Most Giga issues become easier to diagnose once you identify 4 things:
 
 1. **which user is making the request**
 2. **which workspace and Group the work belongs to**
-3. **which resource or Connection is involved**
+3. **which resource or Integration is involved**
 4. **which Giga surface is being used**
 
 The live workspace is the source of truth for current access and capability.
@@ -21,10 +21,10 @@ Review:
 - workspace context
 - Group context
 - the explicitly selected Track
-- Track Context Notes
+- System Instructions and the Track brief
 - the Track's memory (in **Brain**)
 - user-level context
-- current Connections
+- current Integrations
 
 A Chat can link to at most 1 Track, and that Track should be explicitly selected or confirmed.
 
@@ -39,12 +39,12 @@ Check:
 1. whether the Track exists in the current workspace
 2. which Group contains it
 3. whether the current user can access that Group
-4. whether the Track has been archived or moved out of the current working scope
+4. whether the Track is dormant, archived or in the Trash (a Track moved to Trash can be restored)
 5. whether the name being used matches the intended Track
 
-Track visibility currently follows its Group.
+Track visibility follows its Group.
 
-For private work, check the user’s existing private Group.
+For private work, check whether the Track is set to **Only me**, which makes it visible only to its creator.
 
 ## A Track looks empty
 
@@ -52,7 +52,7 @@ An empty file area does not mean the Track has no context or history.
 
 Check the Track’s:
 
-- Context Note
+- Track brief (in its Settings tab)
 - memory (in **Brain**)
 - linked Chats
 - files
@@ -82,7 +82,7 @@ Review whether:
 - the Agent exists in the current workspace
 - the current user belongs to the relevant Group
 - the Agent is available in the current surface
-- the requested Connection or Skill is actually available to that Agent
+- the requested Integration or Skill is actually available to that Agent
 
 [Learn about Sharing Agents →](/agents/sharing)
 
@@ -99,9 +99,9 @@ Check the Skill’s current sharing state and the user’s Group membership.
 
 [Learn about Sharing Skills →](/skills/sharing)
 
-## A Connection is missing
+## An Integration is missing
 
-Before creating another Connection, check the current connected credentials and integrations.
+Before creating another Integration, check the current connected credentials and integrations.
 
 A credential can be:
 
@@ -111,9 +111,9 @@ A credential can be:
 
 Also check whether the requested provider already exists in Giga’s integration catalog.
 
-[Learn about sharing and managing connections →](/connect/sharing)
+[Learn about sharing and managing Integrations →](/connect/sharing)
 
-## A Connection exists but the action still fails
+## An Integration exists but the action still fails
 
 Work through the permission layers.
 
@@ -123,14 +123,14 @@ Check:
 2. Group sharing
 3. credential ownership
 4. external provider permissions
-5. the exact tools exposed by the Connection
+5. the exact tools exposed by the Integration
 6. action-level permissions inside the external system
 
-A valid Connection can still be limited by the connected provider account.
+A valid Integration can still be limited by the connected provider account.
 
 [Learn about Permissions →](/teams-and-admin/permissions)
 
-## The Connection is using the wrong account
+## The Integration is using the wrong account
 
 Inspect the credential metadata and current connected account before taking the action.
 
@@ -144,7 +144,7 @@ For example:
 
 Credential metadata can be renamed by the owner where the current tools allow it.
 
-[Learn about Managing company Connections →](/teams-and-admin/managing-company-connections)
+[Learn about Managing company Integrations →](/teams-and-admin/managing-company-connections)
 
 ## Authentication expired or stopped working
 
@@ -239,7 +239,7 @@ Current Workflow runs can report these step states:
 
 When a step is blocked or failed, stop the run and return the reason.
 
-Resolve the missing input, permission, Connection, or other blocker before continuing.
+Resolve the missing input, permission, Integration, or other blocker before continuing.
 
 [Learn about Running a Workflow →](/workflows/running)
 
@@ -267,7 +267,7 @@ A Pulse can target:
 - a Track
 - no target
 
-Then check the current Agent or Track configuration, Connections, and permissions available at run time.
+Then check the current Agent or Track configuration, Integrations, and permissions available at run time.
 
 The schedule controls when the work runs. The target controls the role or ongoing context the Pulse runs against.
 
@@ -291,7 +291,7 @@ Check:
 - workspace role
 - Group membership
 - resource ownership or sharing
-- Connection sharing
+- Integration sharing
 - provider-side permissions
 - current surface capabilities
 
@@ -319,9 +319,7 @@ The underlying Company Brain and permission boundaries stay consistent across su
 
 ## A model or provider I expected is missing
 
-Check **Vault → Model Providers**. It lists the always-available **Giga managed** provider plus any model keys your workspace has added. To use a provider Giga doesn't manage for you, add your own key there (or from **Integrations → Models**).
-
-[Learn about model providers →](/gateway/index#models)
+Check **Settings → Model Providers** (admins). It lists the always-available **Giga managed** provider plus any model keys your workspace has added. To use a provider Giga doesn't manage for you, an admin can add a key for it there.
 
 ## Still stuck?
 
@@ -334,21 +332,17 @@ Use the smallest diagnostic path that matches the issue:
   <Card title="Access problem" href="/teams-and-admin/permissions" icon="shield-check">
     Check workspace membership, Group access, ownership, and provider permissions.
   </Card>
-  <Card title="Connection problem" href="/connect/sharing" icon="plug">
+  <Card title="Integration problem" href="/connect/sharing" icon="plug">
     Check authentication, provider permissions, connected account, and available tools.
   </Card>
   <Card title="Feature choice problem" href="/resources/choosing-the-right-feature" icon="git-branch">
-    Check whether the work belongs in a Chat, Track, Agent, Skill, Workflow, Pulse, or Connection.
+    Check whether the work belongs in a Chat, Track, Agent, Skill, Workflow, Pulse, or Integration.
   </Card>
 </Columns>
-
-> **Image placeholder**
->
-> Troubleshooting flow: Identify user and surface → Check Group/Track context → Check permissions → Check Connection/provider → Check feature-specific state.
 
 ## Related resources
 
 - [FAQ](/resources/faq)
 - [Giga Dictionary](/resources/dictionary)
 - [Choosing the right Giga feature](/resources/choosing-the-right-feature)
-- [Sharing and managing connections](/connect/sharing)
+- [Sharing and managing Integrations](/connect/sharing)

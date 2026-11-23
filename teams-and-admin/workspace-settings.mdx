@@ -13,14 +13,16 @@ Open **Settings** in the Giga web app. The Settings sidebar has:
 | **Workspace Settings** | The workspace name and what your business does, so Giga can suggest the most relevant integrations | Admins |
 | **Invite member** | Invite people to the workspace | Admins |
 | **Slack Setup** | Your Slack connection, the workspace's Slack install, and (for admins) which Slack channels map to which Groups or Tracks | Everyone |
-| **Browser Profiles** | Saved browser sign-ins Giga's cloud browser can reuse | Everyone |
+| **Cloud Browser Sessions** | Browsers that stay signed in to the sites you use, so your agents can work in them too | Everyone |
+| **Model Providers** | The **Giga managed** provider plus your own model provider keys | Admins |
+| **Plans** | Your workspace plan | Everyone |
+| **Activity & usage** | Credits, runs and credential activity. [Learn more →](/teams-and-admin/activity-and-usage) | Everyone (some sections owners only) |
 
-Some things that used to live in Settings have moved:
+Some things have moved:
 
-- **AI providers** (model keys) → **Vault → Model Providers** or **Integrations → Models**. [Learn more →](/gateway/index#models)
-- **Gateway** → **Integrations → Instant**. [Learn more →](/gateway/index)
-- **Run activity** and **Credits** → [Activity & usage](/teams-and-admin/activity-and-usage)
-- **Team members** and **Groups** → the **Workspace** section. [Learn more →](/teams-and-admin/members-and-roles)
+- **Run activity** and **Credits** → **Settings → Activity & usage**. [Learn more →](/teams-and-admin/activity-and-usage)
+- **Groups** → **Cloud → Organize → Groups**. [Learn more →](/groups/index)
+- **Team members** → see [Members and roles](/teams-and-admin/members-and-roles).
 
 ## Workspace-level context
 
@@ -88,7 +90,7 @@ Other administrative areas are documented separately because they have their own
   <Card title="Permissions" href="/teams-and-admin/permissions" icon="shield-check">
     Understand how roles, Groups, ownership, and provider access combine.
   </Card>
-  <Card title="Company Connections" href="/teams-and-admin/managing-company-connections" icon="plug">
+  <Card title="Company Integrations" href="/teams-and-admin/managing-company-connections" icon="plug">
     Manage approved external-system access and credential ownership.
   </Card>
   <Card title="Groups" href="/groups/index" icon="layers">
@@ -108,13 +110,7 @@ When a user asks to change a workspace setting, Giga should verify:
 - whether confirmation is needed
 - whether the change affects other users
 
-## Current documentation boundary
-
-This page only documents workspace settings supported by the current canonical product sources.
-
-Topics such as SSO, authentication policies, data residency, retention controls, DPA terms, and security-control exports are separate documentation backlog items until Giga has a canonical product source for them. For the credential audit log, see [Activity & usage](/teams-and-admin/activity-and-usage#credential-activity).
-
-We should not infer those capabilities from general enterprise software conventions.
+For the credential audit log, see [Activity & usage](/teams-and-admin/activity-and-usage#credential-activity).
 
 ## A simple example
 
@@ -126,16 +122,12 @@ If the terminology only belongs to Marketing, the Marketing Group is the better 
 
 If it only belongs to one launch, the launch Track is the better scope.
 
-> **Image placeholder**
->
-> Context hierarchy diagram showing Workspace → Group → Track → User, with examples of what belongs at each level.
-
 ## Related pages
 
 - [Teams & Admin overview](/teams-and-admin/index)
 - [Members and roles](/teams-and-admin/members-and-roles)
 - [Permissions](/teams-and-admin/permissions)
-- [Managing company Connections](/teams-and-admin/managing-company-connections)
+- [Managing company Integrations](/teams-and-admin/managing-company-connections)
 - [Activity & usage](/teams-and-admin/activity-and-usage)
 - [Introduction to Groups](/groups/index)
 - [Using context in a Chat](/chats/context)

@@ -1,15 +1,14 @@
 ---
 title: Skills
-description: Learn how reusable Skills give Giga task-specific instructions, methods, and supporting context.
+description: >-
+  Learn how reusable Skills give Giga task-specific instructions, methods, and
+  supporting context.
 ---
-
 A **Skill** is reusable instructions and supporting context for a specific kind of task.
 
 Skills let you teach Giga how your company wants a task handled once, then reuse that method without explaining it again every time.
 
-> **Video placeholder**
->
-> Skills & Workflows overview video.
+In the Giga web app, you'll find Skills under **Cloud → Shared Resources → Skills**.
 
 ## What a Skill is good for
 
@@ -28,12 +27,12 @@ A Skill can hold the instructions, standards, reference context, and supporting 
 
 ## Skill vs Agent vs Workflow
 
-| Primitive | Best fit |
-| --- | --- |
-| **Skill** | Reusable instructions for a specific kind of task |
-| **Agent** | A named reusable AI role with broader identity, context, and access |
-| **Workflow** | A reusable ordered multi-step process |
-| **Chat** | Ad hoc work that does not need a reusable primitive |
+| Primitive    | Best fit                                                            |
+| ------------ | ------------------------------------------------------------------- |
+| **Skill**    | Reusable instructions for a specific kind of task                   |
+| **Agent**    | A named reusable AI role with broader identity, context, and access |
+| **Workflow** | A reusable ordered multi-step process                               |
+| **Chat**     | Ad hoc work that does not need a reusable primitive                 |
 
 A Skill answers **how should Giga do this kind of task?**
 
@@ -45,11 +44,12 @@ A well-designed Skill should be useful wherever that task method is needed and p
 
 For example:
 
-<Columns cols={2}>
-  <Card title="Account Research Skill" href="/skills/index" icon="sparkles">
+<Columns cols="2">
+  <Card title="Account Research Skill" href="/skills/index" icon="sparkles" horizontal="false">
     Defines how Giga should research and summarize an account.
   </Card>
-  <Card title="Sales Research Agent" href="/agents/index" icon="user">
+
+  <Card title="Sales Research Agent" href="/agents/index" icon="user" horizontal="false">
     Can use that method as part of its broader sales research role when the Skill is available.
   </Card>
 </Columns>
@@ -72,7 +72,7 @@ The exact files should support the task the Skill teaches.
 
 > **Keep the Skill focused on the method**
 >
-> Put reusable task guidance in the Skill. Keep broad Agent identity in Agent instructions, and keep project-specific standing background in Track Context Notes.
+> Put reusable task guidance in the Skill. Keep broad Agent identity in Agent instructions, and keep project-specific standing background in the Track brief.
 
 ## Creating and editing Skills
 
@@ -84,6 +84,7 @@ The current Giga tools support:
 - deleting it
 - sharing it into Groups
 - removing it from Groups
+- linking it to Tracks
 
 When editing a Skill, Giga should read the current files first.
 
@@ -97,6 +98,8 @@ A Skill can remain owner-only or be shared into one or more [Groups](/groups/ind
 
 Users can see Skills they own plus Skills shared into Groups they belong to.
 
+A Skill can also be linked to [Tracks](/tracks/index) so it sits alongside the work it supports.
+
 This gives teams a way to reuse the same method without copying the instructions into every Agent or Chat.
 
 [Learn about Sharing Skills →](/skills/sharing)
@@ -105,7 +108,7 @@ This gives teams a way to reuse the same method without copying the instructions
 
 The current Skill model distinguishes between owning a Skill and having access to a shared Skill.
 
-The owner can manage the Skill.
+The owner or a workspace admin can manage the Skill.
 
 A teammate may be able to use a Skill shared into their Group without owning the underlying Skill itself.
 
@@ -127,38 +130,40 @@ It might contain:
 
 That Skill can then be reused wherever the method is relevant and available.
 
-<Columns cols={2}>
-  <Card title="Skill" href="/skills/index" icon="sparkles">
+<Columns cols="2">
+  <Card title="Skill" href="/skills/index" icon="sparkles" horizontal="false">
     Stores the repeatable account research method.
   </Card>
-  <Card title="Agent" href="/agents/index" icon="user">
+
+  <Card title="Agent" href="/agents/index" icon="user" horizontal="false">
     Provides the broader Sales Research role.
   </Card>
-  <Card title="Workflow" href="/workflows/index" icon="list-checks">
+
+  <Card title="Workflow" href="/workflows/index" icon="list-checks" horizontal="false">
     Can organize research into a larger ordered process.
   </Card>
-  <Card title="Group" href="/groups/index" icon="users">
+
+  <Card title="Group" href="/groups/index" icon="users" horizontal="false">
     Controls which team can access the shared Skill.
   </Card>
 </Columns>
 
-> **Image placeholder**
->
-> Diagram showing one Skill reused by a Chat, an Agent, and a Workflow within the appropriate Group permissions.
-
 ## Explore Skills
 
-<Columns cols={2}>
-  <Card title="Creating a Skill" href="/skills/creating-a-skill" icon="plus-circle">
+<Columns cols="2">
+  <Card title="Creating a Skill" href="/skills/creating-a-skill" icon="plus-circle" horizontal="false">
     Turn a repeatable task method into a reusable Skill.
   </Card>
-  <Card title="How Skills are used" href="/skills/how-skills-are-used" icon="play">
+
+  <Card title="How Skills are used" href="/skills/how-skills-are-used" icon="play" horizontal="false">
     Understand how Skills fit into Chats, Agents, and repeated work.
   </Card>
-  <Card title="Sharing Skills" href="/skills/sharing" icon="users">
+
+  <Card title="Sharing Skills" href="/skills/sharing" icon="users" horizontal="false">
     Make a Skill available to the right Groups.
   </Card>
-  <Card title="Examples" href="/skills/examples" icon="book-open">
+
+  <Card title="Examples" href="/skills/examples" icon="book-open" horizontal="false">
     See practical examples of useful Skills.
   </Card>
 </Columns>

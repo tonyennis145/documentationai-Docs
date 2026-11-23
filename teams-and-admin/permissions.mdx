@@ -49,18 +49,18 @@ Groups can scope resources such as:
 - [Tracks](/tracks/index)
 - [Agents](/agents/index)
 - files
-- credentials and [Connections](/connections/index)
+- credentials and [Integrations](/connect/index)
 - Group-level context
 
-A person must first belong to the workspace before an admin can grant them access to a shared Group.
+Groups are managed in **Cloud → Organize → Groups**. A person must first belong to the workspace before an admin can grant them access to a shared Group.
 
 ## Track permissions
 
-A Track currently inherits visibility from the Group it lives in.
+A Track inherits visibility from the Group it lives in, or is set to **Only me**. A Track's Group can't be changed after it is created.
 
 <Columns cols="2">
   <Card title="Private Track" href="/groups/personal-vs-shared" icon="lock" horizontal="false">
-    Lives in the user’s existing private Group.
+    Set to **Only me**: belongs to no Group and is visible only to its creator.
   </Card>
 
   <Card title="Shared Track" href="/tracks/sharing-and-permissions" icon="users" horizontal="false">
@@ -89,7 +89,7 @@ An Agent’s available context and capabilities can depend on:
 
 - its Group
 - the current user’s access
-- shared Connections
+- shared Integrations
 - available Skills
 - live tool permissions
 
@@ -108,13 +108,13 @@ A Skill can be:
 
 Users can see Skills they own plus Skills shared into Groups they belong to.
 
-The Skill owner retains management control in the current model.
+The Skill owner, or a workspace admin, can edit and share it.
 
 [Learn about Sharing Skills →](/skills/sharing)
 
-## Connection permissions
+## Integration permissions
 
-Connections can add several permission layers at once.
+Integrations can add several permission layers at once.
 
 A credential can have an owner and can be shared into Groups.
 
@@ -124,13 +124,13 @@ The external service still controls what the connected account is allowed to do.
 
 | Check                    | Why it matters                                            |
 | ------------------------ | --------------------------------------------------------- |
-| **Current user access**  | Determines whether the user can use the Connection        |
+| **Current user access**  | Determines whether the user can use the Integration       |
 | **Group sharing**        | Determines which shared scopes can use it                 |
 | **Credential ownership** | Determines who can manage the stored credential           |
 | **Provider permissions** | Limits actions inside the external system                 |
 | **Exposed tools**        | Determines which connected capabilities are available now |
 
-[Learn about Sharing Connections →](/connections/sharing-connections)
+[Learn about Sharing Integrations →](/connect/sharing)
 
 ## File permissions
 
@@ -149,7 +149,7 @@ Context exists at several levels.
 - **Track context** requires appropriate management permission for the Track’s Group.
 - **User context** belongs to the current user.
 
-Context Notes and Current Track State follow the access boundary of their Track.
+System Instructions follow the scope they are shared with (just you, a Group, a Track or the whole workspace). A Track's brief follows the access boundary of its Track.
 
 ## Consequential permission changes
 
@@ -167,7 +167,7 @@ Giga should verify the exact resource, audience, and current permissions immedia
 
 ## A simple example
 
-Imagine a Sales team using a shared CRM Connection.
+Imagine a Sales team using a shared CRM Integration.
 
 <Steps>
   <Step title="Workspace membership" icon="user-check" title-type="p">
@@ -178,8 +178,8 @@ Imagine a Sales team using a shared CRM Connection.
     The salesperson belongs to the shared Sales Group.
   </Step>
 
-  <Step title="Shared Connection" icon="plug" title-type="p">
-    The CRM Connection is available within that Group’s current scope.
+  <Step title="Shared Integration" icon="plug" title-type="p">
+    The CRM Integration is available within that Group’s current scope.
   </Step>
 
   <Step title="Provider permissions" icon="shield-check" title-type="p">
@@ -189,15 +189,11 @@ Imagine a Sales team using a shared CRM Connection.
 
 All 4 layers can matter to the final action.
 
-> **Image placeholder**
->
-> Layered permission diagram: Workspace → Role → Group → Resource ownership/sharing → External provider permissions.
-
 ## Related pages
 
 - [Teams & Admin overview](/teams-and-admin/index)
 - [Members and roles](/teams-and-admin/members-and-roles)
-- [Managing company Connections](/teams-and-admin/managing-company-connections)
+- [Managing company Integrations](/teams-and-admin/managing-company-connections)
 - [Workspace settings](/teams-and-admin/workspace-settings)
 - [Introduction to Groups](/groups/index)
 - [Sharing and permissions for Tracks](/tracks/sharing-and-permissions)

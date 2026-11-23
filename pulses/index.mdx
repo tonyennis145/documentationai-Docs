@@ -7,22 +7,20 @@ A **Pulse** is recurring scheduled work in Giga.
 
 Use a Pulse when Giga should perform a check or piece of work automatically on a schedule instead of waiting for someone to ask in a [Chat](/chats/index).
 
-> **Video placeholder**
->
-> Pulses overview video.
+You'll find Pulses under **Cloud → Build & Automate → Pulses**.
 
 ## What a Pulse contains
 
 A Pulse can include:
 
 - a name
-- the instruction Giga should run
-- a schedule
-- an optional target
+- a **Prompt**: what the agent does each time the Pulse runs
+- a schedule (**When it runs**)
+- an optional **Connected to** setting
 
-The target can be an [Agent](/agents/index), a [Track](/tracks/index), or no target at all.
+**Connected to** is the [Agent](/agents/index) or [Track](/tracks/index) the Pulse runs as and writes updates to. Without one, the Pulse still runs, but writes no updates.
 
-The exact schedule options and available targets come from the live workspace.
+The exact schedule options and available Agents and Tracks come from the live workspace.
 
 ## Pulse vs Chat vs Workflow
 
@@ -38,7 +36,7 @@ A Pulse answers **when should this work run?**
 
 A [Workflow](/workflows/index) answers **what ordered process should be reused?**
 
-## Pulse targets
+## Connected to
 
 The current Pulse model supports 3 patterns.
 
@@ -49,33 +47,33 @@ The current Pulse model supports 3 patterns.
   <Card title="Track" href="/tracks/index" icon="folder">
     Run recurring work against an ongoing Track and the context available there.
   </Card>
-  <Card title="No target" href="/pulses/creating-a-pulse" icon="clock">
-    Run the scheduled instruction without attaching it to an Agent or Track.
+  <Card title="Not connected" href="/pulses/creating-a-pulse" icon="clock">
+    Run the Prompt without connecting it to an Agent or Track. It still runs, but writes no updates.
   </Card>
 </Columns>
 
-The live Pulse configuration is the source of truth for which target is currently available.
+The live Pulse configuration is the source of truth for which Agents and Tracks are currently available.
 
 ## Scheduling options
 
 The current Pulse model supports:
 
-- shared named schedule slots
-- custom schedules
+- **Saved times**: reusable named times, like “Morning”
+- **Its own schedule**: a custom cadence
 - daily cadence
 - weekly cadence
 - monthly cadence
 - intra-day cadence
 
-A shared schedule slot lets a Pulse use one of the workspace’s existing named times.
+Saved times let a Pulse use one of the workspace’s existing named times.
 
-A custom schedule gives the Pulse its own cadence.
+Its own schedule gives the Pulse a custom cadence.
 
 [Learn about Pulse schedules →](/pulses/schedules)
 
 ## What can a Pulse do?
 
-The scheduled instruction can ask Giga to perform work using the context and capabilities available when the Pulse runs.
+The Prompt can ask Giga to perform work using the context and capabilities available when the Pulse runs.
 
 Examples include:
 
@@ -85,13 +83,13 @@ Examples include:
 - review a set of current signals
 - produce a scheduled summary through an Agent
 
-Access still depends on the live environment. A Pulse does not create new permissions or Connections.
+Access still depends on the live environment. A Pulse does not create new permissions or Integrations.
 
 ## Pulses and Agents
 
-An Agent can be the target of a Pulse.
+A Pulse can be connected to an Agent.
 
-This is useful when recurring work should run with a consistent role, instructions, context, Skills, and Connections.
+This is useful when recurring work should run with a consistent role, instructions, context, Skills, and Integrations.
 
 For example, a Reporting Agent could run a weekly review through a Pulse when those resources are available in the current workspace.
 
@@ -99,7 +97,7 @@ For example, a Reporting Agent could run a weekly review through a Pulse when th
 
 ## Pulses and Tracks
 
-A Track can also be the target of recurring work.
+A Pulse can also be connected to a Track.
 
 This is useful when the scheduled task belongs to one ongoing body of work, such as:
 
@@ -112,7 +110,7 @@ The Pulse can then run with the Track context available at that time.
 
 > **Track access still matters**
 >
-> Scheduling work against a Track does not widen its audience. The Track continues to follow its Group and permission boundaries.
+> Connecting a Pulse to a Track does not widen its audience. The Track continues to follow its Group and permission boundaries.
 
 ## Live data stays live
 
@@ -120,7 +118,7 @@ A Pulse runs in the environment that exists at execution time.
 
 That means the available:
 
-- Connections
+- Integrations
 - provider permissions
 - Track memory
 - Agent context
@@ -129,13 +127,13 @@ That means the available:
 
 can change between runs.
 
-The Pulse defines the recurring instruction and schedule. Giga still checks the live environment when the work runs.
+The Pulse defines the Prompt and schedule. Giga still checks the live environment when the work runs.
 
 ## Creating recurring behavior deserves confirmation
 
 A Pulse causes future work to run automatically.
 
-Giga should confirm the user’s intent before creating one, especially the instruction, schedule, and target.
+Giga should confirm the user’s intent before creating one, especially the Prompt, schedule, and what it is connected to.
 
 Deleting a Pulse should also be confirmed.
 
@@ -147,29 +145,25 @@ Imagine a **Weekly Pipeline Review** Pulse.
   <Card title="Schedule" href="/pulses/schedules" icon="clock">
     Runs weekly.
   </Card>
-  <Card title="Target" href="/pulses/with-agents" icon="bot">
+  <Card title="Connected to" href="/pulses/with-agents" icon="bot">
     Uses the Sales Reporting Agent.
   </Card>
-  <Card title="Instruction" href="/pulses/creating-a-pulse" icon="file-text">
+  <Card title="Prompt" href="/pulses/creating-a-pulse" icon="file-text">
     Review current pipeline changes and prepare a concise summary.
   </Card>
-  <Card title="Live access" href="/connections/index" icon="plug">
-    Uses the Connections and permissions available when the Pulse runs.
+  <Card title="Live access" href="/connect/index" icon="plug">
+    Uses the Integrations and permissions available when the Pulse runs.
   </Card>
 </Columns>
-
-> **Image placeholder**
->
-> Diagram showing Schedule → Pulse instruction → optional Agent or Track target → live Giga context and Connections → recurring result.
 
 ## Explore Pulses
 
 <Columns cols={2}>
   <Card title="Creating a Pulse" href="/pulses/creating-a-pulse" icon="plus-circle">
-    Set up recurring work with an instruction, schedule, and optional target.
+    Set up recurring work with a Prompt, schedule, and optional Agent or Track.
   </Card>
   <Card title="Schedules" href="/pulses/schedules" icon="clock">
-    Understand shared slots and custom recurring cadences.
+    Understand Saved times and custom recurring cadences.
   </Card>
   <Card title="Pulses with Agents" href="/pulses/with-agents" icon="bot">
     Run scheduled work through a reusable Agent.

@@ -1,0 +1,131 @@
+---
+title: How Giga Memory ("Brain") Works
+description: Evidence, knowledge, memory types, ranking and scope behind Brain
+---
+
+## The one-line idea
+
+Brain is Giga's shared team memory. Anything can **add evidence** (what was said, by whom, where). Only Giga decides **what that evidence means**: a new decision, a commitment marked done, an idea that's now superseded. Outside tools such as ChatGPT and Claude never change what Giga believes directly.
+
+## Two layers
+
+| Layer | What it is | Changes? |
+| --- | --- | --- |
+| Evidence | One record per thing said: who said it, where, when, with a verbatim quote | Only ever added to |
+| Knowledge | What Giga currently believes, worked out from the evidence | Status changes over time, and can always be rebuilt from the evidence |
+
+One memory can have many pieces of evidence, and one piece of evidence can support several memories. Three customers asking for SSO is one memory with three pieces of evidence.
+
+Evidence is always recorded first, then the memory is updated.
+
+## Seven memory types
+
+Ask the questions in order and stop at the first yes. The fixed order means each memory gets exactly one type.
+
+1. Is it how to do something? → **Procedure** (know-how; these become Skills)
+2. Does it settle something for a group? → **Decision**
+3. Does a named person commit to doing it? → **Commitment** (includes goals and plans)
+4. Does it put forward a possibility without committing? → **Idea**
+5. Does someone ask for something? → **Request** (includes open questions)
+6. Does it say what someone wants? → **Preference** (includes opinions, working style, feedback to the agent)
+7. Otherwise, it states what is → **Fact** (state, metrics, issues, expertise)
+
+Events are not a type: they are the evidence itself. Anything that looks like a category (customer, problem, metric…) is a **tag**, not a type.
+
+## Properties on each piece of evidence
+
+| Property | Meaning |
+| --- | --- |
+| Subject | What it's about ("Launch date", "Billing") |
+| Holder | Who said or believes it: a team member, a contact, or just the name as spoken |
+| Strength | Weak / moderate / strong: how strongly someone holds a view (preferences only) |
+| Confidence | 0–1: how sure Giga is that it read the source correctly |
+| Relevance | Internal: one person / several people / team / company. Customers: none / one / some / all |
+| Due date | Commitments only |
+| Tags | Free-form labels |
+| Quote and source | The verbatim evidence plus where it came from (a chat, a link, a recap, a paste…) |
+| Brainstorm thread | For brainstorms: which ideas build on each other, and in what order |
+
+## Memory status
+
+Active · Open · Done · Superseded · Overridden · Disputed · Parked · Rejected · Adopted · Retracted
+
+- Ideas go from explored (**Open**) to **Parked**, **Rejected** or **Adopted** (became a decision or commitment)
+- Commitments go from **Open** to **Done** (or **Parked**, and can be reopened)
+- Decisions and facts are **Superseded** by newer ones
+
+## How new evidence changes existing memories
+
+When something new comes in, Giga compares it with the memories already in that track and links it to them. Only sensible links are allowed for each pair of types:
+
+| Link | Effect |
+| --- | --- |
+| Same | Merges into the existing memory (its evidence count goes up) |
+| Contradicts | The existing memory becomes **Disputed** |
+| Supersedes | A newer decision, fact, idea or procedure replaces the old one |
+| Overrides | A decision settles competing preferences |
+| Answers | A fact, decision or commitment answers an open request |
+| Completes | A fact shows an open commitment is **Done** |
+| Refines | An idea builds on an earlier idea |
+| Adopts | A decision or commitment takes up an idea |
+
+Corrections ("that's wrong", "park that", "reopen it") are also recorded as evidence first, then change the memory to **Retracted**, **Parked**, **Rejected** or **Open**.
+
+## Ranking: strength × authority × recency × confidence
+
+Ranking is worked out each time memory is read. It **ranks** competing memories; it never **decides**. Only a Decision settles something.
+
+- **Strength**: weak 0.3 · moderate 0.6 · strong 1.0
+- **Authority**: currently the same for everyone
+- **Recency**: preferences fade over about 60 days; facts are replaced rather than faded
+- **Confidence**: how sure Giga is it read the source correctly; lower if the quote can't be found in the source text
+
+## Who sees what: scope is the track
+
+| Memory has | Who sees it |
+| --- | --- |
+| A track | Everyone who can access that track |
+| No track ("unfiled") | Only the person who captured it |
+
+- Unfiled memories land in Brain's **To file** inbox with a suggested track, a reason and a confidence.
+- Only the person who captured a memory can file it, and only into a track they can access. **Keep private** stops the suggestions.
+- If you save into track A but a memory clearly belongs to track B, it isn't shared into A. It waits in your To file inbox with B suggested.
+
+## Where memory comes from
+
+1. **Giga chats**: after you work with Giga, memories are taken from the conversation automatically.
+2. **"Save this" from ChatGPT or Claude**: selected passages only (up to 10 passages of 3,000 characters each). Giga asks which track first.
+3. **Agent session recaps**: one structured handoff from an agent session, kept whole.
+4. **Brain → Add (paste)**: up to about 24,000 characters. Pastes of 2,000 characters or more also get a recap in Sessions.
+5. **Brain → Add (import a link)**: Giga reads the link with the right connected tool (Granola, Notion, Google Drive, or the web), writes a recap and takes memories from up to about 120,000 characters. If a track is attached, the link is also saved as a Reference on that track.
+
+Long content is split into parts and processed in parallel. A one-hour transcript takes about a minute.
+
+## Reading memory
+
+In ChatGPT, Claude and other MCP clients, Giga reads memory with three tools:
+
+- **memory_wake**: a short digest of decisions, open commitments (owner, due date, overdue), open questions, disputes with each side's weighted views, top preferences, ideas in play and recent changes
+- **memory_recall**: searches the evidence
+- **memory_items**: current memories, filtered by type, status, subject or track
+
+Giga in the web app reads these too whenever team work comes up.
+
+## Brain screen map
+
+- **To file**: your unfiled inbox
+- **Type tabs** (Decisions, Commitments, Ideas…): current memories
+- **Evidence log**: every piece of evidence, in order
+- **Sessions**: recaps of meetings, long pastes and agent sessions
+- **Brainstorms**: threads of ideas building on each other
+- **Add**: paste text or import a link
+
+## Coming later
+
+- Scheduled scans of meetings and inboxes
+- Memories from Pulse runs
+
+## Related pages
+
+- [Giga Memory](/memory/index)
+- [Track memory](/tracks/memory)

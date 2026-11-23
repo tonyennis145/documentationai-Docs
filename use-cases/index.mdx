@@ -2,11 +2,11 @@
 title: Use Cases
 description: >-
   See how different teams can combine Giga's Chats, Tracks, Agents, Skills,
-  Workflows, Pulses, and Connections around real work.
+  Workflows, Pulses, and Integrations around real work.
 ---
 Giga’s building blocks can be combined around the way different teams actually work.
 
-The examples in this section are **patterns**, not fixed templates. The exact systems, data, and actions available depend on the [Connections](/connections/index), permissions, and live capabilities in your workspace.
+The examples in this section are **patterns**, not fixed templates. The exact systems, data, and actions available depend on the [Integrations](/connect/index), permissions, and live capabilities in your workspace.
 
 ## Start with the work
 
@@ -18,12 +18,12 @@ Then choose the primitives that fit it:
 | ------------------------------------- | ------------------------------------- |
 | Work through something directly       | [Chat](/chats/index)                  |
 | Keep an ongoing body of work together | [Track](/tracks/index)                |
-| Give Giga durable standing background | [Context Note](/tracks/context-notes) |
+| Give Giga durable standing background | [System Instructions](/library/context-cards) |
 | Reuse a named AI role                 | [Agent](/agents/index)                |
 | Reuse a task method                   | [Skill](/skills/index)                |
 | Reuse an ordered process              | [Workflow](/workflows/index)          |
 | Run recurring work on a schedule      | [Pulse](/pulses/index)                |
-| Work with live external systems       | [Connection](/connections/index)      |
+| Work with live external systems       | [Integration](/connect/index)      |
 
 Most useful setups combine several of these rather than relying on one feature alone.
 
@@ -72,8 +72,8 @@ Imagine a Sales team preparing for an account review.
     Store the ongoing account context, decisions, memory, and work product together.
   </Step>
 
-  <Step title="Use live Connections" icon="plug" title-type="p">
-    Pull current information from approved sales systems when the workspace makes those Connections available.
+  <Step title="Use live Integrations" icon="plug" title-type="p">
+    Pull current information from approved sales systems when the workspace makes those Integrations available.
   </Step>
 
   <Step title="Apply a Skill" icon="sparkles" title-type="p">
@@ -98,11 +98,11 @@ Across these examples, Giga’s **Company Brain** remains permission-aware.
 The context available to the work can include relevant:
 
 - workspace and Group guidance
-- Tracks, Context Notes, and memory
+- Tracks, System Instructions, and memory
 - files
 - Agents and Skills
 - Workflows
-- Connections and live external information
+- Integrations and live external information
 - user-level context
 
 Giga retrieves what is relevant and permitted for the current task.
@@ -113,7 +113,7 @@ A use case does not bypass Giga’s access model.
 
 For example:
 
-- a Sales Agent cannot use a CRM Connection that is unavailable in its scope
+- a Sales Agent cannot use a CRM Integration that is unavailable in its scope
 - a teammate cannot access a Track simply because another teammate can
 - a Workflow cannot invent access to a system
 - a Pulse cannot create permissions by scheduling the work
@@ -127,11 +127,7 @@ These examples are meant to show how the primitives fit around real work.
 
 They are not claims that every company uses the same process or that every named external system is automatically supported.
 
-When a use case depends on an external tool, Giga should check the current integration and Connection surface before promising the exact action.
-
-> **Image placeholder**
->
-> Diagram showing a team use case in the center, surrounded by Chat, Track, Agent, Skill, Workflow, Pulse, and Connections, all sitting on top of Company Brain and permissions.
+When a use case depends on an external tool, Giga should check the current integration and Integration surface before promising the exact action.
 
 ## Explore use cases
 

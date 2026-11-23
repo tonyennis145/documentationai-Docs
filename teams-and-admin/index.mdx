@@ -1,12 +1,12 @@
 ---
 title: Teams & Admin
 description: >-
-  Learn how workspace membership, roles, permissions, company Connections, and
+  Learn how workspace membership, roles, permissions, company Integrations, and
   workspace-level context are administered in Giga.
 ---
 The **Teams & Admin** area covers how Giga is managed across a workspace.
 
-The current admin model centers on workspace membership, Group-based access, permission-aware resources, company Connections, and workspace-level settings.
+The current admin model centers on workspace membership, Group-based access, permission-aware resources, company Integrations, and workspace-level settings.
 
 ## Start with the workspace
 
@@ -31,10 +31,10 @@ Giga should use the live workspace state as the source of truth for who can do w
   </Card>
 
   <Card title="Permissions" href="/teams-and-admin/permissions" icon="shield-check" horizontal="false">
-    See how workspace roles, Groups, Tracks, Agents, Skills, files, and Connections fit together.
+    See how workspace roles, Groups, Tracks, Agents, Skills, files, and Integrations fit together.
   </Card>
 
-  <Card title="Company Connections" href="/teams-and-admin/managing-company-connections" icon="plug" horizontal="false">
+  <Card title="Company Integrations" href="/teams-and-admin/managing-company-connections" icon="plug" horizontal="false">
     Manage connected access used across the company while keeping credential ownership and Group sharing separate.
   </Card>
 
@@ -43,7 +43,7 @@ Giga should use the live workspace state as the source of truth for who can do w
   </Card>
 
   <Card title="Activity & usage" href="/teams-and-admin/activity-and-usage" icon="activity" horizontal="false">
-    See credits and spending, agent runs, and every use of your credentials.
+    In **Settings**: see credits and spending, agent runs, and every use of your credentials.
   </Card>
 </Columns>
 
@@ -74,7 +74,7 @@ Groups can scope access around resources such as:
 - [Tracks](/tracks/index)
 - [Agents](/agents/index)
 - files
-- shared credentials and [Connections](/connections/index)
+- shared credentials and [Integrations](/connect/index)
 - Group-level context
 
 > **Workspace membership opens the door. Group membership defines much of the room-by-room access.**
@@ -87,18 +87,18 @@ Different Giga primitives have their own access rules.
 
 For example:
 
-- Track visibility currently follows the Group the Track lives in
+- Track visibility follows the Group the Track lives in, or is set to **Only me**
 - Skills can be owner-only or explicitly shared into Groups
 - credentials can be owned by one user and shared into Groups
 - files follow the Group or Track scope that contains them
-- Context Notes and Current Track State inherit the Track’s Group boundary
+- a Track's brief and memory inherit the Track’s Group boundary
 - Agents are Group-scoped where supported by the current product model
 
 [Learn about Permissions →](/teams-and-admin/permissions)
 
-## Company Connections
+## Company Integrations
 
-A company Connection can give the right people or Agents access to external systems without handing around raw credentials.
+A company Integration can give the right people or Agents access to external systems without handing around raw credentials.
 
 Credential ownership and usage are separate.
 
@@ -106,7 +106,7 @@ A user may be able to **use** a credential shared into their Group without being
 
 The external provider’s own permissions still apply.
 
-[Learn about Managing company Connections →](/teams-and-admin/managing-company-connections)
+[Learn about Managing company Integrations →](/teams-and-admin/managing-company-connections)
 
 ## Workspace-level context
 
@@ -136,7 +136,7 @@ Live permissions should be checked immediately before the change.
 
 This section documents only admin behavior backed by the current product doctrine and live tool surface.
 
-Enterprise controls such as SSO, authentication policies, audit logs, data residency, retention, DPA terms, and security-control exports require separate canonical product sources before they should be documented as Giga capabilities.
+Enterprise controls such as SSO, authentication policies, data residency, retention, DPA terms, and security-control exports require separate canonical product sources before they should be documented as Giga capabilities.
 
 ## A simple example
 
@@ -156,18 +156,14 @@ Imagine a new salesperson joins the company.
   </Step>
 
   <Step title="Keep external access scoped" icon="plug" title-type="p">
-    Shared Connections still follow credential ownership and provider-side permissions.
+    Shared Integrations still follow credential ownership and provider-side permissions.
   </Step>
 </Steps>
-
-> **Image placeholder**
->
-> Diagram showing Workspace → Owner/Admin/Member → Groups → Tracks, Agents, Files, Skills, and shared Connections.
 
 ## Related pages
 
 - [Members and roles](/teams-and-admin/members-and-roles)
 - [Permissions](/teams-and-admin/permissions)
-- [Managing company Connections](/teams-and-admin/managing-company-connections)
+- [Managing company Integrations](/teams-and-admin/managing-company-connections)
 - [Workspace settings](/teams-and-admin/workspace-settings)
 - [Introduction to Groups](/groups/index)

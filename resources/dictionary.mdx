@@ -11,7 +11,7 @@ The definitions below follow the current Giga product model. Exact workspace sta
 
 An **Agent** is a named reusable AI role in Giga.
 
-An Agent can have a role, instructions, context, access to permitted [Connections](/connections/index), and [Skills](/skills/index).
+An Agent can have a role, instructions, context, access to permitted [Integrations](/connect/index), and [Skills](/skills/index).
 
 Use an Agent when a reusable operating identity should be available across multiple tasks, people, or repeated interactions.
 
@@ -27,7 +27,7 @@ Use an Agent when a reusable operating identity should be available across multi
 
 A **Chat** is the direct working surface between a user and Giga.
 
-Use a Chat to ask questions, reason through work, create or edit supported work product, use Connections, and ask Giga to take supported actions.
+Use a Chat to ask questions, reason through work, create or edit supported work product, use Integrations, and ask Giga to take supported actions.
 
 A Chat can be linked to at most **1 explicitly selected Track**.
 
@@ -37,7 +37,7 @@ A Chat can be linked to at most **1 explicitly selected Track**.
 
 **Chat history** is the transcript of the interaction inside a Chat.
 
-It is separate from durable Track context such as Context Notes, memory, and files.
+It is separate from durable Track context such as System Instructions, memory, and files.
 
 [Learn about Chat history →](/chats/history)
 
@@ -45,53 +45,31 @@ It is separate from durable Track context such as Context Notes, memory, and fil
 
 **Company Brain** is Giga’s permission-aware company context layer.
 
-Depending on relevance and access, it can draw from workspace and Group guidance, Tracks, Context Notes, memory, files, Connections, Agents, Skills, Workflows, and user-level context.
+Depending on relevance and access, it can draw from workspace and Group guidance, Tracks, System Instructions, memory, files, Integrations, Agents, Skills, Workflows, and user-level context.
 
 Company Brain is structured around permissions and the work it belongs to.
 
 [See the Feature Overview →](/resources/feature-overview)
 
-## Connection
+## Integration
 
-A **Connection** gives Giga permissioned access to an external system.
+An **Integration** gives Giga permissioned access to an external system.
 
-Connections can represent apps, APIs, databases, MCP servers, browser sessions, messaging systems, and other supported services.
+Integrations can represent apps, APIs, databases, MCP servers, Cloud Browser Sessions, messaging systems, and other supported services. You manage them in **Cloud → Integrations**.
 
-A Connection can provide live information and support actions when the current Giga and provider permissions allow it.
+An Integration can provide live information and support actions when the current Giga and provider permissions allow it.
 
 [Learn about Giga Connect →](/connect/index)
 
-## Context Card
-
-A **Context Card** is background information kept in the [Library](/library/index), such as who you are, what your company does, or how a Track works. Giga adds it to every relevant chat, like a briefing it always reads first.
-
-[Learn about Context Cards →](/library/context-cards)
-
-## Context Note
-
-A **Context Note** is the durable standing context for a Track.
-
-Use it for stable background such as:
-
-- what the Track is about
-- standing instructions
-- terminology
-- durable constraints
-- long-lived handoff context
-
-Fast-changing progress and decisions belong in Track memory.
-
-[Learn about Context Notes →](/tracks/context-notes)
-
 ## Credential
 
-A **credential** is secure authentication material behind some Connections.
+A **credential** is secure authentication material behind some Integrations.
 
-Examples can include authentication tokens, API credentials, connection strings, or login material depending on the Connection method.
+Examples can include authentication tokens, API credentials, connection strings, or login material depending on the Integration method.
 
-Credentials are kept in the [Vault](/connect/vault) and should stay in the secure connection flow rather than ordinary Chats, Context Notes, or files.
+Credentials are kept in [Cloud → Integrations](/connect/vault) and should stay in the secure connection flow rather than ordinary Chats, System Instructions, or files.
 
-[Learn about the Vault →](/connect/vault)
+[Learn about Cloud →](/connect/vault)
 
 ## Database
 
@@ -117,9 +95,9 @@ Files are separate from Track memory. A Track can have rich context and history 
 
 A **Group** is a placement and permission scope in Giga.
 
-Groups can contain or scope resources such as Tracks, Agents, files, credentials, Connections, and shared context.
+Groups can contain or scope resources such as Tracks, Agents, files, credentials, Integrations, and shared context.
 
-Use a Group when there is a real team boundary, shared area, or top-level access scope.
+Use a Group when there is a real team boundary, shared area, or top-level access scope. Groups are managed in **Cloud → Organize → Groups**.
 
 [Learn about Groups →](/groups/index)
 
@@ -128,10 +106,6 @@ Use a Group when there is a real team boundary, shared area, or top-level access
 **Evidence** is the append-only record behind each memory: what was said, a quote, who said it, when, and where it came from. Evidence is never rewritten. You can read all of it in **Brain → Evidence log**.
 
 [Learn about Giga Memory →](/memory/index)
-
-## Instant tools
-
-**Instant tools** are data tools and AI models your agents can use on Giga's account, with nothing to connect and no API key needed. Calls are paid from your workspace credits. You'll find them in **Integrations → Instant**. Instant tools are part of [Giga Gateway](/gateway/index).
 
 ## Memory
 
@@ -143,17 +117,15 @@ Memory belongs to a Track and is visible to the people on that Track, or stays p
 
 ## Model provider
 
-A **model provider** is a source of AI models Giga can use. Every workspace has the **Giga managed** provider; you can add your own keys for other providers in **Vault → Model Providers**.
+A **model provider** is a source of AI models Giga can use. Every workspace has the **Giga managed** provider; admins can add their own keys for other providers in **Settings → Model Providers**.
 
-[Learn about model providers →](/gateway/index#models)
+[Learn about Giga Connect →](/connect/index)
 
-## Private Group
+## Only me
 
-A **private Group** is a Group scoped to its owner.
+**Only me** is the setting for a private Track. There is no private Group: a Track set to **Only me** belongs to no Group and is visible only to you.
 
-Each member has an existing private Group for private work.
-
-A separate Group is generally unnecessary simply to make a Track private.
+A separate Group is unnecessary simply to make a Track private.
 
 [Learn about Personal vs shared work →](/groups/personal-vs-shared)
 
@@ -183,6 +155,14 @@ Use a Skill when the reusable asset is primarily the method, rules, standard, te
 
 [Learn about Skills →](/skills/index)
 
+## System Instructions
+
+**System Instructions** are standing background Giga reads before it works, such as who you are, what your company does, or how a kind of work should be done. They were previously called Context Cards and Context Notes. Each one can be shared with just you, a Group, a Track or the whole workspace. Find them in **Cloud → Shared Resources → System Instructions**.
+
+A Track's own standing background lives in its **Track brief**, in the Track's **Settings** tab. Fast-changing progress and decisions belong in Track memory.
+
+[Learn about System Instructions →](/library/context-cards)
+
 ## Surface
 
 A **surface** is a user-facing interface where someone can work with Giga.
@@ -205,9 +185,9 @@ A **Track** is Giga’s core long-running work primitive.
 
 Use a Track when context, decisions, files, and progress should accumulate around an effort over time.
 
-A Track can contain durable context across Context Notes, memory, linked Chats, and files.
+A Track has a Kind (Project, Area or Exploration) and can contain durable context across its Track brief, System Instructions, memory, linked Chats, and files.
 
-Track visibility currently follows the Group it lives in.
+Track visibility follows the Group it lives in, or is set to **Only me**.
 
 [Learn about Tracks →](/tracks/index)
 
@@ -217,11 +197,11 @@ Track visibility currently follows the Group it lives in.
 
 [Learn about Giga Memory →](/memory/index#where-memory-goes-tracks-or-private-until-you-file-it)
 
-## Vault
+## Cloud
 
-The **Vault** is where the credentials behind your connections are kept: API keys, OAuth connections, logins, databases, browser sessions and model provider keys. Secrets are encrypted and never shown to the AI or sent back to your browser.
+**Cloud** (formerly Vault) is where the credentials behind your Integrations are kept, in **Cloud → Integrations**: Direct (OAuth & MCP), API Keys, Logins, Databases and Cloud Browser Sessions. Secrets are encrypted and never shown to the AI or sent back to your browser.
 
-[Learn about the Vault →](/connect/vault)
+[Learn about Cloud →](/connect/vault)
 
 ## Workflow
 
@@ -237,7 +217,7 @@ Current Workflows can have a name, description, ordered steps, plain-language in
 
 A **workspace** is the top-level Giga environment for a company or team.
 
-Workspace membership, Groups, context, Connections, and other resources all sit within that environment.
+Workspace membership, Groups, context, Integrations, and other resources all sit within that environment.
 
 The current workspace state is the source of truth for what a user can access.
 
@@ -250,16 +230,16 @@ The current workspace state is the source of truth for what a user can access.
 | **Chat** | Direct work with Giga |
 | **Group** | Placement and permission scope |
 | **Track** | Ongoing work with continuity |
-| **Context Note** | Durable standing Track background |
+| **System Instructions** | Standing background Giga reads first |
 | **Memory** | What's been decided, committed, proposed and learned |
 | **Evidence** | The record behind each memory |
 | **Brain** | Where memory lives in the web app |
-| **Vault** | Where credentials are kept |
+| **Cloud** | Where credentials are kept |
 | **Agent** | Named reusable AI role |
 | **Skill** | Reusable task method |
 | **Workflow** | Reusable ordered process |
 | **Pulse** | Recurring scheduled work |
-| **Connection** | Permissioned external-system access |
+| **Integration** | Permissioned external-system access |
 | **File** | Authored work product |
 | **Database** | Structured growing records |
 | **Company Brain** | Permission-aware company context layer |

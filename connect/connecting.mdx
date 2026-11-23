@@ -1,8 +1,9 @@
 ---
 title: Connecting your tools
-description: What you can connect to Giga, the ways to connect, and what to do when a tool isn't in the catalog.
+description: >-
+  What you can connect to Giga, the ways to connect, and what to do when a tool
+  isn't in the catalog.
 ---
-
 Giga has a catalog of apps you can browse and search by category. If a tool is in the catalog, connecting it is usually a couple of clicks.
 
 ## Connection methods
@@ -20,24 +21,27 @@ Some tools have their own setup: **Slack** installs into your workspace, and **W
 
 ## Ways to connect
 
-<Columns cols={2}>
-  <Card title="From Integrations" icon="layout-grid">
-    Open **Integrations → Search**, find the app, choose how you want to connect, and follow the steps. Custom API keys, logins and databases can also be added from **Vault → New**.
+<Columns cols="2">
+  <Card title="From Integrations" icon="layout-grid" horizontal="false">
+    Open **Integrations**, search for the app, choose how you want to connect, and follow the steps. Custom API keys, logins and databases can also be added with the **+** on their group in **Cloud → Integrations**.
   </Card>
-  <Card title="From a chat" icon="message-square">
+
+  <Card title="From a chat" icon="message-square" horizontal="false">
     Ask Giga to connect something. It sends you a secure setup link — no need to leave the conversation.
   </Card>
-  <Card title="From ChatGPT or Claude" icon="sparkles">
+
+  <Card title="From ChatGPT or Claude" icon="sparkles" horizontal="false">
     Giga can show a connect card right inside the chat.
   </Card>
-  <Card title="During onboarding" icon="rocket">
+
+  <Card title="During onboarding" icon="rocket" horizontal="false">
     Pick the tools your work lives in and connect them one after another.
   </Card>
 </Columns>
 
-After connecting, give the connection a name so you and your team can tell it apart. Its credential is kept in the [Vault](/connect/vault), and **Integrations → Connected** lists everything you've connected.
+After connecting, give the integration a name so you and your team can tell it apart. Its credential is kept in [Cloud](/connect/vault), and **Integrations → Connected** lists everything you've connected.
 
-<Callout kind="tip">**Keep secrets out of chat.** Always use the secure setup form for passwords, API keys and tokens rather than pasting them into a message. [Read about safety and security →](/connect/security)</Callout>
+**Keep secrets out of chat.** Always use the secure setup form for passwords, API keys and tokens rather than pasting them into a message. [Read about safety and security →](/connect/security)
 
 ## Multiple accounts
 
@@ -55,13 +59,15 @@ If the tool you need isn't listed, you still have options:
 ## Frequently asked questions
 
 <ExpandableGroup>
-  <Expandable title="Can I connect more than one account for the same app?">
+  <Expandable title="Can I connect more than one account for the same app?" default-open="false">
     Yes. Connect as many accounts as you need, for example a production and a test account, and give each a clear name so you and your team can tell them apart.
   </Expandable>
-  <Expandable title="The tool I need isn't in the catalog. What can I do?">
+
+  <Expandable title="The tool I need isn't in the catalog. What can I do?" default-open="false">
     Ask Giga to add it. Giga can work out how the tool connects and create a private integration just for your workspace. You can also bring your own MCP server or OAuth app.
   </Expandable>
-  <Expandable title="The browser login is stuck on a CAPTCHA or 2FA. What do I do?">
+
+  <Expandable title="The browser login is stuck on a CAPTCHA or 2FA. What do I do?" default-open="false">
     Use the sign-in link Giga sends you to complete the login yourself. Giga reuses that sign-in next time.
   </Expandable>
 </ExpandableGroup>
